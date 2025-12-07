@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import './slider.css';
+import './WhyChoose.css';
 import product1 from '../images/prod-1.png';
 import product2 from '../images/prod-2.png';
 import product3 from '../images/prod-3.png';
@@ -22,6 +23,17 @@ import { useTranslation } from "react-i18next";
 
 const Home = () => {
     const { t } = useTranslation();
+    // State for search form
+    const [productType, setProductType] = useState('All Products');
+    const [sizes, setSizes] = useState('Size');
+    const [keyword, setKeyword] = useState('');
+
+    // Handle search form submission
+    const handleSearch = (e) => {
+        e.preventDefault();
+        // Add your search logic here
+        console.log('Search:', { productType, sizes, keyword });
+    };
   const settings = {
     dots: true,          // show navigation dots
     infinite: true,      // infinite loop
@@ -49,39 +61,81 @@ const Home = () => {
                               <a   className="btn-secondary border-line-btn">{t('icf_method')}</a>
                           </div>
                       </div>
-                      <div className="search-penal home-search-bar">
-                          <div className="left-penal">
-                              {/* Product Type Dropdown */}
-                              <div className="form-group w-30">
-                                  <label htmlFor="inputState" className="form-label">{t('product_type')}</label>
-                                  <div className="select-wrapper">
-                                  <select id="inputState" className="form-select">
-                                      <option defaultValue>{t('all_products')}</option>
-                                      <option>{t('')}</option>
-                                  </select>
-                                      <i className="fa-solid fa-chevron-down select-chevron"></i>
-                                  </div>
-                              </div>
-                              
-                              {/* Sizes Input with Target Icon */}
-                              <div className="form-group w-30">
-                                  <label htmlFor="inputSizes" className="form-label">{t('sizes')}</label>
-                                  <div className="input-wrapper">
-                                      <input type="text" className="form-control" id="inputSizes" placeholder={t('sizes')} />
-                                      <i className="fa-solid fa-crosshairs input-icon"></i>
-                                  </div>
-                              </div>
-                              
-                              {/* Keyword Input */}
-                              <div className="form-group w-40 border-none">
-                                  <label htmlFor="inputKeyword" className="form-label">{t('keyword')}</label>
-                                  <input type="text" className="form-control" id="inputKeyword" placeholder={t('search_keyword')} />
-                              </div>
-                          </div>
-                          <div className="right-penal">
-                              <a   className="btn-primary search-btn">{t('search')}<i className="fa-solid fa-magnifying-glass"></i></a>
-                          </div>
-                      </div>
+                      <div className="hero__search-card">
+          <form className="hero__search-form" onSubmit={handleSearch}>
+            <div className="hero__fields">
+              <div className="hero-field hero-field--type">
+                <span className="hero-field__label">Product Type</span>
+                <div className="hero-select__wrapper">
+                  <select
+                    className="hero-select"
+                    value={productType}
+                    onChange={(e) => setProductType(e.target.value)}
+                    aria-label="Select product type"
+                  >
+                    <option value="All Products">All Products</option>
+                    <option value="ICF Blocks">ICF Blocks</option>
+                    <option value="Panels">Panels</option>
+                    <option value="Accessories">Accessories</option>
+                  </select>
+                  <span className="hero-select__chevron" aria-hidden="true">▾</span>
+                </div>
+              </div>
+
+              <div className="hero-field hero-field--sizes">
+                <span className="hero-field__label">Sizes</span>
+                <div className="hero-select__wrapper">
+                  <select
+                    className="hero-select"
+                    value={sizes}
+                    onChange={(e) => setSizes(e.target.value)}
+                    aria-label="Select size"
+                  >
+                    <option value="Size">Size</option>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                  </select>
+                  <i className="fa-solid fa-crosshairs hero-select__chevron" aria-hidden="true"></i>
+                </div>
+              </div>
+
+              <div className="hero-field hero-field--keyword">
+                <span className="hero-field__label">Keyword</span>
+                <div className="hero-keyword">
+                 
+                  <input
+                    type="text"
+                    className="hero-keyword__input"
+                    placeholder="Search Keyword"
+                    value={keyword}
+                    onChange={(e) => setKeyword(e.target.value)}
+                  />
+                </div>
+              </div>
+
+              <button type="submit" className="hero-submit">
+                <span>Search</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path
+                    d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z"
+                    stroke="white"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M19 19L14.65 14.65"
+                    stroke="white"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
                   </div>
               </div>
           </section>
@@ -338,55 +392,49 @@ const Home = () => {
                       </div>
               </div>
           </section>
-          <section className="light-bg pt-0 pb-0">
-              <div className="container-fuild">
-                  <div className="row g-0">
-                      <div className="col-12 col-md-12 col-lg-6 col-xl-6">
-                          <div className="layer_image">
-                              <img alt=""src="Images/benifit-banner.jpg" />
-                          </div>
+          <section className="why-choose-section" aria-labelledby="why-choose-heading">
+              <div className="why-choose-media">
+                  <img alt="" src="Images/benifit-banner.jpg" loading="lazy" />
+              </div>
 
-                      </div>
-                      <div className="col-12 col-md-12 col-lg-6 col-xl-6">
-                          <div className="layer_content">
-                              <span className="sub-head-small text-blue">{t('your_benifit')}</span>
-                              <h3>{t('why_choose_ecobuild_system_ltd')}</h3>
-                              <p>{t('embarked_on_a_global_search_visiting_8_countries_and_reviewing_11_advanced_building_systems_after_extensive_consultation_with_architects_contractors_and_engineers_we_found_one_solution_that_stood_out_nudura_icf_examining_eleven_different_construction_methods_in_depth')}</p>
-
-                              <ul className="icon-card-white">
-                                  <li>
-                                      <div className="icon-band">
-                                          <img alt=""src="Images/Icons/Proven-Expertise.svg" />
-                                      </div>
-                                      <div className="text-band">
-                                          <h4>{t('proven_expertise')}</h4>
-                                          <p>{t('our_seasoned_team_excels_in_icf_products_with_years_of_successful_market_navigation_offering_informed_decisions_and_optimal_results')}</p>
-                                      </div>
-                                  </li>
-                                  <li>
-                                      <div className="icon-band">
-                                          <img alt=""src="Images/Icons/Customized-Solutions.svg" />
-                                      </div>
-                                      <div className="text-band">
-                                          <h4>{t('customized_solutions')}</h4>
-                                          <p>{t('we_pride_ourselves_on_crafting_personalised_strategies_to_match_your_unique_goals_ensuring_a_seamless_latest_constructions_journey')}</p>
-                                      </div>
-                                  </li>
-                                  <li>
-                                      <div className="icon-band">
-                                          <img alt=""src="Images/Icons/Transparent-Partnerships.svg" />
-                                      </div>
-                                      <div className="text-band">
-                                          <h4>{t('transparent_partnerships')}</h4>
-                                          <p>{t('transparency_is_key_in_our_client_relationships_we_prioritize_clear_communication_and_ethical_practices_fostering_trust_and_reliability_throughout')}</p>
-                                      </div>
-                                  </li>
-                              </ul>
-                          </div>
-
-                      </div>
+              <div className="why-choose-content">
+                  <div className="why-choose-heading" id="why-choose-heading">
+                      <span className="benefit-label">{t('your_benifit')}</span>
+                      <h3>{t('why_choose_ecobuild_system_ltd')}</h3>
+                      <p>{t('embarked_on_a_global_search_visiting_8_countries_and_reviewing_11_advanced_building_systems_after_extensive_consultation_with_architects_contractors_and_engineers_we_found_one_solution_that_stood_out_nudura_icf_examining_eleven_different_construction_methods_in_depth')}</p>
                   </div>
 
+                  <div className="benefits-grid">
+                      <article className="benefit-card">
+                          <div className="benefit-card-icon" aria-hidden="true">
+                              <img alt="" src="Images/Icons/Proven-Expertise.svg" />
+                          </div>
+                          <div className="benefit-card-body">
+                              <h4>{t('proven_expertise')}</h4>
+                              <p>{t('our_seasoned_team_excels_in_icf_products_with_years_of_successful_market_navigation_offering_informed_decisions_and_optimal_results')}</p>
+                          </div>
+                      </article>
+
+                      <article className="benefit-card">
+                          <div className="benefit-card-icon" aria-hidden="true">
+                              <img alt="" src="Images/Icons/Customized-Solutions.svg" />
+                          </div>
+                          <div className="benefit-card-body">
+                              <h4>{t('customized_solutions')}</h4>
+                              <p>{t('we_pride_ourselves_on_crafting_personalised_strategies_to_match_your_unique_goals_ensuring_a_seamless_latest_constructions_journey')}</p>
+                          </div>
+                      </article>
+
+                      <article className="benefit-card">
+                          <div className="benefit-card-icon" aria-hidden="true">
+                              <img alt="" src="Images/Icons/Transparent-Partnerships.svg" />
+                          </div>
+                          <div className="benefit-card-body">
+                              <h4>{t('transparent_partnerships')}</h4>
+                              <p>{t('transparency_is_key_in_our_client_relationships_we_prioritize_clear_communication_and_ethical_practices_fostering_trust_and_reliability_throughout')}</p>
+                          </div>
+                      </article>
+                  </div>
               </div>
           </section>
           <section className="light-bg testimonials-section">
