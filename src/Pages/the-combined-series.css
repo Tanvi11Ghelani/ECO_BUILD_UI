@@ -1,0 +1,265 @@
+/* The Combined Series Component - Styles */
+/* Gradient Card Styles - Matching Figma Design Specifications */
+
+/* Gradient card container - 1500px width, 360px height, 50px border-radius */
+.the-combined-series .card.gredient-card.bg-primary-gradient {
+    width: 100%;
+    max-width: 1500px;
+    min-height: 360px;
+    border-radius: 50px;
+    background: linear-gradient(0deg, rgba(0, 212, 255, 0.9) -12.5%, rgba(0, 163, 224, 0.9) 104.03%);
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Text band inside gradient card */
+.the-combined-series .card.gredient-card .text-band {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    max-width: 1290px;
+    gap: 20px;
+}
+
+/* Image head container - for logo images */
+.the-combined-series .card.gredient-card .img-head {
+    width: 271px;
+    height: 93px;
+    border-radius: 50px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.the-combined-series .card.gredient-card .img-head img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50px;
+}
+
+/* Text content in gradient card - h6 with white text */
+.the-combined-series .card.gredient-card .text-band h6.text-white {
+    width: 100%;
+    max-width: 1290px;
+    min-height: 73px;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+/* Title h5 in gradient card */
+.the-combined-series .card.gredient-card .text-band h5 {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #FFFFFF;
+    margin: 0 0 20px 0;
+}
+
+/* Responsive Design for Gradient Cards - Tablet */
+@media (max-width: 1400px) {
+    .the-combined-series .card.gredient-card.bg-primary-gradient {
+        max-width: 100%;
+        padding: 35px 30px;
+        min-height: auto;
+    }
+    
+    .the-combined-series .card.gredient-card .img-head {
+        width: 240px;
+        height: 83px;
+    }
+    
+    .the-combined-series .card.gredient-card .text-band h6.text-white {
+        font-size: 22px;
+        min-height: auto;
+    }
+}
+
+/* Responsive Design for Gradient Cards - Mobile */
+@media (max-width: 992px) {
+    .the-combined-series .card.gredient-card.bg-primary-gradient {
+        border-radius: 40px;
+        padding: 30px 25px;
+    }
+    
+    .the-combined-series .card.gredient-card .img-head {
+        width: 200px;
+        height: 70px;
+        border-radius: 40px;
+    }
+    
+    .the-combined-series .card.gredient-card .text-band h6.text-white {
+        font-size: 20px;
+    }
+}
+
+/* Responsive Design for Gradient Cards - Small Mobile */
+@media (max-width: 768px) {
+    .the-combined-series .card.gredient-card.bg-primary-gradient {
+        border-radius: 30px;
+        padding: 25px 20px;
+    }
+    
+    .the-combined-series .card.gredient-card .img-head {
+        width: 180px;
+        height: 60px;
+        border-radius: 30px;
+    }
+    
+    .the-combined-series .card.gredient-card .text-band h6.text-white {
+        font-size: 18px;
+    }
+}
+
+/* The Combined Series Component - Typography Styles */
+/* Apply specified typography to all content paragraphs in the component */
+/* Typography: Noto Sans, SemiBold (600), 24px, 140% line-height, capitalize */
+
+/* Main content paragraphs with bold-bg class */
+.the-combined-series .text-band p.bold-bg,
+.the-combined-series .ab-info-band .text-band p.bold-bg,
+.the-combined-series .layer_content .text-band p.bold-bg {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Long paragraph section - ab-info-band styling for proper display */
+.the-combined-series .ab-info-band {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+.the-combined-series .ab-info-band .text-band {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.the-combined-series .ab-info-band .text-band p.bold-bg {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-align: left;
+}
+
+/* Regular paragraphs in text-band and ab-info-band */
+.the-combined-series .text-band p,
+.the-combined-series .ab-info-band .text-band p,
+.the-combined-series .layer_content .text-band p {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+}
+
+/* Paragraphs with pb-3 class - 24px typography */
+.the-combined-series .layer_content p.pb-3 {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+}
+
+/* Floor Technology Section - List items with 24px typography (same as paragraph) */
+.the-combined-series .layer_content .details-list li {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+}
+
+/* Exclude file name paragraphs from typography changes - override with original styles */
+.the-combined-series .file-name-band p,
+.the-combined-series .file-card .file-name-band p {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: 0%;
+    text-transform: none;
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 992px) {
+    .the-combined-series .text-band p,
+    .the-combined-series .ab-info-band .text-band p,
+    .the-combined-series .text-band p.bold-bg,
+    .the-combined-series .ab-info-band .text-band p.bold-bg,
+    .the-combined-series .layer_content .text-band p,
+    .the-combined-series .layer_content p.pb-3 {
+        font-size: 22px;
+    }
+    
+    /* List items responsive */
+    .the-combined-series .layer_content .details-list li {
+        font-size: 22px;
+    }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 768px) {
+    .the-combined-series .text-band p,
+    .the-combined-series .ab-info-band .text-band p,
+    .the-combined-series .text-band p.bold-bg,
+    .the-combined-series .ab-info-band .text-band p.bold-bg,
+    .the-combined-series .layer_content .text-band p,
+    .the-combined-series .layer_content p.pb-3 {
+        font-size: 20px;
+    }
+    
+    /* List items responsive */
+    .the-combined-series .layer_content .details-list li {
+        font-size: 20px;
+    }
+}
+
+/* Responsive Design - Small Mobile */
+@media (max-width: 576px) {
+    .the-combined-series .text-band p,
+    .the-combined-series .ab-info-band .text-band p,
+    .the-combined-series .text-band p.bold-bg,
+    .the-combined-series .ab-info-band .text-band p.bold-bg,
+    .the-combined-series .layer_content .text-band p,
+    .the-combined-series .layer_content p.pb-3 {
+        font-size: 18px;
+    }
+    
+    /* List items responsive */
+    .the-combined-series .layer_content .details-list li {
+        font-size: 18px;
+    }
+}
+

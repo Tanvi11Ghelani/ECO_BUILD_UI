@@ -1,0 +1,1058 @@
+/* Ecobuild Academy Page - Figma Design Implementation */
+/* Base measurements: Desktop 1720px width */
+
+/* ============================================
+   PAGE CONTAINER
+   ============================================ */
+
+.ecobuild-academy-page {
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  background: #FFFFFF;
+}
+
+/* ============================================
+   HERO SECTION - 1920px × 520px - Matching Figma
+   ============================================ */
+
+/* Hero Banner Container - 1920px × 520px */
+.academy-hero-banner {
+  width: 100%;
+  max-width: 1920px;
+  height: 520px;
+  margin: 0 auto 50px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hero Inner Container */
+.academy-hero-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Top Left Text - "ECOBUILD COLLEGE" */
+.academy-hero-top-left {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: 3;
+}
+
+.academy-hero-small-title {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Centered Main Heading */
+.academy-hero-center {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.academy-hero-title {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1.2;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  letter-spacing: 0.5px;
+}
+
+.academy-hero-title br {
+  display: block;
+  margin: 12px 0;
+  line-height: 0;
+}
+
+/* ============================================
+   ECOBUILD ACADEMY SECTION - Matching Figma
+   ============================================ */
+
+.academy-info-section {
+  width: 100%;
+  max-width: 1720px;
+  margin: 60px auto;
+  padding: 0;
+}
+
+/* Section Title */
+.academy-section-title {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  background: linear-gradient(180deg, #00D4FF 0%, #00A3E0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Cards Container - 1400px width, 370px height */
+.academy-cards-grid {
+  width: 100%;
+  max-width: 1400px;
+  height: 370px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  margin: 40px auto 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Academy Card - 675px width, 160px height */
+.academy-card {
+  width: 675px;
+  height: 160px;
+  padding: 40px 30px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.academy-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Dark Card - #345766 background */
+.academy-card-dark {
+  background: #345766;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+/* Blue Gradient Card - 180deg gradient */
+.academy-card-blue {
+  background: linear-gradient(180deg, #00A3E0 0%, #00D4FF 100%);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Icon Box - 80px × 80px */
+.academy-card-icon {
+  width: 80px;
+  height: 80px;
+  min-width: 80px;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Icon box for dark cards - light blue gradient */
+.academy-card-dark .academy-card-icon {
+  background: linear-gradient(0deg, rgba(0, 212, 255, 0.9) -12.5%, rgba(0, 163, 224, 0.9) 104.03%);
+}
+
+/* Icon box for blue cards - dark blue #345766 */
+.academy-card-blue .academy-card-icon {
+  background: #345766;
+}
+
+.academy-card-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+/* Card Text */
+.academy-card-text {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  margin: 0;
+  font-weight: 400;
+  flex: 1;
+}
+
+/* ============================================
+   IMPORTANT INFORMATION SECTION
+   ============================================ */
+
+.important-info-section {
+  width: 100%;
+  max-width: 1720px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #F9FAFB;
+  border-radius: 20px;
+}
+
+/* Important Info Title */
+.important-info-title {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
+  color: #333333;
+  margin-bottom: 25px;
+}
+
+/* Important Info Content */
+.important-info-content {
+  width: 100%;
+}
+
+.important-info-content p {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #666666;
+  margin: 0;
+  text-align: justify;
+}
+
+/* ============================================
+   LIST SECTION - 1416px width, 60px gap
+   ============================================ */
+
+.academy-list-section {
+  width: 100%;
+  max-width: 1720px;
+  margin: 60px auto;
+  padding: 0;
+}
+
+/* List Container - 1416px width, 1230px height, 60px gap, 3 columns */
+.academy-list-container {
+  width: 100%;
+  max-width: 1416px;
+  min-height: 1230px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Listing Card - 410px width, 370px height, 16px border-radius */
+.academy-listing {
+  width: 410px;
+  height: 370px;
+  border-radius: 16px;
+  background: #FFFFFF;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* Hover effect for listing card */
+.academy-listing:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Container - 410px width, 270px height, 15px border-radius (top) */
+.academy-listing-img {
+  width: 410px;
+  height: 270px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  background: #000000;
+  box-sizing: border-box;
+}
+
+.academy-listing-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Play Button - 92px width, 92px height, centered on image */
+.academy-listing-play-btn {
+  width: 92px;
+  height: 92px;
+  position: absolute;
+  top: 89px;
+  left: 159px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  border: none;
+  padding: 0;
+}
+
+/* Play icon inside button */
+.academy-listing-play-btn svg {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for play button */
+.academy-listing-play-btn:hover {
+  background: #FFFFFF;
+  transform: scale(1.1);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.academy-listing:hover .academy-listing-play-btn svg {
+  transform: scale(1.1);
+}
+
+/* Content Section - 410px width, 100px height, gradient background */
+.academy-listing-content {
+  width: 410px;
+  height: 100px;
+  padding: 20px;
+  gap: 24px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  background: linear-gradient(0deg, rgba(0, 212, 255, 0.9) -12.5%, rgba(0, 163, 224, 0.9) 104.03%);
+  border-width: 0px 1px 1px 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-image-source: linear-gradient(0deg, rgba(0, 212, 255, 0.9) -12.5%, rgba(0, 163, 224, 0.9) 104.03%);
+  border-image-slice: 1;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Listing Title */
+.academy-listing-title {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #FFFFFF;
+  margin: 0 0 8px 0;
+  text-transform: capitalize;
+}
+
+/* Listing Description */
+.academy-listing-description {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFFFFF;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* ============================================
+   VIDEO TUTORIALS SECTION - Matching Figma List Design
+   ============================================ */
+
+.video-tutorials-section {
+  width: 100%;
+  max-width: 1720px;
+  margin: 60px auto 80px auto;
+  padding: 0;
+}
+
+/* Video Tutorials Title */
+.video-tutorials-title {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: #333333;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Video List Container - 1416px width, 60px gap, 3 columns */
+.video-list-container {
+  width: 100%;
+  max-width: 1416px;
+  min-height: 1230px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Video Listing Card - 410px width, 370px height, 16px border-radius */
+.video-listing {
+  width: 410px;
+  height: 370px;
+  border-radius: 16px;
+  background: #FFFFFF;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* Hover effect for video listing card */
+.video-listing:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Container - 410px width, 270px height, 15px border-radius (top) */
+.video-listing-img {
+  width: 410px;
+  height: 270px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  background: #000000;
+  box-sizing: border-box;
+}
+
+.video-listing-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Play Button - 92px width, 92px height, blue circle with white play icon */
+.video-listing-play-btn {
+  width: 92px;
+  height: 92px;
+  position: absolute;
+  top: 89px;
+  left: 159px;
+  background: #00A3E0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  border: none;
+  padding: 0;
+}
+
+/* Play icon inside button - white triangle */
+.video-listing-play-btn svg {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for play button */
+.video-listing-play-btn:hover {
+  background: #00D4FF;
+  transform: scale(1.1);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.video-listing:hover .video-listing-play-btn svg {
+  transform: scale(1.1);
+}
+
+/* Content Section - 410px width, 100px height, gradient background */
+.video-listing-content {
+  width: 410px;
+  height: 100px;
+  padding: 20px;
+  gap: 24px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  background: linear-gradient(0deg, rgba(0, 212, 255, 0.9) -12.5%, rgba(0, 163, 224, 0.9) 104.03%);
+  border-width: 0px 1px 1px 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-image-source: linear-gradient(0deg, rgba(0, 212, 255, 0.9) -12.5%, rgba(0, 163, 224, 0.9) 104.03%);
+  border-image-slice: 1;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Video Listing Title */
+.video-listing-title {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #FFFFFF;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+/* ============================================
+   PAGINATION
+   ============================================ */
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 50px;
+}
+
+.pagination-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #E4E4E4;
+  background: #FFFFFF;
+  color: #333333;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: #F5F5F5;
+  border-color: #00A3E0;
+  color: #00A3E0;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-btn.active {
+  background: linear-gradient(180deg, #00D4FF 0%, #00A3E0 100%);
+  border-color: #00A3E0;
+  color: #FFFFFF;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablet - Max width 1200px */
+@media (max-width: 1200px) {
+  .ecobuild-academy-page {
+    padding: 0 15px;
+  }
+
+  .academy-hero-banner {
+    height: 400px;
+    max-width: 100%;
+    border-radius: 20px;
+  }
+
+  .academy-hero-title {
+    font-size: 48px;
+    line-height: 58px;
+    white-space: normal;
+  }
+
+  .academy-hero-small-title {
+    font-size: 16px;
+  }
+
+  .academy-cards-grid {
+    max-width: 100%;
+    height: auto;
+    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .academy-card {
+    width: 100%;
+    max-width: 675px;
+    height: auto;
+    min-height: 160px;
+    padding: 30px 25px;
+  }
+
+  .academy-card-icon {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+    min-height: 70px;
+  }
+
+  .academy-card-icon img {
+    width: 35px;
+    height: 35px;
+  }
+
+  /* Video List Section Responsive */
+  .video-list-container {
+    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    min-height: auto;
+  }
+
+  .video-listing {
+    width: 100%;
+    max-width: 410px;
+    margin: 0 auto;
+  }
+
+  .video-listing-img {
+    width: 100%;
+  }
+
+  .video-listing-content {
+    width: 100%;
+  }
+
+  .video-listing-play-btn {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Tablet Portrait - Max width 992px */
+@media (max-width: 992px) {
+  .academy-hero-banner {
+    height: 350px;
+    border-radius: 20px;
+  }
+
+  .academy-hero-title {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .academy-hero-small-title {
+    font-size: 15px;
+  }
+
+  .academy-section-title,
+  .video-tutorials-title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .academy-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    height: auto;
+  }
+
+  .academy-card {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 160px;
+    padding: 30px 20px;
+  }
+
+  .academy-card-icon {
+    width: 65px;
+    height: 65px;
+    min-width: 65px;
+    min-height: 65px;
+  }
+
+  .academy-card-icon img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .academy-card-text {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  /* Video List Section Responsive */
+  .video-list-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .video-listing {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .video-listing-img {
+    width: 100%;
+  }
+
+  .video-listing-content {
+    width: 100%;
+  }
+}
+
+/* Mobile Landscape - Max width 768px */
+@media (max-width: 768px) {
+  .ecobuild-academy-page {
+    padding: 0 10px;
+  }
+
+  .academy-hero-banner {
+    height: 300px;
+    border-radius: 20px;
+    margin-top: 0;
+  }
+
+  .academy-hero-inner {
+    padding: 30px 20px;
+  }
+
+  .academy-hero-top-left {
+    top: 20px;
+    left: 20px;
+  }
+
+  .academy-hero-title {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .academy-hero-small-title {
+    font-size: 14px;
+  }
+
+  .academy-section-title,
+  .video-tutorials-title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .academy-card {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 150px;
+    padding: 25px 20px;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .academy-card-icon {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    min-height: 60px;
+  }
+
+  .academy-card-icon img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .academy-card-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .important-info-section {
+    padding: 30px 20px;
+  }
+
+  .important-info-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  /* Video List Section Responsive */
+  .video-list-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    min-height: auto;
+  }
+
+  .video-listing {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 370px;
+  }
+
+  .video-listing-img {
+    width: 100%;
+    height: 270px;
+  }
+
+  .video-listing-content {
+    width: 100%;
+    min-height: 100px;
+  }
+
+  .video-listing-play-btn {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Mobile Portrait - Max width 576px */
+@media (max-width: 576px) {
+  .academy-hero-banner {
+    height: 250px;
+    border-radius: 15px;
+  }
+
+  .academy-hero-title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .academy-hero-small-title {
+    font-size: 12px;
+  }
+
+  .academy-hero-top-left {
+    top: 15px;
+    left: 15px;
+  }
+
+  .academy-section-title,
+  .video-tutorials-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .academy-card {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 140px;
+    padding: 20px 15px;
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .academy-card-icon {
+    width: 55px;
+    height: 55px;
+    min-width: 55px;
+    min-height: 55px;
+  }
+
+  .academy-card-icon img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .academy-card-text {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .important-info-section {
+    padding: 25px 15px;
+  }
+
+  .important-info-title {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .important-info-content p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .video-thumbnail {
+    height: 180px;
+  }
+
+
+  /* List Section Responsive */
+  .academy-list-container {
+    gap: 20px;
+  }
+
+  .academy-listing {
+    min-height: 350px;
+  }
+
+  .academy-listing-img {
+    height: 240px;
+  }
+
+  .academy-listing-play-btn {
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .academy-listing-play-btn svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .academy-listing-content {
+    min-height: 90px;
+    padding: 15px;
+  }
+
+  .academy-listing-title {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .academy-listing-description {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .pagination-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+}
+
+/* Extra Small Mobile - Max width 400px */
+@media (max-width: 400px) {
+  .academy-hero-banner {
+    height: 220px;
+    border-radius: 12px;
+  }
+
+  .academy-hero-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .academy-hero-small-title {
+    font-size: 11px;
+  }
+
+  .academy-hero-top-left {
+    top: 12px;
+    left: 12px;
+  }
+
+  .academy-section-title,
+  .video-tutorials-title {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .academy-card {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 130px;
+    padding: 18px 15px;
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .academy-card-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+  }
+
+  .academy-card-icon img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .academy-card-text {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  /* Video List Section Responsive */
+  .video-listing {
+    min-height: 320px;
+  }
+
+  .video-listing-img {
+    height: 220px;
+  }
+
+  .video-listing-play-btn {
+    width: 70px;
+    height: 70px;
+  }
+
+  .video-listing-play-btn svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .video-listing-content {
+    min-height: 80px;
+    padding: 12px;
+  }
+
+  .video-listing-title {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .pagination-container {
+    gap: 8px;
+  }
+
+  .pagination-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+}
+

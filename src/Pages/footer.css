@@ -1,0 +1,4 @@
+.form-control::placeholder {
+  color: white!important;
+  opacity: 1; /* makes sure it's not faded */
+}

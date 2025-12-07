@@ -1,0 +1,288 @@
+/* Contact Us Page - Styling - Figma Design Implementation */
+
+/* Header Banner Image - 1720px width, 350px height */
+.contact-us-page .breadcrumb-band,
+.contact-us-banner {
+    width: 100%;
+    max-width: 1720px;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    margin: 40px auto 0;
+    border-radius: 15px;
+}
+
+/* Ensure container allows full width banner */
+.contact-us-page > .container {
+    max-width: 1720px;
+    padding: 0 15px;
+}
+
+.breadcrumb-band::after {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Contact Us Section Styling */
+.contact-us-section {
+    padding: 70px 0;
+    background: #FFFFFF;
+}
+
+.contact-us-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Form Section Styling */
+.contact-us-section .title h3 {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    color: #161E2D;
+    margin-bottom: 15px;
+}
+
+.contact-us-section .title p {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 16px;
+    color: #5C6368;
+    margin-bottom: 30px;
+}
+
+/* Form Styling */
+.contact-us-section .form-band {
+    margin-top: 30px;
+}
+
+.contact-us-section .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-us-section .form-label {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #161E2D;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.contact-us-section .form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 16px;
+    color: #161E2D;
+    background: #FFFFFF;
+    transition: all 0.3s ease;
+}
+
+.contact-us-section .form-control:focus {
+    outline: none;
+    border-color: #00A3E0;
+    box-shadow: 0 0 0 3px rgba(0, 163, 224, 0.1);
+}
+
+.contact-us-section .form-control::placeholder {
+    color: #9CA3AF;
+}
+
+.contact-us-section textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Contact Details Card Styling */
+.contact-us-section .contact-us-details-card {
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+    background: #FFFFFF;
+    height: 100%;
+}
+
+.contact-us-section .contact-us-details-card .title h3 {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    color: #161E2D;
+    margin-bottom: 20px;
+}
+
+.contact-us-section .contact-details-band {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+}
+
+.contact-us-section .contact-details-band li {
+    margin-bottom: 20px;
+}
+
+.contact-us-section .contact-details-band h6 {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #161E2D;
+    margin-bottom: 8px;
+}
+
+.contact-us-section .contact-details-band p {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 16px;
+    color: #5C6368;
+    margin: 0;
+}
+
+.contact-us-section .contact-details-band a {
+    color: #00A3E0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-us-section .contact-details-band a:hover {
+    color: #0088b8;
+}
+
+.contact-us-section .soical-links {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+.contact-us-section .soical-links li a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #F3F7FD;
+    color: #345766;
+    transition: all 0.3s ease;
+}
+
+.contact-us-section .soical-links li a:hover {
+    background: #345766;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design for Banner */
+@media (max-width: 1720px) {
+    .contact-us-page .breadcrumb-band,
+    .contact-us-banner {
+        max-width: 100%;
+        height: 350px;
+    }
+    
+    .contact-us-page > .container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .breadcrumb-band {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .breadcrumb-band {
+        height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .breadcrumb-band {
+        height: 200px;
+    }
+}
+
+/* Contact Us Page - Button Styling - Figma Design Implementation */
+
+/* Send Message Button - Matching Figma Specifications */
+.contact-us-section .form-action .btn-primary.btn-bg-dark {
+    width: 600px;
+    max-width: 100%;
+    height: 54px;
+    border-radius: 9999px;
+    padding: 11px 20px;
+    background: #345766;
+    color: #FFFFFF;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+/* Button hover effect */
+.contact-us-section .form-action .btn-primary.btn-bg-dark:hover {
+    background: #2a4755;
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 12px rgba(52, 87, 102, 0.3);
+}
+
+/* Button active state */
+.contact-us-section .form-action .btn-primary.btn-bg-dark:active {
+    transform: translateY(0);
+    box-shadow: 0px 2px 6px rgba(52, 87, 102, 0.2);
+}
+
+/* Form action container - Center the button */
+.contact-us-section .form-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 992px) {
+    .contact-us-section .form-action .btn-primary.btn-bg-dark {
+        width: 100%;
+        max-width: 600px;
+        height: 50px;
+        padding: 10px 18px;
+        font-size: 15px;
+    }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 768px) {
+    .contact-us-section .form-action .btn-primary.btn-bg-dark {
+        width: 100%;
+        height: 48px;
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
+
+/* Responsive Design - Small Mobile */
+@media (max-width: 576px) {
+    .contact-us-section .form-action .btn-primary.btn-bg-dark {
+        width: 100%;
+        height: 46px;
+        padding: 9px 15px;
+        font-size: 14px;
+    }
+}
+

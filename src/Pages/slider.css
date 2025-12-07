@@ -1,0 +1,108 @@
+/* General spacing */
+.slider-band .item {
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+/* Slick slider wrappers — ensure full height inheritance */
+.slider-band .slick-slide,
+.slider-band .slick-track,
+.slider-band .slick-list {
+  display: flex !important;
+  align-items: stretch;
+}
+
+/* Ensure each slide takes full available height */
+.slider-band .slick-slide > div {
+  display: flex;
+  height: 100%;
+}
+
+/* Card styling */
+.border-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Image styling */
+.slider-band .img-band img {
+  width: 100%;
+  height: 272px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text + button alignment */
+.slider-band .text-band {
+  flex-grow: 1;
+}
+
+.slider-band .action-band {
+  margin-top: auto;
+}
+
+.slider-band .item {
+  padding: 0 10px; /* spacing between cards */
+  box-sizing: border-box;
+}
+
+.border-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+.slider-band {
+  overflow: hidden !important;
+}
+
+.slider-band .item {
+  display: flex;
+  height: 100%;
+}
+
+.slider-band .border-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 420px; /* adjust based on your design */
+  box-sizing: border-box;
+}
+
+.slider-band .img-band img {
+  width: 100%;
+  height: 272px; /* your desired height */
+  object-fit: cover;
+}
+
+.slider-band .text-band {
+  flex-grow: 1;
+}
+
+.slider-band .action-band {
+  margin-top: auto;
+}
+
+.slider-band .item {
+  padding: 0 10px; /* spacing between cards */
+  box-sizing: border-box;
+}
+
+.border-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+.slider-band {
+  overflow: hidden !important;
+}
+
+

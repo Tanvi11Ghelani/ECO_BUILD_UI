@@ -1,0 +1,190 @@
+/* Press Article Card Styling */
+.press-article-card {
+  background: #ffffff;
+  padding: 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.article-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  gap: 20px;
+}
+
+.article-header h5 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+  line-height: 1.4;
+  flex: 1;
+}
+
+.article-date {
+  font-size: 14px;
+  color: #7f8c8d;
+  white-space: nowrap;
+  padding-top: 2px;
+}
+
+.article-description {
+  font-size: 14px;
+  color: #34495e;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.read-more-link {
+  display: inline-block;
+  color:#00D4FF;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.read-more-link:hover {
+  color:#00A3E0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .article-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .article-date {
+    align-self: flex-start;
+  }
+  
+  .article-header h5 {
+    font-size: 16px;
+  }
+}
+h4 {
+  margin-bottom: 35px !important;
+}
+.read-more-link {
+    font-size: 20px;
+  display: inline-block;
+  color: #06b6d4; /* cyan-500 */
+  font-weight: 600; /* font-semibold */
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+.read-more-link:hover {
+  color: #0891b2; /* cyan-600 */
+}
+
+.article-description {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 140%;
+  text-transform: capitalize;
+  color: #161E2D;  /* optional – you used it earlier */
+}
+.attachments-section {
+  margin-top: 30px;
+}
+
+.attachments-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #345766;
+  margin-bottom: 20px;
+}
+
+.attachments-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.attachment-card {
+  width: 280px;
+  background: white;
+  border: 2px solid #00bcd4;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: 0.3s ease;
+  margin-bottom: 40px;
+}
+
+.pdf-icon {
+  width: 45px;
+  height: 45px;
+}
+
+.attachment-card p {
+  flex: 1;
+  font-size: 15px;
+  color: #345766;
+  font-weight: 500;
+}
+
+.download-icon {
+  font-size: 20px;
+  color: #345766;
+  text-decoration: none;
+}
+
+.download-icon:hover {
+  color: #0ea5e9;
+}
+.attachments-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 25px;
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
+.file-block {
+  width: 260px;
+}
+
+.file-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #345766;
+  margin-bottom: 10px;
+}
+
+.file-card {
+  background: white;
+  border: 2px solid #00c0e4;
+  border-radius: 14px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pdf-icon {
+  width: 42px;
+}
+
+.file-name {
+  flex: 1;
+  font-weight: 500;
+  color: #345766;
+}
+
+.download-icon {
+  font-size: 20px;
+  text-decoration: none;
+  color: #345766;
+}

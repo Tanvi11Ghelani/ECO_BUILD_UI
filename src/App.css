@@ -1,0 +1,92 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* --- Chat Box Floating Styles --- */
+.chat-popup-wrapper {
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  z-index: 9999;
+  transition: all 0.3s ease;
+  transform: translateY(100%);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.chat-popup-wrapper.show {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Chat box container (simulating your uploaded design) */
+.ecobuild-chat-box {
+  width: 340px;
+  height: 550px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Floating button */
+.chat-toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  background: linear-gradient(135deg, #3eb6ff, #0078ff);
+  color: white;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  z-index: 10000;
+}
+
+.chat-toggle-btn:hover {
+  transform: scale(1.05);
+}
+

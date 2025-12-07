@@ -1,0 +1,437 @@
+/* One Series Component - Figma Design Implementation */
+
+/* Main frame container - 1500px width, 561px height, 100px gap - Matching Figma */
+.one-series-frame {
+    width: 100%;
+    max-width: 1500px;
+    min-height: 561px;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Text section - 889px width, 253px height, 30px gap */
+.one-series-text-section {
+    width: 889px;
+    max-width: 889px;
+    min-height: 253px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex: 0 0 889px;
+    box-sizing: border-box;
+}
+
+/* Title "One Series" - gradient text matching Figma design */
+.one-series-title {
+    width: auto;
+    min-width: 191px;
+    height: auto;
+    min-height: 44px;
+    display: block;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 0%;
+    background: linear-gradient(0deg, rgba(0, 212, 255, 0.9) -12.5%, rgba(0, 163, 224, 0.9) 104.03%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* First paragraph - 18px, 140% line-height - Matching Figma */
+.one-series-first-paragraph {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-transform: none;
+    color: #161E2D;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: justify;
+}
+
+/* Light blue border wrapper for image - matching Figma design */
+.one-series-image-wrapper {
+    padding: 0;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 212, 255, 0.5);
+    background: #FFFFFF;
+    display: flex;
+    flex: 0 0 508px;
+    width: 508px;
+    height: 424px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Image container - 508px width, 424px height, 30px border-radius, light blue border */
+.one-series-image-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: #FFFFFF;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.one-series-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 15px;
+    display: block;
+}
+
+/* Second and third paragraphs - 18px, 200% line-height - Matching Figma */
+.one-series-content-paragraph {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 200%;
+    letter-spacing: 0%;
+    text-transform: none;
+    color: #161E2D;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: justify;
+}
+
+/* Section wrapper for content paragraphs */
+.one-series-section {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0;
+    box-sizing: border-box;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Section spacing adjustments - matching Figma */
+/* Note: Global section padding is handled by main CSS, this ensures proper spacing for one-series page */
+
+/* Responsive Design - Large Desktop */
+@media (max-width: 1600px) {
+    .one-series-frame {
+        max-width: 100%;
+        gap: 80px;
+        padding: 0 20px;
+    }
+    
+    .one-series-text-section {
+        width: 100%;
+        max-width: 889px;
+    }
+    
+    .one-series-image-wrapper {
+        width: 450px;
+        height: 375px;
+    }
+}
+
+/* Responsive Design - Desktop */
+@media (max-width: 1400px) {
+    .one-series-frame {
+        gap: 60px;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0 20px;
+        min-height: auto;
+    }
+    
+    .one-series-text-section {
+        width: 100%;
+        max-width: 700px;
+        flex: 1;
+    }
+    
+    .one-series-image-wrapper {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+        aspect-ratio: 508 / 424;
+    }
+    
+    .one-series-image-container {
+        aspect-ratio: 508 / 424;
+    }
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 992px) {
+    .one-series-frame {
+        gap: 40px;
+        min-height: auto;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+    }
+    
+    .one-series-text-section {
+        width: 100%;
+        max-width: 100%;
+        gap: 25px;
+    }
+    
+    .one-series-title {
+        font-size: 32px;
+        line-height: 40px;
+        width: auto;
+        height: auto;
+    }
+    
+    .one-series-first-paragraph,
+    .one-series-content-paragraph {
+        font-size: 16px;
+    }
+    
+    .one-series-image-wrapper {
+        width: 100%;
+        max-width: 508px;
+        height: auto;
+        aspect-ratio: 508 / 424;
+    }
+    
+    .one-series-image-container {
+        border-radius: 25px;
+    }
+    
+    section.pt-0 .layer_image.small-round-layer.border-blue {
+        border-radius: 25px;
+        padding: 8px;
+    }
+    
+    section.pt-0 .layer_content h3.text-primary {
+        font-size: 32px;
+        line-height: 40px;
+    }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 768px) {
+    .one-series-frame {
+        gap: 30px;
+    }
+    
+    .one-series-text-section {
+        gap: 20px;
+    }
+    
+    .one-series-title {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    
+    .one-series-first-paragraph,
+    .one-series-content-paragraph {
+        font-size: 15px;
+        line-height: 180%;
+    }
+    
+    .one-series-image-container {
+        border-radius: 20px;
+    }
+    
+    section.pt-0 .layer_content h3.text-primary {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    
+    section.pt-0 .layer_content .text-band p.bold-bg {
+        font-size: 16px;
+    }
+}
+
+/* Responsive Design - Small Mobile */
+@media (max-width: 576px) {
+    .one-series-frame {
+        gap: 20px;
+    }
+    
+    .one-series-text-section {
+        gap: 15px;
+    }
+    
+    .one-series-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    
+    .one-series-first-paragraph,
+    .one-series-content-paragraph {
+        font-size: 14px;
+        line-height: 160%;
+    }
+    
+    .one-series-image-container {
+        border-radius: 15px;
+    }
+}
+
+/* 90° Corner Panel Section - Matching Figma Design */
+/* Image wrapper with light blue border - matching Figma specifications */
+.one-series-corner-image-wrapper {
+    width: 100%;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 212, 255, 0.5);
+    background: #FFFFFF;
+    padding: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Image container inside wrapper */
+.one-series-corner-image-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.one-series-corner-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 20px;
+}
+
+/* Text content section for 90° corner */
+.one-series-corner-content {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+/* Title "90° corner panel options" - gradient text matching Figma */
+.one-series-corner-title {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 0%;
+    background: linear-gradient(0deg, rgba(0, 212, 255, 0.9) -12.5%, rgba(0, 163, 224, 0.9) 104.03%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Text "Internal EPS Board" - matching Figma specifications */
+.one-series-corner-text {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-transform: none;
+    color: #161E2D;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Responsive adjustments for corner section */
+@media (max-width: 992px) {
+    .one-series-corner-image-wrapper {
+        border-radius: 25px;
+        padding: 8px;
+        margin-bottom: 30px;
+    }
+    
+    .one-series-corner-image-container {
+        border-radius: 18px;
+    }
+    
+    .one-series-corner-image-container img {
+        border-radius: 18px;
+    }
+    
+    .one-series-corner-title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    
+    .one-series-corner-text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .one-series-corner-content {
+        gap: 15px;
+    }
+    
+    .one-series-corner-title {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    
+    .one-series-corner-text {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .one-series-corner-image-wrapper {
+        border-radius: 20px;
+        padding: 6px;
+    }
+    
+    .one-series-corner-image-container {
+        border-radius: 15px;
+    }
+    
+    .one-series-corner-image-container img {
+        border-radius: 15px;
+    }
+    
+    .one-series-corner-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    
+    .one-series-corner-text {
+        font-size: 14px;
+    }
+}
+

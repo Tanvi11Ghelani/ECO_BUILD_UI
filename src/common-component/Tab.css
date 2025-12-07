@@ -1,0 +1,239 @@
+/* Tab Component - Figma Design Implementation */
+
+/* ============================================
+   TAB CONTAINER - 1400px width, 101px height
+   ============================================ */
+
+.tab-container {
+  width: 100%;
+  max-width: 1400px;
+  min-height: 101px;
+  height: auto;
+  padding: 21px 110px;
+  gap: 10px;
+  border-radius: 100px;
+  background: #FFFFFF;
+  box-shadow: 0px 30px 60px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+}
+
+/* ============================================
+   TAB FRAME - 1290px width, 59px height, 31px gap
+   ============================================ */
+
+.tab-frame {
+  width: 100%;
+  max-width: 1290px;
+  min-height: 59px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 31px;
+  box-sizing: border-box;
+  row-gap: 20px;
+}
+
+/* ============================================
+   TAB BUTTON - Base styles
+   ============================================ */
+
+.tab-button {
+  height: 59px;
+  border-radius: 100px;
+  padding: 17px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+  white-space: nowrap;
+}
+
+/* Active Tab - Flexible width based on content, #345766 background */
+.tab-active {
+  min-width: 299px;
+  width: auto;
+  padding-left: 73px;
+  padding-right: 73px;
+  background: #345766;
+  color: #FFFFFF;
+}
+
+/* Inactive Tab - Flexible width based on content, #A3ABB0 background */
+.tab-inactive {
+  min-width: 300px;
+  width: auto;
+  padding-left: 106px;
+  padding-right: 106px;
+  background: #A3ABB0;
+  color: #FFFFFF;
+}
+
+/* Tab Label */
+.tab-label {
+  display: inline-block;
+  text-align: center;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+  color: inherit;
+}
+
+/* Hover effect for inactive tabs */
+.tab-inactive:hover {
+  background: #8A9399;
+  transform: translateY(-2px);
+}
+
+/* Active tab hover effect */
+.tab-active:hover {
+  background: #2A4550;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Large screens - Allow wrapping when tabs don't fit */
+/* Tabs will automatically wrap to next row if they don't fit */
+/* Container and frame heights adjust automatically */
+
+/* Tablet - Max width 1200px */
+@media (max-width: 1200px) {
+  .tab-container {
+    max-width: 100%;
+    padding: 20px 60px;
+    height: auto;
+    min-height: 101px;
+    margin-bottom: 35px;
+  }
+
+  .tab-frame {
+    max-width: 100%;
+    gap: 20px;
+    row-gap: 15px;
+    justify-content: center;
+  }
+
+  .tab-button {
+    width: auto !important;
+    min-width: 200px;
+    padding: 15px 40px;
+  }
+  
+  .tab-active,
+  .tab-inactive {
+    width: auto !important;
+    min-width: 200px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+/* Tablet Portrait - Max width 992px */
+@media (max-width: 992px) {
+  .tab-container {
+    padding: 18px 40px;
+    border-radius: 50px;
+    margin-bottom: 30px;
+  }
+
+  .tab-frame {
+    gap: 15px;
+  }
+
+  .tab-button {
+    min-width: 180px;
+    padding: 14px 35px;
+    font-size: 15px;
+  }
+  
+  .tab-active,
+  .tab-inactive {
+    width: auto !important;
+    min-width: 180px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+
+/* Mobile Landscape - Max width 768px */
+@media (max-width: 768px) {
+  .tab-container {
+    padding: 15px 30px;
+    border-radius: 40px;
+    height: auto;
+    margin-bottom: 25px;
+  }
+
+  .tab-frame {
+    flex-direction: column;
+    gap: 12px;
+    height: auto;
+  }
+
+  .tab-button {
+    width: 100% !important;
+    max-width: 100%;
+    min-width: auto;
+    padding: 14px 30px;
+  }
+}
+
+/* Mobile Portrait - Max width 576px */
+@media (max-width: 576px) {
+  .tab-container {
+    padding: 12px 20px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+  }
+
+  .tab-frame {
+    gap: 10px;
+  }
+
+  .tab-button {
+    padding: 12px 25px;
+    font-size: 14px;
+    height: 50px;
+  }
+
+  .tab-label {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+/* Extra Small Mobile - Max width 400px */
+@media (max-width: 400px) {
+  .tab-container {
+    padding: 10px 15px;
+    border-radius: 25px;
+  }
+
+  .tab-button {
+    padding: 10px 20px;
+    font-size: 13px;
+    height: 45px;
+  }
+
+  .tab-label {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+
