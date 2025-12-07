@@ -8,7 +8,7 @@ const ConstructionMethods = () => {
         <div className="breadcrumb-band">
           <div className="text-band">
             <span>{t("construction_methods")}</span>
-                    <h2>{t("Building homes also for the generations to come.")}</h2>
+                    <h2>{t("building_homes_also_for_the_generations_to_come")}</h2>
           </div>
         </div>
       </div>

@@ -1,15 +1,18 @@
 import { useTranslation } from "react-i18next";
-import Breadcrumb from '../common-component/Breadcrumb';
 
 const AboutUS = () => {
     const { t } = useTranslation();
 
     return (
         <div>
-            <Breadcrumb 
-                header={t("aboutUs.breadcrumbTitle")}
-                subHeader={t("aboutUs.breadcrumbSubtitle")}
-            />
+            <div className="container">
+                <div className="breadcrumb-band">
+                    <div className="text-band">
+                        <span>{t("aboutUs.breadcrumbTitle")}</span>
+                        <h2>{t("aboutUs.breadcrumbSubtitle")}</h2>
+                    </div>
+                </div>
+            </div>
 
             <section>
                 <div className="container">
@@ -143,9 +146,10 @@ const AboutUS = () => {
                                         <a   className="btn-primary btn-bg-dark">
                                             {t("aboutUs.cta.guideButton")}
                                         </a>
-                                        <a   className="btn-secondary">
-                                            {t("aboutUs.cta.contactButton")}
-                                        </a>
+                                       <a href="/contactus" className="btn-secondary">
+    {t("aboutUs.cta.contactButton")}
+</a>
+
                                     </div>
                                 </div>
                             </div>
