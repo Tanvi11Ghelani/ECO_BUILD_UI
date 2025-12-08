@@ -20,19 +20,19 @@ const fileCard = (href, label) => ({
   label,
 });
 
-// Table data - Test reports and certifications
-// Array of report descriptions for the documentation table
-const tableRows = [
-  "Nudura Response To Fire Classification Report No. RA11-0329 According To EU Standard NF EN 13501-1 (English).",
-  "Reaction To Fire Test Of NUDURA EPS Foam According To EU Standard NF EN ISO 11925-2 (French Version Only).",
-  "NUDURA European Classification Report No. RA11-0239 Reaction To Fire According To NF EN 13501-1 (French).",
-  "Fire Resistance Test Report EFR-15-U-0000-41 (French).",
-];
-
 // Main component - Standard And Laboratory Certifications page
 const StandardAndLaboratoryCertification = () => {
   // Translation hook for multi-language support
   const { t } = useTranslation();
+
+  // Table data - Test reports and certifications
+  // Array of report descriptions for the documentation table
+  const tableRows = [
+    t("fire_table_row_1"),
+    t("fire_table_row_2"),
+    t("fire_table_row_3"),
+    t("fire_table_row_4"),
+  ];
 
   // Render a single file card component
   // Card dimensions: 270px × 100px with 50px gap between icon and content
@@ -61,7 +61,6 @@ const StandardAndLaboratoryCertification = () => {
       <Breadcrumb 
         header={t("standard_and_laboratory_certifications")}
         subHeader={t("building_homes_also_for_the_generations_to_come")}
-
       />
 
       {/* ===== CONTENT SECTION ===== */}
@@ -76,9 +75,7 @@ const StandardAndLaboratoryCertification = () => {
         
         {/* Description Text - 1720px width, 114px height */}
         <p className="description-text">
-          {t(
-            "nudura_products_have_been_tested_and_approved_to_ensure_they_meet_western_standards_as_well_as_the_following_european_standards"
-          )}
+          {t("nudura_products_tested_description")}
         </p>
 
         {/* Subsection: Explosion Resistance Test */}
@@ -122,14 +119,13 @@ const StandardAndLaboratoryCertification = () => {
         {/* Text Container - 1720px × 114px */}
         <div className="video-text-container">
           {/* Video Title - 24px Bold, #345766 color, 44px line-height */}
-          {/* Split into two parts as per Figma */}
           <h3 className="video-title">
-            Video Of A 50 Pound Military TNT Explosion Resistance Test (Approximately 23 Kg) Conducted By The I. C. F. World Organization For The US Army.
+            {t("video_title_tnt_explosion")}
           </h3>
           
           {/* Video Subtitle - 18px SemiBold, #161E2D color */}
           <p className="video-subtitle">
-            Insulating Concrete Forms As A Blast Resistant Building Material Force Protection Equipment Demonstration Quantico Marine Corps Base
+            {t("video_subtitle_icf")}
           </p>
         </div>
 
@@ -144,7 +140,7 @@ const StandardAndLaboratoryCertification = () => {
             {renderFileCard(
               fileCard(
                 "#",
-                "Europe - through the British Board of Agrément (BBA).pdf"
+                t("file_europe_bba")
               )
             )}
           </div>
@@ -171,7 +167,7 @@ const StandardAndLaboratoryCertification = () => {
         {/* Text Container - 1720px × 79px, 100px gap */}
         <div className="etag-text-container">
           <h4 className="etag-title">
-            ETAG 009 Guideline For European Technical Approval For Kits/Systems Of Fixed Formwork For Partition Walls Based On Hollow Blocks Or Slabs Of Insulating Material And Sometimes Concrete.
+            {t("etag_009_guideline")}
           </h4>
         </div>
 
@@ -186,13 +182,13 @@ const StandardAndLaboratoryCertification = () => {
             {renderFileCard(
               fileCard(
                 "#",
-                "United Kingdom – ECTA/ETAG 009 standard compliance certificate.pdf"
+                t("file_uk_etag_compliance")
               )
             )}
             {renderFileCard(
               fileCard(
                 "#",
-                "ISO 9001:2008 certification.pdf"
+                t("file_iso_9001_certification")
               )
             )}
           </div>
@@ -204,7 +200,7 @@ const StandardAndLaboratoryCertification = () => {
       <section className="fire-level-section">
         {/* Title - 243px × 44px, 36px ExtraBold, gradient color */}
         <div className="fire-level-title-container">
-          <h3 className="fire-level-title">Fire Level E</h3>
+          <h3 className="fire-level-title">{t("fire_level_e")}</h3>
         </div>
 
         {/* Data Table - 1700px × 412px, 30px border-radius, 1px black border, shadow */}
@@ -248,7 +244,7 @@ const StandardAndLaboratoryCertification = () => {
       <section className="british-psi-section">
         {/* Title - 36px ExtraBold, gradient color */}
         <div className="british-psi-title-container">
-          <h3 className="british-psi-title">British Psi Certifications</h3>
+          <h3 className="british-psi-title">{t("british_psi_certifications")}</h3>
         </div>
 
         {/* Data Table - 1700px width, 30px border-radius, 1px black border, shadow */}
@@ -262,49 +258,49 @@ const StandardAndLaboratoryCertification = () => {
               </tr>
               {/* Table Rows - British Psi certifications */}
               <tr className="table-data-row">
-                <td className="table-data-cell">NUDURA British Psi Approvals Standard Block</td>
+                <td className="table-data-cell">{t("british_psi_standard_block")}</td>
                 <td className="table-data-cell table-file-cell">
                   <div className="table-file-link">
                     <a href="#" onClick={(e)=>e.preventDefault()}>
                       <div className="file-icon">
                         <img src={pdf} alt={t("zip_icon")} />
                       </div>
-                      <span className="file-label">ZIP</span>
+                      <span className="file-label">{t("zip")}</span>
                       <img src={download} alt={t("download")} className="download-icon" />
                     </a>
                   </div>
                 </td>
               </tr>
               <tr className="table-data-row">
-                <td className="table-data-cell">NUDURA British Psi Approvals +25 Mm.</td>
+                <td className="table-data-cell">{t("british_psi_25mm")}</td>
                 <td className="table-data-cell table-file-cell">
                   <div className="table-file-link">
                     <a href="#" onClick={(e)=>e.preventDefault()}>
                       <div className="file-icon">
                         <img src={pdf} alt={t("zip_icon")} />
                       </div>
-                      <span className="file-label">ZIP</span>
+                      <span className="file-label">{t("zip")}</span>
                       <img src={download} alt={t("download")} className="download-icon" />
                     </a>
                   </div>
                 </td>
               </tr>
               <tr className="table-data-row">
-                <td className="table-data-cell">NUDURA British Psi Approvals +102 Mm.</td>
+                <td className="table-data-cell">{t("british_psi_102mm")}</td>
                 <td className="table-data-cell table-file-cell">
                   <div className="table-file-link">
                     <a href="#" onClick={(e)=>e.preventDefault()}>
                       <div className="file-icon">
                         <img src={pdf} alt={t("zip_icon")} />
                       </div>
-                      <span className="file-label">ZIP</span>
+                      <span className="file-label">{t("zip")}</span>
                       <img src={download} alt={t("download")} className="download-icon" />
                     </a>
                   </div>
                 </td>
               </tr>
               <tr className="table-data-row">
-                <td className="table-data-cell">NUDURA European Classification Report No. RA11-0239 Reaction To Fire According To NF EN 13501-1 (French).</td>
+                <td className="table-data-cell">{t("fire_table_row_3")}</td>
                 <td className="table-data-cell table-file-cell">
                   <div className="table-file-link">
                     <a href="#" onClick={(e)=>e.preventDefault()}>
@@ -318,14 +314,14 @@ const StandardAndLaboratoryCertification = () => {
                 </td>
               </tr>
               <tr className="table-data-row">
-                <td className="table-data-cell">NUDURA British Psi Approvals +152 Mm.</td>
+                <td className="table-data-cell">{t("british_psi_152mm")}</td>
                 <td className="table-data-cell table-file-cell">
                   <div className="table-file-link">
                     <a href="#" onClick={(e)=>e.preventDefault()}>
                       <div className="file-icon">
                         <img src={pdf} alt={t("zip_icon")} />
                       </div>
-                      <span className="file-label">ZIP</span>
+                      <span className="file-label">{t("zip")}</span>
                       <img src={download} alt={t("download")} className="download-icon" />
                     </a>
                   </div>
@@ -340,7 +336,7 @@ const StandardAndLaboratoryCertification = () => {
       <section className="psi-approval-section">
         {/* Title - 36px ExtraBold, gradient color */}
         <div className="psi-approval-title-container">
-          <h3 className="psi-approval-title">Psi approval</h3>
+          <h3 className="psi-approval-title">{t("psi_approval")}</h3>
         </div>
 
         {/* Data Table - 1700px width, 30px border-radius, 1px border, shadow */}
@@ -354,70 +350,70 @@ const StandardAndLaboratoryCertification = () => {
               </tr>
               {/* Table Rows - Psi approval certifications */}
               <tr className="table-data-row">
-                <td className="table-data-cell">NUDURA Psi Approvals For PHPP (Passive House Design Package) Standard Block</td>
+                <td className="table-data-cell">{t("psi_phpp_standard_block")}</td>
                 <td className="table-data-cell table-file-cell">
                   <div className="table-file-link">
                     <a href="#" onClick={(e)=>e.preventDefault()}>
                       <div className="file-icon">
                         <img src={pdf} alt={t("zip_icon")} />
                       </div>
-                      <span className="file-label">ZIP</span>
+                      <span className="file-label">{t("zip")}</span>
                       <img src={download} alt={t("download")} className="download-icon" />
                     </a>
                   </div>
                 </td>
               </tr>
               <tr className="table-data-row">
-                <td className="table-data-cell">NUDURA Psi Approvals For PHPP +25 Mm.</td>
+                <td className="table-data-cell">{t("psi_phpp_25mm")}</td>
                 <td className="table-data-cell table-file-cell">
                   <div className="table-file-link">
                     <a href="#" onClick={(e)=>e.preventDefault()}>
                       <div className="file-icon">
                         <img src={pdf} alt={t("zip_icon")} />
                       </div>
-                      <span className="file-label">ZIP</span>
+                      <span className="file-label">{t("zip")}</span>
                       <img src={download} alt={t("download")} className="download-icon" />
                     </a>
                   </div>
                 </td>
               </tr>
               <tr className="table-data-row">
-                <td className="table-data-cell">NUDURA Psi Approvals For PHPP +51 Mm.</td>
+                <td className="table-data-cell">{t("psi_phpp_51mm")}</td>
                 <td className="table-data-cell table-file-cell">
                   <div className="table-file-link">
                     <a href="#" onClick={(e)=>e.preventDefault()}>
                       <div className="file-icon">
                         <img src={pdf} alt={t("zip_icon")} />
                       </div>
-                      <span className="file-label">ZIP</span>
+                      <span className="file-label">{t("zip")}</span>
                       <img src={download} alt={t("download")} className="download-icon" />
                     </a>
                   </div>
                 </td>
               </tr>
               <tr className="table-data-row">
-                <td className="table-data-cell">NUDURA Psi Approvals For PHPP +102 Mm.</td>
+                <td className="table-data-cell">{t("psi_phpp_102mm")}</td>
                 <td className="table-data-cell table-file-cell">
                   <div className="table-file-link">
                     <a href="#" onClick={(e)=>e.preventDefault()}>
                       <div className="file-icon">
                         <img src={pdf} alt={t("zip_icon")} />
                       </div>
-                      <span className="file-label">ZIP</span>
+                      <span className="file-label">{t("zip")}</span>
                       <img src={download} alt={t("download")} className="download-icon" />
                     </a>
                   </div>
                 </td>
               </tr>
               <tr className="table-data-row">
-                <td className="table-data-cell">NUDURA Psi Approvals For PHPP +152 Mm.</td>
+                <td className="table-data-cell">{t("psi_phpp_152mm")}</td>
                 <td className="table-data-cell table-file-cell">
                   <div className="table-file-link">
                     <a href="#" onClick={(e)=>e.preventDefault()}>
                       <div className="file-icon">
                         <img src={pdf} alt={t("zip_icon")} />
                       </div>
-                      <span className="file-label">ZIP</span>
+                      <span className="file-label">{t("zip")}</span>
                       <img src={download} alt={t("download")} className="download-icon" />
                     </a>
                   </div>
@@ -432,16 +428,16 @@ const StandardAndLaboratoryCertification = () => {
       <section className="standard-tests-section">
         {/* Section Title */}
         <h3 className="section-title">
-          Standard Tests And Certifications
+          {t("standard_tests_and_certifications")}
         </h3>
         
         {/* Introductory Text */}
         <p className="description-text">
-          NUDURA Products Have Been Tested And Approved To Comply With The Following European Standards: ETAG 009 Guideline For European Technical Approval For Kits/Systems Of Fixed Formwork For Partition Walls Based On Hollow Blocks Or Slabs Of Insulating Material And Sometimes Concrete.
+          {t("nudura_products_tested_etag_description")}
         </p>
 
         {/* European Approvals Subsection */}
-        <h4 className="subsection-title">European Approvals</h4>
+        <h4 className="subsection-title">{t("european_approvals")}</h4>
         <div className="file-attachments-section">
           <div>
             <span className="file-attachments-title">
@@ -452,14 +448,14 @@ const StandardAndLaboratoryCertification = () => {
             {renderFileCard(
               fileCard(
                 "#",
-                "European International ETA 07 0034 (BBA).pdf"
+                t("file_european_eta")
               )
             )}
           </div>
         </div>
 
         {/* National Approvals Subsection */}
-        <h4 className="subsection-title" style={{ marginTop: '40px' }}>National Approvals</h4>
+        <h4 className="subsection-title" style={{ marginTop: '40px' }}>{t("national_approvals")}</h4>
         <div className="file-attachments-section">
           <div>
             <span className="file-attachments-title">
@@ -470,19 +466,19 @@ const StandardAndLaboratoryCertification = () => {
             {renderFileCard(
               fileCard(
                 "#",
-                "France CSTB DTA 16 09-581.pdf"
+                t("file_france_cstb")
               )
             )}
             {renderFileCard(
               fileCard(
                 "#",
-                "Technion approval.pdf"
+                t("file_technion_approval")
               )
             )}
             {renderFileCard(
               fileCard(
                 "#",
-                "Fire resistance standard 755.pdf"
+                t("file_fire_resistance_755")
               )
             )}
           </div>
@@ -493,11 +489,11 @@ const StandardAndLaboratoryCertification = () => {
       <section className="conformity-466-section">
         {/* Section Title */}
         <h3 className="section-title">
-          Conformity To Standard 466 Concrete Reinforcement Test Reports
+          {t("conformity_standard_466")}
         </h3>
 
         {/* STC Rating Reports Subsection */}
-        <h4 className="subsection-title">STC (Sound Insulation Rating) Rating Reports</h4>
+        <h4 className="subsection-title">{t("stc_rating_reports")}</h4>
         <div className="file-attachments-section">
           <div>
             <span className="file-attachments-title">
@@ -508,20 +504,20 @@ const StandardAndLaboratoryCertification = () => {
             {renderFileCard(
               fileCard(
                 "#",
-                "STC 4-inch report September 2003.pdf"
+                t("file_stc_4inch")
               )
             )}
             {renderFileCard(
               fileCard(
                 "#",
-                "6 Inch STC Report | Letter on Predicting Acoustical Insulation Performance.pdf"
+                t("file_stc_6inch")
               )
             )}
           </div>
         </div>
 
         {/* Fire Resistance Rating Subsection */}
-        <h4 className="subsection-title" style={{ marginTop: '40px' }}>Fire Resistance Rating</h4>
+        <h4 className="subsection-title" style={{ marginTop: '40px' }}>{t("fire_resistance_rating")}</h4>
         <div className="file-attachments-section">
           <div>
             <span className="file-attachments-title">
@@ -532,20 +528,20 @@ const StandardAndLaboratoryCertification = () => {
             {renderFileCard(
               fileCard(
                 "#",
-                "NUDURA Canada Fire Resistance Rating.pdf"
+                t("file_nudura_canada_fire")
               )
             )}
             {renderFileCard(
               fileCard(
                 "#",
-                "NUDURA USA Resistance Rating.pdf"
+                t("file_nudura_usa_fire")
               )
             )}
           </div>
         </div>
 
         {/* Capacity And Structural Stability Testing Subsection */}
-        <h4 className="subsection-title" style={{ marginTop: '40px' }}>Capacity And Structural Stability Testing</h4>
+        <h4 className="subsection-title" style={{ marginTop: '40px' }}>{t("capacity_structural_stability")}</h4>
         <div className="file-attachments-section">
           <div>
             <span className="file-attachments-title">
@@ -556,20 +552,20 @@ const StandardAndLaboratoryCertification = () => {
             {renderFileCard(
               fileCard(
                 "#",
-                "NUDURA Molds Capacity Test.pdf"
+                t("file_nudura_molds_capacity")
               )
             )}
             {renderFileCard(
               fileCard(
                 "#",
-                "NUDURA Curbstone Capacitance Test.pdf"
+                t("file_nudura_curbstone")
               )
             )}
           </div>
         </div>
 
         {/* Thermal Barrier Test Subsection */}
-        <h4 className="subsection-title" style={{ marginTop: '40px' }}>Thermal Barrier Test</h4>
+        <h4 className="subsection-title" style={{ marginTop: '40px' }}>{t("thermal_barrier_test")}</h4>
         <div className="file-attachments-section">
           <div>
             <span className="file-attachments-title">
@@ -580,20 +576,20 @@ const StandardAndLaboratoryCertification = () => {
             {renderFileCard(
               fileCard(
                 "#",
-                "NUDURA Thermal Barrier Test Canada.pdf"
+                t("file_thermal_barrier_canada")
               )
             )}
             {renderFileCard(
               fileCard(
                 "#",
-                "NUDURA Thermal Barrier Test USA.pdf"
+                t("file_thermal_barrier_usa")
               )
             )}
           </div>
         </div>
 
         {/* Vapor Permeability Subsection */}
-        <h4 className="subsection-title" style={{ marginTop: '40px' }}>Vapor Permeability</h4>
+        <h4 className="subsection-title" style={{ marginTop: '40px' }}>{t("vapor_permeability")}</h4>
         <div className="file-attachments-section">
           <div>
             <span className="file-attachments-title">
@@ -604,26 +600,26 @@ const StandardAndLaboratoryCertification = () => {
             {renderFileCard(
               fileCard(
                 "#",
-                "NUDURA Vapor Permeability Canada.pdf"
+                t("file_vapor_canada")
               )
             )}
             {renderFileCard(
               fileCard(
                 "#",
-                "NUDURA Vapor Permeability USA.pdf"
+                t("file_vapor_usa")
               )
             )}
             {renderFileCard(
               fileCard(
                 "#",
-                "NUDURA Vapor Permeability - Testing.pdf"
+                t("file_vapor_testing")
               )
             )}
           </div>
         </div>
 
         {/* Thermal Resistance Subsection */}
-        <h4 className="subsection-title" style={{ marginTop: '40px' }}>Thermal Resistance</h4>
+        <h4 className="subsection-title" style={{ marginTop: '40px' }}>{t("thermal_resistance")}</h4>
         <div className="file-attachments-section">
           <div>
             <span className="file-attachments-title">
@@ -634,14 +630,14 @@ const StandardAndLaboratoryCertification = () => {
             {renderFileCard(
               fileCard(
                 "#",
-                "NUDURA Thermal Resistance Whole Wall.pdf"
+                t("file_thermal_resistance_wall")
               )
             )}
           </div>
         </div>
 
         {/* NUDURA Tensile Stress Mesh Subsection */}
-        <h4 className="subsection-title" style={{ marginTop: '40px' }}>NUDURA Tensile Stress Mesh</h4>
+        <h4 className="subsection-title" style={{ marginTop: '40px' }}>{t("nudura_tensile_stress_mesh")}</h4>
         <div className="file-attachments-section">
           <div>
             <span className="file-attachments-title">
@@ -652,7 +648,7 @@ const StandardAndLaboratoryCertification = () => {
             {renderFileCard(
               fileCard(
                 "#",
-                "NUDURA Tensile Stress Test Homes.pdf"
+                t("file_tensile_stress_homes")
               )
             )}
           </div>

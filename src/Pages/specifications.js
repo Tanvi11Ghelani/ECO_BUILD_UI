@@ -17,7 +17,7 @@ const Specifications = () =>{
                         <div className="col-md-12">
                             <div className="layer_content p-0">
                                 <h3 className="text-primary mb-5">{t('specifications')}</h3>
-                                <h6 className="mb-0 mt-5 mb-4 font-bg-700">{t('this_information_is_intended_to_provide_the_architect_and_engineer_with_a_quick_and_convenient_introduction_to_the_nudura_wall_system')}</h6>
+                                <h6 className="mb-0 mt-5 mb-4 font-bg-700">{t('this_information_is_intended_to_provide')}</h6>
                             </div>
                             <h6 className="mb-3 mt-5 ">{t('file_attachments')}</h6>
                             <div className="file-list">

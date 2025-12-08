@@ -7,8 +7,8 @@ const CatalogForDirectDownload = () => {
     return(
         <div>
             <Breadcrumb 
-                header={t("Information Center")}
-                subHeader={t("Building homes also for the generations to come.")}
+                header={t("information_center")}
+                subHeader={t("building_homes_also_for_the_generations_to_come")}
             />
 
 
@@ -16,7 +16,7 @@ const CatalogForDirectDownload = () => {
 
         <section>
             <div className="container">
-                <h3 className="text-primary mb-5 text-center">{t("Catalog For Direct Viewing")}</h3>
+                <h3 className="text-primary mb-5 text-center">{t("catalog_for_direct_viewing")}</h3>
 
                 <div className="pdf-viewer-band">
                     <iframe src={pdf} width="100%" height="100%" style={{border: "none"}}
