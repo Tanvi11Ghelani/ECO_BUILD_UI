@@ -35,11 +35,11 @@ import './the-combined-series.css';
 
 
 
-const TheCombinedSeries = () =>{
+const TheCombinedSeries = () => {
     const { t } = useTranslation();
     return (
         <div className="the-combined-series">
-            <Breadcrumb 
+            <Breadcrumb
                 header={t('the_combined_series')}
                 subHeader={t('building_homes_also_for_the_generations_to_come')}
             />
@@ -69,10 +69,10 @@ const TheCombinedSeries = () =>{
                     </ul>
                 </div>
                 <div className="tab-content" id="pills-tabContent">
-                    
+
                     <div className="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
                         tabindex="0">
-                        
+
                         <section className="white-bg">
                             <div className="container">
                                 <div className="card gredient-card bg-primary-gradient">
@@ -84,23 +84,23 @@ const TheCombinedSeries = () =>{
                             </div>
                         </section>
                     </div>
-                    
+
                     <div className="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
                         tabindex="0">
-                        
+
                         <section className="white-bg">
                             <div className="container">
                                 <div className="card gredient-card bg-primary-gradient">
                                     <div className="text-band text-left">
                                         <div className="img-head">
-                                            <img alt=""src={hydroScaled} />
+                                            <img alt="" src={hydroScaled} />
                                         </div>
                                         <h6 className="text-white">{t('hydrofoam_offers_installers_a_highly_dense_yet_lightweight_expanded_polystyrene_eps_product_used_as_insulation_for_underfloor_heating_hydrofoam_is_easy_to_cut_to_any_desired_angle_or_radius_increasing_installation_speed')}</h6>
                                     </div>
                                 </div>
                             </div>
                         </section>
-                        
+
                         <section className="pt-0">
                             <div className="container">
                                 <div className="ab-info-band">
@@ -122,11 +122,11 @@ const TheCombinedSeries = () =>{
                                             <a href="EcoBuildPdf/Product/Combined Series/Heated floor technology (hydrofoam)/hydrofoam_520_compressed.pdf"
                                                 target="_blank" download>
                                                 <div className="file-icon-band">
-                                                    <img alt=""src={pdfFile} />
+                                                    <img alt="" src={pdfFile} />
                                                 </div>
                                                 <div className="file-name-band">
                                                     <p>{t('hydrofoam_520_compressed_pdf')}</p>
-                                                    <span className="small-icon"><img alt=""src={downloadIcon} /></span>
+                                                    <span className="small-icon"><img alt="" src={downloadIcon} /></span>
                                                 </div>
                                             </a>
                                         </div>
@@ -135,7 +135,7 @@ const TheCombinedSeries = () =>{
                             </div>
                         </section>
 
-                        
+
                         <section className="pt-0">
                             <div className="container">
                                 <div className="full-video-card">
@@ -151,7 +151,7 @@ const TheCombinedSeries = () =>{
                             </div>
                         </section>
 
-                        
+
                         <section className="pt-0">
                             <div className="container">
                                 <div className="titile-band">
@@ -162,7 +162,7 @@ const TheCombinedSeries = () =>{
                                         <div className="card icon-top-primary-card">
                                             <div className="icon-card top-icon-band">
                                                 <div className="icon-band">
-                                                    <img alt=""src={insulationUnder} />
+                                                    <img alt="" src={insulationUnder} />
                                                 </div>
                                             </div>
                                             <div className="text-band">
@@ -174,7 +174,7 @@ const TheCombinedSeries = () =>{
                                         <div className="card icon-top-primary-card">
                                             <div className="icon-card top-icon-band">
                                                 <div className="icon-band">
-                                                    <img alt=""src={quickInstallation} />
+                                                    <img alt="" src={quickInstallation} />
                                                 </div>
                                             </div>
                                             <div className="text-band">
@@ -186,7 +186,7 @@ const TheCombinedSeries = () =>{
                                         <div className="card icon-top-primary-card">
                                             <div className="icon-card top-icon-band">
                                                 <div className="icon-band">
-                                                    <img alt=""src={insulationPanels} />
+                                                    <img alt="" src={insulationPanels} />
                                                 </div>
                                             </div>
                                             <div className="text-band">
@@ -198,7 +198,7 @@ const TheCombinedSeries = () =>{
                                         <div className="card icon-top-primary-card">
                                             <div className="icon-card top-icon-band">
                                                 <div className="icon-band">
-                                                    <img alt=""src={multiDirectional} />
+                                                    <img alt="" src={multiDirectional} />
                                                 </div>
                                             </div>
                                             <div className="text-band">
@@ -210,7 +210,7 @@ const TheCombinedSeries = () =>{
                                         <div className="card icon-top-primary-card">
                                             <div className="icon-card top-icon-band">
                                                 <div className="icon-band">
-                                                    <img alt=""src={interlockOverlaps}/>
+                                                    <img alt="" src={interlockOverlaps} />
                                                 </div>
                                             </div>
                                             <div className="text-band">
@@ -222,7 +222,7 @@ const TheCombinedSeries = () =>{
                                         <div className="card icon-top-primary-card">
                                             <div className="icon-card top-icon-band">
                                                 <div className="icon-band">
-                                                    <img alt=""src={excellentPerformance} />
+                                                    <img alt="" src={excellentPerformance} />
                                                 </div>
                                             </div>
                                             <div className="text-band">
@@ -235,7 +235,7 @@ const TheCombinedSeries = () =>{
                                         <div className="card icon-top-primary-card">
                                             <div className="icon-card top-icon-band">
                                                 <div className="icon-band">
-                                                    <img alt=""src={mmBoard} />
+                                                    <img alt="" src={mmBoard} />
                                                 </div>
                                             </div>
                                             <div className="text-band">
@@ -247,7 +247,7 @@ const TheCombinedSeries = () =>{
                                         <div className="card icon-top-primary-card">
                                             <div className="icon-card top-icon-band">
                                                 <div className="icon-band">
-                                                    <img alt=""src={lightweightWork1} />
+                                                    <img alt="" src={lightweightWork1} />
                                                 </div>
                                             </div>
                                             <div className="text-band">
@@ -259,7 +259,7 @@ const TheCombinedSeries = () =>{
                                         <div className="card icon-top-primary-card">
                                             <div className="icon-card top-icon-band">
                                                 <div className="icon-band">
-                                                    <img alt=""src={lightweightWork2} />
+                                                    <img alt="" src={lightweightWork2} />
                                                 </div>
                                             </div>
                                             <div className="text-band">
@@ -271,7 +271,7 @@ const TheCombinedSeries = () =>{
                                         <div className="card icon-top-primary-card">
                                             <div className="icon-card top-icon-band">
                                                 <div className="icon-band">
-                                                    <img alt=""src={recyclable} />
+                                                    <img alt="" src={recyclable} />
                                                 </div>
                                             </div>
                                             <div className="text-band">
@@ -283,7 +283,7 @@ const TheCombinedSeries = () =>{
                                         <div className="card icon-top-primary-card">
                                             <div className="icon-card top-icon-band">
                                                 <div className="icon-band">
-                                                    <img alt=""src={waterResistant} />
+                                                    <img alt="" src={waterResistant} />
                                                 </div>
                                             </div>
                                             <div className="text-band">
@@ -300,48 +300,48 @@ const TheCombinedSeries = () =>{
                             </div>
                         </section>
 
-                        
+
                         <section className="pt-0">
                             <div className="container">
                                 <div className="row g-4">
                                     <div className="col-sm-6 col-md-6 col-lg-4 col-xl-4">
                                         <div className="gallery-img-card">
-                                            <img alt=""src={gallery1} />
+                                            <img alt="" src={gallery1} />
                                         </div>
                                     </div>
                                     <div className="col-sm-6 col-md-6 col-lg-4 col-xl-4">
                                         <div className="gallery-img-card">
-                                            <img alt=""src={gallery2} />
+                                            <img alt="" src={gallery2} />
                                         </div>
                                     </div>
                                     <div className="col-sm-6 col-md-6 col-lg-4 col-xl-4">
                                         <div className="gallery-img-card">
-                                            <img alt=""src={gallery3} />
+                                            <img alt="" src={gallery3} />
                                         </div>
                                     </div>
                                     <div className="col-sm-6 col-md-6 col-lg-4 col-xl-4">
                                         <div className="gallery-img-card">
-                                            <img alt=""src={gallery4} />
+                                            <img alt="" src={gallery4} />
                                         </div>
                                     </div>
                                     <div className="col-sm-6 col-md-6 col-lg-4 col-xl-4">
                                         <div className="gallery-img-card">
-                                            <img alt=""src={gallery5} />
+                                            <img alt="" src={gallery5} />
                                         </div>
                                     </div>
                                     <div className="col-sm-6 col-md-6 col-lg-4 col-xl-4">
                                         <div className="gallery-img-card">
-                                            <img alt=""src={gallery6} />
+                                            <img alt="" src={gallery6} />
                                         </div>
                                     </div>
                                     <div className="col-sm-6 col-md-6 col-lg-4 col-xl-4">
                                         <div className="gallery-img-card">
-                                            <img alt=""src={gallery7} />
+                                            <img alt="" src={gallery7} />
                                         </div>
                                     </div>
                                     <div className="col-sm-6 col-md-6 col-lg-4 col-xl-4">
                                         <div className="gallery-img-card">
-                                            <img alt=""src={gallery8} />
+                                            <img alt="" src={gallery8} />
                                         </div>
                                     </div>
                                 </div>
@@ -349,16 +349,16 @@ const TheCombinedSeries = () =>{
                         </section>
 
                     </div>
-                    
+
                     <div className="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
                         tabindex="0">
-                        
+
                         <section className="white-bg">
                             <div className="container">
                                 <div className="card gredient-card bg-primary-gradient">
                                     <div className="text-band text-left">
                                         <div className="img-head">
-                                            <img alt=""src={homega} />
+                                            <img alt="" src={homega} />
                                         </div>
                                         <h6 className="text-white">{t('nudura_retrofit_technology_is_an_easy_to_use_solution_for_interior_or_exterior_insulation_for_solid_or_cavity_walls')}</h6>
                                     </div>
@@ -366,7 +366,7 @@ const TheCombinedSeries = () =>{
                             </div>
                         </section>
 
-                        
+
                         <section className="pt-0">
                             <div className="container">
                                 <div className="row align-items-center">
@@ -388,7 +388,7 @@ const TheCombinedSeries = () =>{
 
                                     <div className="col-md-4">
                                         <div className="layer_image small-round-layer border border-blue">
-                                            <img alt=""src={ceilingTechnology} />
+                                            <img alt="" src={ceilingTechnology} />
                                         </div>
 
                                     </div>
@@ -397,7 +397,7 @@ const TheCombinedSeries = () =>{
                             </div>
                         </section>
 
-                        
+
                         <section className="pt-0">
                             <div className="container">
                                 <div className="file-attachments-band">
@@ -407,11 +407,11 @@ const TheCombinedSeries = () =>{
                                             <a href="EcoBuildPdf/Product/Combined Series/Ceiling technology(Homega)/hydrofoam_520_compressed.pdf"
                                                 target="_blank" download>
                                                 <div className="file-icon-band">
-                                                    <img alt=""src={pdfFile} />
+                                                    <img alt="" src={pdfFile} />
                                                 </div>
                                                 <div className="file-name-band">
                                                     <p>{t('01_homega_520_pdf')}</p>
-                                                    <span className="small-icon"><img alt=""src={downloadIcon} /></span>
+                                                    <span className="small-icon"><img alt="" src={downloadIcon} /></span>
                                                 </div>
                                             </a>
                                         </div>
@@ -420,7 +420,7 @@ const TheCombinedSeries = () =>{
                             </div>
                         </section>
 
-                        
+
                         <section className="pt-0">
                             <div className="container">
                                 <div className="full-video-card mb-5">
@@ -450,16 +450,16 @@ const TheCombinedSeries = () =>{
                             </div>
                         </section>
                     </div>
-                    
+
                     <div className="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab"
                         tabindex="0">
-                        
+
                         <section className="white-bg">
                             <div className="container">
                                 <div className="card gredient-card bg-primary-gradient">
                                     <div className="text-band text-left">
                                         <div className="img-head">
-                                            <img alt=""src={thermofoam} />
+                                            <img alt="" src={thermofoam} />
                                         </div>
                                         <h6 className="text-white">{t('nudura_ceiling_and_floor_technology_complements_the_building_envelope_and_maximizes_the_energy_efficiency_of_the_home_a_fast_economical_high_performance_insulation_solution_for_upgrading_uninsulated_floors_and_ceilings_in_homes_garages_and_cottages')}</h6>
                                     </div>
@@ -467,14 +467,14 @@ const TheCombinedSeries = () =>{
                             </div>
                         </section>
 
-                        
+
                         <section className="pt-0">
                             <div className="container">
                                 <div className="row align-items-center">
                                     <div className="col-md-8">
                                         <div className="layer_content p-0">
                                             <h3 className="text-primary">{t('flooring_technology')}</h3>
-                                            <h6 className="mb-0 mt-3 mb-4">{t('nudura_floor_technology')}</h6>
+                                            <h6 className="mb-0 mt-3 mb-4" style={{ fontSize: "22px" }}>{t('nudura_floor_technology')}</h6>
                                             <p className="pb-3">{t('the_floor_is_often_the_most_neglected_area_of_the_home_in_terms_of_insulation_a_floor_insulated_with_nudura_floor_technology_complements_the_building_envelope_and_increases_the_comfort_and_energy_efficiency_of_the_home_nudura_floor_technology_offers')}</p>
                                             <ul className="details-list">
                                                 <li>{t('an_economical_layer_of_protection_against_cold_transmission_from_the_ground')}</li>
@@ -490,7 +490,7 @@ const TheCombinedSeries = () =>{
 
                                     <div className="col-md-4">
                                         <div className="layer_image small-round-layer border border-blue">
-                                            <img alt=""src={flooringTechnology} />
+                                            <img alt="" src={flooringTechnology} />
                                         </div>
 
                                     </div>
@@ -499,7 +499,7 @@ const TheCombinedSeries = () =>{
                             </div>
                         </section>
 
-                        
+
                         <section className="pt-0">
                             <div className="container">
                                 <div className="file-attachments-band p-0">
@@ -509,11 +509,11 @@ const TheCombinedSeries = () =>{
                                             <a href="EcoBuildPdf/Product/Combined Series/Flooring technology(thermofoam)/thermofoam_520_compressed.pdf"
                                                 target="_blank" download>
                                                 <div className="file-icon-band">
-                                                    <img alt=""src={pdfFile} />
+                                                    <img alt="" src={pdfFile} />
                                                 </div>
                                                 <div className="file-name-band">
                                                     <p>{t('thermofoam_520_compressed_pdf')}</p>
-                                                    <span className="small-icon"><img alt=""src={downloadIcon} /></span>
+                                                    <span className="small-icon"><img alt="" src={downloadIcon} /></span>
                                                 </div>
                                             </a>
                                         </div>
@@ -522,7 +522,7 @@ const TheCombinedSeries = () =>{
                             </div>
                         </section>
 
-                        
+
                         <section className="pt-0">
                             <div className="container">
                                 <div className="ab-info-band">

@@ -142,7 +142,7 @@
   "opentime": "שעות פתיחה:",
   "monday_friday_09_00_17_00": "יום שני - יום שישי: 09:00-17:00",
   "saturday_sunday_09_00_14_00": "יום שבת - יום ראשון: 09:00 - 14:00",
-  "follow_us":"עקבו אחרינו:",
+  "follow_us": "עקבו אחרינו:",
   "early_design_criteria": "קריטריוני תכנון מוקדמים",
   "below_the_construction_slope": "מתחת לשיפוע הבנייה",
   "flammable_construction": "בנייה דליקה",
@@ -883,5 +883,10 @@
   "powered_by": "מופעל על ידי",
   "write_a_message": "כתוב הודעה...",
   "error_message": "סליחה, נתקלתי בבעיה. אנא נסה שוב.",
-  "assistant_is_typing": "העוזר מקליד..."
+  "assistant_is_typing": "העוזר מקליד...",
+  "specifications": "מפרטים",
+  "building_homes_also_for_the_generations_to_come": "בניית בתים גם לדורות הבאים",
+  "this_information_is_intended_to_provide_the_architect_and_engineer_with_a_quick_and_convenient_introduction_to_the_nudura_wall_system": "מידע זה נועד לספק לאדריכל ולמהנדס היכרות מהירה ונוחה עם מערכת הקירות של Nudura.",
+  "file_attachments": "קבצים מצורפים",
+  "specification_in_10_chapters_pdf": "מפרט ב־10 פרקים (PDF)"
 }

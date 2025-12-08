@@ -24,7 +24,7 @@
   "write_about_us_in_the_press": "اكتب عنا في الصحافة",
   "broadcast_news": "أخبار البث",
   "frequently_asked_questions_about_nudura_ecobuild": "الأسئلة الشائعة حول NUDURA ECOBUILD",
-  "icf":"آي سي إف",
+  "icf": "آي سي إف",
   "nudura_combined_series": "سلسلة NUDURA المجمعة",
   "retrofit_insulation_technology": "تقنية العزل التحديثية RETROFIT",
   "advanced_construction_methods": "طرق البناء المتقدمة",
@@ -916,5 +916,10 @@
   "one_series_one_sided_form_the_one1_series_saves_labor_costs_by_eliminating_the_need_to_strip_foam_from_elevator_shafts_stairwells_and_other_areas_that_do_not_require_foam_the_one_series_gives_architects_more_flexibility_in_designing_educational_buildings_and_multi_story_warehouses_for_homebuilders_the_one_series_is_ideal_for_swimming_pools_and_other_applications_that_require_foam_on_only_one_side_the_transition_from_concrete_to_foam_is_seamless_and_nudura_s_unique_design_allows_the_concrete_to_meet_the_exterior_of_the_foam_board_the_dura_multilock_grid_uses_smaller_connection_points_so_that_the_grids_are_not_visible_on_the_concrete_side_of_the_wall_this_innovative_design_features_only_two_small_connection_points_per_grid_that_can_be_easily_covered_and_concealed_the_result_is_a_smoother_interior_and_exterior_surface": "قالب سلسلة One أحادي الجانب. توفر سلسلة One1 تكاليف العمالة من خلال إلغاء الحاجة إلى تجريد الرغوة من مهاوي المصاعد، وفتحات السلالم، والمناطق الأخرى التي لا تتطلب رغوة. تمنح سلسلة One المهندسين المعماريين مرونة أكبر في تصميم المباني التعليمية والمستودعات متعددة الطوابق. بالنسبة لبناة المنازل، تعد سلسلة One مثالية للمسابح والتطبيقات الأخرى التي تتطلب رغوة على جانب واحد فقط. الانتقال من الخرسانة إلى الرغوة سلس، ويسمح التصميم الفريد لـ NUDURA للخرسانة بالالتقاء بالجزء الخارجي من لوح الرغوة. تستخدم شبكة DURA MULTILOCK نقاط اتصال أصغر بحيث لا تكون الشبكات مرئية على جانب الخرسانة من الجدار. يتميز هذا التصميم المبتكر بنقطتي اتصال صغيرتين فقط لكل شبكة يمكن تغطيتها وإخفاؤها بسهولة. والنتيجة هي سطح داخلي وخارجي أكثر نعومة.",
   "how_does_it_work_the_one_series_combines_traditional_formwork_methods_with_insulated_concrete_formwork_technology_nudura_provides_all_the_materials_required_to_complete_the_multilock_formwork_including_plywood_mesh_screws_and_a_special_template_for_quick_and_easy_assembly_the_plywood_pieces_come_pre_drilled_eliminating_the_need_to_drill_on_site_installers_can_simply_assemble_the_formwork_quickly_and_easily_in_the_desired_shape_combined_with_nudura_s_standard_and_innovative_icf_panels_and_custom_made_forms_transitions_from_900_to_450_are_made_easy_when_the_job_is_done_all_plywood_panels_can_be_removed_and_cleaned_for_reuse_on_the_next_job_saving_costs_and_eliminating_waste": "كيف يعمل؟ تجمع سلسلة One بين طرق القوالب التقليدية وتقنية قوالب الخرسانة المعزولة. توفر NUDURA جميع المواد اللازمة لإكمال قوالب Multilock، بما في ذلك الخشب الرقائقي، والشبكة، والمسامير، وقالب خاص للتجميع السريع والسهل. تأتي قطع الخشب الرقائقي مثقبة مسبقًا، مما يلغي الحاجة إلى الحفر في الموقع. يمكن للمركبين ببساطة تجميع القوالب بسرعة وسهولة بالشكل المطلوب. جنبًا إلى جنب مع ألواح ICF القياسية والمبتكرة من NUDURA وأشكال مخصصة، يصبح الانتقال من 900 إلى 450 سهلاً. عند الانتهاء من العمل، يمكن إزالة جميع ألواح الخشب الرقائقي وتنظيفها لإعادة استخدامها في العمل التالي، مما يوفر التكاليف ويقضي على النفايات.",
   "90_corner_panel_options": "خيارات ألواح الزاوية 90 درجة",
-  "internal_eps_board": "لوحة EPS داخلية"
+  "internal_eps_board": "لوحة EPS داخلية",
+  "specifications": "المواصفات",
+  "building_homes_also_for_the_generations_to_come": "بناء منازل للأجيال القادمة أيضًا",
+  "this_information_is_intended_to_provide_the_architect_and_engineer_with_a_quick_and_convenient_introduction_to_the_nudura_wall_system": "تهدف هذه المعلومات إلى تزويد المهندس والمعماري بمقدمة سريعة وسهلة حول نظام جدران Nudura.",
+  "file_attachments": "المرفقات",
+  "specification_in_10_chapters_pdf": "المواصفات في 10 فصول (PDF)"
 }
