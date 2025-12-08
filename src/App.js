@@ -42,6 +42,7 @@ import NodoraXR35 from './Pages/nodora-xr35';
 import AboutUS from './Pages/about-us';
 import BroadcastNews from './Pages/broadcast-news';
 import WriteAboutUsInPress from './Pages/about-us-in-press';
+import PlusSeriesOnClickSection from './Pages/plus-series-on-click';
 import './i18n/index';
 
 // import other pages if you have them
@@ -58,92 +59,92 @@ function App() {
         <Route path="/registration" element={<Registration />} />
         <Route path="/belowtheconstructionslope" element={
           <BelowTheConstructionSlope />
-          } 
-          />
+        }
+        />
         <Route path="/flamableconstruction" element={
           <FlamableConstruction />
-          } 
-          />
+        }
+        />
         <Route path="/noncombstibleconstruction" element={
           <NonCombustibleConstruction />
-          } 
-          />
+        }
+        />
         <Route path="/firewall" element={
           <FireWall />
-          } 
-          />
+        }
+        />
         <Route path="/formunitprofile" element={
           <FormUnitProfile />
-          } 
-          />
+        }
+        />
         <Route path="/bimlibrary" element={
           <BIMLibrary />
-          } 
-          />
+        }
+        />
         <Route path="/earlydesigncriteria" element={
           <EarlyDesignCriteria />
-          } 
-          />
+        }
+        />
         <Route path="/thecombinedseries" element={
           <TheCombinedSeries />
-          } 
-          />
+        }
+        />
         <Route path="/oneseries" element={
           <OneSeries />
-          } 
-          />
+        }
+        />
         <Route path="/nuduraseries" element={
           <NUDURASeries />
-          } 
-          />
+        }
+        />
         <Route path="/planning" element={
           <Plannig />
-          } 
-          />
+        }
+        />
         <Route path="/catalogfordirectviewing" element={
           <CatalogForDirectDownload />
-          } 
-          />
+        }
+        />
         <Route path="/filestodownload" element={
           <FileToDownload />
-          } 
-          />
+        }
+        />
         <Route path="/standardandlaboratory" element={
           <StandardAndLaboratoryCertification />
-          }
-           />
+        }
+        />
         <Route path="/specification" element={
           <Specifications />
-          }
-           />
+        }
+        />
         <Route path="/brochures" element={
           <Brouchers />
         }
-           />
+        />
         <Route path="/projectdescription" element={
           <ProjectDescription />
-          } 
-          />
+        }
+        />
         <Route path="/articales" element={
           <ArticlesAndArticles />
-          } 
-          />
+        }
+        />
         <Route path="/rockplaster" element={
           <RockPlaster />
-          } 
-          />
+        }
+        />
         <Route path="/photogallery" element={
           <PhotoGallery />
-          } 
-          />
+        }
+        />
         <Route path="/videogallery" element={
           <VideoGalery />
-          } 
-          />
+        }
+        />
         <Route path="/academy" element={
           <EcobuildAcademy />
-          } 
-          />
+        }
+        />
         <Route path="/contactus" element={
           <ContactUS />
         }
@@ -152,16 +153,17 @@ function App() {
           <FAQ />
         }
         />
-      <Route path="/thermalmass" element={<ThermalMass />} />
-      <Route path="/sustainable-construction" element={<SustanableConstruction />} />
-      <Route path="/innovation" element={<Innovation />} />
-      <Route path="/construction-methods" element={<ConstructionMethods />} />
-      <Route path="/nodoraseries" element={<NodoraSeries />} />
-      <Route path="/nodoraxr35" element={<NodoraXR35 />} />
-      <Route path="/aboutus" element={<AboutUS />} />
-      <Route path="/aboutusinpress" element={<WriteAboutUsInPress />} />
-      <Route path="/broadcastnews" element={<BroadcastNews />} />
-      {/* <Route path="/aboutuspress" element={<WriteAboutUsInPress />} /> */}
+        <Route path="/thermalmass" element={<ThermalMass />} />
+        <Route path="/sustainable-construction" element={<SustanableConstruction />} />
+        <Route path="/innovation" element={<Innovation />} />
+        <Route path="/construction-methods" element={<ConstructionMethods />} />
+        <Route path="/nodoraseries" element={<NodoraSeries />} />
+        <Route path="/nodoraxr35" element={<NodoraXR35 />} />
+        <Route path='/plus-series-product' element={<PlusSeriesOnClickSection />} />
+        <Route path="/aboutus" element={<AboutUS />} />
+        <Route path="/aboutusinpress" element={<WriteAboutUsInPress />} />
+        <Route path="/broadcastnews" element={<BroadcastNews />} />
+        {/* <Route path="/aboutuspress" element={<WriteAboutUsInPress />} /> */}
 
         {/* Add more routes here */}
       </Routes>

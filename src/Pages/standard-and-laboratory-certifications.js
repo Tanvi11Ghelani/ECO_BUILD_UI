@@ -37,7 +37,7 @@ const StandardAndLaboratoryCertification = () => {
   // Render a single file card component
   // Card dimensions: 270px × 100px with 50px gap between icon and content
   const renderFileCard = ({ href, label }) => (
-    <div className="file-card shadow-sm">
+    <div className="file-card ">
       <a href={href} target="_blank" rel="noopener noreferrer">
         {/* Icon section - 48px × 48px */}
         <div className="file-icon-band">

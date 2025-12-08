@@ -232,7 +232,7 @@
   transition: all 0.3s ease;
   overflow: hidden;
   opacity: 1;
-  box-shadow: 0px 2px 8px rgba(0, 212, 255, 0.1);
+
 }
 
 .standard-cert-page .file-card:hover {
