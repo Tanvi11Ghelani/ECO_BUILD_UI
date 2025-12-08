@@ -19,149 +19,149 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 
 
+const EarlyDesignCriteria = () => {
+    const { t } = useTranslation();
+    
 const fourData = [
     {
-        title: 'Vertical Reinforcing A6B01',
+        title:  t('fourData.title1'),
         pdf: 'EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/102mm 4 Concrete Core Forms/Vertical Reinforcing A4B01.pdf',
         dwg: 'EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/102mm 4 Concrete Core Forms/a4b01.dwg',
     },
     {
-        title: 'Brick Ledge Reinforcement A8B02',
+        title:  t('fourData.title2'),
         pdf: 'EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/102mm 4 Concrete Core Forms/45 Degree Corner A4B03.pdf',
         dwg: 'EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/102mm 4 Concrete Core Forms/a4b02.dwg',
     },
     {
-        title: '90 Degree Corner A8B03',
+        title:  t('fourData.title3'),
         pdf: 'EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/102mm 4 Concrete Core Forms/90 Degree Corner A4B02.pdf',
         dwg: 'EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/102mm 4 Concrete Core Forms/a4b03.dwg',
     },
     {
-        title: 'T Form A8B06',
+        title:  t('fourData.title4'),
         pdf: 'EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/102mm 4 Concrete Core Forms/T Form A4B04.pdf',
         dwg: 'EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/102mm 4 Concrete Core Forms/a4b04.dwg',
     },
 ]
 const sixData = [
     {
-        title: "Vertical Reinforcing A6B01",
+        title:  t('sixData.title1'),
         pdf: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/152mm 6 Concrete Core Forms/Vertical Reinforcing A6B01.pdf",
         dwg: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/152mm 6 Concrete Core Forms/a6b01.dwg",
     },
     {
-        title: "Brick Ledge Reinforcement A6B02",
+        title:  t('sixData.title2'),
         pdf: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/152mm 6 Concrete Core Forms/Brick Ledge Reinforcement A6B02.pdf",
         dwg: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/152mm 6 Concrete Core Forms/a6b02.dwg",
     },
     {
-        title: "Steel Angle Brick Support A6B03",
+        title:  t('sixData.title3'),
         pdf: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/152mm 6 Concrete Core Forms/Steel Angle Brick Support A6B03.pdf",
         dwg: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/152mm 6 Concrete Core Forms/a6b03.dwg",
     },
     {
-        title: "Lintel Diagram Elevation A6B04",
+        title:  t('sixData.title4'),
         pdf: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/152mm 6 Concrete Core Forms/Lintel Diagram Elevation A6B04.pdf",
         dwg: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/152mm 6 Concrete Core Forms/a6b04.dwg",
     },
     {
-        title: "Lintel at OWSJ Floor Connection A6B05",
+        title: t('sixData.title5'),
         pdf: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/152mm 6 Concrete Core Forms/Lintel at OWSJ Floor Connection A6B05.pdf",
         dwg: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/152mm 6 Concrete Core Forms/a6b05.dwg",
     },
     {
-        title: "Lintel at Hollow Core Floor Connection A6B06",
+        title:  t('sixData.title6'),
         pdf: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/152mm 6 Concrete Core Forms/Lintel at Hollow Core Floor Connection A6B06.pdf",
         dwg: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/152mm 6 Concrete Core Forms/a6b06.dwg",
     },
     {
-        title: "90 Degree Corner A6B08",
+        title:  t('sixData.title7'),
         pdf: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/152mm 6 Concrete Core Forms/90 Degree Corner A6B08.pdf",
         dwg: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/152mm 6 Concrete Core Forms/a6b08.dwg",
     },
     {
-        title: "45 Degree Corner A6B09",
+        title:  t('sixData.title8'),
         pdf: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/152mm 6 Concrete Core Forms/45 Degree Corner A6B09.pdf",
         dwg: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/152mm 6 Concrete Core Forms/a6b09.dwg",
     },
 ]
 const eightData = [
     {
-        title: "Vertical Reinforcing A6B01",
+        title:  t('eightData.title1'),
         pdf: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/203mm 8 Concrete Core Forms/Vertical Reinforcing A8B01.pdf",
         dwg: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/203mm 8 Concrete Core Forms/a4b01.dwg",
     },
     {
-        title: "Brick Ledge Reinforcement A8B02",
+        title:  t('eightData.title2'),
         pdf: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/203mm 8 Concrete Core Forms/Brick Ledge Reinforcement A8B02.pdf",
         dwg: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/203mm 8 Concrete Core Forms/a8b02.dwg",
     },
     {
-        title: "90 Degree Corner A8B03",
+        title:  t('eightData.title3'),
         pdf: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/203mm 8 Concrete Core Forms/90 Degree Corner A8B03.pdf",
         dwg: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/203mm 8 Concrete Core Forms/a8b03.dwg",
     },
     {
-        title: "T Form A8B06",
+        title:  t('eightData.title4'),
         pdf: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/203mm 8 Concrete Core Forms/T Form A8B06.pdf",
         dwg: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/203mm 8 Concrete Core Forms/a8b06.dwg",
     },
     {
-        title: "45 Degree Corner A8B07",
+        title:  t('eightData.title5'),
         pdf: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/203mm 8 Concrete Core Forms/45 Degree Corner A8B07.pdf",
         dwg: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/203mm 8 Concrete Core Forms/a8b07.dwg",
     },
 ]
 const tenData = [
     {
-        title: "Vertical Reinforcing A10B01",
+        title:  t('tenData.title1'),
         pdf: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/254mm 10 Concrete Core Forms/Vertical Reinforcing A10B01.pdf",
         dwg: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/254mm 10 Concrete Core Forms/A10B01.dwg",
     },
     {
-        title: "Brick Ledge Reinforcement A10B02",
+        title: t('tenData.title2'),
         pdf: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/254mm 10 Concrete Core Forms/Brick Ledge Reinforcement A10B02.pdf",
         dwg: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/254mm 10 Concrete Core Forms/A10B02.dwg",
     },
     {
-        title: "90 Degree Corner A10B03",
+        title:  t('tenData.title3'),
         pdf: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/254mm 10 Concrete Core Forms/90 Degree Corner A10B03.pdf",
         dwg: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/254mm 10 Concrete Core Forms/A10B03.dwg",
     },
     {
-        title: "T Form A10B05",
+        title: t('tenData.title4'),
         pdf: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/254mm 10 Concrete Core Forms/T Form A10B05.pdf",
         dwg: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/254mm 10 Concrete Core Forms/A10B05.dwg",
     },
     {
-        title: "45 Degree Corner A10B06",
+        title:  t('tenData.title5'),
         pdf: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/254mm 10 Concrete Core Forms/45 Degree Corner A10B06.pdf",
         dwg: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/254mm 10 Concrete Core Forms/A10B06.dwg",
     },
 ]
 const twelveData = [
     {
-        title: "Vertical Reinforcing A12B01",
+        title:  t('twelveData.title1'),
         pdf: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/305mm 12 Concrete Core Forms/Vertical Reinforcing A12B01.pdf",
         dwg: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/305mm 12 Concrete Core Forms/A12B01.dwg",
     },
     {
-        title: "90 Degree Corner A12B02",
+        title:  t('twelveData.title2'),
         pdf: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/305mm 12 Concrete Core Forms/90 Degree Corner A12B02.pdf",
         dwg: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/305mm 12 Concrete Core Forms/A12B02.dwg",
     },
     {
-        title: "T Form A12B03",
+        title:  t('twelveData.title3'),
         pdf: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/305mm 12 Concrete Core Forms/T Form A12B03.pdf",
         dwg: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/305mm 12 Concrete Core Forms/A12B03.dwg",
     },
     {
-        title: "45 Degree Corner A12B04",
+        title:  t('twelveData.title4'),
         pdf: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/305mm 12 Concrete Core Forms/45 Degree Corner A12B04.pdf",
         dwg: "EcoBuildPdf/EarlyDesignCriteria/Engineering Parameters/305mm 12 Concrete Core Forms/A12B04.dwg",
     }
 ]
-
-const EarlyDesignCriteria = () => {
-    const { t } = useTranslation();
     return (
         <div>
             <div className="container">

@@ -14,9 +14,12 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 import './below-the-construction-slope.css';
 
-const data = [
+
+const FireWall = () => {
+  const { t } = useTranslation();
+  const data = [
   {
-    title: '6” (152mm) Firewall/STC foundation',
+    title: t('firewell.title1'),
     size: '6"',
     code: 'FW6D1',
     pdf: 'EcoBuildPdf/Firewall/152mm-6CONCRETECOREFORM152/FirewallSTCFootingFW6D1.pdf',
@@ -24,7 +27,7 @@ const data = [
     fileName: 'FW6D1',
   },
   {
-    title: '6” (152mm) Fireproof/STC mezzanine floor (A)',
+    title: t('firewell.title2'),
     size: '6"',
     code: 'FW6D2A',
      pdf: 'EcoBuildPdf/Firewall/152mm-6CONCRETECOREFORM152/FirewallSTC Intermediate Floor (a) FW6D2A.pdf',
@@ -32,7 +35,7 @@ const data = [
     fileName: 'FW6D2A',
   },
   {
-    title: '6” (152mm) Fireproof/STC mezzanine floor (B)',
+    title: t('firewell.title3'),
     size: '6"',
     code: 'FW6D2B',
      pdf: 'EcoBuildPdf/Firewall/152mm-6CONCRETECOREFORM152/FirewallSTC Intermediate Floor (b) FW6D2B.pdf',
@@ -40,7 +43,7 @@ const data = [
     fileName: 'FW6D2B',
   },
   {
-    title: '6” (152mm) Firewall/STC in the ceiling',
+    title: t('firewell.title4'),
     size: '6"',
     code: 'FW6D3',
      pdf: 'EcoBuildPdf/Firewall/152mm-6CONCRETECOREFORM152/FirewallSTC at Ceiling FW6D3.pdf',
@@ -48,7 +51,7 @@ const data = [
     fileName: 'FW6D3',
   },
   {
-    title: '6” (152mm) Firewall/STC on roof (Canada)',
+    title: t('firewell.title5'),
     size: '6"',
     code: 'FW6D4',
      pdf: 'EcoBuildPdf/Firewall/152mm-6CONCRETECOREFORM152/FirewallSTC at Roof (Canada) FW6D4.pdf',
@@ -56,7 +59,7 @@ const data = [
     fileName: 'FW6D4',
   },
   {
-    title: '6” (152mm) Firewall/STC on roof (USA)',
+    title: t('firewell.title6'),
     size: '6"',
     code: 'FW6D5',
      pdf: 'EcoBuildPdf/Firewall/152mm-6CONCRETECOREFORM152/FirewallSTC at Roof (USA) FW6D5.pdf',
@@ -64,7 +67,7 @@ const data = [
     fileName: 'FW6D5',
   },
   {
-    title: '6” (152mm) Firewall/STC top view',
+    title: t('firewell.title7'),
     size: '6"',
     code: 'FW6D6',
      pdf: 'EcoBuildPdf/Firewall/152mm-6CONCRETECOREFORM152/FirewallSTC Plan View FW6D6.pdf',
@@ -72,9 +75,6 @@ const data = [
     fileName: 'FW6D6',
   },
 ];
-
-const FireWall = () => {
-  const { t } = useTranslation();
   return (
     <div>
       <div className="container">
@@ -249,7 +249,7 @@ const FireWall = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="explanation-link"
-                      >{t('explanation_page')}</a>
+                      >{t('belowConstructionSlope.explanationPage')}</a>
                     </td>
 
                     {/* File Links */}

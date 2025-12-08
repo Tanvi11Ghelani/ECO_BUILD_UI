@@ -4,54 +4,7 @@ import { useTranslation } from "react-i18next";
 import Breadcrumb from '../common-component/Breadcrumb';
 import "./video-gallery.css";
 
-// Static demo videos for testing - 9 videos matching Figma design
-const DEMO_VIDEOS = [
-  {
-    id: 1,
-    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-    category: { name: "Introduction" }
-  },
-  {
-    id: 2,
-    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-    category: { name: "Products" }
-  },
-  {
-    id: 3,
-    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-    category: { name: "Products" }
-  },
-  {
-    id: 4,
-    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
-    category: { name: "Shallow Foundations" }
-  },
-  {
-    id: 5,
-    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
-    category: { name: "Getting Started - Laying The First Layer" }
-  },
-  {
-    id: 6,
-    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
-    category: { name: "Laying Reinforcement Bars" }
-  },
-  {
-    id: 7,
-    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
-    category: { name: "Applying A Second Layer" }
-  },
-  {
-    id: 8,
-    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
-    category: { name: "Alignment System" }
-  },
-  {
-    id: 9,
-    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
-    category: { name: "Openings - Windows And Doors" }
-  }
-];
+
 
 const VideoGalery = () => {
   const { t } = useTranslation();
@@ -59,7 +12,54 @@ const VideoGalery = () => {
   const [selectedVideo, setSelectedVideo] = useState(null); // ✅ track clicked video
   const [currentPage, setCurrentPage] = useState(1); // pagination state
   const itemsPerPage = 9; // show 9 items per page
-
+// Static demo videos for testing - 9 videos matching Figma design
+const DEMO_VIDEOS = [
+  {
+    id: 1,
+    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    category: { name: t('videoCategory.category1'), }
+  },
+  {
+    id: 2,
+    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    category: { name: t('videoCategory.category2'), }
+  },
+  {
+    id: 3,
+    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+    category: { name: t('videoCategory.category3'), }
+  },
+  {
+    id: 4,
+    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+    category: { name: t('videoCategory.category4'), }
+  },
+  {
+    id: 5,
+    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+    category: { name: t('videoCategory.category5'), }
+  },
+  {
+    id: 6,
+    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+    category: { name: t('videoCategory.category6'), }
+  },
+  {
+    id: 7,
+    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+    category: { name: t('videoCategory.category7'), }
+  },
+  {
+    id: 8,
+    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+    category: { name: t('videoCategory.category8'), }
+  },
+  {
+    id: 9,
+    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
+    category: { name: t('videoCategory.category9'), }
+  }
+];
   useEffect(() => {
     const fetchGallery = async () => {
       try {

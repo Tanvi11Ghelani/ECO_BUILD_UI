@@ -17,86 +17,86 @@ import { useTranslation } from "react-i18next";
 import './below-the-construction-slope.css';
 
 
-const floor = [
-    {
-        description: 'Insulated Brick 6" (152mm)',
-        coreThickness: '6"',
-        claddingType: 'with-bricks',
-        insulation: 'isolated',
-        fileName: 'B6C10',
-        pdf: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/DWGB6D03.pdf',
-        dwg: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/B6D03.dwg',
-    },
-    {
-        description: 'Insulated Brick 8" (203mm)',
-        coreThickness: '8"',
-        claddingType: 'with-bricks',
-        insulation: 'isolated',
-        fileName: 'B8C11',
-        pdf: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/DWGB6D03.pdf',
-        dwg: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/B6D03.dwg',
-    },
-    {
-        description: 'Insulated Brick 10" (254mm)',
-        coreThickness: '10"',
-        claddingType: 'with-bricks',
-        insulation: 'isolated',
-        fileName: 'B10C07',
-        pdf: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/DWGB6D03.pdf',
-        dwg: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/B6D03.dwg',
-    },
-    {
-        description: 'Insulated Brick 12" (305mm)',
-        coreThickness: '12"',
-        claddingType: 'with-bricks',
-        insulation: 'isolated',
-        fileName: 'B12C06',
-        pdf: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/DWGB6D03.pdf',
-        dwg: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/B6D03.dwg',
-    },
-    {
-        description: 'Uninsulated Brick 6" (152mm)',
-        coreThickness: '6"',
-        claddingType: 'with-bricks',
-        insulation: 'not-isolated',
-        fileName: 'B6C11',
-        pdf: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/DWGB6D03.pdf',
-        dwg: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/B6D03.dwg',
-    },
-    {
-        description: 'Uninsulated brick 8" (203mm)',
-        coreThickness: '8"',
-        claddingType: 'with-bricks',
-        insulation: 'not-isolated',
-        fileName: 'B8C12',
-        pdf: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/DWGB6D03.pdf',
-        dwg: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/B6D03.dwg',
-    },
-    {
-        description: 'Uninsulated Brick 10" (254mm)',
-        coreThickness: '10"',
-        claddingType: 'with-bricks',
-        insulation: 'not-isolated',
-        fileName: 'B10C08',
-        pdf: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/DWGB6D03.pdf',
-        dwg: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/B6D03.dwg',
-    },
-    {
-        description: 'Uninsulated brick 12" (305mm)',
-        coreThickness: '12"',
-        claddingType: 'with-bricks',
-        insulation: 'not-isolated',
-        fileName: 'B12C07',
-        pdf: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/DWGB6D03.pdf',
-        dwg: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/B6D03.dwg',
-    },
-]
+
 
 const FlamableConstruction = () => {
     const { t } = useTranslation();
     // State to manage active tab
     const [activeTab, setActiveTab] = useState('floor-at-grade');
-
+const floor = [
+    {
+        description: t('belowConstructionSlope.insulatedConcrete61'),
+        coreThickness: '6"',
+        claddingType: t('belowConstructionSlope.withBricks'),
+        insulation: t('belowConstructionSlope.isolated'),
+        fileName: 'B6C10',
+        pdf: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/DWGB6D03.pdf',
+        dwg: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/B6D03.dwg',
+    },
+    {
+        description: t('belowConstructionSlope.insulatedConcrete81'),
+        coreThickness: '8"',
+        claddingType: t('belowConstructionSlope.withBricks'),
+        insulation: t('belowConstructionSlope.isolated'),
+        fileName: 'B8C11',
+        pdf: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/DWGB6D03.pdf',
+        dwg: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/B6D03.dwg',
+    },
+    {
+        description: t('belowConstructionSlope.insulatedConcrete101'),
+        coreThickness: '10"',
+        claddingType: t('belowConstructionSlope.withBricks'),
+        insulation: t('belowConstructionSlope.isolated'),
+        fileName: 'B10C07',
+        pdf: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/DWGB6D03.pdf',
+        dwg: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/B6D03.dwg',
+    },
+    {
+        description: t('belowConstructionSlope.insulatedConcrete121'),
+        coreThickness: '12"',
+        claddingType: t('belowConstructionSlope.withBricks'),
+        insulation: t('belowConstructionSlope.isolated'),
+        fileName: 'B12C06',
+        pdf: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/DWGB6D03.pdf',
+        dwg: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/B6D03.dwg',
+    },
+    {
+        description: t('belowConstructionSlope.uninsulatedConcrete61'),
+        coreThickness: '6"',
+        claddingType: t('belowConstructionSlope.withBricks'),
+        insulation: t('belowConstructionSlope.notIsolated'),
+        fileName: 'B6C11',
+        pdf: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/DWGB6D03.pdf',
+        dwg: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/B6D03.dwg',
+    },
+    {
+        description: t('belowConstructionSlope.uninsulatedConcrete81'),
+        coreThickness: '8"',
+        claddingType: t('belowConstructionSlope.withBricks'),
+        insulation: t('belowConstructionSlope.notIsolated'),
+        fileName: 'B8C12',
+        pdf: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/DWGB6D03.pdf',
+        dwg: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/B6D03.dwg',
+    },
+    {
+        description: t('belowConstructionSlope.uninsulatedConcrete101'),
+        coreThickness: '10"',
+        claddingType: t('belowConstructionSlope.withBricks'),
+        insulation: t('belowConstructionSlope.notIsolated'),
+        fileName: 'B10C08',
+        pdf: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/DWGB6D03.pdf',
+        dwg: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/B6D03.dwg',
+    },
+    {
+        description: t('belowConstructionSlope.uninsulatedConcrete121'),
+        coreThickness: '12"',
+        claddingType: t('belowConstructionSlope.withBricks'),
+        insulation: t('belowConstructionSlope.notIsolated'),
+        fileName: 'B12C07',
+        pdf: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/DWGB6D03.pdf',
+        dwg: '/EcoBuildPdf/Flammableconstruction/FlooratGradeDetails/InsulatedBrick/B6D03.dwg',
+    },
+]
     // Define tabs array for Tab component
     const tabs = [
         { id: 'floor-at-grade', label: t('floor_at_grade_details') },
@@ -288,31 +288,15 @@ const FlamableConstruction = () => {
 
                                                     {/* Cladding type */}
                                                     <td className="dlinfo hover01">
-                                                        <span
-                                                            className={`status ${item.claddingType === "with-bricks"
-                                                                    ? "with-bricks"
-                                                                    : "without-bricks"
-                                                                }`}
-                                                        >
-                                                            {item.claddingType === "with-bricks"
-                                                                ? "With bricks"
-                                                                : "Without bricks"}
-                                                        </span>
+                                                    - <td className="dlinfo hover01">
+                          <span className="status">{item.claddingType}</span>
+                        </td>
                                                     </td>
 
                                                     {/* Insulation */}
                                                     <td className="dlinfo hover01">
-                                                        <span
-                                                            className={
-                                                                item.insulation === "not-isolated"
-                                                                    ? "status not-isolated"
-                                                                    : "status"
-                                                            }
-                                                        >
-                                                            {item.insulation === "not-isolated"
-                                                                ? "Not isolated"
-                                                                : "Isolated"}
-                                                        </span>
+                                                                                <span className="status">{item.insulation}</span>
+
                                                     </td>
 
                                                     <td className="dlinfo hover01">{item.fileName}</td>

@@ -18,9 +18,13 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 import './below-the-construction-slope.css';
 
-const imperialDWFData = [
+
+const BIMLibrary = () => {
+    const { t } = useTranslation();
+    const tr = (key, fallback) => t(key, { defaultValue: fallback });
+    const imperialDWFData = [
     {
-        title: 'Standard Form Unit ',
+        title: t('imperialDWFData.title1'),
         dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 4-inch/standard-form-unit-imperial.dwf',
         dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 6-inch/icf-nudura-6-inch-standard-form-unit-imperial.dwf',
         dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 8-inch/icf-nudura-8-inch-standard-form-unit-imperial.dwf',
@@ -28,7 +32,7 @@ const imperialDWFData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 12-inch/icf-nudura-12-inch-standard-form-unit-imperial.dwf',
     },
     {
-        title: '90 Degree Corner Form Unit',
+        title: t('imperialDWFData.title2'),
         dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 4-inch/90-degree-form-unit-imperial.dwf',
         dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 6-inch/icf-nudura-6-inch-90-degree-form-unit-imperial.dwf',
         dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 8-inch/icf-nudura-8-inch-90-degree-form-unit-imperial.dwf',
@@ -36,7 +40,7 @@ const imperialDWFData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 12-inch/icf-nudura-12-inch-90-degree-form-unit-imperial.dwf',
     },
     {
-        title: '45 Degree Corner Form Unit',
+        title: t('imperialDWFData.title3'),
         dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 4-inch/45-degree-form-unit-imperial.dwf',
         dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 6-inch/icf-nudura-6-inch-45-degree-form-unit-imperial.dwf',
         dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 8-inch/icf-nudura-8-inch-45-degree-form-unit-imperial.dwf',
@@ -44,7 +48,7 @@ const imperialDWFData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 12-inch/icf-nudura-12-inch-45-degree-form-unit-imperial.dwf',
     },
     {
-        title: 'Single Sided Taper Top Form Unit',
+        title: t('imperialDWFData.title4'),
         dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 4-inch/single-sided-taper-top-form-unit-imperial.dwf',
         dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 6-inch/icf-nudura-6-inch-single-sided-taper-top-form-unit-imperial.dwf',
         dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 8-inch/icf-nudura-8-inch-single-sided-taper-top-form-unit-imperial.dwf',
@@ -52,7 +56,7 @@ const imperialDWFData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 12-inch/icf-nudura-12-inch-single-sided-taper-top-imperial.dwf',
     },
     {
-        title: 'Brick Ledge Form Unit',
+        title: t('imperialDWFData.title5'),
         dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 4-inch/brick-ledge-form-unit-imperial.dwf',
         dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 6-inch/icf-nudura-6-inch-brick-ledge-form-unit-imperial.dwf',
         dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 8-inch/icf-nudura-8-inch-brick-ledge-form-unit-imperial.dwf',
@@ -60,7 +64,7 @@ const imperialDWFData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 12-inch/icf-nudura-12-inch-brick-ledge-form-unit-imperial.dwf',
     },
     {
-        title: 'T Form Unit- Short',
+        title: t('imperialDWFData.title6'),
         dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 4-inch/short-t-form-unit-imperial.dwf',
         dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 6-inch/icf-nudura-6-inch-short-t-form-unit-imperial.dwf',
         dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 8-inch/icf-nudura-8-inch-short-t-form-unit-imperial.dwf',
@@ -68,7 +72,7 @@ const imperialDWFData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 12-inch/icf-nudura-12-inch-short-t-form-unit-imperial.dwf',
     },
     {
-        title: 'T Form Unit- Long',
+        title: t('imperialDWFData.title7'),
         dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 4-inch/long-t-form-unit-imperial.dwf',
         dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 6-inch/icf-nudura-6-inch-long-t-form-unit-imperial.dwf',
         dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 8-inch/icf-nudura-8-inch-long-t-form-unit-imperial.dwf',
@@ -76,14 +80,14 @@ const imperialDWFData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 12-inch/icf-nudura-12-inch-long-t-form-unit-imperial.dwf',
     },
     {
-        title: 'End Cap',
+        title: t('imperialDWFData.title8'),
         dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 4-inch/end-cap-imperial.dwf',
         dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 6-inch/icf-nudura-6-inch-end-cap-imperial.dwf',
         dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 8-inch/icf-nudura-8-inch-end-cap-imperial.dwf',
         dwg10: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 10-inch/icf-nudura-10-inch-end-cap-imperial.dwf',
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 12-inch/icf-nudura-12-inch-end-cap-imperial.dwf',    },
     {
-        title: 'Height Adjuster',
+        title:t('imperialDWFData.title9'),
         dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 4-inch/height-adjuster-imperial.dwf',
         dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 6-inch/icf-nudura-6-inch-height-adjuster-imperial.dwf',
         dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial DWF 8-inch/icf-nudura-8-inch-height-adjuster-imperial.dwf',
@@ -94,52 +98,52 @@ const imperialDWFData = [
 ]
 const projects = [
     {
-    title: 'Project Imperial - RVT',
+    title:t('projects.title1'),
     fileType: 'RVT',
     fileUrl: 'EcoBuildPdf/BIMLibrary/Revit Project & Template Files/Project Files/wall-icf-nudura-project-imperial.rvt'
   },
   {
-    title: 'Project Metric - RVT',
+    title: t('projects.title2'),
     fileType: 'RVT',
     fileUrl: 'EcoBuildPdf/BIMLibrary/Revit Project & Template Files/Project Files/wall-icf-nudura-project-metric.rvt'
   },
 ]
 const template = [
     {
-        title: 'Template Imperial',
+        title: t('template.title1'),
         fileType: 'RVT',
         fileUrl: 'EcoBuildPdf/BIMLibrary/Revit Project & Template Files/Template Files - RTE/wall-icf-nudura-template-imperial.rte'
     },
     {
-        title: 'Project Metric - RVT',
+        title:t('template.title2'),
         fileType: 'RVT',
         fileUrl: 'EcoBuildPdf/BIMLibrary/Revit Project & Template Files/Template Files - RTE/wall-icf-nudura-template-metric.rte'
     }
 ]
 const metricrfaform = [
     {
-      title: 'Brick Ledge Extension',
+      title:  t('metricrfaform.title1'),
       rfa:'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA Form Panels/nudura-brick-ledge-extension.rfa'
     },
     {
-        title: 'Brick Ledge Panel',
+        title:  t('metricrfaform.title2'),
         rfa:'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA Form Panels/nudura-brick-ledge-panel.rfa'
         
     },
     {
-        title: 'Standard Form Panel',
+        title: t('metricrfaform.title3'),
         rfa:'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA Form Panels/nudura-standard-form-panel.rfa'
         
     },
     {
-        title: 'Taper Top Panel',
+        title:  t('metricrfaform.title4'),
         rfa:'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA Form Panels/nudura-taper-top-panel.rfa'
         
     },
 ]
 const imperialRFAData = [
   {
-        title: 'Standard Form Unit ',
+        title:  t('imperialRFAData.title1'),
         dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 4-Inch/icf-nudura-4-inch-standard-form-unit-imperial.rfa',
         dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 6-Inch/icf-nudura-6-inch-standard-form-unit-imperial.rfa',
         dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 8-Inch/icf-nudura-8-inch-standard-form-unit-imperial.rfa',
@@ -147,7 +151,7 @@ const imperialRFAData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 12-Inch/icf-nudura-12-inch-standard-form-unit-imperial.rfa',
     },
     {
-        title: '90 Degree Corner Form Unit',
+        title:  t('imperialRFAData.title2'),
         dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 4-Inch/90-degree-form-unit-imperial.rfa',
         dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 6-Inch/icf-nudura-6-inch-90-degree-form-unit-imperial.rfa',
         dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 8-Inch/icf-nudura-8-inch-90-degree-form-unit-imperial.rfa',
@@ -155,7 +159,7 @@ const imperialRFAData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 12-Inch/icf-nudura-12-inch-90-degree-form-unit-imperial.rfa',
     },
     {
-        title: '45 Degree Corner Form Unit',
+        title: t('imperialRFAData.title3'),
         dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 4-Inch/45-degree-form-unit-imperial.rfa',
         dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 6-Inch/icf-nudura-6-inch-45-degree-form-unit-imperial.rfa',
         dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 8-Inch/icf-nudura-8-inch-45-degree-form-unit-imperial.rfa',
@@ -163,7 +167,7 @@ const imperialRFAData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 12-Inch/icf-nudura-12-inch-45-degree-form-unit-imperial.rfa',
     },
     {
-        title: 'Single Sided Taper Top Form Unit',
+        title:  t('imperialRFAData.title4'),
         dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 4-Inch/single-sided-taper-top-form-unit-imperial.rfa',
         dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 6-Inch/icf-nudura-6-inch-single-sided-taper-top-form-unit-imperial.rfa',
         dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 8-Inch/icf-nudura-8-inch-single-sided-taper-top-form-unit-imperial.rfa',
@@ -171,7 +175,7 @@ const imperialRFAData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 12-Inch/icf-nudura-12-inch-single-sided-taper-top-imperial.rfa',
     },
     {
-        title: 'Brick Ledge Form Unit',
+        title:  t('imperialRFAData.title5'),
         dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 4-Inch/brick-ledge-form-unit-imperial.rfa',
         dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 6-Inch/icf-nudura-6-inch-brick-ledge-form-unit-imperial.rfa',
         dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 8-Inch/icf-nudura-8-inch-brick-ledge-form-unit-imperial.rfa',
@@ -179,7 +183,7 @@ const imperialRFAData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 12-Inch/icf-nudura-12-inch-brick-ledge-form-unit-imperial.rfa',
     },
     {
-        title: 'T Form Unit- Short',
+        title:  t('imperialRFAData.title6'),
          dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 4-Inch/short-t-form-unit-imperial.rfa',
          dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 6-Inch/icf-nudura-6-inch-short-t-form-unit-imperial.rfa',
          dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 8-Inch/icf-nudura-8-inch-short-t-form-unit-imperial.rfa',
@@ -187,7 +191,7 @@ const imperialRFAData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 12-Inch/icf-nudura-12-inch-short-t-form-unit-imperial.rfa',
     },
     {
-        title: 'T Form Unit- Long',
+        title:  t('imperialRFAData.title7'),
         dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 4-Inch/long-t-form-unit-imperial.rfa',
         dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 6-Inch/icf-nudura-6-inch-long-t-form-unit-imperial.rfa',
         dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 8-Inch/icf-nudura-8-inch-long-t-form-unit-imperial.rfa',
@@ -195,7 +199,7 @@ const imperialRFAData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 12-Inch/icf-nudura-12-inch-long-t-form-unit-imperial.rfa',
     },
     {
-        title: 'End Cap',
+        title:  t('imperialRFAData.title8'),
         dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 4-Inch/end-cap-imperial.rfa',
         dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 6-Inch/icf-nudura-6-inch-end-cap-imperial.rfa',
         dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 8-Inch/icf-nudura-8-inch-end-cap-imperial.rfa',
@@ -203,7 +207,7 @@ const imperialRFAData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 12-Inch/icf-nudura-12-inch-end-cap-imperial.rfa',
     },
     {
-        title: 'Height Adjuster',
+        title:  t('imperialRFAData.title9'),
         dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 4-Inch/height-adjuster-imperial.rfa',
         dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 6-Inch/icf-nudura-6-inch-height-adjuster-imperial.rfa',
         dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Imperial RFA 8-Inch/icf-nudura-8-inch-height-adjuster-imperial.rfa',
@@ -214,7 +218,7 @@ const imperialRFAData = [
 ]
 const metricDWFData = [
     {
-        title: 'Standard Form Unit ',
+        title:  t('metricDWFData.title1'),
          dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 102mm/icf-nudura-102mm-standard-form-unit-metric.dwf',
          dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 152mm/icf-nudura-152mm-standard-form-unit-metric.dwf',
          dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 203mm/icf-nudura-203mm-standard-form-unit-metric.dwf',
@@ -222,7 +226,7 @@ const metricDWFData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 305mm/icf-nudura-305mm-standard-form-unit-metric.dwf',
     },
     {
-        title: '90 Degree Corner Form Unit',
+        title:  t('metricDWFData.title2'),
          dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 102mm/icf-nudura-102mm-90-degree-form-unit-metric.dwf',
          dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 152mm/icf-nudura-152mm-90-degree-form-unit-metric.dwf',
          dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 203mm/icf-nudura-203mm-90-degree-form-unit-metric.dwf',
@@ -230,7 +234,7 @@ const metricDWFData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 305mm/icf-nudura-305mm-standard-form-unit-metric.dwf',
     },
     {
-        title: '45 Degree Corner Form Unit',
+        title:  t('metricDWFData.title3'),
          dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 102mm/icf-nudura-102mm-45-degree-form-unit-metric.dwf',
          dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 152mm/icf-nudura-152mm-45-degree-form-unit-metric.dwf',
          dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 203mm/icf-nudura-203mm-45-degree-form-unit-metric.dwf',
@@ -238,7 +242,7 @@ const metricDWFData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 305mm/icf-nudura-305mm-45-degree-form-unit-metric.dwf',
     },
     {
-        title: 'Single Sided Taper Top Form Unit',
+        title:  t('metricDWFData.title4'),
          dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 102mm/icf-nudura-102mm-single-sided-taper-top-form-unit-metric.dwf',
          dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 152mm/icf-nudura-152mm-single-sided-taper-top-form-unit-metric.dwf',
          dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 203mm/icf-nudura-203mm-single-sided-taper-top-form-unit-metric.dwf',
@@ -246,7 +250,7 @@ const metricDWFData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 305mm/icf-nudura-305mm-single-sided-taper-top-form-unit-metric.dwf',
     },
     {
-        title: 'Brick Ledge Form Unit',
+        title:  t('metricDWFData.title5'),
          dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 102mm/icf-nudura-102mm-brick-ledge-form-unit-metric.dwf',
          dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 152mm/icf-nudura-152mm-brick-ledge-form-unit-metric.dwf',
          dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 203mm/icf-nudura-203mm-brick-ledge-form-unit-metric.dwf',
@@ -254,7 +258,7 @@ const metricDWFData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 305mm/icf-nudura-305mm-brick-ledge-form-unit-metric.dwf',
     },
     {
-        title: 'T Form Unit- Short',
+        title:  t('metricDWFData.title6'),
          dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 102mm/icf-nudura-102mm-short-t-form-unit-metric.dwf',
          dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 152mm/icf-nudura-152mm-short-t-form-unit-metric.dwf',
          dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 203mm/icf-nudura-203mm-short-t-form-unit-metric.dwf',
@@ -262,7 +266,7 @@ const metricDWFData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 305mm/icf-nudura-305mm-short-t-form-unit-metric.dwf',
     },
     {
-        title: 'T Form Unit- Long',
+        title:  t('metricDWFData.title7'),
          dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 102mm/icf-nudura-102mm-long-t-form-unit-metric.dwf',
          dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 152mm/icf-nudura-152mm-long-t-form-unit-metric.dwf',
          dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 203mm/icf-nudura-203mm-long-t-form-unit-metric.dwf',
@@ -270,14 +274,14 @@ const metricDWFData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 305mm/icf-nudura-305mm-long-t-form-unit-metric.dwf',
     },
     {
-        title: 'End Cap',
+        title:  t('metricDWFData.title8'),
          dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 102mm/icf-nudura-102mm-single-end-cap-metric.dwf',
          dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 152mm/icf-nudura-152mm-single-end-cap-metric.dwf',
          dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 203mm/icf-nudura-203mm-single-end-cap-metric.dwf',
         dwg10: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 254mm/icf-nudura-254mm-single-end-cap-metric.dwf',
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 305mm/icf-nudura-305mm-single-end-cap-metric.dwf',    },
     {
-        title: 'Height Adjuster',
+        title:  t('metricDWFData.title9'),
          dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 102mm/icf-nudura-102mm-height-adjuster-metric.dwf',
          dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 152mm/icf-nudura-152mm-height-adjuster-metric.dwf',
          dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric DWF 203mm/icf-nudura-203mm-height-adjuster-metric.dwf',
@@ -288,7 +292,7 @@ const metricDWFData = [
 ]
 const metricRFAData = [
    {
-        title: 'Standard Form Unit ',
+        title: t('metricRFAData.title1'),
         dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 102mm/icf-nudura-102mm-standard-form-unit-metric.rfa',
         dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 152mm/icf-nudura-152mm-standard-form-unit-metric.rfa',
         dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 203mm/icf-nudura-203mm-standard-form-unit-metric.rfa',
@@ -296,7 +300,7 @@ const metricRFAData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 305mm/icf-nudura-305mm-standard-form-unit-metric.rfa',
     },
     {
-        title: '90 Degree Corner Form Unit',
+        title: t('metricRFAData.title2'),
         dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 102mm/icf-nudura-102mm-90-degree-form-unit-metric.rfa',
         dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 152mm/icf-nudura-152nn-90-degree-form-unit-metric.rfa',
         dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 203mm/icf-nudura-203mm-90-degree-form-unit-metric.rfa',
@@ -304,7 +308,7 @@ const metricRFAData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 305mm/icf-nudura-305mm-90-degree-form-unit-metric.rfa',
     },
     {
-        title: '45 Degree Corner Form Unit',
+        title: t('metricRFAData.title3'),
         dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 102mm/icf-nudura-102mm-45-degree-form-unit-metric.rfa',
         dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 152mm/icf-nudura-152mm-45-degree-form-unit-metric.rfa',
         dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 203mm/icf-nudura-203mm-45-degree-form-unit-metric.rfa',
@@ -312,7 +316,7 @@ const metricRFAData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 305mm/icf-nudura-305mm-45-degree-form-unit-metric.rfa',
     },
     {
-        title: 'Single Sided Taper Top Form Unit',
+        title: t('metricRFAData.title4'),
         dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 152mm/icf-nudura-102mm-single-sided-taper-top-form-unit-metric.rfa',
         dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 203mm/icf-nudura-152-single-sided-taper-top-form-unit-metric.rfa',
         dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 102mm/icf-nudura-203mm-single-sided-taper-top-form-unit-metric.rfa',
@@ -320,7 +324,7 @@ const metricRFAData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 305mm/icf-nudura-305mm-single-sided-taper-top-metric.rfa',
     },
     {
-        title: 'Brick Ledge Form Unit',
+        title: t('metricRFAData.title5'),
         dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 102mm/icf-nudura-102mm-brick-ledge-form-unit-metric.rfa',
         dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 152mm/icf-nudura-152mm-brick-ledge-form-unit-metric.rfa',
         dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 203mm/icf-nudura-203mm-brick-ledge-form-unit-metric.rfa',
@@ -328,7 +332,7 @@ const metricRFAData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 305mm/icf-nudura-305mm-brick-ledge-form-unit-metric.rfa',
     },
     {
-        title: 'T Form Unit- Short',
+        title: t('metricRFAData.title6'),
         dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 102mm/icf-nudura-102mm-short-t-form-unit-metric.rfa',
         dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 152mm/icf-nudura-152mm-short-t-form-unit-metric.rfa',
         dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 203mm/icf-nudura-203mm-short-t-form-unit-metric.rfa',
@@ -336,7 +340,7 @@ const metricRFAData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 305mm/icf-nudura-305mm-short-t-form-unit-metric.rfa',
     },
     {
-        title: 'T Form Unit- Long',
+        title: t('metricRFAData.title7'),
         dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 102mm/icf-nudura-102mm-long-t-form-unit-metric.rfa',
         dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 152mm/icf-nudura-152mm-long-t-form-unit-metric.rfa',
         dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 203mm/icf-nudura-203mm-long-t-form-unit-metric.rfa',
@@ -344,14 +348,14 @@ const metricRFAData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 305mm/icf-nudura-305mm-long-t-form-unit-metric.rfa',
     },
     {
-        title: 'End Cap',
+        title: t('metricRFAData.title8'),
         dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 102mm/icf-nudura-102mm-end-cap-metric.rfa',
         dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 152mm/icf-nudura-152mm-single-end-cap-metric.rfa',
         dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 203mm/icf-nudura-203mm-single-end-cap-metric.rfa',
         dwg10: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 254mm/icf-nudura-254mm-end-cap-metric.rfa',
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 305mm/icf-nudura-305mm-end-cap-metric.rfa',    },
     {
-        title: 'Height Adjuster',
+        title: t('metricRFAData.title9'),
         dwg4: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 102mm/icf-nudura-102mm-height-adjuster.rfa',
         dwg6: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 152mm/icf-nudura-152mm-height-adjuster-metric.rfa',
         dwg8: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 203mm/icf-nudura-203mm-height-adjuster-metric.rfa',
@@ -359,11 +363,6 @@ const metricRFAData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 305mm/icf-nudura-305mm-height-adjuster-metric.rfa',
     },
 ]
-
-const BIMLibrary = () => {
-    const { t } = useTranslation();
-    const tr = (key, fallback) => t(key, { defaultValue: fallback });
-    
     // State to manage active tab
     const [activeTab, setActiveTab] = useState('unit-form-model');
 
@@ -523,7 +522,7 @@ const BIMLibrary = () => {
                             </div>
 
                             <div className="form-group w-30 border-none">
-                                <label className="form-label">{tr("bimLibrary.search.description", "Description")}</label>
+                                <label className="form-label">{t("Description")}</label>
                                 <input type="email" className="form-control" placeholder={tr("bimLibrary.search.placeholder", "Search here")} />
                             </div>
                         </div>
@@ -563,7 +562,7 @@ const BIMLibrary = () => {
                                 <table className="dltrc tabel-content-center" style={{background:"none"}}>
                                     <tbody>
                                         <tr className="dlheader">
-                                            <td>{t("bimLibrary.tableHeaders.description")}</td>
+                                            <td>{t("Description")}</td>
                                             <td>{t('4_inch')}</td>
                                             <td>{t('6_inch')}</td>
                                             <td>{t('8_inch')}</td>
@@ -603,7 +602,7 @@ const BIMLibrary = () => {
                                 <table className="dltrc tabel-content-center" style={{background:"none"}}>
                                     <tbody>
                                         <tr className="dlheader">
-                                            <td>{t("bimLibrary.tableHeaders.description")}</td>
+                                            <td>{t("Description")}</td>
                                             <td className="dlheader">{t('4_inch')}</td>
                                             <td className="dlheader">{t('6_inch')}</td>
                                             <td className="dlheader">{t('8_inch')}</td>
@@ -641,7 +640,7 @@ const BIMLibrary = () => {
                                 <table className="dltrc tabel-content-center" style={{background:"none"}}>
                                     <tbody>
                                         <tr className="dlheader">
-                                            <td className="dlheader">{t('description')}</td>
+                                            <td>{t("Description")}</td>
                                             <td className="dlheader">{t('4_inch')}</td>
                                             <td className="dlheader">{t('6_inch')}</td>
                                             <td className="dlheader">{t('8_inch')}</td>
@@ -678,7 +677,7 @@ const BIMLibrary = () => {
                                 <table className="dltrc tabel-content-center" style={{background:"none"}}>
                                     <tbody>
                                         <tr className="dlheader">
-                                            <td className="dlheader">{t('description')}</td>
+                                            <td>{t("Description")}</td>
                                             <td className="dlheader">{t('4_inch')}</td>
                                             <td className="dlheader">{t('6_inch')}</td>
                                             <td className="dlheader">{t('8_inch')}</td>
@@ -716,7 +715,7 @@ const BIMLibrary = () => {
                                 <table className="dltrc tabel-content-center" style={{background:"none"}}>
                                     <tbody>
                                         <tr className="dlheader">
-                                            <td className="dlheader">{t('description')}</td>
+                                            <td className="dlheader">{t('Description')}</td>
 
                                             <td className="dlheader">{t('files')}</td>
                                         </tr>
@@ -758,7 +757,7 @@ const BIMLibrary = () => {
                                         <table className="dltrc tabel-content-center" style={{background:"none"}}>
                                             <tbody>
                                                 <tr className="dlheader">
-                                                    <td className="dlheader">{t('description')}</td>
+                                                    <td className="dlheader">{t('Description')}</td>
                                                     <td className="dlheader">{t('file')}</td>
                                                 </tr>
                                                 {projects.map((item, index) => (
@@ -793,7 +792,7 @@ const BIMLibrary = () => {
                                         <table className="dltrc tabel-content-center" style={{background:"none"}}>
                                             <tbody>
                                                 <tr className="dlheader">
-                                                    <td className="dlheader">{t('description')}</td>
+                                                    <td className="dlheader">{t('Description')}</td>
                                                     <td className="dlheader">{t('file')}</td>
                                                 </tr>
                                                 {template.map((item, index) => (

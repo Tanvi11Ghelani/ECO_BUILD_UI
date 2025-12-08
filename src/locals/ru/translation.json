@@ -6,6 +6,7 @@
   "Video Player": "Видеоплеер",
   "No video selected": "Видео не выбрано",
   "follow_us": "Следите за нами",
+    "isolated": "Изолированный",
   "specialises_in_providing_high_class_tours_for_those_in_need_contact_us": "Специализируется на организации высококлассных туров для нуждающихся. Свяжитесь с нами",
   "address_moshav_tarom": "Мошав Тавом",
   "operating_hours_09_00_17_00": "Часы работы: 09:00-17:00",
@@ -497,17 +498,28 @@
   "brick_veneer": "Кирпичный шпон",
   "7_8_inch_22_mm_hard_coat_stucco": "7/8-дюймовая (22 мм) штукатурка твердого покрытия",
   "cement_board_siding": "Цементный сайдинг",
-  "dryvit_systems_inc_dryvit_outsulation_exterior_insulation_and_finish_system_as_described_in_esr_1232": "Dryvit Systems INC., Dryvit Outsulation Exterior Insulation and Finish System, как описано в ESR-1232",
-  "finestone_finestone_pebbletex_pebbletex_d_quik_clad_d_and_impact_r_wall_systems_as_described_in_er_4455": "Finestone., Finestone Pebbletex, Pebbletex-D, Quik Clad-D и Impact-R Wall Systems, как описано в ER-4455",
-  "omega_products_international_inc_omega_diamond_wall_and_diamond_wall_pm_insulating_exterior_stucco_systems_as_described_in_esr_1194": "Omega Products International INC., Omega Diamond Wall и Diamond Wall PM Insulating Exterior Stucco Systems, как описано в ESR-1194",
-  "senergy_llc_senerflex_and_senerthik_exterior_insulation_and_finish_systems_eifs_as_described_in_er_3850": "Senergy LLC., Senerflex и Senerthik Exterior Insulation and Finish Systems (EIFS), как описано в ER-3850",
-  "sonowall_stucco_systems_sonowall_exterior_insulation_and_finish_systems_as_described_in_er_5678": "Sonowall Stucco Systems., Sonowall Exterior Insulation and Finish Systems, как описано в ER-5678",
-  "sto_corporation_sto_classic_exterior_insulation_and_finish_system_eifs_and_sto_classic_eifs_with_gold_guard_as_described_in_er_3906": "STO Corporation., STO Classic Exterior Insulation and Finish System (EIFS) и STO Classic EIFS с Gold Guard, как описано в ER-3906",
-  "sto_corporation_sto_essence_exterior_insulation_and_finish_systems_eifs_as_described_in_9642b": "STO Corporation., STO Essence Exterior Insulation and Finish Systems (EIFS), как описано в 9642B",
-  "sto_corporation_sto_essence_exterior_insulation_and_finish_system_eifs_and_sto_eifs_with_gold_guard_as_described_in_er_3617": "STO Corporation., STO Essence Exterior Insulation and Finish System (EIFS) и STO EIFS с Gold Guard, как описано в ER-3617",
-  "in_addition_to_the_above_noted_options_for_finishing_exterior_surfaces_of_buildings_designated_for_non_combustible_construction_there_are_limited_single_story_occupancies_of_types_i_through_iv_construction_within_the_usa_where_a_design_professional_is_asked_to_consider_use_of_nudura_and_the_client_may_not_wish_to_employ_brick_hard_coat_stucco_or_non_combustible_eifs_as_the_designated_finish_even_though_the_occupancy_type_and_building_size_does_not_require_the_provision_of_an_automatic_sprinkler_system_nudura_s_evaluation_report_no_esr_2092_makes_specific_provisions_for_the_enabling_of_use_of_either_aluminum_or_steel_siding_finish_without_the_need_of_an_engineer_designed_cladding_system_or_additional_requirement_of_automatic_sprinklers_so_long_as_it_is_installed_as_per_the_limitations_stated_within_the_report": "В дополнение к вышеупомянутым вариантам отделки наружных поверхностей зданий, предназначенных для несгораемого строительства, существует ограниченное количество одноэтажных помещений типов I-IV строительства в США, где от специалиста по проектированию просят рассмотреть использование Nudura®, и клиент может не желать использовать кирпич, штукатурку твердого покрытия или несгораемый EIFS в качестве назначенной отделки, даже если тип занятости и размер здания НЕ требуют обеспечения автоматической спринклерной системы. Отчет об оценке Nudura® № ESR-2092 содержит конкретные положения, позволяющие использовать либо алюминиевый, либо стальной сайдинг (без необходимости в инженерно-разработанной системе облицовки или дополнительном требовании автоматических спринклеров) при условии, что он установлен в соответствии с ограничениями, указанными в отчете.",
-  "in_canada_for_non_combustible_construction_with_exterior_finishes_materials_must_conform_to_can_ulc_s_101_fire_endurance_tests_of_building_construction_and_materials_and_can4_s114_m_test_for_determination_of_non_combustibility_in_building_materials": "В Канаде для несгораемого строительства с наружной отделкой материалы должны соответствовать CAN/ULC S-101 «Испытания на огнестойкость строительных конструкций и материалов» и CAN4-S114-M, «Испытание для определения несгораемости строительных материалов».",
-  "the_list_below_shows_exterior_finishes_that_either_comply_or_have_been_tested_to_the_standard_above": "В списке ниже показаны наружные отделочные материалы, которые либо соответствуют, либо были испытаны в соответствии с вышеуказанным стандартом;",
+  "dryvit_systems_inc_dryvit_outsulation_exterior_insulation_and_finish_system_as_described_in_esr_1232": "Dryvit Systems INC., система внешней теплоизоляции и отделки Dryvit Outsulation, как описано в ESR-1232",
+
+  "finestone_finestone_pebbletex_pebbletex_d_quik_clad_d_and_impact_r_wall_systems_as_described_in_er_4455": "Finestone., системы Finestone Pebbletex, Pebbletex-D, Quik Clad-D и Impact-R, как описано в ER-4455",
+
+  "omega_products_international_inc_omega_diamond_wall_and_diamond_wall_pm_insulating_exterior_stucco_systems_as_described_in_esr_1194": "Omega Products International INC., системы наружной утепляющей штукатурки Omega Diamond Wall и Diamond Wall PM, как описано в ESR-1194",
+
+  "senergy_llc_senerflex_and_senerthik_exterior_insulation_and_finish_systems_eifs_as_described_in_er_3850": "Senergy LLC., системы внешней теплоизоляции и отделки Senerflex и Senerthik (EIFS), как описано в ER-3850",
+
+  "sonowall_stucco_systems_sonowall_exterior_insulation_and_finish_systems_as_described_in_er_5678": "Sonowall Stucco Systems., системы внешней теплоизоляции и отделки Sonowall, как описано в ER-5678",
+
+  "sto_corporation_sto_classic_exterior_insulation_and_finish_system_eifs_and_sto_classic_eifs_with_gold_guard_as_described_in_er_3906": "STO Corporation, система внешней теплоизоляции и отделки STO Classic (EIFS) и STO Classic EIFS с Gold Guard, как описано в ER-3906",
+
+  "sto_corporation_sto_essence_exterior_insulation_and_finish_systems_eifs_as_described_in_9642b": "STO Corporation, системы внешней теплоизоляции и отделки STO Essence (EIFS), как описано в 9642B",
+
+  "sto_corporation_sto_essence_exterior_insulation_and_finish_system_eifs_and_sto_eifs_with_gold_guard_as_described_in_er_3617": "STO Corporation, система внешней теплоизоляции и отделки STO Essence (EIFS) и STO EIFS с Gold Guard, как описано в ER-3617",
+
+  "in_addition_to_the_above_noted_options_for_finishing_exterior_surfaces_of_buildings_designated_for_non_combustible_construction_there_are_limited_single_story_occupancies_of_types_i_through_iv_construction_within_the_usa_where_a_design_professional_is_asked_to_consider_use_of_nudura_and_the_client_may_not_wish_to_employ_brick_hard_coat_stucco_or_non_combustible_eifs_as_the_designated_finish_even_though_the_occupancy_type_and_building_size_does_not_require_the_provision_of_an_automatic_sprinkler_system_nudura_s_evaluation_report_no_esr_2092_makes_specific_provisions_for_the_enabling_of_use_of_either_aluminum_or_steel_siding_finish_without_the_need_of_an_engineer_designed_cladding_system_or_additional_requirement_of_automatic_sprinklers_so_long_as_it_is_installed_as_per_the_limitations_stated_within_the_report": "В дополнение к вышеуказанным вариантам отделки наружных поверхностей зданий, предназначенных для несгораемого строительства, существуют определённые одноэтажные помещения типов I–IV в США, где специалисту по проектированию могут предложить рассмотреть использование Nudura®, и клиент может не желать применять кирпич, штукатурку твёрдого покрытия или несгораемый EIFS в качестве отделки, даже если тип использования здания и его размеры не требуют установки автоматической спринклерной системы. Отчёт об оценке Nudura® № ESR-2092 содержит специальные положения, разрешающие использование алюминиевого или стального сайдинга без необходимости инженерно разработанной системы облицовки или дополнительных требований по автоматическим спринклерным системам, при условии соблюдения ограничений, указанных в отчёте.",
+
+  "in_canada_for_non_combustible_construction_with_exterior_finishes_materials_must_conform_to_can_ulc_s_101_fire_endurance_tests_of_building_construction_and_materials_and_can4_s114_m_test_for_determination_of_non_combustibility_in_building_materials": "В Канаде, для несгораемого строительства с наружной отделкой материалы должны соответствовать CAN/ULC S-101 «Испытания на огнестойкость строительных конструкций и материалов» и CAN4-S114-M «Испытание для определения несгораемости строительных материалов».",
+
+  "the_list_below_shows_exterior_finishes_that_either_comply_or_have_been_tested_to_the_standard_above": "Ниже приведён список наружных отделочных материалов, которые либо соответствуют стандарту, либо были испытаны на соответствие указанным требованиям.",
+
   "sto_corporation_pdf": "STO Corporation.pdf",
   "dryvit_systems_ltd_pdf": "Dryvit Systems Ltd.pdf",
   "durabond_products_ltd_pdf": "Durabond Products Ltd.pdf",
@@ -984,6 +996,343 @@
   "this_information_is_intended_to_provide": "Эта информация предназначена для того, чтобы предоставить архитектору и инженеру быстрое и удобное введение в стеновую систему NUDURA®.",
   "specification_in_10_chapters_pdf": "Спецификация в 10 главах.pdf",
   "product_catelog": "Каталог продукции",
-"booklet": "Буклет"
+"booklet": "Буклет",
+"belowConstructionSlope": {
+  "breadcrumbTitle": "Ниже строительного уклона",
+  "breadcrumbSubtitle": "Строительные детали и документация",
+
+  "card1Title": "Ниже строительного уклона",
+  "card1Alt": "Иконка ниже строительного уклона",
+  "card2Title": "Горючая конструкция",
+  "card2Alt": "Иконка горючей конструкции",
+  "card3Title": "Негорючая конструкция",
+  "card3Alt": "Иконка негорючей конструкции",
+  "card4Title": "Противопожарная стена",
+  "card4Alt": "Иконка противопожарной стены",
+  "card5Title": "Профили формованных блоков",
+  "card5Alt": "Иконка профилей формованных блоков",
+  "card6Title": "Библиотека BIM",
+  "card6Alt": "Иконка библиотеки BIM",
+  "card7Title": "Ранние проектные критерии",
+  "card7Alt": "Иконка ранних проектных критериев",
+
+  "sectionTitle": "Детали ниже строительного уклона",
+  "sectionDescription": "Полная строительная документация для применения ниже уровня земли",
+  "point1": "Высококачественные строительные детали",
+  "point2": "Доступны варианты различной толщины",
+  "point3": "Изолированные и неизолированные версии",
+
+  "detailingCovers": "Деталировка охватывает следующее:",
+  "detailPoint1": "Конфигурации плит ниже уровня земли",
+  "detailPoint2": "Варианты стен цоколя",
+  "detailPoint3": "Балочные фундаменты и утолщённые плиты",
+
+  "fileName": "Имя файла",
+  "thickness": "Толщина",
+  "description": "Описание",
+  "searchHere": "Поиск здесь",
+  "search": "Поиск",
+  "searchAdvanced": "Расширенный поиск",
+
+  "tabBelowGradeSlab": "Плита ниже уровня земли",
+  "tabStemWall": "Цокольная стена",
+  "tabGradeBeams": "Фундаментные балки",
+  "tabHaunchedSlab": "Утолщённая плита на грунте",
+
+  "colDescription": "Описание",
+  "colCoreThickness": "Толщина ядра",
+  "colInsulation": "Изоляция",
+  "colFileName": "Имя файла",
+  "colExplanation": "Объяснение",
+  "colFiles": "Файлы",
+  "colCladdingtype": "Тип облицовки",
+
+  "explanationPage": "Страница объяснения",
+  "pdf": "PDF",
+  "dwg": "DWG",
+  "pdf_icon": "Иконка PDF",
+  "dwg_icon": "Иконка DWG",
+  "download": "Скачать",
+
+  "insulated": "Изолированный",
+  "notInsulated": "Неизолированный",
+  "isolated": "Изолированный",
+  "notIsolated": "Неизолированный",
+  "withBricks": "С кирпичом",
+  "withoutBricks": "Без кирпича",
+
+  "insulatedConcrete6": "Изолированный, бетонное ядро 6\" (152 мм)",
+  "insulatedConcrete8": "Изолированный, бетонное ядро 8\" (203 мм)",
+  "insulatedConcrete10": "Изолированный, бетонное ядро 10\" (254 мм)",
+  "insulatedConcrete12": "Изолированный, бетонное ядро 12\" (305 мм)",
+  "uninsulatedConcrete6": "Неизолированный, бетонное ядро 6\" (152 мм)",
+  "uninsulatedConcrete8": "Неизолированный, бетонное ядро 8\" (203 мм)",
+  "uninsulatedConcrete10": "Неизолированный, бетонное ядро 10\" (254 мм)",
+  "uninsulatedConcrete12": "Неизолированный, бетонное ядро 12\" (305 мм)",
+
+  "concrete6": "Бетонное ядро 6\" (152 мм)",
+  "concrete8": "Бетонное ядро 8\" (203 мм)",
+  "concrete10": "Бетонное ядро 10\" (254 мм)",
+  "concrete12": "Бетонное ядро 12\" (305 мм)",
+
+  "brickInsulated6": "Кирпич — изолированный, бетонное ядро 6\" (152 мм)",
+  "brickInsulated8": "Кирпич — изолированный, бетонное ядро 8\" (203 мм)",
+  "brickUninsulated6": "Кирпич — неизолированный, бетонное ядро 6\" (152 мм)",
+  "brickUninsulated8": "Кирпич — неизолированный, бетонное ядро 8\" (203 мм)",
+  "noBrickInsulated6": "Без кирпича — изолированный, бетонное ядро 6\" (152 мм)",
+  "noBrickInsulated8": "Без кирпича — изолированный, бетонное ядро 8\" (203 мм)",
+  "noBrickUninsulated6": "Без кирпича — неизолированный, бетонное ядро 6\" (152 мм)",
+  "noBrickUninsulated8": "Без кирпича — неизолированный, бетонное ядро 8\" (203 мм)",
+
+  "size6": "6\"",
+  "size8": "8\"",
+  "size10": "10\"",
+  "size12": "12\"",
+  "insulatedConcrete61": "С утеплением, бетонное ядро 6\" (152 мм)",
+  "insulatedConcrete81": "С утеплением, бетонное ядро 8\" (203 мм)",
+  "insulatedConcrete101": "С утеплением, бетонное ядро 10\" (254 мм)",
+  "insulatedConcrete121": "С утеплением, бетонное ядро 12\" (305 мм)",
+
+  "uninsulatedConcrete61": "Без утепления, 6\" (152 мм)",
+  "uninsulatedConcrete81": "Без утепления, 8\" (203 мм)",
+  "uninsulatedConcrete101": "Без утепления, 10\" (254 мм)",
+  "uninsulatedConcrete121": "Без утепления, 12\" (305 мм)"
+},
+"firewell": {
+  "title1": "6” (152 мм) противопожарная стена/основание STC",
+  "title2": "6” (152 мм) огнестойкий/межэтажное перекрытие STC (A)",
+  "title3": "6” (152 мм) огнестойкий/межэтажное перекрытие STC (B)",
+  "title4": "6” (152 мм) противопожарная стена/потолок STC",
+  "title5": "6” (152 мм) противопожарная стена/кровля STC (Канада)",
+  "title6": "6” (152 мм) противопожарная стена/кровля STC (США)",
+  "title7": "6” (152 мм) противопожарная стена/STC — вид сверху"
+},
+"concretecoreData": {
+  "title1": "Стандартный формованный блок",
+  "title2": "Формованный блок угловой 90 градусов",
+  "title3": "Формованный блок угловой 45 градусов",
+  "title4": "Формованный блок с одинарным сужением сверху",
+  "title5": "Формованный блок с двойным сужением сверху",
+  "title6": "Формованный блок с кирпичным уступом",
+  "title7": "Концевая крышка и регулятор высоты"
+},
+"sixinchData": {
+  "title1": "Стандартный формованный блок",
+  "title2": "Формованный блок угловой 90 градусов",
+  "title3": "Формованный блок угловой 45 градусов",
+  "title4": "Формованный блок с одинарным сужением сверху",
+  "title5": "Формованный блок с двойным сужением сверху",
+  "title6": "Формованный блок с кирпичным уступом",
+  "title7": "Т-образный формованный блок",
+  "title8": "Концевая крышка и регулятор высоты"
+},
+"eightinchData": {
+  "title1": "Стандартный формованный блок",
+  "title2": "Формованный блок угловой 90 градусов",
+  "title3": "Формованный блок угловой 45 градусов",
+  "title4": "Формованный блок с одинарным сужением сверху",
+  "title5": "Формованный блок с двойным сужением сверху",
+  "title6": "Формованный блок с кирпичным уступом",
+  "title7": "Т-образный формованный блок",
+  "title8": "Концевая крышка и регулятор высоты"
+},
+"teninchData": {
+  "title1": "Стандартный формованный блок",
+  "title2": "Формованный блок угловой 90 градусов",
+  "title3": "Формованный блок угловой 45 градусов",
+  "title4": "Формованный блок с одинарным сужением сверху",
+  "title5": "Формованный блок с двойным сужением сверху",
+  "title6": "Формованный блок с кирпичным уступом",
+  "title7": "Концевая крышка и регулятор высоты"
+},
+"twelveinchData": {
+  "title1": "Стандартный формованный блок",
+  "title2": "Формованный блок угловой 90 градусов",
+  "title3": "Формованный блок угловой 45 градусов",
+  "title4": "Формованный блок с одинарным сужением сверху",
+  "title5": "Формованный блок с двойным сужением сверху",
+  "title6": "Формованный блок с кирпичным уступом",
+  "title7": "Концевая крышка и регулятор высоты"
+},
+"eightXRinchData": {
+  "title1": "XR35 стандартный формованный блок",
+  "title2": "XR35 стандартный формованный блок"
+},
+  "imperialDWFData": {
+    "title1": "Стандартный блок формы",
+    "title2": "Угловой блок формы 90 градусов",
+    "title3": "Угловой блок формы 45 градусов",
+    "title4": "Конусный верхний блок формы с одной стороны",
+    "title5": "Блок формы кирпичной полки",
+    "title6": "Блок формы T — короткий",
+    "title7": "Блок формы T — длинный",
+    "title8": "Концевой колпачок",
+    "title9": "Регулятор высоты"
+  },
+
+  "projects": {
+    "title1": "Имперский проект — RVT",
+    "title2": "Метрический проект — RVT"
+  },
+
+  "templates": {
+    "title1": "Имперский шаблон",
+    "title2": "Метрический проект — RVT"
+  },
+
+  "metricrfaform": {
+    "title1": "Удлинение кирпичной полки",
+    "title2": "Панель кирпичной полки",
+    "title3": "Стандартная панель формы",
+    "title4": "Коническая верхняя панель"
+  },
+
+  "imperialRFAData": {
+    "title1": "Стандартный блок формы",
+    "title2": "Угловой блок формы 90 градусов",
+    "title3": "Угловой блок формы 45 градусов",
+    "title4": "Конусный верхний блок формы с одной стороны",
+    "title5": "Блок формы кирпичной полки",
+    "title6": "Блок формы T — короткий",
+    "title7": "Блок формы T — длинный",
+    "title8": "Концевой колпачок",
+    "title9": "Регулятор высоты"
+  },
+
+  "metricDWFData": {
+    "title1": "Стандартный блок формы",
+    "title2": "Угловой блок формы 90 градусов",
+    "title3": "Угловой блок формы 45 градусов",
+    "title4": "Конусный верхний блок формы с одной стороны",
+    "title5": "Блок формы кирпичной полки",
+    "title6": "Блок формы T — короткий",
+    "title7": "Блок формы T — длинный",
+    "title8": "Концевой колпачок",
+    "title9": "Регулятор высоты"
+  },
+
+  "metricRFAData": {
+    "title1": "Стандартный блок формы",
+    "title2": "Угловой блок формы 90 градусов",
+    "title3": "Угловой блок формы 45 градусов",
+    "title4": "Конусный верхний блок формы с одной стороны",
+    "title5": "Блок формы кирпичной полки",
+    "title6": "Блок формы T — короткий",
+    "title7": "Блок формы T — длинный",
+    "title8": "Концевой колпачок",
+    "title9": "Регулятор высоты"
+  },
+  "bimLibrary": {
+    "title": "Библиотека BIM",
+    "subtitle": "Создаём дома, которые прослужат будущим поколениям.",
+
+    "heading": "Библиотека BIM",
+
+    "description1": "Наша библиотека информационного моделирования зданий (BIM) помогает проектировщикам на ранних этапах работы над проектом при использовании программного обеспечения для проектирования зданий.",
+    "description2": "Созданные для работы с программным обеспечением Autodesk Revit, эти файлы показывают, как использовать системы Nudura для различных типов стен. Используйте 3D-модели, чтобы экспериментировать с геометрией форм Nudura и получить любой необходимый вид, не покидая офиса. Файлы проекта и шаблонов позволяют даже переносить типы стен Nudura в ваши текущие проекты.",
+
+    "technicalRequirements": {
+      "title": "Технические требования",
+      "body": "Если у вас нет Autodesk Revit, вы можете просматривать файлы, загрузив бесплатную версию программного обеспечения Autodesk Design Review, которое включает множество функций для просмотра 3D-профилей форм Nudura. Просто используйте файлы .dwf, чтобы просматривать наши формованные блоки в 3D. Обратите внимание: из-за размера файлов эти модели и семейства предназначены только для просмотра и не должны использоваться для сборки внутри проекта."
+    },
+
+    "cards": {
+      "belowConstructionSlope": "Ниже строительного уклона",
+      "flammableConstruction": "Горючая конструкция",
+      "nonCombustibleConstruction": "Негорючая конструкция",
+      "firewall": "Противопожарная стена",
+      "formUnitProfiles": "Профили формованных блоков",
+      "bimLibrary": "Библиотека BIM",
+      "earlyDesignCriteria": "Ранние критерии проектирования"
+    },
+
+    "search": {
+      "fileName": "Имя файла",
+      "thickness": "Толщина",
+      "description": "Описание",
+      "placeholder": "Поиск...",
+      "search": "Поиск",
+      "advanced": "Расширенный поиск"
+    },
+
+    "tabs": {
+      "unitFormModel": "Модель формованного блока Nudura",
+      "projectTemplateFiles": "Файлы проектов и шаблонов Revit"
+    },
+
+    "tables": {
+      "imperialDWF": "Имперский DWF",
+      "imperialRFA": "Имперский RFA",
+      "metricDWF": "Метрический DWF",
+      "metricRFA": "Метрический RFA",
+      "metricRFAFormPanels": "Метрические панели формы RFA",
+      "projectFiles": "Файлы проектов",
+      "templateFiles": "Файлы шаблонов — RTE"
+    },
+
+    "tableHeaders": {
+      "description": "Описание",
+      "file": "Файл"
+    }
+  },
+  "Description": "Описание",
+  "fourData": {
+    "title1": "Вертикальное армирование A6B01",
+    "title2": "Армирование кирпичной полки A8B02",
+    "title3": "Угол 90 градусов A8B03",
+    "title4": "Форма T A8B06"
+  },
+  "sixData": {
+    "title1": "Вертикальное армирование A6B01",
+    "title2": "Армирование кирпичной полки A6B02",
+    "title3": "Стальной угловой опорный элемент для кирпича A6B03",
+    "title4": "Схема перемычки (вид спереди) A6B04",
+    "title5": "Перемычка на соединении с перекрытием OWSJ A6B05",
+    "title6": "Перемычка на соединении с пустотной плитой A6B06",
+    "title7": "Угол 90 градусов A6B08",
+    "title8": "Угол 45 градусов A6B09"
+  },
+  "eightData": {
+    "title1": "Вертикальное армирование A6B01",
+    "title2": "Армирование кирпичной полки A8B02",
+    "title3": "Угол 90 градусов A8B03",
+    "title4": "Форма T A8B06",
+    "title5": "Угол 45 градусов A8B07"
+  },
+  "tenData": {
+    "title1": "Вертикальное армирование A10B01",
+    "title2": "Армирование кирпичной полки A10B02",
+    "title3": "Угол 90 градусов A10B03",
+    "title4": "Форма T A10B05",
+    "title5": "Угол 45 градусов A10B06"
+  },
+  "twelveData": {
+    "title1": "Вертикальное армирование A12B01",
+    "title2": "Угол 90 градусов A12B02",
+    "title3": "Форма T A12B03",
+    "title4": "Угол 45 градусов A12B04"
+  },
+  "videoCategory": {
+  "category1": "Продукт",
+  "category2": "Продукт",
+  "category3": "Продукт",
+  "category4": "Мелкозаглубленные фундаменты",
+  "category5": "Начало работы — укладка первого слоя",
+  "category6": "Укладка арматурных стержней",
+  "category7": "Нанесение второго слоя",
+  "category8": "Система выравнивания",
+  "category9": "Проемы — окна и двери"
+},
+"nudura_plus_series_intro": "Компания Nudura продвигала инновации в продукции и возглавляла отрасль благодаря инновационной линейке изолированных бетонных опалубок. Эти инновации продолжаются с серией Nudura Plus+.",
+  
+  "nudura_plus_series_desc_1": "Линейка форм и вставок серии Plus+ предоставляет альтернативы для проектировщиков и строителей, которые хотят добавить дополнительную изоляцию к стандартной линейке изолированных бетонных опалубок Nudura.",
+  
+  "nudura_plus_series_desc_2": "Серия Nudura Plus+ использует инновацию, эксклюзивную для Nudura, что позволяет строителям, архитекторам и инженерам более эффективно проектировать и возводить коммерческие и жилые здания.",
+  
+  "nudura_plus_series_tech": "Технологии DURAFOLD®, DURAMAX® и DURALOK®, а также система поворота в четырёх направлениях предлагают запатентованные решения, доступные только у Nudura, во всех формах и размерах.",
+  
+  "Nudura_plus_forms_title": "Формы Nudura PLUS",
+  
+  "Nudura_plus_forms_desc": "Формы Nudura Plus+ доступны в четырёх размерах: 25 мм, 50 мм, 100 мм и 150 мм, и теперь предлагают значения R до R-48. Формы Plus+ ламинируются нужным количеством изоляции с использованием клея, одобренного для EPS, что обеспечивает безопасную ламинацию для всех строительных применений. Если требуемое количество изоляции превышает 150 мм, Nudura может изготовить индивидуальное количество изоляции."
 
 }
