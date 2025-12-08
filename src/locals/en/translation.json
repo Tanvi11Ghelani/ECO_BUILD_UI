@@ -1,3 +1,4 @@
+
 {
   "TECHNICAL INFORMATION ON R-VALUE & THERMAL MASS": "TECHNICAL INFORMATION ON R-VALUE & THERMAL MASS",
   "High Thermal Mass Concrete Core": "High Thermal Mass Concrete Core",
@@ -985,5 +986,331 @@
   "this_information_is_intended_to_provide": "This information is intended to provide the architect and engineer with a quick and convenient introduction to the NUDURA® wall system.",
   "specification_in_10_chapters_pdf": "Specification in 10 chapters.pdf",
   "product_catelog":" Product Catalog",
-  "booklet": "Booklet"
+  "booklet": "Booklet",
+  "belowConstructionSlope": {
+    "breadcrumbTitle": "Below the Construction Slope",
+    "breadcrumbSubtitle": "Construction Details and Documentation",
+    
+    "card1Title": "Below the Construction Slope",
+    "card1Alt": "Below Construction Slope Icon",
+    "card2Title": "Flammable Construction",
+    "card2Alt": "Flammable Construction Icon",
+    "card3Title": "Non-Combustible Construction",
+    "card3Alt": "Non-Combustible Construction Icon",
+    "card4Title": "Firewall",
+    "card4Alt": "Firewall Icon",
+    "card5Title": "Form Unit Profiles",
+    "card5Alt": "Form Unit Profiles Icon",
+    "card6Title": "BIM Library",
+    "card6Alt": "BIM Library Icon",
+    "card7Title": "Early Design Criteria",
+    "card7Alt": "Early Design Criteria Icon",
+    
+    "sectionTitle": "Below the Construction Slope Details",
+    "sectionDescription": "Comprehensive construction documentation for below-grade applications",
+    "point1": "High-quality construction details",
+    "point2": "Multiple thickness options available",
+    "point3": "Insulated and non-insulated variants",
+    
+    "detailingCovers": "Detailing covers the following:",
+    "detailPoint1": "Below Grade Slab configurations",
+    "detailPoint2": "Stem Wall variations",
+    "detailPoint3": "Grade Beams and Haunched Slabs",
+    
+    "fileName": "File Name",
+    "thickness": "Thickness",
+    "description": "Description",
+    "searchHere": "Search here",
+    "search": "Search",
+    "searchAdvanced": "Advanced Search",
+    
+    "tabBelowGradeSlab": "Below Grade Slab",
+    "tabStemWall": "Stem Wall",
+    "tabGradeBeams": "Grade Beams",
+    "tabHaunchedSlab": "Haunched Slab on Grade",
+    
+    "colDescription": "Description",
+    "colCoreThickness": "Core Thickness",
+    "colInsulation": "Insulation",
+    "colFileName": "File Name",
+    "colExplanation": "Explanation",
+    "colFiles": "Files",
+    "colCladdingtype": "Cladding Type",
+    
+    "explanationPage": "Explanation Page",
+    "pdf": "PDF",
+    "dwg": "DWG",
+    "pdf_icon": "PDF Icon",
+    "dwg_icon": "DWG Icon",
+    "download": "Download",
+    
+    "insulated": "Insulated",
+    "notInsulated": "Not Insulated",
+    "isolated": "Isolated",
+    "notIsolated": "Not Isolated",
+    "withBricks": "With Bricks",
+    "withoutBricks": "Without Bricks",
+    
+    "insulatedConcrete6": "Insulated, 6\" (152 mm) concrete core",
+    "insulatedConcrete8": "Insulated, 8\" (203 mm) concrete core",
+    "insulatedConcrete10": "Insulated, 10\" (254 mm) concrete core",
+    "insulatedConcrete12": "Insulated, 12\" (305 mm) concrete core",
+    "uninsulatedConcrete6": "Uninsulated, 6\" (152 mm) concrete core",
+    "uninsulatedConcrete8": "Uninsulated, 8\" (203 mm) concrete core",
+    "uninsulatedConcrete10": "Uninsulated, 10\" (254 mm) concrete core",
+    "uninsulatedConcrete12": "Uninsulated, 12\" (305 mm) concrete core",
+    
+ "insulatedConcrete61": "Insulated, 6\" (152 mm) concrete core",
+    "insulatedConcrete81": "Insulated, 8\" (203 mm) concrete core",
+    "insulatedConcrete101": "Insulated, 10\" (254 mm) concrete core",
+    "insulatedConcrete121": "Insulated, 12\" (305 mm) concrete core",
+    "uninsulatedConcrete61": "Uninsulated, 6\" (152 mm)",
+    "uninsulatedConcrete81": "Uninsulated, 8\" (203 mm)",
+    "uninsulatedConcrete101": "Uninsulated, 10\" (254 mm)",
+    "uninsulatedConcrete121": "Uninsulated, 12\" (305 mm)",
+    "concrete6": "6\" (152 mm) concrete core",
+    "concrete8": "8\" (203 mm) concrete core",
+    "concrete10": "10\" (254 mm) concrete core",
+    "concrete12": "12\" (305 mm) concrete core",
+    
+    "brickInsulated6": "Brick - Insulated, 6\" (152 mm) Concrete Core",
+    "brickInsulated8": "Brick - Insulated, 8\" (203 mm) Concrete Core",
+    "brickUninsulated6": "Brick - Uninsulated, 6\" (152 mm) Concrete Core",
+    "brickUninsulated8": "Brick - Uninsulated, 8\" (203 mm) Concrete Core",
+    "noBrickInsulated6": "No Bricks - Insulated, 6\" (152 mm) Concrete Core",
+    "noBrickInsulated8": "No Bricks - Insulated, 8\" (203 mm) Concrete Core",
+    "noBrickUninsulated6": "No bricks - Uninsulated, 6\" (152 mm) concrete core",
+    "noBrickUninsulated8": "No bricks - Uninsulated, 8\" (203 mm) concrete core",
+    
+    "size6": "6\"",
+    "size8": "8\"",
+    "size10": "10\"",
+    "size12": "12\""
+  },
+  "firewell":{
+  "title1":"6” (152mm) Firewall/STC foundation",
+  "title2":"6” (152mm) Fireproof/STC mezzanine floor (A)",
+  "title3":"6” (152mm) Fireproof/STC mezzanine floor (B)",
+  "title4":"6” (152mm) Firewall/STC in the ceiling",
+  "title5":"6” (152mm) Firewall/STC on roof (Canada)",
+  "title6":"6” (152mm) Firewall/STC on roof (USA)",
+  "title7":"6” (152mm) Firewall/STC top view"
+  },
+  "concretecoreData": {
+    "title1": "Standard Form Unit",
+    "title2": "90 Degree Corner Form Unit",
+    "title3": "45 Degree Corner Form Unit",
+    "title4": "Single Sided Taper Top Form Unit",
+    "title5": "Double Sided Taper Top Form Unit",
+    "title6": "Brick Ledge Form Unit",
+    "title7": "End Cap and Height Adjuster"
+  },
+  "sixinchData": {
+    "title1": "Standard Form Unit",
+    "title2": "90 Degree Corner Form Unit",
+    "title3": "45 Degree Corner Form Unit",
+    "title4": "Single Sided Taper Top Form Unit",
+    "title5": "Double Sided Taper Top Form Unit",
+    "title6": "Brick Ledge Form Unit",
+    "title7": "T-Form Unit",
+    "title8": "End Cap and Height Adjuster"
+  },
+  "eightinchData": {
+    "title1": "Standard Form Unit",
+    "title2": "90 Degree Corner Form Unit",
+    "title3": "45 Degree Corner Form Unit",
+    "title4": "Single Sided Taper Top Form Unit",
+    "title5": "Double Sided Taper Top Form Unit",
+    "title6": "Brick Ledge Form Unit",
+    "title7": "T-Form Unit",
+    "title8": "End Cap and Height Adjuster"
+  },
+  "teninchData": {
+    "title1": "Standard Form Unit",
+    "title2": "90 Degree Corner Form Unit",
+    "title3": "45 Degree Corner Form Unit",
+    "title4": "Single Sided Taper Top Form Unit",
+    "title5": "Double Sided Taper Top Form Unit",
+    "title6": "Brick Ledge Form Unit",
+    "title7": "End Cap and Height Adjuster"
+  },
+  "twelveinchData": {
+    "title1": "Standard Form Unit",
+    "title2": "90 Degree Corner Form Unit",
+    "title3": "45 Degree Corner Form Unit",
+    "title4": "Single Sided Taper Top Form Unit",
+    "title5": "Double Sided Taper Top Form Unit",
+    "title6": "Brick Ledge Form Unit",
+    "title7": "End Cap and Height Adjuster"
+  },
+   "eightXRinchData": {
+    "title1": "XR35 Standard Form Unit",
+    "title2": "XR35 Standard Form Unit"
+  },
+  "imperialDWFData": {
+    "title1":"Standard Form Unit",
+    "title2":"90 Degree Corner Form Unit",
+    "title3":"45 Degree Corner Form Unit",
+    "title4":"Single Sided Taper Top Form Unit",
+    "title5":"Brick Ledge Form Unit",
+    "title6":"T Form Unit- Short",
+    "title7":"T Form Unit- Long",
+    "title8":"End Cap",
+    "title9":"Height Adjuster"
+  },
+  "projects":{
+"title1":"Project Imperial - RVT",
+"title2":"Project Metric - RVT"
+  },
+  "templates":{
+    "title1":"Template Imperial",
+    "title2":"Project Metric - RVT"
+  },
+  "metricrfaform":{
+    "title1":"Brick Ledge Extension",
+    "title2":"Brick Ledge Panel",
+    "title3":"Standard Form Panel",
+    "title4":"Taper Top Panel"
+  },
+  "imperialRFAData":{
+    "title1":"Standard Form Unit",
+    "title2":"90 Degree Corner Form Unit",
+    "title3":"45 Degree Corner Form Unit",
+    "title4":"Single Sided Taper Top Form Unit",
+    "title5":"Brick Ledge Form Unit",
+    "title6":"T Form Unit- Short",
+    "title7":"T Form Unit- Long",
+    "title8":"End Cap",
+    "title9":"Height Adjuster"
+  },
+"metricDWFData":{
+ "title1":"Standard Form Unit",
+    "title2":"90 Degree Corner Form Unit",
+    "title3":"45 Degree Corner Form Unit",
+    "title4":"Single Sided Taper Top Form Unit",
+    "title5":"Brick Ledge Form Unit",
+    "title6":"T Form Unit- Short",
+    "title7":"T Form Unit- Long",
+    "title8":"End Cap",
+    "title9":"Height Adjuster"
+},
+"metricRFAData":{
+ "title1":"Standard Form Unit",
+    "title2":"90 Degree Corner Form Unit",
+    "title3":"45 Degree Corner Form Unit",
+    "title4":"Single Sided Taper Top Form Unit",
+    "title5":"Brick Ledge Form Unit",
+    "title6":"T Form Unit- Short",
+    "title7":"T Form Unit- Long",
+    "title8":"End Cap",
+    "title9":"Height Adjuster"
+},
+ "bimLibrary": {
+    "title": "BIM Library",
+    "subtitle": "Building homes also for the generations to come.",
+
+    "heading": "BIM Library",
+
+    "description1": "Our Building Information Modeling (BIM) Library helps design professionals in the first stages of a project when working with building design software.",
+    "description2": "Created to work with Autodesk Revit building design software, these files show how to use Nudura for a variety of wall types. Use the 3D models to play and experiment with the geometry of Nudura forms to achieve any view you need without leaving the comfort of your office. The project and template files even let you transfer the Nudura wall types into your existing building projects.",
+
+    "technicalRequirements": {
+      "title": "Technical Requirements",
+      "body": "If you don't have Autodesk Revit, you can view the files by downloading a free copy of the Autodesk Design Review software, which has many features for viewing the Nudura 3D form unit profiles. Simply use the .dwf files to view our form lineup in 3D. Note that, due to file size, these models/families are intended for viewing purposes only and not for assembly within a project."
+    },
+
+    "cards": {
+      "belowConstructionSlope": "Below the construction slope",
+      "flammableConstruction": "Flammable construction",
+      "nonCombustibleConstruction": "Non-combustible construction",
+      "firewall": "Firewall",
+      "formUnitProfiles": "Form unit profiles",
+      "bimLibrary": "BIM Library",
+      "earlyDesignCriteria": "Early design criteria"
+    },
+
+    "search": {
+      "fileName": "File Name",
+      "thickness": "Thickness",
+      "description": "Description",
+      "placeholder": "Search Here",
+      "search": "Search",
+      "advanced": "Search advanced"
+    },
+
+    "tabs": {
+      "unitFormModel": "Nudura Unit Form Model",
+      "projectTemplateFiles": "Revit Project & Template Files"
+    },
+
+    "tables": {
+      "imperialDWF": "Imperial DWF",
+      "imperialRFA": "Imperial RFA",
+      "metricDWF": "Metric DWF",
+      "metricRFA": "Metric RFA",
+      "metricRFAFormPanels": "Metric RFA Form Panels",
+      "projectFiles": "Project Files",
+      "templateFiles": "Template Files - RTE"
+    },
+
+    "tableHeaders": {
+      "description": "Description",
+      "file": "File"
+    }
+  },
+  "Description":"Description",
+  "fourData": {
+    "title1":"Vertical Reinforcing A6B01",
+    "title2":"Brick Ledge Reinforcement A8B02",
+    "title3":"90 Degree Corner A8B03",
+    "title4":"T Form A8B06"
+  },
+  "sixData": {
+   "title1": "Vertical Reinforcing A6B01",
+    "title2":"Brick Ledge Reinforcement A6B02",
+    "title3":"Steel Angle Brick Support A6B03",
+    "title4":"Lintel Diagram Elevation A6B04",
+    "title5":"Lintel at OWSJ Floor Connection A6B05",
+    "title6":"Lintel at Hollow Core Floor Connection A6B06",
+    "title7":"90 Degree Corner A6B08",
+    "title8":"45 Degree Corner A6B09"
+},
+  "eightData": {
+    "title1":"Vertical Reinforcing A6B01",
+    "title2":"Brick Ledge Reinforcement A8B02",
+    "title3":"90 Degree Corner A8B03",
+    "title4":"T Form A8B06",
+    "title5":"45 Degree Corner A8B07"
+  },
+  "tenData": {
+    "title1":"Vertical Reinforcing A10B01",
+    "title2":"Brick Ledge Reinforcement A10B02",
+    "title3":"90 Degree Corner A10B03",
+    "title4":"T Form A10B05",
+    "title5":"45 Degree Corner A10B06"
+},
+  "twelveData": {
+    "title1":"Vertical Reinforcing A12B01",
+    "title2":"90 Degree Corner A12B02",
+    "title3":"T Form A12B03",
+    "title4":"45 Degree Corner A12B04"
+  },
+  "videoCategory":{
+    "category1":"Product",
+    "category2":"Product",
+    "category3":"Product",
+    "category4":"Shallow Foundations",
+    "category5":"Getting Started - Laying The First Layer",
+    "category6":"Laying Reinforcement Bars",
+    "category7":"Applying A Second Layer",
+    "category8":"Alignment System",
+    "category9":"Openings - Windows And Doors"
+  },
+  "nudura_plus_series_intro":"Nudura has driven product innovation and led the industry with an innovative line of insulated concrete forms. This innovation continues with the Nudura Plus+ Series.",
+"nudura_plus_series_desc_1":"The Plus+ Series line of forms and inserts provides alternatives for design professionals and builders looking to add additional insulation to the standard line of Nudura insulated concrete forms.",
+"nudura_plus_series_desc_2":"The Nudura Plus+ series utilizes an innovation exclusive to Nudura, enabling builders, architects and engineers the ability to construct and design commercial and residential buildings more efficiently.",
+"nudura_plus_series_tech":"DURAFOLD Technology®, DURAMAX Technology® and DURALOK Technology®, along with our 4-way flip system, offer patented technology only available from Nudura, in all shapes and sizes.",
+"Nudura_plus_forms_title":"Nudura PLUS Forms",
+"Nudura_plus_forms_desc":"Nudura Plus+ forms are available in four sizes, 25 in (25 mm), 50 in (50 mm), 100 in (4 mm) and 150 in (6 mm) and now offer R-values ​​as high as R-48. Plus+ forms are laminated with the desired amount of insulation with an EPS approved adhesive, ensuring the lamination is safe for all building applications. If the desired amount of insulation is greater than 150 mm (4 mm), Nudura can customize the desired amount of insulation."
+
 }
