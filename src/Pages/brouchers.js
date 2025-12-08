@@ -8,8 +8,8 @@ const Brouchers = () => {
     return(
         <div>
             <Breadcrumb 
-                header={t("Brochures")}
-                subHeader={t("Building homes also for the generations to come.")}
+                header={t("brochures")}
+                subHeader={t("building_homes_also_for_the_generations_to_come")}
             />
 
 
@@ -22,14 +22,14 @@ const Brouchers = () => {
                 <table className="dltrc" style={{background:"none"}}>
                     <tbody>
                         <tr className="dlheader">
-                            <td className="dlheader">{t("File Name")}</td>
-                            <td className="dlheader">{t("Type")}</td>
+                            <td className="dlheader">{t("file_name")}</td>
+                            <td className="dlheader">{t("type")}</td>
                             <td className="dlheader">{t("Size")}</td>
-                            <td className="dlheader">{t("Uploaded on")}</td>
-                            <td className="dlheader">{t("Files")}</td>
+                            <td className="dlheader">{t("uploaded_on")}</td>
+                            <td className="dlheader">{t("files")}</td>
                         </tr>
                         <tr className="dlinfo">
-                            <td className="dlinfo hover01">{t("Product Catalog")}</td>
+                            <td className="dlinfo hover01">{t("product_catelog")}</td>
                             <td className="dlinfo hover01">{t("PDF")}</td>
                             <td className="dlinfo hover01">{t("6.47 MB")}</td>
                             <td className="dlinfo hover01">{t("04 Aug, 2016")}</td>
