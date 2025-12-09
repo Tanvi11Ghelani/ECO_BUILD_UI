@@ -510,7 +510,7 @@ section.hero-band {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 0px;
   height: 92px;
 }
 
@@ -2968,7 +2968,7 @@ nav.navbar.navbar-expand-lg {
 }
 
 ul.navbar-nav li a {
-  font-size: 20px;
+  font-size: 18px;
   color: var(--font);
   text-decoration: none;
   font-weight: 700;
@@ -3157,7 +3157,6 @@ section.hero-band {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
   height: 92px;
 }
 

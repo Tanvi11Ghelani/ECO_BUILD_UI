@@ -58,7 +58,7 @@ const Navbar = () => {
     submenuLinks.forEach((link) => {
       link.addEventListener("click", handleSubmenuClick);
     });
-     // Close language dropdown when clicking outside
+    // Close language dropdown when clicking outside
     const handleClickOutside = (e) => {
       if (!e.target.closest(".language-dropdown-wrapper")) {
         setShowLangDropdown(false);
@@ -77,7 +77,7 @@ const Navbar = () => {
       <header className="header">
         {/* Inline style tag for submenu and chat popup */}
         <style>
-  {`
+          {`
     .dropdown-submenu {
       position: relative;
     }
@@ -233,7 +233,7 @@ const Navbar = () => {
       }
     }
   `}
-</style>
+        </style>
 
         <nav className="navbar navbar-expand-lg">
           <div className="cus-container-fluid">
@@ -255,7 +255,7 @@ const Navbar = () => {
                 </a>
 
                 <li className="nav-item dropdown">
-                  <a className="nav-link dropdown-toggle"   role="button" data-bs-toggle="dropdown" aria-expanded="false">{t('products')}</a>
+                  <a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">{t('products')}</a>
                   <ul className="dropdown-menu">
                     <li><Link className="dropdown-item" to="/plus-series">{t('plus_series')}</Link></li>
                     <li><Link className="dropdown-item" to="/thecombinedseries">{t('the_combined_series')}</Link></li>
@@ -275,7 +275,7 @@ const Navbar = () => {
                 </li>
 
                 <li className="nav-item dropdown">
-                  <a className="nav-link dropdown-toggle"   role="button" data-bs-toggle="dropdown" aria-expanded="false">{t('information_center')}</a>
+                  <a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">{t('information_center')}</a>
                   <ul className="dropdown-menu">
                     <li><Link className="dropdown-item" to="/planning">{t('planning')}</Link></li>
                     <li><Link className="dropdown-item" to="/catalogfordirectviewing">{t('catalog_for_direct_viewing')}</Link></li>
@@ -290,7 +290,7 @@ const Navbar = () => {
                 </li>
 
                 <li className="nav-item dropdown">
-                  <a className="nav-link dropdown-toggle"   role="button" data-bs-toggle="dropdown" aria-expanded="false">{t('design_library')}</a>
+                  <a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">{t('design_library')}</a>
                   <ul className="dropdown-menu">
                     <li><Link className="dropdown-item" to="/belowtheconstructionslope">{t('below_the_construction_slope')}</Link></li>
                     <li><Link className="dropdown-item" to="/flamableconstruction">{t('flammable_construction')}</Link></li>
@@ -303,7 +303,7 @@ const Navbar = () => {
                 </li>
 
                 <li className="nav-item dropdown">
-                  <a className="nav-link dropdown-toggle"   role="button" data-bs-toggle="dropdown" aria-expanded="false">{t('gallery')}</a>
+                  <a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">{t('gallery')}</a>
                   <ul className="dropdown-menu">
                     <li><Link className="dropdown-item" to="/photogallery">{t('photo_gallery')}</Link></li>
                     <li><Link className="dropdown-item" to="/videogallery">{t('video_gallery')}</Link></li>
@@ -343,9 +343,8 @@ const Navbar = () => {
               {languages.map((lang) => (
                 <button
                   key={lang.code}
-                  className={`language-option ${
-                    i18n.language === lang.code ? "active" : ""
-                  }`}
+                  className={`language-option ${i18n.language === lang.code ? "active" : ""
+                    }`}
                   onClick={() => changeLanguage(lang.code)}
                 >
                   <span className="language-flag">{lang.flag}</span>
@@ -357,7 +356,7 @@ const Navbar = () => {
               ))}
             </div>
           </li>
-              
+
           {/* Chat toggle */}
           <li>
             <div

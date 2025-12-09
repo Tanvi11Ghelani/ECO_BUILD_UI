@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -22,6 +23,7 @@ import { useTranslation } from "react-i18next";
 
 const Home = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   // State for search form
   const [productType, setProductType] = useState("All Products");
   const [sizes, setSizes] = useState("Size");
@@ -59,11 +61,19 @@ const Home = () => {
               </h1>
 
               <div className="btn-group">
-                <a className="btn-primary construction-methods-btn">
+                <a
+                  className="btn-primary construction-methods-btn"
+                  onClick={() => navigate('/construction-methods')}
+                  style={{ cursor: 'pointer' }}
+                >
                   {t("construction_methods")}
                   <span className="btn-triangle"></span>
                 </a>
-                <a className="btn-secondary border-line-btn">
+                <a
+                  className="btn-secondary border-line-btn"
+                  onClick={() => navigate('/introduction')}
+                  style={{ cursor: 'pointer' }}
+                >
                   {t("icf_method")}
                 </a>
               </div>
