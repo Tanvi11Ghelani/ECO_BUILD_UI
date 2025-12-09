@@ -27,7 +27,7 @@
   "write_about_us_in_the_press": "Write About Us in the Press",
   "broadcast_news": "Broadcast News",
   "frequently_asked_questions_about_nudura_ecobuild": "Frequently Asked Questions about NUDURA ECOBUILD",
-  "icf": "ICE",
+  "icf": "ICF",
   "nudura_combined_series": "NUDURA Combined Series",
   "retrofit_insulation_technology": "RETROFIT Insulation Technology",
   "advanced_construction_methods": "Advanced construction methods",
@@ -1415,6 +1415,84 @@
       "researchHighlight": "we research and develop new products every day",
       "researchText2": "We don't just build buildings, construction industry in Israel.",
       "ecobuild": "Ecobuild - green, advanced and most environmentally friendly construction"
+    }
+  },
+  "as_icf_technology_becomes_increasingly":"As ICF technology becomes increasingly popular for commercial construction, there is debate as to whether it can be used for the construction of firewalls within building structures. Here, we outline the information you need to detail firewall connections with Nudura forms that are fully compliant with North American codes.",
+  "request_quote": "Request a Quote",
+  "contractor_type": "Contractor Type",
+  "phone": "Phone",
+  "email": "Email Address",
+  "first_name_last_name": "First and Last Name",
+  "first_name": "First Name",
+  "last_name": "Last Name",
+  "choose_stage": "Choose the stage you are in",
+  "select_a_step": "Select a step",
+  "planning_stage": "Planning",
+  "design_stage": "Design",
+  "construction_stage": "Construction",
+  "other_stage": "Other",
+  "construction_area": "Construction Area",
+  "select_an_area": "Select an area",
+  "residential": "Residential",
+  "commercial": "Commercial",
+  "industrial": "Industrial",
+  "other_area": "Other",
+  "upload_files": "Uploading files",
+  "choose_files": "Choose Files",
+  "receive_promotions": "Receive promotions and updates by email",
+  "submit_quote_request": "Submit Quote Request",
+  "quote_request_submitted": "Your quote request has been submitted!",
+  "scroll_to_top": "Scroll to Top",
+  "submit_quote":" Submit Quote",
+  "no_results_found": "No results found",
+  "academy": {
+    "breadcrumb": {
+      "title": "Ecobuild Academy",
+      "subtitle": "Building Homes Also For The Generations To Come"
+    },
+    "sectionTitle": "Ecobuild Academy",
+    "cards": {
+      "instructionBook": "Participants Will Receive An Instruction Book (Hebrew) \"Installer's Guide,\" A Notebook And Writing Instruments.",
+      "courseCost": "The Cost Of The Course Is 400 NIS, But At This Stage It Will Be Provided Free Of Charge Until Further Notice.",
+      "courseHours": "Course Hours: 9:00 AM To 5:00 PM. A Light Lunch Will Be Served And Hot Drinks Are Available Throughout The Day.",
+      "registration": "To Register, Contact An Authorized Distributor. Or Connect To The Contact Subject Form To Register For The Course.",
+      "bookIconAlt": "Book icon",
+      "writeIconAlt": "Write icon",
+      "clockIconAlt": "Clock icon",
+      "clipboardIconAlt": "Clipboard icon"
+    },
+    "important": {
+      "title": "Important Information",
+      "text": "NUDURA Or Ecobuild Shall Not Be Liable For Any General, Special, Direct Or Indirect Damages, Including Bodily Injury, Property Damage, Or Any Other Losses Arising From The Use, Installation, Or Misuse Of NUDURA Products. It Is The Responsibility Of The Contractor, Architect, Engineer, And Property Owner To Ensure Proper Installation According To Applicable Building Codes And Standards. Ecobuild Reserves The Right To Cancel Classes, Modify Course Content, Or Change Instructors At Any Time Without Prior Notice. Participants Are Responsible For Verifying All Information And Following Proper Installation Procedures As Outlined In The Official Installation Guidelines."
+    },
+    "videos": {
+      "title": "Video Tutorials",
+      "playButton": "Play video",
+     "video1": "1. Introduction",
+  "video2": "1.1 Products",
+  "video3": "2.0 Products",
+  "video4": "3.0 Shallow foundations",
+  "video5": "4.0 Getting Started - Laying the First Layer",
+  "video6": "4.1 Laying reinforcement bars",
+  "video7": "5.0 Applying a second layer",
+  "video8": "6.0 Alignment System",
+  "video9": "7.0 Openings - Windows and Doors",
+  "video10": "7.1 Service openings",
+  "video11": "8.0 lintels",
+  "video12": "9.0 Special Ingredients",
+  "video13": "10.0 Concrete pouring",
+  "video14": "11.0 Insulation from moisture and humidity",
+  "video15": "12.0 The Parag layer",
+  "video16": "13.0 Electricity and Plumbing",
+  "video17": "14.0 Interior/Exterior Finishes"
+    },
+    "pagination": {
+      "previous": "Previous page",
+      "next": "Next page",
+      "page": "Go to page {{page}}"
+    },
+    "modal": {
+      "close": "Close video"
     }
   }
 }

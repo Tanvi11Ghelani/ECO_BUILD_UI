@@ -385,25 +385,24 @@ const scrollRef = useRef(null);
                     </div>
 
                     {/* Video Embed */}
-                    <div className="row justify-content-center mb-4">
-                        <div className="col-lg-8">
-                            <div className="video-container">
-                                <iframe 
-                                    src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" 
-                                    width="100%" 
-                                    height="450" 
-                                    frameBorder="0" 
-                                    allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowFullScreen
-                                    title="Storm Resistance Video"
-                                />
-                                <p className="text-center mt-2 video-caption">
-                                    {t('icf1.storm.videoCaption')}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
+               <div className="row justify-content-center mb-4">
+    <div className="col-lg-8">
+        <div className="video-container">
+            <iframe 
+                src="https://player.vimeo.com/video/352305565?fl=pl&fe=sh"
+                width="100%" 
+                height="450" 
+                frameBorder="0" 
+                allow="autoplay; fullscreen; picture-in-picture" 
+                allowFullScreen
+                title="Storm Resistance Video"
+            />
+            <p className="text-center mt-2 video-caption">
+                {t('icf1.storm.videoCaption')}
+            </p>
+        </div>
+    </div>
+</div>
                     {/* Storm Images */}
                     <div className="row g-4 justify-content-center">
                         <div className="col-lg-5 col-md-6">

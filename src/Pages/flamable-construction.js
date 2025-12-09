@@ -23,6 +23,7 @@ const FlamableConstruction = () => {
     const { t } = useTranslation();
     // State to manage active tab
     const [activeTab, setActiveTab] = useState('floor-at-grade');
+    
 const floor = [
     {
         description: t('belowConstructionSlope.insulatedConcrete61'),

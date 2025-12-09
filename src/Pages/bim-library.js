@@ -18,10 +18,63 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 import './below-the-construction-slope.css';
 
-
 const BIMLibrary = () => {
     const { t } = useTranslation();
     const tr = (key, fallback) => t(key, { defaultValue: fallback });
+    
+    // State for search inputs
+    const [searchInputs, setSearchInputs] = useState({
+        fileName: '',
+        thickness: '',
+        description: ''
+    });
+
+    // State to manage active tab
+    const [activeTab, setActiveTab] = useState('unit-form-model');
+
+    // Define tabs array for Tab component
+    const tabs = [
+        { id: 'unit-form-model', label: tr("bimLibrary.tabs.unitFormModel", "Unit Form Model") },
+        { id: 'project-template', label: tr("bimLibrary.tabs.projectTemplateFiles", "Project / Template Files") },
+    ];
+
+    // Handle tab change
+    const handleTabChange = (tabId) => {
+        setActiveTab(tabId);
+        // Reset search when changing tabs
+        setSearchInputs({
+            fileName: '',
+            thickness: '',
+            description: ''
+        });
+    };
+
+    // Handle search input changes
+    const handleSearchInputChange = (field, value) => {
+        setSearchInputs(prev => ({
+            ...prev,
+            [field]: value
+        }));
+    };
+
+    // Handle search button click
+    const handleSearch = (e) => {
+        e.preventDefault();
+        // Filtering happens automatically through state updates
+        console.log('Searching with:', searchInputs);
+    };
+
+    // Handle advanced search - clear all filters
+    const handleAdvancedSearch = (e) => {
+        e.preventDefault();
+        setSearchInputs({
+            fileName: '',
+            thickness: '',
+            description: ''
+        });
+    };
+
+
     const imperialDWFData = [
     {
         title: t('imperialDWFData.title1'),
@@ -363,18 +416,261 @@ const metricRFAData = [
         dwg12: 'EcoBuildPdf/BIMLibrary/Nudura Unit Form Model/Metric RFA 305mm/icf-nudura-305mm-height-adjuster-metric.rfa',
     },
 ]
-    // State to manage active tab
-    const [activeTab, setActiveTab] = useState('unit-form-model');
 
-    // Define tabs array for Tab component
-    const tabs = [
-        { id: 'unit-form-model', label: tr("bimLibrary.tabs.unitFormModel", "Unit Form Model") },
-        { id: 'project-template', label: tr("bimLibrary.tabs.projectTemplateFiles", "Project / Template Files") },
-    ];
+    // Filter data function
+    const filterData = (data) => {
+        return data.filter(item => {
+            const fileNameMatch = searchInputs.fileName 
+                ? (item.searchTitle || item.title || '').toLowerCase().includes(searchInputs.fileName.toLowerCase())
+                : true;
+            
+            const thicknessMatch = searchInputs.thickness 
+                ? (item.thickness || '').toLowerCase().includes(searchInputs.thickness.toLowerCase())
+                : true;
+            
+            const descriptionMatch = searchInputs.description 
+                ? (item.title || '').toLowerCase().includes(searchInputs.description.toLowerCase())
+                : true;
+            
+            return fileNameMatch && thicknessMatch && descriptionMatch;
+        });
+    };
 
-    // Handle tab change
-    const handleTabChange = (tabId) => {
-        setActiveTab(tabId);
+    // Get filtered data for current tab
+    const getFilteredData = () => {
+        switch(activeTab) {
+            case 'unit-form-model':
+                return {
+                    imperialDWF: filterData(imperialDWFData),
+                    imperialRFA: filterData(imperialRFAData),
+                    metricDWF: filterData(metricDWFData),
+                    metricRFA: filterData(metricRFAData),
+                    metricRFAForm: filterData(metricrfaform)
+                };
+            case 'project-template':
+                return {
+                    projects: filterData(projects),
+                    template: filterData(template)
+                };
+            default:
+                return {};
+        }
+    };
+
+    const filteredData = getFilteredData();
+
+    // Render table for DWF/RFA data
+    const renderFormModelTable = (data, title, fileType = 'dwg') => {
+        if (!data || data.length === 0) return null;
+
+        return (
+            <section className="white-bg pt-4">
+                <div className="title">
+                    <h3 className="text-primary text-center mb-5">{title}</h3>
+                </div>
+                <table className="dltrc tabel-content-center" style={{background:"none"}}>
+                    <tbody>
+                        <tr className="dlheader">
+                            <td>{t("Description")}</td>
+                            <td>{t('4_inch')}</td>
+                            <td>{t('6_inch')}</td>
+                            <td>{t('8_inch')}</td>
+                            <td>{t('10_inch')}</td>
+                            <td>{t('12_inch')}</td>
+                        </tr>
+                        {data.map((item, index) => (
+                            <tr className="dlinfo" key={index}>
+                                <td className="dlinfo hover01">{item.title}</td>
+                                {['dwg4', 'dwg6', 'dwg8', 'dwg10', 'dwg12'].map((key) => (
+                                    <td className="dlinfo hover01" key={key}>
+                                        {item[key] ? (
+                                            <ul className="file-list-inner-td">
+                                                <li>
+                                                    <a 
+                                                        href={item[key]} 
+                                                        className="blue-link" 
+                                                        target="_blank" 
+                                                        rel="noopener noreferrer"
+                                                        download
+                                                    >
+                                                        <div className="icon-band">
+                                                            <img src={fileType === 'rfa' ? image12 : image11} alt={t('file_icon')} />
+                                                        </div>
+                                                        {fileType === 'rfa' ? t('rfa') : t('dwg')}
+                                                        <img src={image10} className="download-icon" alt={t('download_icon')} />
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        ) : '-'}
+                                    </td>
+                                ))}
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </section>
+        );
+    };
+
+    // Render table for metric RFA form panels
+    const renderMetricRFAFormTable = (data) => {
+        if (!data || data.length === 0) return null;
+
+        return (
+            <section className="white-bg pt-4">
+                <div className="title">
+                    <h3 className="text-primary text-center mb-5">{t('metric_rfa_form_panels')}</h3>
+                </div>
+                <table className="dltrc tabel-content-center" style={{background:"none"}}>
+                    <tbody>
+                        <tr className="dlheader">
+                            <td className="dlheader">{t('Description')}</td>
+                            <td className="dlheader">{t('files')}</td>
+                        </tr>
+                        {data.map((item, index) => (
+                            <tr className="dlinfo" key={index}>
+                                <td className="dlinfo hover01">{item.title}</td>
+                                <td className="dlinfo hover01">
+                                    <ul className="file-list-inner-td">
+                                        <li>
+                                            <a
+                                                href={item.rfa}
+                                                className="blue-link"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                download
+                                            >
+                                                <div className="icon-band">
+                                                    <img src={image12} alt={t('rfa_icon')} />
+                                                </div>
+                                                {t('rfa')}
+                                                <img src={image10} className="download-icon" alt={t('download_icon')} />
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </section>
+        );
+    };
+
+    // Render project/template tables
+    const renderProjectTemplateTables = (projectsData, templateData) => {
+        const hasProjects = projectsData && projectsData.length > 0;
+        const hasTemplate = templateData && templateData.length > 0;
+
+        if (!hasProjects && !hasTemplate) {
+            return (
+                <section className="white-bg pt-4">
+                    <div className="no-results">
+                        <p>{t('no_results_found') || 'No results found matching your search criteria.'}</p>
+                    </div>
+                </section>
+            );
+        }
+
+        return (
+            <section className="white-bg pt-4">
+                <div className="row">
+                    {hasProjects && (
+                        <div className="col-md-6">
+                            <div className="title">
+                                <h3 className="text-primary text-center mb-5">{t('project_files')}</h3>
+                            </div>
+                            <table className="dltrc tabel-content-center" style={{background:"none"}}>
+                                <tbody>
+                                    <tr className="dlheader">
+                                        <td className="dlheader">{t('Description')}</td>
+                                        <td className="dlheader">{t('file')}</td>
+                                    </tr>
+                                    {projectsData.map((item, index) => (
+                                        <tr className="dlinfo" key={index}>
+                                            <td className="dlinfo hover01">{item.title}</td>
+                                            <td className="dlinfo hover01">
+                                                <ul className="file-list-inner-td">
+                                                    <li>
+                                                        <a href={item.fileUrl} className="blue-link" download>
+                                                            <div className="icon-band">
+                                                                <img src={image13} alt={item.fileType} />
+                                                            </div>
+                                                            {item.fileType}
+                                                            <img
+                                                                src={image10}
+                                                                className="download-icon"
+                                                                alt={t('download')}
+                                                            />
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    )}
+                    
+                    {hasTemplate && (
+                        <div className={`col-md-6 ${hasProjects ? '' : 'offset-md-3'}`}>
+                            <div className="title">
+                                <h3 className="text-primary text-center mb-5 m-mt-4">{t('template_files_rte')}</h3>
+                            </div>
+                            <table className="dltrc tabel-content-center" style={{background:"none"}}>
+                                <tbody>
+                                    <tr className="dlheader">
+                                        <td className="dlheader">{t('Description')}</td>
+                                        <td className="dlheader">{t('file')}</td>
+                                    </tr>
+                                    {templateData.map((item, index) => (
+                                        <tr className="dlinfo" key={index}>
+                                            <td className="dlinfo hover01">{item.title}</td>
+                                            <td className="dlinfo hover01">
+                                                <ul className="file-list-inner-td">
+                                                    <li>
+                                                        <a href={item.fileUrl} className="blue-link" download>
+                                                            <div className="icon-band">
+                                                                <img src={image13} alt={item.fileType} />
+                                                            </div>
+                                                            {item.fileType}
+                                                            <img
+                                                                src={image10}
+                                                                className="download-icon"
+                                                                alt={t('download')}
+                                                            />
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    )}
+                </div>
+            </section>
+        );
+    };
+
+    // Check if any data exists in filtered results for current tab
+    const hasFilteredResults = () => {
+        if (activeTab === 'unit-form-model') {
+            return (
+                filteredData.imperialDWF?.length > 0 ||
+                filteredData.imperialRFA?.length > 0 ||
+                filteredData.metricDWF?.length > 0 ||
+                filteredData.metricRFA?.length > 0 ||
+                filteredData.metricRFAForm?.length > 0
+            );
+        } else {
+            return (
+                filteredData.projects?.length > 0 ||
+                filteredData.template?.length > 0
+            );
+        }
     };
 
     return (
@@ -383,10 +679,10 @@ const metricRFAData = [
                 header={tr("bimLibrary.title", "BIM Library")}
                 subHeader={tr("bimLibrary.subtitle", "Design resources and downloads")}
             />
+            
             <section>
                 <div className="container">
                     <div className="row g-4">
-
                         <div className="col-md-3">
                             <div className="card icon-top-primary-card h-245">
                                 <Link to="/belowtheconstructionslope" className="icon-card top-icon-band blue cus-p-16">
@@ -477,27 +773,23 @@ const metricRFAData = [
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </section>
+            
             <section className="pt-0">
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-md-12">
                             <div className="layer_content p-0">
                                 <h3 className="text-primary mb-3">{t("bimLibrary.heading")}</h3>
-
                                 <p className="dark-font-600 mt-2 mb-2">
                                     {t("bimLibrary.description1")}
                                 </p>
-
                                 <p className="dark-font-600 mt-2 mb-2">
                                     {t("bimLibrary.description2")}
                                 </p>
-
                                 <h6 className="mb-0 mt-3 mb-4">{t("bimLibrary.technicalRequirements.title")}</h6>
-
                                 <p className="dark-font-600 mt-2 mb-2">
                                     {t("bimLibrary.technicalRequirements.body")}
                                 </p>
@@ -506,328 +798,117 @@ const metricRFAData = [
                     </div>
                 </div>
             </section>
+            
+            {/* Search Panel */}
             <section className="pt-0">
                 <div className="container">
                     <div className="belowTheConstructionSlope-container">
-                    <div className="search-penal bg-penal">
-                        <div className="left-penal">
-                            <div className="form-group w-30">
-                                <label className="form-label">{tr("bimLibrary.search.fileName", "File Name")}</label>
-                                <input type="email" className="form-control" placeholder={tr("bimLibrary.search.placeholder", "Search here")} />
+                        <div className="search-penal bg-penal">
+                            <div className="left-penal">
+                                <div className="form-group w-30">
+                                    <label className="form-label">{tr("bimLibrary.search.fileName", "File Name")}</label>
+                                    <input 
+                                        type="text" 
+                                        className="form-control" 
+                                        placeholder={tr("bimLibrary.search.placeholder", "Search here")}
+                                        value={searchInputs.fileName}
+                                        onChange={(e) => handleSearchInputChange('fileName', e.target.value)}
+                                    />
+                                </div>
+                                <div className="form-group w-40">
+                                    <label className="form-label">{tr("bimLibrary.search.thickness", "Thickness")}</label>
+                                    <input 
+                                        type="text" 
+                                        className="form-control" 
+                                        placeholder={tr("bimLibrary.search.placeholder", "Search here")}
+                                        value={searchInputs.thickness}
+                                        onChange={(e) => handleSearchInputChange('thickness', e.target.value)}
+                                    />
+                                </div>
+                                <div className="form-group w-30 border-none">
+                                    <label className="form-label">{t("Description")}</label>
+                                    <input 
+                                        type="text" 
+                                        className="form-control" 
+                                        placeholder={tr("bimLibrary.search.placeholder", "Search here")}
+                                        value={searchInputs.description}
+                                        onChange={(e) => handleSearchInputChange('description', e.target.value)}
+                                    />
+                                </div>
                             </div>
-
-                            <div className="form-group w-40">
-                                <label className="form-label">{tr("bimLibrary.search.thickness", "Thickness")}</label>
-                                <input type="email" className="form-control" placeholder={tr("bimLibrary.search.placeholder", "Search here")} />
-                            </div>
-
-                            <div className="form-group w-30 border-none">
-                                <label className="form-label">{t("Description")}</label>
-                                <input type="email" className="form-control" placeholder={tr("bimLibrary.search.placeholder", "Search here")} />
+                            <div className="right-penal">
+                                <button 
+                                    className="btn-primary"
+                                    onClick={handleSearch}
+                                >
+                                    {tr("bimLibrary.search.search", "Search")}
+                                    <i className="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                                <button 
+                                    className="btn-primary white-border-btn"
+                                    onClick={handleAdvancedSearch}
+                                >
+                                    {tr("bimLibrary.search.advanced", "Advanced Search")}
+                                </button>
                             </div>
                         </div>
-
-                        <div className="right-penal">
-                            <a   className="btn-primary">
-                                {tr("bimLibrary.search.search", "Search")}
-                                <i className="fa-solid fa-magnifying-glass"></i>
-                            </a>
-                            <a   className="btn-primary white-border-btn">
-                                {tr("bimLibrary.search.advanced", "Advanced Search")}
-                            </a>
-                        </div>
-                    </div>
                     </div>
                 </div>
             </section>
+            
             <section className="pt-0">
                 <div className="container">
-                    {/* Tab Component - Reusable tab navigation */}
                     <Tab 
                         tabs={tabs}
                         defaultActiveTab="unit-form-model"
                         onTabChange={handleTabChange}
                     />
                 </div>
+                
                 <div className="container">
-                    {/* Tab Content - Render based on active tab */}
                     {activeTab === 'unit-form-model' && (
                         <>
-                        <section className="white-bg pt-4">
-                                <div className="title">
-                                    <h3 className="text-primary text-center mb-5">
-                                        {t("bimLibrary.tables.imperialDWF")}
-                                    </h3>
-                                </div>
-                                <table className="dltrc tabel-content-center" style={{background:"none"}}>
-                                    <tbody>
-                                        <tr className="dlheader">
-                                            <td>{t("Description")}</td>
-                                            <td>{t('4_inch')}</td>
-                                            <td>{t('6_inch')}</td>
-                                            <td>{t('8_inch')}</td>
-                                            <td>{t('10_inch')}</td>
-                                            <td>{t('12_inch')}</td>
-                                        </tr>
-                                        {imperialDWFData.map((item, index) => (
-                                            <tr className="dlinfo" key={index}>
-                                                <td className="dlinfo hover01">{item.title}</td>
-
-                                                {['dwg4', 'dwg6', 'dwg8', 'dwg10', 'dwg12'].map((key) => (
-                                                    <td className="dlinfo hover01" key={key}>
-                                                        <ul className="file-list-inner-td">
-                                                            <li>
-                                                                <a href={item[key]} className="blue-link" target="_blank" rel="noopener noreferrer">
-                                                                    <div className="icon-band">
-                                                                        <img src={image11} alt={t('file_icon')} />
-                                                                    </div>{t('dwg')}<img src={image10} className="download-icon" alt={t('download_icon')} />
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </td>
-                                                ))}
-                                            </tr>
-                                        ))}
-
-                                    </tbody>
-                                </table>
-                            </section>
-                            
-                            <section className="white-bg pt-4">
-                                <div className="title">
-                                    <h3 className="text-primary text-center mb-5">
-                                        {t("bimLibrary.tables.imperialDWF")}
-                                    </h3>
-                                </div>
-                                <table className="dltrc tabel-content-center" style={{background:"none"}}>
-                                    <tbody>
-                                        <tr className="dlheader">
-                                            <td>{t("Description")}</td>
-                                            <td className="dlheader">{t('4_inch')}</td>
-                                            <td className="dlheader">{t('6_inch')}</td>
-                                            <td className="dlheader">{t('8_inch')}</td>
-                                            <td className="dlheader">{t('10_inch')}</td>
-                                            <td className="dlheader">{t('12_inch')}</td>
-                                        </tr>
-                                        {imperialRFAData.map((item, index) => (
-                                            <tr className="dlinfo" key={index}>
-                                                <td className="dlinfo hover01">{item.title}</td>
-
-                                                {['dwg4', 'dwg6', 'dwg8', 'dwg10', 'dwg12'].map((key) => (
-                                                    <td className="dlinfo hover01" key={key}>
-                                                        <ul className="file-list-inner-td">
-                                                            <li>
-                                                                <a href={item[key]} className="blue-link" target="_blank" rel="noopener noreferrer">
-                                                                    <div className="icon-band">
-                                                                        <img src={image12} alt={t('file_icon')} />
-                                                                    </div>{t('rfa')}<img src={image10} className="download-icon" alt={t('download_icon')} />
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </td>
-                                                ))}
-                                            </tr>
-                                        ))}
-
-                                    </tbody>
-                                </table>
-                            </section>
-                            
-                            <section className="white-bg pt-4">
-                                <div className="title">
-                                    <h3 className="text-primary text-center mb-5">{t('metric_dwf')}</h3>
-                                </div>
-                                <table className="dltrc tabel-content-center" style={{background:"none"}}>
-                                    <tbody>
-                                        <tr className="dlheader">
-                                            <td>{t("Description")}</td>
-                                            <td className="dlheader">{t('4_inch')}</td>
-                                            <td className="dlheader">{t('6_inch')}</td>
-                                            <td className="dlheader">{t('8_inch')}</td>
-                                            <td className="dlheader">{t('10_inch')}</td>
-                                            <td className="dlheader">{t('12_inch')}</td>
-                                        </tr>
-                                        {metricDWFData.map((item, index) => (
-                                            <tr className="dlinfo" key={index}>
-                                                <td className="dlinfo hover01">{item.title}</td>
-
-                                                {['dwg4', 'dwg6', 'dwg8', 'dwg10', 'dwg12'].map((key) => (
-                                                    <td className="dlinfo hover01" key={key}>
-                                                        <ul className="file-list-inner-td">
-                                                            <li>
-                                                                <a href={item[key]} className="blue-link" target="_blank" rel="noopener noreferrer">
-                                                                    <div className="icon-band">
-                                                                        <img src={image11} alt={t('file_icon')} />
-                                                                    </div>{t('dwg')}<img src={image10} className="download-icon" alt={t('download_icon')} />
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </td>
-                                                ))}
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            </section>
-                            
-                            <section className="white-bg pt-4">
-                                <div className="title">
-                                    <h3 className="text-primary text-center mb-5">{t('metric_rfa')}</h3>
-                                </div>
-                                <table className="dltrc tabel-content-center" style={{background:"none"}}>
-                                    <tbody>
-                                        <tr className="dlheader">
-                                            <td>{t("Description")}</td>
-                                            <td className="dlheader">{t('4_inch')}</td>
-                                            <td className="dlheader">{t('6_inch')}</td>
-                                            <td className="dlheader">{t('8_inch')}</td>
-                                            <td className="dlheader">{t('10_inch')}</td>
-                                            <td className="dlheader">{t('12_inch')}</td>
-                                        </tr>
-                                        {metricRFAData.map((item, index) => (
-                                            <tr className="dlinfo" key={index}>
-                                                <td className="dlinfo hover01">{item.title}</td>
-
-                                                {['dwg4', 'dwg6', 'dwg8', 'dwg10', 'dwg12'].map((key) => (
-                                                    <td className="dlinfo hover01" key={key}>
-                                                        <ul className="file-list-inner-td">
-                                                            <li>
-                                                                <a href={item[key]} className="blue-link" target="_blank" rel="noopener noreferrer">
-                                                                    <div className="icon-band">
-                                                                        <img src={image12} alt={t('file_icon')} />
-                                                                    </div>{t('rfa')}<img src={image10} className="download-icon" alt={t('download_icon')} />
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </td>
-                                                ))}
-                                            </tr>
-                                        ))}
-
-                                    </tbody>
-                                </table>
-                            </section>
-                            
-                            <section className="white-bg pt-4">
-                                <div className="title">
-                                    <h3 className="text-primary text-center mb-5">{t('metric_rfa_form_panels')}</h3>
-                                </div>
-                                <table className="dltrc tabel-content-center" style={{background:"none"}}>
-                                    <tbody>
-                                        <tr className="dlheader">
-                                            <td className="dlheader">{t('Description')}</td>
-
-                                            <td className="dlheader">{t('files')}</td>
-                                        </tr>
-                                        {metricrfaform.map((item, index) => (
-      <tr className="dlinfo" key={index}>
-        <td className="dlinfo hover01">{item.title}</td>
-        <td className="dlinfo hover01">
-          <ul className="file-list-inner-td">
-            <li>
-              <a
-                href={item.rfa}
-                className="blue-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="icon-band">
-                  <img src={image12} alt={t('rfa_icon')} />
-                </div>{t('rfa')}<img src={image10} className="download-icon" alt={t('download_icon')} />
-              </a>
-            </li>
-          </ul>
-        </td>
-      </tr>
-    ))}
-
-                                    </tbody>
-                                </table>
-                            </section>
+                            {hasFilteredResults() ? (
+                                <>
+                                    {renderFormModelTable(
+                                        filteredData.imperialDWF, 
+                                        t("bimLibrary.tables.imperialDWF"), 
+                                        'dwg'
+                                    )}
+                                    {renderFormModelTable(
+                                        filteredData.imperialRFA, 
+                                        t("bimLibrary.tables.imperialDWF"), 
+                                        'rfa'
+                                    )}
+                                    {renderFormModelTable(
+                                        filteredData.metricDWF, 
+                                        t('metric_dwf'), 
+                                        'dwg'
+                                    )}
+                                    {renderFormModelTable(
+                                        filteredData.metricRFA, 
+                                        t('metric_rfa'), 
+                                        'rfa'
+                                    )}
+                                    {renderMetricRFAFormTable(filteredData.metricRFAForm)}
+                                </>
+                            ) : (
+                                <section className="white-bg pt-4">
+                                    <div className="no-results">
+                                        <p>{t('no_results_found') || 'No results found matching your search criteria.'}</p>
+                                    </div>
+                                </section>
+                            )}
                         </>
                     )}
 
                     {activeTab === 'project-template' && (
-                        <section className="white-bg pt-4">
-                                <div className="row">
-                                    <div className="col-md-6">
-                                        <div className="title">
-                                            <h3 className="text-primary text-center mb-5">{t('project_files')}</h3>
-                                        </div>
-                                        <table className="dltrc tabel-content-center" style={{background:"none"}}>
-                                            <tbody>
-                                                <tr className="dlheader">
-                                                    <td className="dlheader">{t('Description')}</td>
-                                                    <td className="dlheader">{t('file')}</td>
-                                                </tr>
-                                                {projects.map((item, index) => (
-                                                    <tr className="dlinfo" key={index}>
-                                                        <td className="dlinfo hover01">{item.title}</td>
-                                                        <td className="dlinfo hover01">
-                                                            <ul className="file-list-inner-td">
-                                                                <li>
-                                                                    <a href={item.fileUrl} className="blue-link" download>
-                                                                        <div className="icon-band">
-                                                                            <img src={image13} alt={item.fileType} />
-                                                                        </div>
-                                                                        {item.fileType}
-                                                                        <img
-                                                                            src={image10}
-                                                                            className="download-icon"
-                                                                            alt={t('download')}
-                                                                        />
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                ))}
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div className="col-md-6">
-                                        <div className="title">
-                                            <h3 className="text-primary text-center mb-5 m-mt-4">{t('template_files_rte')}</h3>
-                                        </div>
-                                        <table className="dltrc tabel-content-center" style={{background:"none"}}>
-                                            <tbody>
-                                                <tr className="dlheader">
-                                                    <td className="dlheader">{t('Description')}</td>
-                                                    <td className="dlheader">{t('file')}</td>
-                                                </tr>
-                                                {template.map((item, index) => (
-                                                    <tr className="dlinfo" key={index}>
-                                                        <td className="dlinfo hover01">{item.title}</td>
-                                                        <td className="dlinfo hover01">
-                                                            <ul className="file-list-inner-td">
-                                                                <li>
-                                                                    <a href={item.fileUrl} className="blue-link" download>
-                                                                        <div className="icon-band">
-                                                                            <img src={image13} alt={item.fileType} />
-                                                                        </div>
-                                                                        {item.fileType}
-                                                                        <img
-                                                                            src={image10}
-                                                                            className="download-icon"
-                                                                            alt={t('download')}
-                                                                        />
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                ))}
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </section>
+                        renderProjectTemplateTables(filteredData.projects, filteredData.template)
                     )}
                 </div>
-
-
             </section>
         </div>
     );
 }
+
 export default BIMLibrary;

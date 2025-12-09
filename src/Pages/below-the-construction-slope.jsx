@@ -20,6 +20,13 @@ const BelowTheConstructionSlope = () => {
     const { t } = useTranslation();
     const [activeTab, setActiveTab] = useState('below-grade-slab');
 
+    const [searchInputs, setSearchInputs] = useState({
+        fileName: '',
+        thickness: '',
+        description: ''
+    });
+
+
     // Move all data arrays inside the component so they can use t()
     const BelowGrade = [
       {
@@ -299,6 +306,66 @@ const BelowTheConstructionSlope = () => {
         { id: 'haunched-slab', label: t("belowConstructionSlope.tabHaunchedSlab") },
     ];
 
+    const handleSearchInputChange = (field, value) => {
+        setSearchInputs(prev => ({
+            ...prev,
+            [field]: value
+        }));
+    };
+
+    // Generic filter function for any data array
+    const filterData = (data) => {
+        return data.filter(item => {
+            const fileNameMatch = searchInputs.fileName 
+                ? (item.code || item.fileName || '').toLowerCase().includes(searchInputs.fileName.toLowerCase())
+                : true;
+            
+            const thicknessMatch = searchInputs.thickness 
+                ? (item.size || item.coreThickness || '').toLowerCase().includes(searchInputs.thickness.toLowerCase())
+                : true;
+            
+            const descriptionMatch = searchInputs.description 
+                ? (item.title || item.description || '').toLowerCase().includes(searchInputs.description.toLowerCase())
+                : true;
+            
+            return fileNameMatch && thicknessMatch && descriptionMatch;
+        });
+    };
+
+    // Filter data based on active tab
+    const getFilteredData = () => {
+        switch(activeTab) {
+            case 'below-grade-slab':
+                return filterData(BelowGrade);
+            case 'stem-wall':
+                return [...filterData(stemWall1Data), ...filterData(stemWall2Data)];
+            case 'grade-beams':
+                return filterData(GreadBeams);
+            case 'haunched-slab':
+                return filterData(SlabOnGrade);
+            default:
+                return [];
+        }
+    };
+
+    const filteredData = getFilteredData();
+
+    // Handle search button click
+    const handleSearch = (e) => {
+        e.preventDefault();
+        // Filtering happens automatically through state updates
+        console.log('Searching with:', searchInputs);
+    };
+
+    // Handle advanced search - clear all filters
+    const handleAdvancedSearch = (e) => {
+        e.preventDefault();
+        setSearchInputs({
+            fileName: '',
+            thickness: '',
+            description: ''
+        });
+    };
     const handleTabChange = (tabId) => {
         setActiveTab(tabId);
     };
@@ -436,15 +503,18 @@ const BelowTheConstructionSlope = () => {
               <div className="left-penal">
                 <div className="form-group w-30">
                   <label className="form-label">{t("belowConstructionSlope.fileName")}</label>
-                  <input className="form-control" placeholder={t("belowConstructionSlope.searchHere")} />
+                  <input className="form-control" placeholder={t("belowConstructionSlope.searchHere")}  value={searchInputs.fileName}
+                      onChange={(e) => handleSearchInputChange('fileName', e.target.value)} />
                 </div>
                 <div className="form-group w-40">
                   <label className="form-label">{t("belowConstructionSlope.thickness")}</label>
-                  <input className="form-control" placeholder={t("belowConstructionSlope.searchHere")} />
+                  <input className="form-control" placeholder={t("belowConstructionSlope.searchHere")} value={searchInputs.thickness}
+                      onChange={(e) => handleSearchInputChange('thickness', e.target.value)} />
                 </div>
                 <div className="form-group w-30 border-none">
                   <label className="form-label">{t("belowConstructionSlope.description")}</label>
-                  <input className="form-control" placeholder={t("belowConstructionSlope.searchHere")} />
+                  <input className="form-control" placeholder={t("belowConstructionSlope.searchHere")}  value={searchInputs.description}
+                      onChange={(e) => handleSearchInputChange('description', e.target.value)} />
                 </div>
               </div>
               <div className="right-penal">
@@ -467,18 +537,19 @@ const BelowTheConstructionSlope = () => {
           <div className="container">
             {activeTab === 'below-grade-slab' && (
               <section className="white-bg pt-0">
-                <table className="dltrc" style={{ background: "none" }}>
-                  <tbody>
-                    <tr className="dlheader">
-                      <td>{t("belowConstructionSlope.colDescription")}</td>
-                      <td>{t("belowConstructionSlope.colCoreThickness")}</td>
-                      <td>{t("belowConstructionSlope.colInsulation")}</td>
-                      <td>{t("belowConstructionSlope.colFileName")}</td>
-                      <td>{t("belowConstructionSlope.colExplanation")}</td>
-                      <td>{t("belowConstructionSlope.colFiles")}</td>
-                    </tr>
-                    {BelowGrade.map((item, index) => (
-                      <tr className="dlinfo" key={index}>
+                {filteredData.length > 0 ? (
+                  <table className="dltrc" style={{ background: "none" }}>
+                    <tbody>
+                      <tr className="dlheader">
+                        <td>{t("belowConstructionSlope.colDescription")}</td>
+                        <td>{t("belowConstructionSlope.colCoreThickness")}</td>
+                        <td>{t("belowConstructionSlope.colInsulation")}</td>
+                        <td>{t("belowConstructionSlope.colFileName")}</td>
+                        <td>{t("belowConstructionSlope.colExplanation")}</td>
+                        <td>{t("belowConstructionSlope.colFiles")}</td>
+                      </tr>
+                      {filteredData.map((item, index) => (
+                        <tr className="dlinfo" key={index}>
                         <td className="dlinfo hover01">{item.title}</td>
                         <td className="dlinfo hover01">{item.size}</td>
                         <td className="dlinfo hover01">
@@ -512,27 +583,33 @@ const BelowTheConstructionSlope = () => {
                             </li>
                           </ul>
                         </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+                     </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                ) : (
+                  <div className="no-results">
+                    <p>{t('no_results_found') || 'No results found matching your search criteria.'}</p>
+                  </div>
+                )}
               </section>
             )}
 
-            {activeTab === 'stem-wall' && (
+           {activeTab === 'stem-wall' && (
               <>
                 <section className="white-bg pt-0">
-                  <table className="dltrc" style={{ background: "none" }}>
-                    <tbody>
-                      <tr className="dlheader">
-                        <td>{t("belowConstructionSlope.colDescription")}</td>
-                        <td>{t("belowConstructionSlope.colCoreThickness")}</td>
-                        <td>{t("belowConstructionSlope.colFileName")}</td>
-                        <td>{t("belowConstructionSlope.colExplanation")}</td>
-                        <td>{t("belowConstructionSlope.colFiles")}</td>
-                      </tr>
-                      {stemWall1Data.map((item) => (
-                        <tr className="dlinfo" key={item.fileName}>
+                  {filteredData.filter(item => item.pdf.includes('StemWall')).length > 0 ? (
+                    <table className="dltrc" style={{ background: "none" }}>
+                      <tbody>
+                        <tr className="dlheader">
+                          <td>{t("belowConstructionSlope.colDescription")}</td>
+                          <td>{t("belowConstructionSlope.colCoreThickness")}</td>
+                          <td>{t("belowConstructionSlope.colFileName")}</td>
+                          <td>{t("belowConstructionSlope.colExplanation")}</td>
+                          <td>{t("belowConstructionSlope.colFiles")}</td>
+                        </tr>
+                        {filteredData.filter(item => item.pdf.includes('StemWall')).map((item) => (
+                          <tr className="dlinfo" key={item.fileName}>
                           <td className="dlinfo hover01">{item.description}</td>
                           <td className="dlinfo hover01">{item.coreThickness}</td>
                           <td className="dlinfo hover01">{item.fileName}</td>
@@ -560,23 +637,29 @@ const BelowTheConstructionSlope = () => {
                             </ul>
                           </td>
                         </tr>
-                      ))}
-                    </tbody>
-                  </table>
+                        ))}
+                      </tbody>
+                    </table>
+                  ) : (
+                    <div className="no-results">
+                      <p>{t('no_results_found') || 'No results found matching your search criteria.'}</p>
+                    </div>
+                  )}
                 </section>
                 
                 <section className="white-bg pt-0">
-                  <table className="dltrc" style={{ background: "none" }}>
-                    <tbody>
-                      <tr className="dlheader">
-                        <td>{t("belowConstructionSlope.colDescription")}</td>
-                        <td>{t("belowConstructionSlope.colCoreThickness")}</td>
-                        <td>{t("belowConstructionSlope.colFileName")}</td>
-                        <td>{t("belowConstructionSlope.colExplanation")}</td>
-                        <td>{t("belowConstructionSlope.colFiles")}</td>
-                      </tr>
-                      {stemWall2Data.map((item) => (
-                        <tr className="dlinfo" key={item.fileName}>
+                  {filteredData.filter(item => item.pdf.includes('StemWall4')).length > 0 ? (
+                    <table className="dltrc" style={{ background: "none" }}>
+                      <tbody>
+                        <tr className="dlheader">
+                          <td>{t("belowConstructionSlope.colDescription")}</td>
+                          <td>{t("belowConstructionSlope.colCoreThickness")}</td>
+                          <td>{t("belowConstructionSlope.colFileName")}</td>
+                          <td>{t("belowConstructionSlope.colExplanation")}</td>
+                          <td>{t("belowConstructionSlope.colFiles")}</td>
+                        </tr>
+                        {filteredData.filter(item => item.pdf.includes('StemWall4')).map((item) => (
+                          <tr className="dlinfo" key={item.fileName}>
                           <td className="dlinfo hover01">{item.description}</td>
                           <td className="dlinfo hover01">{item.coreThickness}</td>
                           <td className="dlinfo hover01">{item.fileName}</td>
@@ -603,18 +686,24 @@ const BelowTheConstructionSlope = () => {
                               </li>
                             </ul>
                           </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
+                         </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  ) : (
+                    <div className="no-results">
+                      <p>{t('no_results_found') || 'No results found matching your search criteria.'}</p>
+                    </div>
+                  )}
                 </section>
               </>
             )}
 
-            {activeTab === 'grade-beams' && (
+           {activeTab === 'grade-beams' && (
               <section className="white-bg pt-0">
-                <table className="dltrc" style={{ background: "none" }}>
-                  <tbody>
+                {filteredData.length > 0 ? (
+                  <table className="dltrc" style={{ background: "none" }}>
+                    <tbody>
                     <tr className="dlheader">
                       <td>{t("belowConstructionSlope.colDescription")}</td>
                       <td>{t("belowConstructionSlope.colCoreThickness")}</td>
@@ -656,15 +745,20 @@ const BelowTheConstructionSlope = () => {
                         </td>
                       </tr>
                     ))}
-                  </tbody>
-                </table>
+                   </tbody>
+                  </table>
+                ) : (
+                  <div className="no-results">
+                    <p>{t('no_results_found') || 'No results found matching your search criteria.'}</p>
+                  </div>
+                )}
               </section>
             )}
-
             {activeTab === 'haunched-slab' && (
               <section className="white-bg pt-0">
-                <table className="dltrc" style={{ background: "none" }}>
-                  <tbody>
+                {filteredData.length > 0 ? (
+                  <table className="dltrc" style={{ background: "none" }}>
+                    <tbody>
                     <tr className="dlheader">
                       <td>{t("belowConstructionSlope.colDescription")}</td>
                       <td>{t("belowConstructionSlope.colCoreThickness")}</td>
@@ -715,7 +809,12 @@ const BelowTheConstructionSlope = () => {
                       </tr>
                     ))}
                   </tbody>
-                </table>
+                  </table>
+                ) : (
+                  <div className="no-results">
+                    <p>{t('no_results_found') || 'No results found matching your search criteria.'}</p>
+                  </div>
+                )}
               </section>
             )}
           </div>
