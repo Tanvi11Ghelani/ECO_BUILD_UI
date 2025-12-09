@@ -43,6 +43,7 @@ import AboutUS from './Pages/about-us';
 import BroadcastNews from './Pages/broadcast-news';
 import WriteAboutUsInPress from './Pages/about-us-in-press';
 import PlusSeriesOnClickSection from './Pages/plus-series-on-click';
+import ICFMethods from './Pages/icf-methods';
 import './i18n/index';
 
 // import other pages if you have them
@@ -139,6 +140,10 @@ function App() {
         />
         <Route path="/videogallery" element={
           <VideoGalery />
+        }
+        />
+        <Route path="/icf-method" element={
+          <ICFMethods />
         }
         />
         <Route path="/academy" element={

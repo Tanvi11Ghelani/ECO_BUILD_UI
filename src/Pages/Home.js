@@ -71,7 +71,7 @@ const Home = () => {
                 </a>
                 <a
                   className="btn-secondary border-line-btn"
-                  onClick={() => navigate('/introduction')}
+                  onClick={() => navigate('/icf-method')}
                   style={{ cursor: 'pointer' }}
                 >
                   {t("icf_method")}
