@@ -1494,7 +1494,21 @@
     "modal": {
       "close": "إغلاق الفيديو"
     }
-  }
+  },
+   "Janacek_Residence_Project_Profile": "ملف مشروع سكن ياناتشيك",
+  "farmhouse_basement_project_profile": "ملف مشروع قبو منزل ريفي",
+  "St_Peter_Anglican_Church_Tallahassee_Project_Profile": "ملف مشروع كنيسة القديس بيتر الأنغليكانية – تالاهاسي",
+  "Richardsville_Elementary_Project_Profile_Template": "قالب ملف مشروع مدرسة ريتشاردسفيل الابتدائية",
+  "ireland_house_profile_template": "قالب ملف منزل أيرلندا",
+  "curly_house_project_profile": "ملف مشروع منزل كارلي",
+  "Woodside_High_School_Project_Profile": "ملف مشروع مدرسة وودسايد الثانوية",
+  "select_contractor_type": "اختر نوع المقاول",
+  "private_builder": "بناء خاص",
+  "entrepreneur": "رائد أعمال",
+  "private_contractor": "مقاول خاص",
+  "construction_company": "شركة إنشاءات",
+  "public_construction": "إنشاءات عامة",
+  "other": "أخرى"
 
 
 }

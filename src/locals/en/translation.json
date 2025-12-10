@@ -1494,5 +1494,19 @@
     "modal": {
       "close": "Close video"
     }
-  }
+  },
+  "Janacek_Residence_Project_Profile": "Janacek Residence Project Profile",
+  "farmhouse_basement_project_profile": "Farmhouse Basement Project Profile",
+  "St_Peter_Anglican_Church_Tallahassee_Project_Profile":" St Peter Anglican Church Tallahassee Project Profile",
+  "Richardsville_Elementary_Project_Profile_Template":" Richardsville Elementary Project Profile Template",
+  "ireland_house_profile_template":" Ireland House Profile Template",
+  "curly_house_project_profile":" Curly House Project Profile",
+  "Woodside_High_School_Project_Profile":" Woodside High School Project Profile",
+  "select_contractor_type": "Select Contractor Type",
+  "private_builder": "Private builder",
+  "entrepreneur": "Entrepreneur",
+  "private_contractor": "Private contractor",
+  "construction_company": "Construction company",
+  "public_construction": "Public construction",
+  "other": "Other"
 }

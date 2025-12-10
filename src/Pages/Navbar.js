@@ -1094,14 +1094,36 @@ const Navbar = () => {
                           </label>
                         </td>
                         <td>
-                          <input
-                            type="text"
-                            name="contractorType"
-                            value={formData.contractorType}
+                          <select
+                            name="stage"
+                            value={formData.stage}
                             onChange={handleInputChange}
-                            className="form-input"
+                            className="form-select"
                             required
-                          />
+                          >
+                            <option value="">
+                              {t("select_contractor_type")}
+                            </option>
+                            <option value="private_builder">
+                              {t("private_builder")}
+                            </option>
+                            <option value="entrepreneur">
+                              {t("entrepreneur")}
+                            </option>
+                            <option value="private_contractor">
+                              {t("private_contractor")}
+                            </option>
+                            <option value="construction_company">
+                              {t("construction_company")}
+                            </option>
+                            <option value="saturated_construction">
+                              {t("saturated_construction")}
+                            </option>
+                            <option value="public_construction">
+                              {t("public_construction")}
+                            </option>
+                            <option value="other">{t("other")}</option>
+                          </select>
                         </td>
                       </tr>
                       <tr>

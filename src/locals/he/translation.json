@@ -1492,6 +1492,20 @@
     "modal": {
       "close": "סגור וידאו"
     }
-  }
+  },
+  "Janacek_Residence_Project_Profile": "פרופיל פרויקט מגורי ינאצ'ק",
+  "farmhouse_basement_project_profile": "פרופיל פרויקט מרתף בית חווה",
+  "St_Peter_Anglican_Church_Tallahassee_Project_Profile": "פרופיל פרויקט כנסיית סנט פיטר האנגליקנית, טלהאסי",
+  "Richardsville_Elementary_Project_Profile_Template": "תבנית פרופיל בית ספר יסודי ריצ'רדסוויל",
+  "ireland_house_profile_template": "תבנית פרופיל בית אירלנד",
+  "curly_house_project_profile": "פרופיל פרויקט בית קרלי",
+  "Woodside_High_School_Project_Profile": "פרופיל פרויקט תיכון וודסייד",
+  "select_contractor_type": "בחר סוג קבלן",
+  "private_builder": "קבלן פרטי",
+  "entrepreneur": "יזם",
+  "private_contractor": "קבלן עצמאי",
+  "construction_company": "חברת בנייה",
+  "public_construction": "בנייה ציבורית",
+  "other": "אחר"
 
 }

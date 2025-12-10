@@ -1526,6 +1526,20 @@
     "modal": {
       "close": "Закрыть видео"
     }
-  }
+  },
+  "Janacek_Residence_Project_Profile": "Профиль проекта резиденции Яначека",
+  "farmhouse_basement_project_profile": "Профиль проекта подвала фермерского дома",
+  "St_Peter_Anglican_Church_Tallahassee_Project_Profile": "Профиль проекта англиканской церкви Святого Петра, Таллахасси",
+  "Richardsville_Elementary_Project_Profile_Template": "Шаблон профиля начальной школы Ричардсвилля",
+  "ireland_house_profile_template": "Шаблон профиля дома Ирландии",
+  "curly_house_project_profile": "Профиль проекта «Кёрли Хаус»",
+  "Woodside_High_School_Project_Profile": "Профиль проекта средней школы Вудсайд",
+  "select_contractor_type": "Выберите тип подрядчика",
+  "private_builder": "Частный застройщик",
+  "entrepreneur": "Предприниматель",
+  "private_contractor": "Частный подрядчик",
+  "construction_company": "Строительная компания",
+  "public_construction": "Государственное строительство",
+  "other": "Другое"
 
 }

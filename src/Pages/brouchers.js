@@ -32,13 +32,16 @@ const Brouchers = () => {
                             <td className="dlinfo hover01">{t("04 Aug, 2016")}</td>
                             <td className="dlinfo hover01">
                                 <ul className="file-list-inner-td justify-content-center">
-                                    <li><a   className="red-link border-none">
+                                    <li><a  href="Ecobuild_Frontend_ui/public/EcoBuildPdf/Information Center/Brochures/booklet.pdf"
+    download  className="red-link border-none">
                                             <div className="icon-band"><img alt=""src={pdf} /></div>{t("PDF")}<img
                                                 src={download} className="download-icon" />
                                         </a></li>
                                 </ul>
                             </td>
                         </tr>
+
+
                         <tr className="dlinfo">
                             <td className="dlinfo hover01">{t("booklet")}</td>
                             <td className="dlinfo hover01">{t("PDF")}</td>
@@ -46,8 +49,9 @@ const Brouchers = () => {
                             <td className="dlinfo hover01">{t("04 Aug, 2016")}</td>
                             <td className="dlinfo hover01">
                                 <ul className="file-list-inner-td justify-content-center">
-                                    <li><a   className="red-link border-none">
-                                            <div className="icon-band"><img alt=""src="Ecobuild_Frontend_ui/public/EcoBuildPdf/Information Center/Brochures/booklet.pdf" /></div>{t("PDF")}<img
+                                    <li><a href="Ecobuild_Frontend_ui/public/EcoBuildPdf/Information Center/Brochures/Product Catalog.pdf"
+    download  className="red-link border-none">
+                                            <div className="icon-band"><img alt="" src={pdf} /></div>{t("PDF")}<img
                                                 src="Images/Icons/Download.svg" className="download-icon" />
                                         </a></li>
                                 </ul>
