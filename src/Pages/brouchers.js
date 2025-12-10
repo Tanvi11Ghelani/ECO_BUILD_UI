@@ -11,9 +11,6 @@ const Brouchers = () => {
                 header={t("brochures")}
                 subHeader={t("building_homes_also_for_the_generations_to_come")}
             />
-
-
-        
         <section>
             <div className="container">
                 <div className="title">
@@ -50,7 +47,7 @@ const Brouchers = () => {
                             <td className="dlinfo hover01">
                                 <ul className="file-list-inner-td justify-content-center">
                                     <li><a   className="red-link border-none">
-                                            <div className="icon-band"><img alt=""src="Images/Icons/pdf-gray.svg" /></div>{t("PDF")}<img
+                                            <div className="icon-band"><img alt=""src="Ecobuild_Frontend_ui/public/EcoBuildPdf/Information Center/Brochures/booklet.pdf" /></div>{t("PDF")}<img
                                                 src="Images/Icons/Download.svg" className="download-icon" />
                                         </a></li>
                                 </ul>

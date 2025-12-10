@@ -408,12 +408,12 @@
 /* ============================================
    VIDEO TUTORIALS SECTION - Matching Figma List Design
    ============================================ */
-
 .video-tutorials-section {
   width: 100%;
-  max-width: 1720px;
+  max-width: 1200px; /* Reduced from 1720px to match breadcrumb */
   margin: 60px auto 80px auto;
-  padding: 0;
+  padding: 0 20px; /* Added padding for mobile responsiveness */
+  box-sizing: border-box;
 }
 
 /* Video Tutorials Title */
@@ -427,24 +427,25 @@
   text-align: center;
 }
 
-/* Video List Container - 1416px width, 60px gap, 3 columns */
+/* Video List Container - Adjusted to fit within 1200px container */
 .video-list-container {
   width: 100%;
-  max-width: 1416px;
-  min-height: 1230px;
+  max-width: 1100px; /* Reduced from 1416px */
+  min-height: auto; /* Changed from 1230px */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
+  gap: 40px; /* Reduced from 60px */
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Video Listing Card - 410px width, 370px height, 16px border-radius */
+/* Video Listing Card - Adjusted to fit 3 in a row with 40px gaps */
 .video-listing {
-  width: 410px;
-  height: 370px;
-  border-radius: 16px;
+  width: 100%;
+  /*Changedfromfixed410px*/max-width: 400px;
+  /*Adjustedfor3columns*/height: 320px;
+  /*Reducedfrom370px*/border-radius: 16px;
   background: #ffffff;
   overflow: hidden;
   cursor: pointer;
@@ -455,18 +456,16 @@
   display: flex;
   flex-direction: column;
   text-align: left;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
 }
 
-/* Hover effect for video listing card */
-.video-listing:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
-}
-
-/* Image Container - 410px width, 270px height, 15px border-radius (top) */
+/* Image Container - Adjusted proportionally */
 .video-listing-img {
-  width: 410px;
-  height: 270px;
+  width: 100%;
+  height: 220px; /* Reduced from 270px */
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   overflow: hidden;
@@ -475,20 +474,14 @@
   box-sizing: border-box;
 }
 
-.video-listing-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Play Button - 92px width, 92px height, blue circle with white play icon */
+/* Play Button - Adjusted size and position */
 .video-listing-play-btn {
-  width: 92px;
-  height: 92px;
+  width: 70px; /* Reduced from 92px */
+  height: 70px; /* Reduced from 92px */
   position: absolute;
-  top: 89px;
-  left: 159px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: #00a3e0;
   border-radius: 50%;
   display: flex;
@@ -502,30 +495,18 @@
   padding: 0;
 }
 
-/* Play icon inside button - white triangle */
+/* Play icon inside button */
 .video-listing-play-btn svg {
-  width: 40px;
-  height: 40px;
+  width: 30px; /* Reduced from 40px */
+  height: 30px; /* Reduced from 40px */
   transition: transform 0.3s ease;
 }
 
-/* Hover effect for play button */
-.video-listing-play-btn:hover {
-  background: #00d4ff;
-  transform: scale(1.1);
-  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.3);
-}
-
-.video-listing:hover .video-listing-play-btn svg {
-  transform: scale(1.1);
-}
-
-/* Content Section - 410px width, 100px height, gradient background */
+/* Content Section - Adjusted */
 .video-listing-content {
-  width: 410px;
+  width: 100%;
   height: 100px;
-  padding: 20px;
-  gap: 24px;
+  padding: 15px 20px; /* Adjusted padding */
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
   background: linear-gradient(
@@ -548,7 +529,6 @@
   justify-content: center;
   align-items: flex-start;
 }
-
 /* Video Listing Title */
 .video-listing-title {
   font-family: "Noto Sans", sans-serif;

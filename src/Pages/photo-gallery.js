@@ -1,58 +1,77 @@
-// Import images at the top of your component file
-import img1 from "../images/gallery/gallery-img-all-01.jpg";
-import img2 from "../images/gallery/gallery-img-all-02.jpg";
-import img3 from "../images/gallery/gallery-img-all-03.jpg";
-import img4 from "../images/gallery/gallery-img-all-04.jpg";
-import img5 from "../images/gallery/gallery-img-all-05.jpg";
-import img6 from "../images/gallery/gallery-img-all-06.jpg";
-import img7 from "../images/gallery/gallery-img-all-07.jpg";
-import img8 from "../images/gallery/gallery-img-all-08.jpg";
-import img9 from "../images/gallery/gallery-img-all-09.jpg";
+import { useState, useEffect } from "react";
+import { loadAllCategories } from "../utils/galleryImageLoader";
 import Breadcrumb from "../common-component/Breadcrumb";
-import img10 from "../images/gallery/gallery-img-all-10.jpg";
-import img11 from "../images/gallery/gallery-img-all-11.jpg";
-import img12 from "../images/gallery/gallery-img-all-12.jpg";
-import { useState, useRef, useEffect } from "react";
 import api from "../HTTP/baseURLMain";
 import { useTranslation } from "react-i18next";
 import "./photo-gallery.css";
-
-const images = [
-  img1,
-  img2,
-  img3,
-  img4,
-  img5,
-  img6,
-  img7,
-  img8,
-  img9,
-  img10,
-  img11,
-  img12,
-];
 
 const PhotoGallery = () => {
   const { t } = useTranslation();
   const [galleryItems, setGalleryItems] = useState([]);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [currentTab, setCurrentTab] = useState("all"); // Track current tab
+  const [currentTab, setCurrentTab] = useState("all");
+  const [localImages, setLocalImages] = useState({
+    all: [],
+    completed: [],
+    construction: [],
+    events: [],
+  });
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Load local images from folders
+  useEffect(() => {
+    const loadLocalImages = () => {
+      setIsLoading(true);
+      try {
+        const images = loadAllCategories();
+        setLocalImages(images);
+        console.log("Local images loaded:", {
+          all: images.all.length,
+          completed: images.completed.length,
+          construction: images.construction.length,
+        });
+      } catch (error) {
+        console.error("Error loading local images:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    loadLocalImages();
+  }, []);
 
   // Get current images based on active tab
   const getCurrentImages = () => {
-    if (currentTab === "all" && galleryItems && galleryItems.length > 0) {
-      return galleryItems
-        .filter((item) => item.image)
-        .map((item) => ({
-          src: item.image,
-          alt: item.category?.name || "Gallery",
-        }));
+    switch (currentTab) {
+      case "all":
+        // Combine API images with local "all" images
+        if (galleryItems && galleryItems.length > 0) {
+          const apiImages = galleryItems
+            .filter((item) => item.image)
+            .map((item) => ({
+              src: item.image,
+              alt: item.category?.name || "Gallery",
+              id: item.id || `api-${Date.now()}-${Math.random()}`,
+              fromApi: true,
+            }));
+
+          return [...apiImages, ...localImages.all];
+        }
+        return localImages.all;
+
+      case "completed":
+        return localImages.completed;
+
+      case "construction":
+        return localImages.construction;
+
+      case "events":
+        return localImages.events;
+
+      default:
+        return localImages.all;
     }
-    return images.map((img, index) => ({
-      src: img,
-      alt: `Gallery ${index + 1}`,
-    }));
   };
 
   const currentImages = getCurrentImages();
@@ -61,7 +80,7 @@ const PhotoGallery = () => {
   const openLightbox = (index) => {
     setCurrentImageIndex(index);
     setLightboxOpen(true);
-    document.body.style.overflow = "hidden"; // Prevent background scroll
+    document.body.style.overflow = "hidden";
   };
 
   // Close lightbox
@@ -127,7 +146,7 @@ const PhotoGallery = () => {
             return item;
           });
           setGalleryItems(processedItems);
-          console.log("Gallery items loaded:", processedItems.length);
+          console.log("API Gallery items loaded:", processedItems.length);
         } else {
           console.warn("No gallery items in API response");
           setGalleryItems([]);
@@ -150,53 +169,67 @@ const PhotoGallery = () => {
     fetchGallery();
   }, []);
 
-  // Gallery content component to reduce code duplication
-  const GalleryContent = ({
-    images,
-    onImageClick,
-    useGalleryItems = false,
-  }) => (
+  // Gallery content component
+  const GalleryContent = ({ images, onImageClick }) => (
     <section>
       <div className="container">
-        <div className="row g-4">
-          {useGalleryItems && galleryItems && galleryItems.length > 0
-            ? galleryItems
-              .filter((item) => item.image)
-              .map((item, index) => (
-                <div
-                  className="col-sm-6 col-md-6 col-lg-4 col-xl-3"
-                  key={item.id || index}
-                >
-                  <div
-                    className="gallery-img-card"
-                    onClick={() => onImageClick(index)}
-                    style={{ cursor: "pointer" }}
-                  >
-                    <img
-                      src={item.image}
-                      alt={item.category?.name || `Gallery ${index + 1}`}
-                    />
-                  </div>
-                </div>
-              ))
-            : images.map((img, index) => (
+        {isLoading ? (
+          <div className="text-center py-5">
+            <div className="spinner-border text-primary" role="status">
+              <span className="visually-hidden">Loading...</span>
+            </div>
+            <p className="mt-3">{t("loading_images") || "Loading images..."}</p>
+          </div>
+        ) : images.length === 0 ? (
+          <div className="text-center py-5">
+            <p className="text-muted">
+              {t("no_images_found") || "No images found in this category"}
+            </p>
+          </div>
+        ) : (
+          <div className="row g-4">
+            {images.map((img, index) => (
               <div
                 className="col-sm-6 col-md-6 col-lg-4 col-xl-3"
-                key={index}
+                key={img.id || index}
               >
                 <div
                   className="gallery-img-card"
                   onClick={() => onImageClick(index)}
                   style={{ cursor: "pointer" }}
                 >
-                  <img src={img} alt={`Gallery ${index + 1}`} />
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    onError={(e) => {
+                      e.target.src =
+                        "https://via.placeholder.com/300x200/cccccc/666666?text=Image+Not+Found";
+                    }}
+                  />
                 </div>
               </div>
             ))}
-        </div>
+          </div>
+        )}
       </div>
     </section>
   );
+
+  // Get images for current tab
+  const getTabImages = () => {
+    switch (currentTab) {
+      case "all":
+        return getCurrentImages();
+      case "completed":
+        return localImages.completed;
+      case "construction":
+        return localImages.construction;
+      case "events":
+        return localImages.events;
+      default:
+        return getCurrentImages();
+    }
+  };
 
   return (
     <div className="photo-gallery-page">
@@ -213,14 +246,9 @@ const PhotoGallery = () => {
           >
             <li className="nav-item" role="presentation">
               <button
-                className="nav-link active"
-                id="pills-home-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-home"
+                className={`nav-link ${currentTab === "all" ? "active" : ""}`}
                 type="button"
                 role="tab"
-                aria-controls="pills-home"
-                aria-selected="true"
                 onClick={() => setCurrentTab("all")}
               >
                 {t("show_all")}
@@ -228,14 +256,11 @@ const PhotoGallery = () => {
             </li>
             <li className="nav-item" role="presentation">
               <button
-                className="nav-link"
-                id="pills-profile-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-profile"
+                className={`nav-link ${
+                  currentTab === "completed" ? "active" : ""
+                }`}
                 type="button"
                 role="tab"
-                aria-controls="pills-profile"
-                aria-selected="false"
                 onClick={() => setCurrentTab("completed")}
               >
                 {t("gallery_of_completed_projects")}
@@ -243,14 +268,11 @@ const PhotoGallery = () => {
             </li>
             <li className="nav-item" role="presentation">
               <button
-                className="nav-link"
-                id="pills-contact-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-contact"
+                className={`nav-link ${
+                  currentTab === "construction" ? "active" : ""
+                }`}
                 type="button"
                 role="tab"
-                aria-controls="pills-contact"
-                aria-selected="false"
                 onClick={() => setCurrentTab("construction")}
               >
                 {t("projects_under_construction")}
@@ -258,14 +280,11 @@ const PhotoGallery = () => {
             </li>
             <li className="nav-item" role="presentation">
               <button
-                className="nav-link border-none"
-                id="pills-disabled-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-disabled"
+                className={`nav-link border-none ${
+                  currentTab === "events" ? "active" : ""
+                }`}
                 type="button"
                 role="tab"
-                aria-controls="pills-disabled"
-                aria-selected="false"
                 onClick={() => setCurrentTab("events")}
               >
                 {t("ecobuild_events")}
@@ -273,51 +292,13 @@ const PhotoGallery = () => {
             </li>
           </ul>
         </div>
-        <div className="tab-content" id="pills-tabContent">
-          <div
-            className="tab-pane fade show active"
-            id="pills-home"
-            role="tabpanel"
-            aria-labelledby="pills-home-tab"
-          >
-            <GalleryContent
-              images={images}
-              onImageClick={openLightbox}
-              useGalleryItems={true}
-            />
-          </div>
 
-          <div
-            className="tab-pane fade"
-            id="pills-profile"
-            role="tabpanel"
-            aria-labelledby="pills-profile-tab"
-          >
-            <GalleryContent images={images} onImageClick={openLightbox} />
-          </div>
-
-          <div
-            className="tab-pane fade"
-            id="pills-contact"
-            role="tabpanel"
-            aria-labelledby="pills-contact-tab"
-          >
-            <GalleryContent images={images} onImageClick={openLightbox} />
-          </div>
-
-          <div
-            className="tab-pane fade"
-            id="pills-disabled"
-            role="tabpanel"
-            aria-labelledby="pills-disabled-tab"
-          >
-            <GalleryContent images={images} onImageClick={openLightbox} />
-          </div>
-        </div>
+        {/* Gallery Content */}
+        <GalleryContent images={getTabImages()} onImageClick={openLightbox} />
       </section>
 
       {/* Lightbox Modal */}
-      {lightboxOpen && (
+      {lightboxOpen && currentImages.length > 0 && (
         <div className="lightbox-modal" onClick={closeLightbox}>
           <button className="lightbox-close" onClick={closeLightbox}>
             ×
@@ -340,6 +321,10 @@ const PhotoGallery = () => {
             <img
               src={currentImages[currentImageIndex].src}
               alt={currentImages[currentImageIndex].alt}
+              onError={(e) => {
+                e.target.src =
+                  "https://via.placeholder.com/800x600/cccccc/666666?text=Image+Not+Found";
+              }}
             />
             <div className="lightbox-counter">
               {currentImageIndex + 1} / {currentImages.length}
