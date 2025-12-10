@@ -14,7 +14,7 @@ const SustanableConstruction = () => {
     const { t } = useTranslation();
     return (
         <div>
-            <Breadcrumb 
+            <Breadcrumb
                 header={t('sustainable_construction')}
                 subHeader={t('building_homes_also_for_the_generations_to_come')}
             />
@@ -33,15 +33,15 @@ const SustanableConstruction = () => {
                 <div className="container">
                     <div className="row g-4 align-items-center justify-content-center">
                         <div className="col-sm-12 col-md-6 col-lg-5 col-xl-4">
-                            <div className="single-text-content-card xy-radius">
-                                <div className="text-band">
+                            <div className="single-text-content-card xy-radius h-100 d-flex align-items-center justify-content-center">
+                                <div className="text-band text-center" style={{ margin: 0 }}>
                                     <h4 className="mb-0">{t('training')}</h4>
                                 </div>
                             </div>
                         </div>
                         <div className="col-sm-12 col-md-6 col-lg-5 col-xl-4">
-                            <div className="single-text-content-card xy-radius">
-                                <div className="text-band">
+                            <div className="single-text-content-card xy-radius h-100 d-flex align-items-center justify-content-center">
+                                <div className="text-band text-center" style={{ margin: 0 }}>
                                     <h4 className="mb-0">{t('nudura_walls_bullet_resistance')}</h4>
                                 </div>
                             </div>
@@ -107,7 +107,7 @@ const SustanableConstruction = () => {
                             <li>{t('compliance_with_local_regional_and_national_building_codes')}</li>
                             <li>{t('every_authorized_nudura_distributor_has_access_to_our_technical_support_team_who_can_provide_additional_information_and_guidance_on_special_installations_and_building_code_issues_for_the_nudura_wall_system')}</li>
                         </ul>
-                        <h6 className="mt-4"><a   className="priamry-link">{t('contact_an_authorized_distributor')}</a></h6>
+                        <h6 className="mt-4"><a className="priamry-link">{t('contact_an_authorized_distributor')}</a></h6>
                     </div>
                 </div>
             </section>
@@ -286,43 +286,43 @@ const SustanableConstruction = () => {
                     <div className="row g-4">
                         <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3">
                             <div className="gallery-img-card">
-                                <img alt=""src={img} />
+                                <img alt="" src={img} />
                             </div>
                         </div>
                         <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3">
                             <div className="gallery-img-card">
-                                <img alt=""src={img1} />
+                                <img alt="" src={img1} />
                             </div>
                         </div>
                         <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3">
                             <div className="gallery-img-card">
-                                <img alt=""src={img2} />
+                                <img alt="" src={img2} />
                             </div>
                         </div>
                         <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3">
                             <div className="gallery-img-card">
-                                <img alt=""src={img3} />
+                                <img alt="" src={img3} />
                             </div>
                         </div>
 
                         <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3">
                             <div className="gallery-img-card">
-                                <img alt=""src={img4} />
+                                <img alt="" src={img4} />
                             </div>
                         </div>
                         <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3">
                             <div className="gallery-img-card">
-                                <img alt=""src={img5} />
+                                <img alt="" src={img5} />
                             </div>
                         </div>
                         <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3">
                             <div className="gallery-img-card">
-                                <img alt=""src={img6} />
+                                <img alt="" src={img6} />
                             </div>
                         </div>
                         <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3">
                             <div className="gallery-img-card">
-                                <img alt=""src={img7} />
+                                <img alt="" src={img7} />
                             </div>
                         </div>
                     </div>

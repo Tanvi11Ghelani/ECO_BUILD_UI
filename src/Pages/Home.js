@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -20,7 +20,7 @@ import img from "../images/Img2.png";
 import img2 from "../images/Img3.png";
 import { hide } from "@popperjs/core";
 import { useTranslation } from "react-i18next";
-
+import "./HomeDropdown.css";
 const Home = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
@@ -268,48 +268,53 @@ const Home = () => {
             <span>{t("featured_products")}</span>
             <h3>{t("recommended_for_you")}</h3>
           </div>
+
+
+
           <div className="row g-4">
             <div className="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-              <div className="card gradient-card">
-                <div className="img-band w-100">
-                  <img alt="" src={product1} />
-                </div>
-                <div className="text-band p-3">
-                  <h5>{t("the_nudura_icf_series")}</h5>
-                  <ul>
-                    <li>
-                      <span>{t("type")}:</span>
-                      {t("4_way_flip")}
-                    </li>
-                    <li>
-                      <span>{t("size")}:</span>
-                      {t("4_way_flip")}
-                    </li>
-                    <li>
-                      <span>{t("shape")}:</span>
-                      {t("all_shapes")}
-                    </li>
-                  </ul>
-                  <div className="review-band">
-                    <span>
-                      <i className="fa-solid fa-star"></i>
-                    </span>
-                    <span>
-                      <i className="fa-solid fa-star"></i>
-                    </span>
-                    <span>
-                      <i className="fa-solid fa-star"></i>
-                    </span>
-                    <span>
-                      <i className="fa-solid fa-star"></i>
-                    </span>
-                    <span>
-                      <i className="fa-regular fa-star"></i>
-                    </span>
-                    <p>{t("45_reviews")}</p>
+              <Link to="/nodoraseriesproduct" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div className="card gradient-card">
+                  <div className="img-band w-100">
+                    <img alt="" src={product1} />
+                  </div>
+                  <div className="text-band p-3">
+                    <h5>{t("the_nudura_icf_series")}</h5>
+                    <ul>
+                      <li>
+                        <span>{t("type")}:</span>
+                        {t("4_way_flip")}
+                      </li>
+                      <li>
+                        <span>{t("size")}:</span>
+                        {t("4_way_flip")}
+                      </li>
+                      <li>
+                        <span>{t("shape")}:</span>
+                        {t("all_shapes")}
+                      </li>
+                    </ul>
+                    <div className="review-band">
+                      <span>
+                        <i className="fa-solid fa-star"></i>
+                      </span>
+                      <span>
+                        <i className="fa-solid fa-star"></i>
+                      </span>
+                      <span>
+                        <i className="fa-solid fa-star"></i>
+                      </span>
+                      <span>
+                        <i className="fa-solid fa-star"></i>
+                      </span>
+                      <span>
+                        <i className="fa-regular fa-star"></i>
+                      </span>
+                      <p>{t("45_reviews")}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
             <div className="col-sm-6 col-md-6 col-lg-4 col-xl-4">
               <div className="card gradient-card">

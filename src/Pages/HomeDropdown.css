@@ -1,0 +1,173 @@
+/* Main container for the search bar (The "Pill") */
+.hero__search-card {
+    background: #fff;
+    border-radius: 60px;
+    /* Slightly more rounded */
+    padding: 0 0 0 25px;
+    /* Minimal padding, height controlled by content or flex */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    /* Lighter shadow */
+    width: 100%;
+    max-width: 1200px;
+    /* Slightly reduced width for compactness */
+    margin: 0 auto;
+    height: 80px !important;
+    /* Explicit height to force "small" */
+    display: flex;
+    align-items: center;
+}
+
+.hero__search-form {
+    width: 100%;
+    height: 100%;
+}
+
+.hero__fields {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Individual Fields */
+.hero-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: 0 25px;
+    height: 40px;
+    /* Constrain height of inner fields */
+}
+
+.hero-field--type {
+    padding-left: 0;
+    min-width: 180px;
+}
+
+.hero-field--sizes {
+    min-width: 150px;
+}
+
+.hero-field--keyword {
+    flex-grow: 1;
+    padding-right: 15px;
+}
+
+/* Vertical Dividers */
+.hero-field:not(:last-of-type)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 25px;
+    /* Small divider */
+    width: 1px;
+    background-color: #eee;
+}
+
+.hero-field--keyword::after {
+    display: none;
+}
+
+/* Label Styling */
+.hero-field__label {
+    font-size: 0.75rem;
+    /* Smaller label */
+    font-weight: 700;
+    color: #9e9e9e;
+    margin-bottom: 0;
+    display: block;
+    line-height: 1;
+}
+
+/* Native Select Styling to look clean/flat */
+.hero-select__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.hero-select {
+    appearance: none;
+    /* Remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    border: none;
+    font-size: 0.95rem;
+    /* Moderate size */
+    font-weight: 700;
+    color: #1a1a1a;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+    padding-right: 20px;
+    /* Space for custom arrow if needed */
+    line-height: 1.2;
+}
+
+.hero-select__chevron {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 0.7rem;
+    color: #6c757d;
+}
+
+/* Input Keyword Styling */
+.hero-keyword {
+    width: 100%;
+}
+
+.hero-keyword__input {
+    border: none;
+    background: transparent;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    width: 100%;
+    padding: 0;
+    outline: none;
+    height: auto;
+}
+
+.hero-keyword__input::placeholder {
+    color: #1a1a1a;
+    opacity: 1;
+}
+
+/* Search Button Styling */
+.hero-submit {
+    background-color: #00bfff;
+    border: none;
+    border-radius: 40px;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0 30px;
+    /* Horizontal padding only */
+    height: 46px;
+    /* Slightly smaller than container height to have margin */
+    margin: 7px;
+    /* Margin to create spacing from container edges */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0;
+}
+
+.hero-submit:hover {
+    background-color: #009acd;
+}
+
+/* Custom Dropdown Fallbacks (if code switches back) */
+.custom-dropdown-trigger {
+    font-size: 0.95rem;
+}

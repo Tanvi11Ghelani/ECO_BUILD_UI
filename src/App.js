@@ -44,6 +44,7 @@ import BroadcastNews from './Pages/broadcast-news';
 import WriteAboutUsInPress from './Pages/about-us-in-press';
 import PlusSeriesOnClickSection from './Pages/plus-series-on-click';
 import ICFMethods from './Pages/icf-methods';
+import Nuduraseriesproduct from './Pages/nuduraseriesproduct';
 import './i18n/index';
 
 // import other pages if you have them
@@ -55,6 +56,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/plus-series" element={<PlusSeriesSection />} />
+        <Route path="/nodoraseriesproduct" element={<Nuduraseriesproduct />} />
         <Route path="/login" element={<Login />} />
         <Route path="/forgetpassword" element={<ForgetPassword />} />
         <Route path="/registration" element={<Registration />} />
@@ -98,6 +100,8 @@ function App() {
           <NUDURASeries />
         }
         />
+
+
         <Route path="/planning" element={
           <Plannig />
         }

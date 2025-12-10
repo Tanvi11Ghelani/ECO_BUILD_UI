@@ -3010,6 +3010,27 @@ nav.navbar.navbar-expand-lg {
   direction: rtl;
 }
 
+.single-text-content-card {
+  background: var(--primary-gradient);
+  padding: 25px 12px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  /* Vertical center */
+  justify-content: center;
+  /* Horizontal center */
+  text-align: center;
+}
+
+.text-band {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* center horizontal */
+  align-items: center;
+  /* center vertical */
+}
+
 .navmenu-band .btn-primary {
   height: 48px;
   padding: 8px 24px;

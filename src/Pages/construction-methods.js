@@ -8,7 +8,7 @@ const ConstructionMethods = () => {
         <div className="breadcrumb-band">
           <div className="text-band">
             <span>{t("construction_methods")}</span>
-                    <h2>{t("building_homes_also_for_the_generations_to_come")}</h2>
+            <h2>{t("building_homes_also_for_the_generations_to_come")}</h2>
           </div>
         </div>
       </div>
@@ -33,57 +33,57 @@ const ConstructionMethods = () => {
           </div>
           <div className="row g-4">
             <div className="col-sm-12 col-md-6 col-lg-3 col-xl-3">
-              <div className="single-text-content-card xy-radius">
-                <div className="text-band">
+              <div className="single-text-content-card xy-radius h-100 d-flex align-items-center justify-content-center">
+                <div className="text-band text-center" style={{ margin: 0 }}>
                   <h4 className="mb-0">{t("military_construction")}</h4>
                 </div>
               </div>
             </div>
             <div className="col-sm-12 col-md-6 col-lg-3 col-xl-3">
-              <div className="single-text-content-card xy-radius">
-                <div className="text-band">
+              <div className="single-text-content-card xy-radius h-100 d-flex align-items-center justify-content-center">
+                <div className="text-band text-center" style={{ margin: 0 }}>
                   <h4 className="mb-0">{t("green_building")}</h4>
                 </div>
               </div>
             </div>
             <div className="col-sm-12 col-md-6 col-lg-3 col-xl-3">
-              <div className="single-text-content-card xy-radius">
-                <div className="text-band">
+              <div className="single-text-content-card xy-radius h-100 d-flex align-items-center justify-content-center">
+                <div className="text-band text-center" style={{ margin: 0 }}>
                   <h4 className="mb-0">{t("institutional_construction")}</h4>
                 </div>
               </div>
             </div>
             <div className="col-sm-12 col-md-6 col-lg-3 col-xl-3">
-              <div className="single-text-content-card xy-radius">
-                <div className="text-band">
+              <div className="single-text-content-card xy-radius h-100 d-flex align-items-center justify-content-center">
+                <div className="text-band text-center" style={{ margin: 0 }}>
                   <h4 className="mb-0">{t("protected_construction")}</h4>
                 </div>
               </div>
             </div>
             <div className="col-sm-12 col-md-6 col-lg-3 col-xl-3">
-              <div className="single-text-content-card xy-radius">
-                <div className="text-band">
+              <div className="single-text-content-card xy-radius h-100 d-flex align-items-center justify-content-center">
+                <div className="text-band text-center" style={{ margin: 0 }}>
                   <h4 className="mb-0">{t("modular_construction")}</h4>
                 </div>
               </div>
             </div>
             <div className="col-sm-12 col-md-6 col-lg-3 col-xl-3">
-              <div className="single-text-content-card xy-radius">
-                <div className="text-band">
+              <div className="single-text-content-card xy-radius h-100 d-flex align-items-center justify-content-center">
+                <div className="text-band text-center" style={{ margin: 0 }}>
                   <h4 className="mb-0">{t("insulated_construction")}</h4>
                 </div>
               </div>
             </div>
             <div className="col-sm-12 col-md-6 col-lg-3 col-xl-3">
-              <div className="single-text-content-card xy-radius">
-                <div className="text-band">
+              <div className="single-text-content-card xy-radius h-100 d-flex align-items-center justify-content-center">
+                <div className="text-band text-center" style={{ margin: 0 }}>
                   <h4 className="mb-0">{t("industrialized_construction")}</h4>
                 </div>
               </div>
             </div>
             <div className="col-sm-12 col-md-6 col-lg-3 col-xl-3">
-              <div className="single-text-content-card xy-radius">
-                <div className="text-band">
+              <div className="single-text-content-card xy-radius h-100 d-flex align-items-center justify-content-center">
+                <div className="text-band text-center" style={{ margin: 0 }}>
                   <h4 className="mb-0">{t("saturated_construction")}</h4>
                 </div>
               </div>
@@ -265,13 +265,13 @@ const ConstructionMethods = () => {
             <div className="text-band flex-text-band">
               <p className="bold-bg lh-sm mb-2">
                 {t("building_construction_is_like")}  <a
-                href="https://ecobuild.co.il/%d7%91%d7%a0%d7%99%d7%94-%d7%a8%d7%95%d7%95%d7%99%d7%94/"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ marginLeft: "4px", color: "#00A3E0" }}
-              >
-                {t("building_construction_is_like_link")}
-              </a>
+                  href="https://ecobuild.co.il/%d7%91%d7%a0%d7%99%d7%94-%d7%a8%d7%95%d7%95%d7%99%d7%94/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ marginLeft: "4px", color: "#00A3E0" }}
+                >
+                  {t("building_construction_is_like_link")}
+                </a>
               </p>
             </div>
           </div>

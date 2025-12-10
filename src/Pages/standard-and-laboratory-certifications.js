@@ -58,7 +58,7 @@ const StandardAndLaboratoryCertification = () => {
     <div className="standard-cert-page">
       {/* ===== HERO SECTION ===== */}
       {/* Breadcrumb Component - Reusable header banner */}
-      <Breadcrumb 
+      <Breadcrumb
         header={t("standard_and_laboratory_certifications")}
         subHeader={t("building_homes_also_for_the_generations_to_come")}
       />
@@ -72,14 +72,14 @@ const StandardAndLaboratoryCertification = () => {
         <h3 className="section-title">
           {t("standard_and_laboratory_certifications")}
         </h3>
-        
+
         {/* Description Text - 1720px width, 114px height */}
         <p className="description-text">
           {t("nudura_products_tested_description")}
         </p>
 
         {/* Subsection: Explosion Resistance Test */}
-        <h4 style={{ 
+        <h4 style={{
           fontFamily: '"Noto Sans", sans-serif',
           fontWeight: 700,
           fontSize: '18px',
@@ -122,7 +122,7 @@ const StandardAndLaboratoryCertification = () => {
           <h3 className="video-title">
             {t("video_title_tnt_explosion")}
           </h3>
-          
+
           {/* Video Subtitle - 18px SemiBold, #161E2D color */}
           <p className="video-subtitle">
             {t("video_subtitle_icf")}
@@ -220,7 +220,7 @@ const StandardAndLaboratoryCertification = () => {
                   {/* Download link with PDF icon */}
                   <td className="table-data-cell table-file-cell">
                     <div className="table-file-link">
-                      <a href="#" onClick={(e)=>e.preventDefault()}>
+                      <a href="#" onClick={(e) => e.preventDefault()}>
                         <div className="file-icon">
                           <img src={pdf} alt={t("pdf_icon")} />
                         </div>
@@ -261,7 +261,7 @@ const StandardAndLaboratoryCertification = () => {
                 <td className="table-data-cell">{t("british_psi_standard_block")}</td>
                 <td className="table-data-cell table-file-cell">
                   <div className="table-file-link">
-                    <a href="#" onClick={(e)=>e.preventDefault()}>
+                    <a href="#" onClick={(e) => e.preventDefault()}>
                       <div className="file-icon">
                         <img src={pdf} alt={t("zip_icon")} />
                       </div>
@@ -275,7 +275,7 @@ const StandardAndLaboratoryCertification = () => {
                 <td className="table-data-cell">{t("british_psi_25mm")}</td>
                 <td className="table-data-cell table-file-cell">
                   <div className="table-file-link">
-                    <a href="#" onClick={(e)=>e.preventDefault()}>
+                    <a href="#" onClick={(e) => e.preventDefault()}>
                       <div className="file-icon">
                         <img src={pdf} alt={t("zip_icon")} />
                       </div>
@@ -289,7 +289,7 @@ const StandardAndLaboratoryCertification = () => {
                 <td className="table-data-cell">{t("british_psi_102mm")}</td>
                 <td className="table-data-cell table-file-cell">
                   <div className="table-file-link">
-                    <a href="#" onClick={(e)=>e.preventDefault()}>
+                    <a href="#" onClick={(e) => e.preventDefault()}>
                       <div className="file-icon">
                         <img src={pdf} alt={t("zip_icon")} />
                       </div>
@@ -303,7 +303,7 @@ const StandardAndLaboratoryCertification = () => {
                 <td className="table-data-cell">{t("fire_table_row_3")}</td>
                 <td className="table-data-cell table-file-cell">
                   <div className="table-file-link">
-                    <a href="#" onClick={(e)=>e.preventDefault()}>
+                    <a href="#" onClick={(e) => e.preventDefault()}>
                       <div className="file-icon">
                         <img src={pdf} alt={t("pdf_icon")} />
                       </div>
@@ -317,7 +317,7 @@ const StandardAndLaboratoryCertification = () => {
                 <td className="table-data-cell">{t("british_psi_152mm")}</td>
                 <td className="table-data-cell table-file-cell">
                   <div className="table-file-link">
-                    <a href="#" onClick={(e)=>e.preventDefault()}>
+                    <a href="#" onClick={(e) => e.preventDefault()}>
                       <div className="file-icon">
                         <img src={pdf} alt={t("zip_icon")} />
                       </div>
@@ -353,7 +353,7 @@ const StandardAndLaboratoryCertification = () => {
                 <td className="table-data-cell">{t("psi_phpp_standard_block")}</td>
                 <td className="table-data-cell table-file-cell">
                   <div className="table-file-link">
-                    <a href="#" onClick={(e)=>e.preventDefault()}>
+                    <a href="#" onClick={(e) => e.preventDefault()}>
                       <div className="file-icon">
                         <img src={pdf} alt={t("zip_icon")} />
                       </div>
@@ -367,7 +367,7 @@ const StandardAndLaboratoryCertification = () => {
                 <td className="table-data-cell">{t("psi_phpp_25mm")}</td>
                 <td className="table-data-cell table-file-cell">
                   <div className="table-file-link">
-                    <a href="#" onClick={(e)=>e.preventDefault()}>
+                    <a href="#" onClick={(e) => e.preventDefault()}>
                       <div className="file-icon">
                         <img src={pdf} alt={t("zip_icon")} />
                       </div>
@@ -381,7 +381,7 @@ const StandardAndLaboratoryCertification = () => {
                 <td className="table-data-cell">{t("psi_phpp_51mm")}</td>
                 <td className="table-data-cell table-file-cell">
                   <div className="table-file-link">
-                    <a href="#" onClick={(e)=>e.preventDefault()}>
+                    <a href="#" onClick={(e) => e.preventDefault()}>
                       <div className="file-icon">
                         <img src={pdf} alt={t("zip_icon")} />
                       </div>
@@ -395,7 +395,7 @@ const StandardAndLaboratoryCertification = () => {
                 <td className="table-data-cell">{t("psi_phpp_102mm")}</td>
                 <td className="table-data-cell table-file-cell">
                   <div className="table-file-link">
-                    <a href="#" onClick={(e)=>e.preventDefault()}>
+                    <a href="#" onClick={(e) => e.preventDefault()}>
                       <div className="file-icon">
                         <img src={pdf} alt={t("zip_icon")} />
                       </div>
@@ -409,7 +409,7 @@ const StandardAndLaboratoryCertification = () => {
                 <td className="table-data-cell">{t("psi_phpp_152mm")}</td>
                 <td className="table-data-cell table-file-cell">
                   <div className="table-file-link">
-                    <a href="#" onClick={(e)=>e.preventDefault()}>
+                    <a href="#" onClick={(e) => e.preventDefault()}>
                       <div className="file-icon">
                         <img src={pdf} alt={t("zip_icon")} />
                       </div>
@@ -430,7 +430,7 @@ const StandardAndLaboratoryCertification = () => {
         <h3 className="section-title">
           {t("standard_tests_and_certifications")}
         </h3>
-        
+
         {/* Introductory Text */}
         <p className="description-text">
           {t("nudura_products_tested_etag_description")}

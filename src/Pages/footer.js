@@ -17,7 +17,7 @@ function Footer() {
                   alt=""
                   src="Images/Logo-white.png"
                   className="img-fluid"
-                  style={{ maxWidth: "200px" }}
+                  style={{ maxWidth: "300px" }}
                 />
               </div>
             </div>
@@ -302,13 +302,13 @@ function Footer() {
                   <a target="_blank">{t("icf")}</a>
                 </li>
                 <li className="mb-2">
-                     <Link className="mb-2" to="/thecombinedseries">
-                   {t("nudura_combined_series")}
+                  <Link className="mb-2" to="/thecombinedseries">
+                    {t("nudura_combined_series")}
                   </Link>
                 </li>
-                 <Link className="mb-2" to="/thecombinedseries">
-                   {t("retrofit_insulation_technology")}
-                  </Link>
+                <Link className="mb-2" to="/thecombinedseries">
+                  {t("retrofit_insulation_technology")}
+                </Link>
                 <li className="mb-2">
                   <Link className="dropdown-item" to="/construction-methods">
                     {t("advanced_construction_methods")}
