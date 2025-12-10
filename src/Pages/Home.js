@@ -29,11 +29,101 @@ const Home = () => {
   const [sizes, setSizes] = useState("Size");
   const [keyword, setKeyword] = useState("");
 
+  const allPages = [
+    { name: "Home", path: "/" },
+    { name: "Plus Series", path: "/plus-series" },
+    { name: "Login", path: "/login" },
+    { name: "Registration", path: "/registration" },
+    { name: "Below Construction Slope", path: "/belowtheconstructionslope" },
+    { name: "Flamable Construction", path: "/flamableconstruction" },
+    { name: "Non-Combustible Construction", path: "/noncombstibleconstruction" },
+    { name: "Fire Wall", path: "/firewall" },
+    { name: "Form Unit Profile", path: "/formunitprofile" },
+    { name: "BIM Library", path: "/bimlibrary" },
+    { name: "Early Design Criteria", path: "/earlydesigncriteria" },
+    { name: "The Combined Series", path: "/thecombinedseries" },
+    { name: "One Series", path: "/oneseries" },
+    { name: "Nudura Series", path: "/nuduraseries" },
+    { name: "Planning", path: "/planning" },
+    { name: "Catalog", path: "/catalogfordirectviewing" },
+    { name: "Files to Download", path: "/filestodownload" },
+    { name: "Standard & Laboratory", path: "/standardandlaboratory" },
+    { name: "Specifications", path: "/specification" },
+    { name: "Brochures", path: "/brochures" },
+    { name: "Project Description", path: "/projectdescription" },
+    { name: "Articles", path: "/articales" },
+    { name: "Rock Plaster", path: "/rockplaster" },
+    { name: "Photo Gallery", path: "/photogallery" },
+    { name: "Video Gallery", path: "/videogallery" },
+    { name: "ICF Method", path: "/icf-method" },
+    { name: "Academy", path: "/academy" },
+    { name: "Contact Us", path: "/contactus" },
+    { name: "FAQ", path: "/faq" },
+    { name: "Thermal Mass", path: "/thermalmass" },
+    { name: "Sustainable Construction", path: "/sustainable-construction" },
+    { name: "Innovation", path: "/innovation" },
+    { name: "Construction Methods", path: "/construction-methods" },
+    { name: "Nodora Series", path: "/nodoraseries" },
+    { name: "Nodora XR35", path: "/nodoraxr35" },
+    { name: "Plus Series Product", path: "/plus-series-product" },
+    { name: "About Us", path: "/aboutus" },
+    { name: "About Us In Press", path: "/aboutusinpress" },
+    { name: "Broadcast News", path: "/broadcastnews" },
+  ];
+
+  const [suggestions, setSuggestions] = useState([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+
+  const handleKeywordChange = (e) => {
+    const value = e.target.value;
+    setKeyword(value);
+    if (value.length > 0) {
+      const filtered = allPages.filter(page =>
+        page.name.toLowerCase().includes(value.toLowerCase())
+      );
+      setSuggestions(filtered);
+      setShowSuggestions(true);
+    } else {
+      setShowSuggestions(false);
+    }
+  };
+
+  const selectSuggestion = (path) => {
+    navigate(path);
+    setShowSuggestions(false);
+  };
+
   // Handle search form submission
   const handleSearch = (e) => {
     e.preventDefault();
-    // Add your search logic here
-    console.log("Search:", { productType, sizes, keyword });
+    const searchTerm = keyword.toLowerCase().trim();
+
+    // specific checks (keeping existing logic as priority)
+    if (searchTerm.includes('nudura') || productType === 'ICF Blocks') {
+      navigate('/nuduraseries');
+    } else if (searchTerm.includes('panel') || productType === 'Panels') {
+      navigate('/thecombinedseries');
+    } else if (searchTerm.includes('accessories') || productType === 'Accessories') {
+      navigate('/nuduraseries');
+    } else if (searchTerm.includes('one')) {
+      navigate('/oneseries');
+    } else if (searchTerm.includes('plus')) {
+      navigate('/plus-series');
+    } else if (searchTerm.includes('sustainable')) {
+      navigate('/sustainable-construction');
+    } else if (searchTerm.includes('fire')) {
+      navigate('/firewall');
+    } else if (searchTerm.includes('thermal')) {
+      navigate('/thermalmass');
+    } else {
+      // Fallback: check if we have a direct match in allPages
+      const match = allPages.find(page => page.name.toLowerCase().includes(searchTerm));
+      if (match) {
+        navigate(match.path);
+      } else {
+        navigate('/construction-methods');
+      }
+    }
   };
   const settings = {
     dots: true, // show navigation dots
@@ -134,8 +224,10 @@ const Home = () => {
                         className="hero-keyword__input"
                         placeholder={t("search_keyword")}
                         value={keyword}
-                        onChange={(e) => setKeyword(e.target.value)}
+                        onChange={handleKeywordChange}
+                        autoComplete="off"
                       />
+
                     </div>
                   </div>
 
@@ -186,15 +278,15 @@ const Home = () => {
                   <h5>{t("the_nudura_icf_series")}</h5>
                   <ul>
                     <li>
-                      <span>{t("type")}</span>
+                      <span>{t("type")}:</span>
                       {t("4_way_flip")}
                     </li>
                     <li>
-                      <span>{t("size")}</span>
+                      <span>{t("size")}:</span>
                       {t("4_way_flip")}
                     </li>
                     <li>
-                      <span>{t("shape")}</span>
+                      <span>{t("shape")}:</span>
                       {t("all_shapes")}
                     </li>
                   </ul>
@@ -228,15 +320,15 @@ const Home = () => {
                   <h5>{t("casa_lomas_de_machal_machas")}</h5>
                   <ul>
                     <li>
-                      <span>{t("type")}</span>
+                      <span>{t("type")}:</span>
                       {t("4_way_flip")}
                     </li>
                     <li>
-                      <span>{t("size")}</span>
+                      <span>{t("size")}:</span>
                       {t("4_way_flip")}
                     </li>
                     <li>
-                      <span>{t("shape")}</span>
+                      <span>{t("shape")}:</span>
                       {t("all_shapes")}
                     </li>
                   </ul>
@@ -270,15 +362,15 @@ const Home = () => {
                   <h5>{t("casa_lomas_de_machal_machas")}</h5>
                   <ul>
                     <li>
-                      <span>{t("type")}</span>
+                      <span>{t("type")}:</span>
                       {t("4_way_flip")}
                     </li>
                     <li>
-                      <span>{t("size")}</span>
+                      <span>{t("size")}:</span>
                       {t("4_way_flip")}
                     </li>
                     <li>
-                      <span>{t("shape")}</span>
+                      <span>{t("shape")}:</span>
                       {t("all_shapes")}
                     </li>
                   </ul>
@@ -312,15 +404,15 @@ const Home = () => {
                   <h5>{t("casa_lomas_de_machal_machas")}</h5>
                   <ul>
                     <li>
-                      <span>{t("type")}</span>
+                      <span>{t("type")}:</span>
                       {t("4_way_flip")}
                     </li>
                     <li>
-                      <span>{t("size")}</span>
+                      <span>{t("size")}:</span>
                       {t("4_way_flip")}
                     </li>
                     <li>
-                      <span>{t("shape")}</span>
+                      <span>{t("shape")}:</span>
                       {t("all_shapes")}
                     </li>
                   </ul>
@@ -354,15 +446,15 @@ const Home = () => {
                   <h5>{t("casa_lomas_de_machal_machas")}</h5>
                   <ul>
                     <li>
-                      <span>{t("type")}</span>
+                      <span>{t("type")}:</span>
                       {t("4_way_flip")}
                     </li>
                     <li>
-                      <span>{t("size")}</span>
+                      <span>{t("size")}:</span>
                       {t("4_way_flip")}
                     </li>
                     <li>
-                      <span>{t("shape")}</span>
+                      <span>{t("shape")}:</span>
                       {t("all_shapes")}
                     </li>
                   </ul>
@@ -396,15 +488,15 @@ const Home = () => {
                   <h5>{t("casa_lomas_de_machal_machas")}</h5>
                   <ul>
                     <li>
-                      <span>{t("type")}</span>
+                      <span>{t("type")} :</span>
                       {t("4_way_flip")}
                     </li>
                     <li>
-                      <span>{t("size")}</span>
+                      <span>{t("size")} :</span>
                       {t("4_way_flip")}
                     </li>
                     <li>
-                      <span>{t("shape")}</span>
+                      <span>{t("shape")} :</span>
                       {t("all_shapes")}
                     </li>
                   </ul>

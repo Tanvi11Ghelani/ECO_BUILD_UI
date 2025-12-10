@@ -161,38 +161,38 @@ const PhotoGallery = () => {
         <div className="row g-4">
           {useGalleryItems && galleryItems && galleryItems.length > 0
             ? galleryItems
-                .filter((item) => item.image)
-                .map((item, index) => (
-                  <div
-                    className="col-sm-6 col-md-6 col-lg-4 col-xl-3"
-                    key={item.id || index}
-                  >
-                    <div
-                      className="gallery-img-card"
-                      onClick={() => onImageClick(index)}
-                      style={{ cursor: "pointer" }}
-                    >
-                      <img
-                        src={item.image}
-                        alt={item.category?.name || `Gallery ${index + 1}`}
-                      />
-                    </div>
-                  </div>
-                ))
-            : images.map((img, index) => (
+              .filter((item) => item.image)
+              .map((item, index) => (
                 <div
                   className="col-sm-6 col-md-6 col-lg-4 col-xl-3"
-                  key={index}
+                  key={item.id || index}
                 >
                   <div
                     className="gallery-img-card"
                     onClick={() => onImageClick(index)}
                     style={{ cursor: "pointer" }}
                   >
-                    <img src={img} alt={`Gallery ${index + 1}`} />
+                    <img
+                      src={item.image}
+                      alt={item.category?.name || `Gallery ${index + 1}`}
+                    />
                   </div>
                 </div>
-              ))}
+              ))
+            : images.map((img, index) => (
+              <div
+                className="col-sm-6 col-md-6 col-lg-4 col-xl-3"
+                key={index}
+              >
+                <div
+                  className="gallery-img-card"
+                  onClick={() => onImageClick(index)}
+                  style={{ cursor: "pointer" }}
+                >
+                  <img src={img} alt={`Gallery ${index + 1}`} />
+                </div>
+              </div>
+            ))}
         </div>
       </div>
     </section>
