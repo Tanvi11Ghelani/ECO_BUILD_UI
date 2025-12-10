@@ -5,6 +5,15 @@
    HERO SECTION - Title with Background Image
    ============================================ */
 
+/* Breadcrumb Container Fix - Match content width */
+.standard-cert-page .container {
+  max-width: 1720px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
 /* Hero Container - 1720px × 350px */
 .standard-cert-page {
   width: 100%;
@@ -115,9 +124,10 @@
 .standard-cert-page .content-section {
   width: 100%;
   max-width: 1720px;
-  margin: 0 auto 60px auto;
-  padding: 0 !important;
+  margin: 0 auto 40px auto;
+  padding: 0 20px !important;
   opacity: 1;
+  box-sizing: border-box;
 }
 
 .standard-cert-page .content-section .card {
@@ -160,9 +170,9 @@
 /* Description Text - 1720px width, 114px height top: 83px, gap: 100px */
 .standard-cert-page .description-text {
   width: 100%;
-  max-width: 1720px;
+  max-width: 100%;
   margin-top: 0 !important;
-  margin-bottom: 40px !important;
+  margin-bottom: 30px !important;
   font-family: "Noto Sans", sans-serif !important;
   font-size: 16px !important;
   line-height: 24px !important;
@@ -172,7 +182,7 @@
 
 /* Override Bootstrap paragraph margins */
 .standard-cert-page p.description-text {
-  margin-bottom: 40px !important;
+  margin-bottom: 30px !important;
 }
 
 
@@ -183,14 +193,14 @@
 /* File Attachments Container - 1700px width, 145px height, 20px gap */
 .standard-cert-page .file-attachments-section {
   width: 100% !important;
-  max-width: 1700px !important;
-  margin: 0 auto !important;
-  padding: 30px 0 !important;
+  max-width: 100% !important;
+  margin: 0 0 20px 0 !important;
+  padding: 20px 0 !important;
   opacity: 1;
   display: block !important;
 }
 
-.standard-cert-page .file-attachments-section > div:first-child {
+.standard-cert-page .file-attachments-section>div:first-child {
   margin-bottom: 15px;
 }
 
@@ -355,8 +365,10 @@
 /* Video Main Section - 1750px × 939px, 30px gap */
 .standard-cert-page .video-main-section {
   width: 100%;
-  max-width: 1750px;
-  margin: 60px auto;
+  max-width: 1720px;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -405,12 +417,13 @@
 /* Video File Attachments - 1700px × 145px, 20px gap, border-bottom 1px */
 .standard-cert-page .video-file-attachments {
   width: 100%;
-  max-width: 1700px;
-  padding: 30px 0;
+  max-width: 100%;
+  padding: 20px 0;
+  margin-bottom: 10px;
   opacity: 1;
 }
 
-.standard-cert-page .video-file-attachments > div:first-child {
+.standard-cert-page .video-file-attachments>div:first-child {
   margin-bottom: 15px;
 }
 
@@ -463,10 +476,12 @@
 .standard-cert-page .number-seven-section {
   width: 100%;
   max-width: 1720px;
-  margin: 60px auto;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   opacity: 1;
 }
 
@@ -490,12 +505,13 @@
 /* ETAG File Attachments - 1700px × 145px, 20px gap, border-bottom 1px */
 .standard-cert-page .etag-file-attachments {
   width: 100%;
-  max-width: 1700px;
-  padding: 30px 0;
+  max-width: 100%;
+  padding: 20px 0;
+  margin-bottom: 10px;
   opacity: 1;
 }
 
-.standard-cert-page .etag-file-attachments > div:first-child {
+.standard-cert-page .etag-file-attachments>div:first-child {
   margin-bottom: 15px;
 }
 
@@ -514,18 +530,20 @@
 /* Fire Level Section - 1700px × 506px, 50px gap */
 .standard-cert-page .fire-level-section {
   width: 100%;
-  max-width: 1700px;
-  margin: 60px auto;
+  max-width: 1720px;
+  margin: 15px auto 30px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 25px;
   opacity: 1;
 }
 
 /* Title Container - 243px × 44px, 20px padding */
 .standard-cert-page .fire-level-title-container {
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 0;
   opacity: 1;
   text-align: center;
   display: flex;
@@ -690,18 +708,20 @@
 /* British Psi Section - Similar styling to Fire Level */
 .standard-cert-page .british-psi-section {
   width: 100%;
-  max-width: 1700px;
-  margin: 60px auto 80px auto;
+  max-width: 1720px;
+  margin: 15px auto 30px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 25px;
   opacity: 1;
 }
 
 /* Title Container */
 .standard-cert-page .british-psi-title-container {
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 0;
   opacity: 1;
   text-align: center;
   display: flex;
@@ -756,18 +776,20 @@
 /* Psi Approval Section - Similar styling to British Psi */
 .standard-cert-page .psi-approval-section {
   width: 100%;
-  max-width: 1700px;
-  margin: 60px auto 80px auto;
+  max-width: 1720px;
+  margin: 15px auto 30px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 25px;
   opacity: 1;
 }
 
 /* Title Container */
 .standard-cert-page .psi-approval-title-container {
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 0;
   opacity: 1;
   text-align: center;
   display: flex;
@@ -823,8 +845,9 @@
 .standard-cert-page .standard-tests-section {
   width: 100%;
   max-width: 1720px;
-  margin: 60px auto;
-  padding: 0;
+  margin: 30px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
   opacity: 1;
 }
 
@@ -848,8 +871,9 @@
 .standard-cert-page .conformity-466-section {
   width: 100%;
   max-width: 1720px;
-  margin: 60px auto 80px auto;
-  padding: 0;
+  margin: 30px auto 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
   opacity: 1;
 }
 
@@ -860,6 +884,7 @@
 
 /* Tablet - Max width 1200px */
 @media (max-width: 1200px) {
+
   /* Hero section adjustments */
   .standard-cert-page {
     padding: 0 15px;
@@ -937,6 +962,7 @@
 
 /* Tablet Portrait - Max width 992px */
 @media (max-width: 992px) {
+
   /* Hero adjustments */
   .standard-cert-page {
     padding: 0 15px;
@@ -1020,6 +1046,7 @@
 
 /* Mobile Landscape - Max width 768px */
 @media (max-width: 768px) {
+
   /* Hero adjustments */
   .standard-cert-page {
     padding: 0 10px;
@@ -1154,6 +1181,7 @@
 
 /* Mobile Portrait - Max width 576px */
 @media (max-width: 576px) {
+
   /* Hero adjustments */
   .standard-cert-page {
     padding: 0 10px;
@@ -1288,6 +1316,7 @@
 
 /* Extra Small Mobile - Max width 400px */
 @media (max-width: 400px) {
+
   /* Hero adjustments */
   .standard-cert-page {
     padding: 0 8px;
@@ -1445,4 +1474,3 @@
 .standard-cert-page .gap-3 {
   gap: 1rem;
 }
-
