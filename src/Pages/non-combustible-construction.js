@@ -24,415 +24,308 @@ const NonCombustibleConstruction = () => {
     description: "",
   });
 
-  // Sample data structure - you can expand this with your actual data
+  // Complete data structure with nested sections
   const tableData = {
-    "slab-on-grade": [
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("isolated"),
-        fileName: t("b6c10"),
-        isIsolated: true,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("isolated"),
-        fileName: t("b6c10"),
-        isIsolated: true,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("isolated"),
-        fileName: t("b6c10"),
-        isIsolated: true,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("isolated"),
-        fileName: t("b6c10"),
-        isIsolated: true,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("not_isolated"),
-        fileName: t("b6c10"),
-        isIsolated: false,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("not_isolated"),
-        fileName: t("b6c10"),
-        isIsolated: false,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("not_isolated"),
-        fileName: t("b6c10"),
-        isIsolated: false,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("not_isolated"),
-        fileName: t("b6c10"),
-        isIsolated: false,
-      },
-    ],
-    "grade-at-floor": [
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("isolated"),
-        fileName: t("b6c10"),
-        isIsolated: true,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("isolated"),
-        fileName: t("b6c10"),
-        isIsolated: true,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("isolated"),
-        fileName: t("b6c10"),
-        isIsolated: true,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("isolated"),
-        fileName: t("b6c10"),
-        isIsolated: true,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("not_isolated"),
-        fileName: t("b6c10"),
-        isIsolated: false,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("not_isolated"),
-        fileName: t("b6c10"),
-        isIsolated: false,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("not_isolated"),
-        fileName: t("b6c10"),
-        isIsolated: false,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("not_isolated"),
-        fileName: t("b6c10"),
-        isIsolated: false,
-      },
-    ],
-    "intermediate-floor": [
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("isolated"),
-        fileName: t("b6c10"),
-        isIsolated: true,
-      },
-      // Add more data for this tab
-    ],
-    "roof-connections": [
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("isolated"),
-        fileName: t("b6c10"),
-        isIsolated: true,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("isolated"),
-        fileName: t("b6c10"),
-        isIsolated: true,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("isolated"),
-        fileName: t("b6c10"),
-        isIsolated: true,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("isolated"),
-        fileName: t("b6c10"),
-        isIsolated: true,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("not_isolated"),
-        fileName: t("b6c10"),
-        isIsolated: false,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("not_isolated"),
-        fileName: t("b6c10"),
-        isIsolated: false,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("not_isolated"),
-        fileName: t("b6c10"),
-        isIsolated: false,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("not_isolated"),
-        fileName: t("b6c10"),
-        isIsolated: false,
-      },
-    ],
-    doors: [
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("isolated"),
-        fileName: t("b6c10"),
-        isIsolated: true,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("isolated"),
-        fileName: t("b6c10"),
-        isIsolated: true,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("isolated"),
-        fileName: t("b6c10"),
-        isIsolated: true,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("isolated"),
-        fileName: t("b6c10"),
-        isIsolated: true,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("not_isolated"),
-        fileName: t("b6c10"),
-        isIsolated: false,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("not_isolated"),
-        fileName: t("b6c10"),
-        isIsolated: false,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("not_isolated"),
-        fileName: t("b6c10"),
-        isIsolated: false,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("not_isolated"),
-        fileName: t("b6c10"),
-        isIsolated: false,
-      },
-    ],
-    "demising-wall": [
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("isolated"),
-        fileName: t("b6c10"),
-        isIsolated: true,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("isolated"),
-        fileName: t("b6c10"),
-        isIsolated: true,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("isolated"),
-        fileName: t("b6c10"),
-        isIsolated: true,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("isolated"),
-        fileName: t("b6c10"),
-        isIsolated: true,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("not_isolated"),
-        fileName: t("b6c10"),
-        isIsolated: false,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("not_isolated"),
-        fileName: t("b6c10"),
-        isIsolated: false,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("not_isolated"),
-        fileName: t("b6c10"),
-        isIsolated: false,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("not_isolated"),
-        fileName: t("b6c10"),
-        isIsolated: false,
-      },
-    ],
-    windows: [
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("isolated"),
-        fileName: t("b6c10"),
-        isIsolated: true,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("isolated"),
-        fileName: t("b6c10"),
-        isIsolated: true,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("isolated"),
-        fileName: t("b6c10"),
-        isIsolated: true,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("isolated"),
-        fileName: t("b6c10"),
-        isIsolated: true,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("not_isolated"),
-        fileName: t("b6c10"),
-        isIsolated: false,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("not_isolated"),
-        fileName: t("b6c10"),
-        isIsolated: false,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("not_isolated"),
-        fileName: t("b6c10"),
-        isIsolated: false,
-      },
-      {
-        description: t("insulated_brick_6_152mm"),
-        coreThickness: t("6"),
-        claddingType: t("with_bricks"),
-        insulation: t("not_isolated"),
-        fileName: t("b6c10"),
-        isIsolated: false,
-      },
-    ],
+    "slab-on-grade": {
+      sections: [
+        {
+          title: "brick_insulated",
+          items: [
+            {
+              description: "6_head_and_sill_brick",
+              coreThickness: "6",
+              claddingType: "with_bricks",
+              insulation: "isolated",
+              fileName: "B6C10",
+              pdfUrl: "/EcoBuildPdf/Non-combustibleconstruction/SlabonGrade/Insulated Brick/6_ Head and Sill Brick(152mm) B6C10.pdf",
+              dwgUrl: "/EcoBuildPdf/Non-combustibleconstruction/SlabonGrade/Insulated Brick/b6c10.dwg",
+            },
+            {
+              description: "8_concrete_core_brick",
+              coreThickness: "8",
+              claddingType: "with_bricks",
+              insulation: "isolated",
+              fileName: "B8C11",
+              
+              pdfUrl: "/EcoBuildPdf/Non-combustibleconstruction/SlabonGrade/Insulated Brick/8_ (203mm) Concrete core B8C11.pdf",
+              dwgUrl: "/EcoBuildPdf/Non-combustibleconstruction/SlabonGrade/Insulated Brick/b8c11.dwg",
+            },
+            {
+              description: "10_concrete_core",
+              coreThickness: "10",
+              claddingType: "with_bricks",
+              insulation: "isolated",
+              fileName: "B10C09",
+              pdfUrl: "/EcoBuildPdf/Non-combustibleconstruction/SlabonGrade/Insulated Brick/8_ (254mm) Concrete core B10C07.pdf",
+              dwgUrl: "/EcoBuildPdf/Non-combustibleconstruction/SlabonGrade/Insulated Brick/b10c07.dwg",
+            },
+            {
+              description: "12_concrete_core",
+              coreThickness: "12",
+              claddingType: "with_bricks",
+              insulation: "isolated",
+              fileName: "B12C06",
+              pdfUrl: "/EcoBuildPdf/Non-combustibleconstruction/SlabonGrade/Insulated Brick/12_ (305mm) Concrete core B12C061.pdf",
+              dwgUrl: "/EcoBuildPdf/Non-combustibleconstruction/SlabonGrade/Insulated Brick/b12c06.dwg",
+            },
+          ],
+        },
+        {
+          title: "brick_non_insulated",
+          items: [
+            {
+              description: "6_concrete_core_brick",
+              coreThickness: "6",
+              claddingType: "with_bricks",
+              insulation: "not_isolated",
+              fileName: "B6C11",
+              pdfUrl: "/EcoBuildPdf/Non-combustibleconstruction/SlabonGrade/Non- Brick Insulated/6_ (152mm) Concrete core B6C07.pdf",
+              dwgUrl: "/EcoBuildPdf/Non-combustibleconstruction/SlabonGrade/Non- Brick Insulated/B6C11.dwg",
+            },
+            {
+              description: "8_concrete_core_brick",
+              coreThickness: "8",
+              claddingType: "with_bricks",
+              insulation: "not_isolated",
+              fileName: "B8C12",
+              pdfUrl: "/EcoBuildPdf/Non-combustibleconstruction/SlabonGrade/Non- Brick Insulated/B8C12.pdf",
+              dwgUrl: "/EcoBuildPdf/Non-combustibleconstruction/SlabonGrade/Non- Brick Insulated/B8C12.dwg",
+            },
+            {
+              description: "10_concrete_core_brick",
+              coreThickness: "10",
+              claddingType: "with_bricks",
+              insulation: "not_isolated",
+              fileName: "B10C06",
+              pdfUrl: "/EcoBuildPdf/Non-combustibleconstruction/SlabonGrade/Non- Brick Insulated/B10C06.pdf",
+              dwgUrl: "/EcoBuildPdf/Non-combustibleconstruction/SlabonGrade/Non- Brick Insulated/B10C06.dwg",
+            },
+            {
+              description: "12_concrete_core_brick",
+              coreThickness: "12",
+              claddingType: "with_bricks",
+              insulation: "not_isolated",
+              fileName: "B12C01",
+              pdfUrl: "/EcoBuildPdf/Non-combustibleconstruction/SlabonGrade/Non- Brick Insulated/B12C01.pdf",
+              dwgUrl: "/EcoBuildPdf/Non-combustibleconstruction/SlabonGrade/Non- Brick Insulated/B12C01.dwg",
+            },
+          ],
+        },
+        {
+          title: "non_brick_insulated",
+          items: [
+            {
+              description: "6_concrete_core",
+              coreThickness: "6",
+              claddingType: "without_bricks",
+              insulation: "isolated",
+              fileName: "B6C01",
+              pdfUrl: "/files/slab-on-grade/non-brick-insulated/B6C01.pdf",
+              dwgUrl: "/files/slab-on-grade/non-brick-insulated/B6C01.dwg",
+            },
+            {
+              description: "8_concrete_core",
+              coreThickness: "8",
+              claddingType: "without_bricks",
+              insulation: "isolated",
+              fileName: "B8C08",
+              pdfUrl: "/files/slab-on-grade/non-brick-insulated/B8C08.pdf",
+              dwgUrl: "/files/slab-on-grade/non-brick-insulated/B8C08.dwg",
+            },
+            {
+              description: "10_concrete_core",
+              coreThickness: "10",
+              claddingType: "without_bricks",
+              insulation: "isolated",
+              fileName: "B10C04",
+              pdfUrl: "/files/slab-on-grade/non-brick-insulated/B10C04.pdf",
+              dwgUrl: "/files/slab-on-grade/non-brick-insulated/B10C04.dwg",
+            },
+            {
+              description: "12_concrete_core",
+              coreThickness: "12",
+              claddingType: "without_bricks",
+              insulation: "isolated",
+              fileName: "B12C03",
+              pdfUrl: "/files/slab-on-grade/non-brick-insulated/B12C03.pdf",
+              dwgUrl: "/files/slab-on-grade/non-brick-insulated/B12C03.dwg",
+            },
+          ],
+        },
+        {
+          title: "non_brick_non_insulated",
+          items: [
+            {
+              description: "6_concrete_core",
+              coreThickness: "6",
+              claddingType: "without_bricks",
+              insulation: "not_isolated",
+              fileName: "B6C01",
+              pdfUrl: "/files/slab-on-grade/non-brick-non-insulated/B6C01.pdf",
+              dwgUrl: "/files/slab-on-grade/non-brick-non-insulated/B6C01.dwg",
+            },
+            {
+              description: "8_concrete_core",
+              coreThickness: "8",
+              claddingType: "without_bricks",
+              insulation: "not_isolated",
+              fileName: "B8C06",
+              pdfUrl: "/files/slab-on-grade/non-brick-non-insulated/B8C06.pdf",
+              dwgUrl: "/files/slab-on-grade/non-brick-non-insulated/B8C06.dwg",
+            },
+            {
+              description: "10_concrete_core",
+              coreThickness: "10",
+              claddingType: "without_bricks",
+              insulation: "not_isolated",
+              fileName: "B10C05",
+              pdfUrl: "/files/slab-on-grade/non-brick-non-insulated/B10C05.pdf",
+              dwgUrl: "/files/slab-on-grade/non-brick-non-insulated/B10C05.dwg",
+            },
+            {
+              description: "12_concrete_core",
+              coreThickness: "12",
+              claddingType: "without_bricks",
+              insulation: "not_isolated",
+              fileName: "B12C01",
+              pdfUrl: "/files/slab-on-grade/non-brick-non-insulated/B12C01.pdf",
+              dwgUrl: "/files/slab-on-grade/non-brick-non-insulated/B12C01.dwg",
+            },
+          ],
+        },
+      ],
+    },
+    "grade-at-floor": {
+      sections: [
+        {
+          title: "brick_insulated",
+          items: [
+            {
+              description: "6_head_and_sill_brick",
+              coreThickness: "6",
+              claddingType: "with_bricks",
+              insulation: "isolated",
+              fileName: "GF-B6C10",
+              pdfUrl: "/files/grade-at-floor/brick-insulated/GF-B6C10.pdf",
+              dwgUrl: "/files/grade-at-floor/brick-insulated/GF-B6C10.dwg",
+            },
+            {
+              description: "8_concrete_core_brick",
+              coreThickness: "8",
+              claddingType: "with_bricks",
+              insulation: "isolated",
+              fileName: "GF-B8C11",
+              pdfUrl: "/files/grade-at-floor/brick-insulated/GF-B8C11.pdf",
+              dwgUrl: "/files/grade-at-floor/brick-insulated/GF-B8C11.dwg",
+            },
+          ],
+        },
+        {
+          title: "brick_non_insulated",
+          items: [
+            {
+              description: "6_concrete_core_brick",
+              coreThickness: "6",
+              claddingType: "with_bricks",
+              insulation: "not_isolated",
+              fileName: "GF-B6C11",
+              pdfUrl: "/files/grade-at-floor/brick-non-insulated/GF-B6C11.pdf",
+              dwgUrl: "/files/grade-at-floor/brick-non-insulated/GF-B6C11.dwg",
+            },
+          ],
+        },
+      ],
+    },
+    "intermediate-floor": {
+      sections: [
+        {
+          title: "brick_insulated",
+          items: [
+            {
+              description: "6_head_and_sill_brick",
+              coreThickness: "6",
+              claddingType: "with_bricks",
+              insulation: "isolated",
+              fileName: "IF-B6C10",
+              pdfUrl: "/files/intermediate-floor/brick-insulated/IF-B6C10.pdf",
+              dwgUrl: "/files/intermediate-floor/brick-insulated/IF-B6C10.dwg",
+            },
+          ],
+        },
+      ],
+    },
+    "roof-connections": {
+      sections: [
+        {
+          title: "brick_insulated",
+          items: [
+            {
+              description: "6_head_and_sill_brick",
+              coreThickness: "6",
+              claddingType: "with_bricks",
+              insulation: "isolated",
+              fileName: "RC-B6C10",
+              pdfUrl: "/files/roof-connections/brick-insulated/RC-B6C10.pdf",
+              dwgUrl: "/files/roof-connections/brick-insulated/RC-B6C10.dwg",
+            },
+          ],
+        },
+      ],
+    },
+    doors: {
+      sections: [
+        {
+          title: "brick_insulated",
+          items: [
+            {
+              description: "6_head_and_sill_brick",
+              coreThickness: "6",
+              claddingType: "with_bricks",
+              insulation: "isolated",
+              fileName: "D-B6C10",
+              pdfUrl: "/files/doors/brick-insulated/D-B6C10.pdf",
+              dwgUrl: "/files/doors/brick-insulated/D-B6C10.dwg",
+            },
+          ],
+        },
+      ],
+    },
+    "demising-wall": {
+      sections: [
+        {
+          title: "brick_insulated",
+          items: [
+            {
+              description: "6_head_and_sill_brick",
+              coreThickness: "6",
+              claddingType: "with_bricks",
+              insulation: "isolated",
+              fileName: "DW-B6C10",
+              pdfUrl: "/files/demising-wall/brick-insulated/DW-B6C10.pdf",
+              dwgUrl: "/files/demising-wall/brick-insulated/DW-B6C10.dwg",
+            },
+          ],
+        },
+      ],
+    },
+    windows: {
+      sections: [
+        {
+          title: "brick_insulated",
+          items: [
+            {
+              description: "6_head_and_sill_brick",
+              coreThickness: "6",
+              claddingType: "with_bricks",
+              insulation: "isolated",
+              fileName: "W-B6C10",
+              pdfUrl: "/files/windows/brick-insulated/W-B6C10.pdf",
+              dwgUrl: "/files/windows/brick-insulated/W-B6C10.dwg",
+            },
+          ],
+        },
+      ],
+    },
   };
 
   const tabs = [
@@ -461,7 +354,6 @@ const NonCombustibleConstruction = () => {
   };
 
   const handleSearch = () => {
-    // Search is automatically applied through filteredData
     console.log("Search triggered with filters:", searchFilters);
   };
 
@@ -473,72 +365,131 @@ const NonCombustibleConstruction = () => {
     });
   };
 
+  const handleDownload = (url, fileName) => {
+    // Create a temporary link element
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = fileName;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   // Filter data based on search criteria
-  const filteredData = useMemo(() => {
-    const currentData = tableData[activeTab] || [];
+  const filteredSections = useMemo(() => {
+    const currentTabData = tableData[activeTab];
+    if (!currentTabData || !currentTabData.sections) return [];
 
-    return currentData.filter((item) => {
-      const matchesFileName =
-        !searchFilters.fileName ||
-        item.fileName
-          .toLowerCase()
-          .includes(searchFilters.fileName.toLowerCase());
+    return currentTabData.sections
+      .map((section) => ({
+        ...section,
+        items: section.items.filter((item) => {
+          const matchesFileName =
+            !searchFilters.fileName ||
+            item.fileName
+              .toLowerCase()
+              .includes(searchFilters.fileName.toLowerCase());
 
-      const matchesThickness =
-        !searchFilters.thickness ||
-        item.coreThickness
-          .toLowerCase()
-          .includes(searchFilters.thickness.toLowerCase());
+          const matchesThickness =
+            !searchFilters.thickness ||
+            t(item.coreThickness)
+              .toLowerCase()
+              .includes(searchFilters.thickness.toLowerCase());
 
-      const matchesDescription =
-        !searchFilters.description ||
-        item.description
-          .toLowerCase()
-          .includes(searchFilters.description.toLowerCase());
+          const matchesDescription =
+            !searchFilters.description ||
+            t(item.description)
+              .toLowerCase()
+              .includes(searchFilters.description.toLowerCase());
 
-      return matchesFileName && matchesThickness && matchesDescription;
-    });
-  }, [activeTab, searchFilters, tableData]);
+          return matchesFileName && matchesThickness && matchesDescription;
+        }),
+      }))
+      .filter((section) => section.items.length > 0);
+  }, [activeTab, searchFilters, t]);
 
-  const renderTableRow = (item, index) => (
-    <tr key={index} className="dlinfo">
-      <td className="dlinfo hover01">{item.description}</td>
-      <td className="dlinfo hover01">{item.coreThickness}</td>
-      <td className="dlinfo hover01">
-        <span className="status with-bricks">{item.claddingType}</span>
-      </td>
-      <td className="dlinfo hover01">
-        <span className={`status ${!item.isIsolated ? "not-isolated" : ""}`}>
-          {item.insulation}
-        </span>
-      </td>
-      <td className="dlinfo hover01">{item.fileName}</td>
-      <td className="dlinfo hover01">
-        <a className="explanation-link">{t("explanation_page")}</a>
-      </td>
-      <td className="dlinfo hover01">
-        <ul className="file-list-inner-td">
-          <li>
-            <a className="red-link">
-              <div className="icon-band">
-                <img src={image9} alt="PDF" />
-              </div>
-              {t("pdf")}
-              <img src={image10} className="download-icon" alt="Download" />
-            </a>
-          </li>
-          <li>
-            <a className="blue-link">
-              <div className="icon-band">
-                <img src={image11} alt="DWG" />
-              </div>
-              {t("dwg")}
-              <img src={image10} className="download-icon" alt="Download" />
-            </a>
-          </li>
-        </ul>
-      </td>
-    </tr>
+  const renderTableRow = (item, index) => {
+    const isIsolated = item.insulation === "isolated";
+
+    return (
+      <tr key={index} className="dlinfo">
+        <td className="dlinfo hover01">{t(item.description)}</td>
+        <td className="dlinfo hover01">{t(item.coreThickness)}</td>
+        <td className="dlinfo hover01">
+          <span className="status with-bricks">{t(item.claddingType)}</span>
+        </td>
+        <td className="dlinfo hover01">
+          <span className={`status ${!isIsolated ? "not-isolated" : ""}`}>
+            {t(item.insulation)}
+          </span>
+        </td>
+        <td className="dlinfo hover01">{item.fileName}</td>
+        <td className="dlinfo hover01">
+          <a href="#" className="explanation-link">
+            {t("explanation_page")}
+          </a>
+        </td>
+        <td className="dlinfo hover01">
+          <ul className="file-list-inner-td">
+            <li>
+              <a
+                className="red-link"
+                onClick={() =>
+                  handleDownload(item.pdfUrl, `${item.fileName}.pdf`)
+                }
+                style={{ cursor: "pointer" }}
+              >
+                <div className="icon-band">
+                  <img src={image9} alt="PDF" />
+                </div>
+                {t("pdf")}
+                <img src={image10} className="download-icon" alt="Download" />
+              </a>
+            </li>
+            <li>
+              <a
+                className="blue-link"
+                onClick={() =>
+                  handleDownload(item.dwgUrl, `${item.fileName}.dwg`)
+                }
+                style={{ cursor: "pointer" }}
+              >
+                <div className="icon-band">
+                  <img src={image11} alt="DWG" />
+                </div>
+                {t("dwg")}
+                <img src={image10} className="download-icon" alt="Download" />
+              </a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+    );
+  };
+
+  const renderSection = (section, sectionIndex) => (
+    <div key={sectionIndex} className="section-container mb-4">
+      <div className="section-header">
+        <h4 className="text-primary">{t(section.title)}</h4>
+      </div>
+      <table
+        className="dltrc"
+        style={{ background: "none", marginBottom: "30px" }}
+      >
+        <tbody>
+          <tr className="dlheader">
+            <td className="dlheader">{t("description")}</td>
+            <td className="dlheader">{t("core_thickness")}</td>
+            <td className="dlheader">{t("cladding_type")}</td>
+            <td className="dlheader">{t("insulation")}</td>
+            <td className="dlheader">{t("file_name")}</td>
+            <td className="dlheader">{t("explanation_page")}</td>
+            <td className="dlheader">{t("files")}</td>
+          </tr>
+          {section.items.map((item, index) => renderTableRow(item, index))}
+        </tbody>
+      </table>
+    </div>
   );
 
   return (
@@ -760,39 +711,21 @@ const NonCombustibleConstruction = () => {
         </div>
         <div className="container">
           <section className="white-bg pt-0">
-            {activeTab === "slab-on-grade" && (
-              <div className="titile-band">
-                <h3 className="text-primary text-center">
-                  {t("slab_on_grade")}
-                </h3>
+            <div className="titile-band">
+              <h3 className="text-primary text-center">
+                {tabs.find((tab) => tab.id === activeTab)?.label}
+              </h3>
+            </div>
+
+            {filteredSections.length > 0 ? (
+              filteredSections.map((section, index) =>
+                renderSection(section, index)
+              )
+            ) : (
+              <div style={{ textAlign: "center", padding: "40px" }}>
+                <p>{t("no_results_found")}</p>
               </div>
             )}
-
-            <table className="dltrc" style={{ background: "none" }}>
-              <tbody>
-                <tr className="dlheader">
-                  <td className="dlheader">{t("description")}</td>
-                  <td className="dlheader">{t("core_thickness")}</td>
-                  <td className="dlheader">{t("cladding_type")}</td>
-                  <td className="dlheader">{t("insulation")}</td>
-                  <td className="dlheader">{t("file_name")}</td>
-                  <td className="dlheader">{t("explanation_page")}</td>
-                  <td className="dlheader">{t("files")}</td>
-                </tr>
-                {filteredData.length > 0 ? (
-                  filteredData.map((item, index) => renderTableRow(item, index))
-                ) : (
-                  <tr>
-                    <td
-                      colSpan="7"
-                      style={{ textAlign: "center", padding: "20px" }}
-                    >
-                      {t("no_results_found") || "No results found"}
-                    </td>
-                  </tr>
-                )}
-              </tbody>
-            </table>
           </section>
         </div>
       </section>

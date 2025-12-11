@@ -3,7 +3,7 @@ import pdf from "../images/Icons/pdf-gray.svg";
 import download from "../images/Icons/Download.svg";
 import pdffile from "../images/Icons/pdf-fille.svg";
 import { useTranslation } from "react-i18next";
-import Breadcrumb from '../common-component/Breadcrumb';
+import Breadcrumb from "../common-component/Breadcrumb";
 
 // Import component-specific CSS - Figma design implementation
 import "./standard-and-laboratory-certifications.css";
@@ -28,11 +28,79 @@ const StandardAndLaboratoryCertification = () => {
 
   // Table data - Test reports and certifications
   // Array of report descriptions for the documentation table
-  const tableRows = [
-    t("fire_table_row_1"),
-    t("fire_table_row_2"),
-    t("fire_table_row_3"),
-    t("fire_table_row_4"),
+  const tableData = [
+    {
+      label: t("fire_table_row_1"),
+      pdf: "https://ecobuild.co.il/wp-content/uploads/2020/03/2803796.pdf",
+    },
+    {
+      label: t("fire_table_row_2"),
+      pdf: "https://ecobuild.co.il/wp-content/uploads/2020/03/8775213.pdf",
+    },
+    {
+      label: t("fire_table_row_3"),
+      pdf: "https://ecobuild.co.il/wp-content/uploads/2020/03/2716315.pdf",
+    },
+    {
+      label: t("fire_table_row_4"),
+      pdf: "https://ecobuild.co.il/wp-content/uploads/2020/03/4387945.pdf",
+    },
+  ];
+
+  const britishPsiFiles = [
+    {
+      label: t("british_psi_standard_block"),
+      file: "/EcoBuildPdf/Information Center/Standard and laboratory certificationsBritish Psi Certifications/NUDURA British Psi Approvals Standard Block.zip",
+      type: t("zip"),
+    },
+    {
+      label: t("british_psi_25mm"),
+      file: "/EcoBuildPdf/Information Center/Standard and laboratory certificationsBritish Psi Certifications/NUDURA British Psi Approvals +25 mm..zip",
+      type: t("zip"),
+    },
+    {
+      label: t("british_psi_51mm"),
+      file: "/EcoBuildPdf/Information Center/Standard and laboratory certificationsBritish Psi Certifications/NUDURA British Psi Approvals +51 mm..zip",
+      type: t("zip"),
+    },
+    {
+      label: t("british_psi_102mm"),
+      file: "/EcoBuildPdf/Information Center/Standard and laboratory certificationsBritish Psi Certifications/NUDURA British Psi Approvals +102 mm..zip",
+      type: t("pdf"),
+    },
+    {
+      label: t("british_psi_152mm"),
+      file: "/EcoBuildPdf/Information Center/Standard and laboratory certificationsBritish Psi Certifications/NUDURA British Psi Approvals +152 mm..zip",
+      type: t("zip"),
+    },
+  ];
+
+  const psiApprovalFiles = [
+    {
+      label: t("psi_phpp_standard_block"),
+      file: "/EcoBuildPdf/Information Center/Standard and laboratory certifications/Psi Approval Certifications/NUDURA Psi Approval Standard Block.zip",
+      type: t("zip"),
+    },
+    {
+      label: t("psi_phpp_25mm"),
+      file: "/EcoBuildPdf/Information Center/Standard and laboratory certifications/Psi Approval Certifications/NUDURA Psi Approval 25mm.zip",
+      type: t("zip"),
+    },
+    {
+      label: t("psi_phpp_51mm"),
+      file: "/EcoBuildPdf/Information Center/Standard and laboratory certifications/Psi Approval Certifications/NUDURA Psi Approval 51mm.zip",
+      type: t("zip"),
+    },
+    {
+      label: t("psi_phpp_102mm"),
+      file: "/EcoBuildPdf/Information Center/Standard and laboratory certifications/Psi Approval Certifications/NUDURA Psi Approval 102mm.zip",
+      type: t("zip"),
+    },
+    {
+      label: t("psi_phpp_152mm"),
+      file: "/EcoBuildPdf/Information Center/Standard and laboratory certifications/Psi Approval Certifications/NUDURA Psi Approval 152mm.zip",
+      type: t("zip"),
+    },
   ];
 
   // Render a single file card component
@@ -64,12 +132,7 @@ const StandardAndLaboratoryCertification = () => {
         subHeader={t("building_homes_also_for_the_generations_to_come")}
       />
 
-      {/* ===== CONTENT SECTION ===== */}
-      {/* Introduction text and first file attachment */}
-      {/* Container: 1720px width, 372px height, 30px gap */}
       <section className="content-section mb-5 proper-spacing">
-        {/* Section Title - "Standard and laboratory certifications" */}
-        {/* Font: Noto Sans Bold 36px/44px, Gradient color */}
         <h3 className="section-title">
           {t("standard_and_laboratory_certifications")}
         </h3>
@@ -80,15 +143,17 @@ const StandardAndLaboratoryCertification = () => {
         </p>
 
         {/* Subsection: Explosion Resistance Test */}
-        <h4 style={{
-          fontFamily: '"Noto Sans", sans-serif',
-          fontWeight: 700,
-          fontSize: '18px',
-          lineHeight: '26px',
-          color: '#333333',
-          marginBottom: '15px',
-          marginTop: '0'
-        }}>
+        <h4
+          style={{
+            fontFamily: '"Noto Sans", sans-serif',
+            fontWeight: 700,
+            fontSize: "18px",
+            lineHeight: "26px",
+            color: "#333333",
+            marginBottom: "15px",
+            marginTop: "0",
+          }}
+        >
           {t("explosion_resistance_test_results_report")}
         </h4>
 
@@ -113,21 +178,14 @@ const StandardAndLaboratoryCertification = () => {
         </div>
       </section>
 
-      {/* ===== VIDEO SECTION ===== */}
-      {/* Video Section - 1750px × 939px, 30px gap */}
-      {/* Video demonstration of explosion resistance test */}
       <section className="video-main-section">
         {/* Text Container - 1720px × 114px */}
         <div className="video-text-container">
           {/* Video Title - 24px Bold, #345766 color, 44px line-height */}
-          <h3 className="video-title">
-            {t("video_title_tnt_explosion")}
-          </h3>
+          <p className="video-title">{t("video_title_tnt_explosion")}</p>
 
-          {/* Video Subtitle - 18px SemiBold, #161E2D color */}
-          <p className="video-subtitle">
-            {t("video_subtitle_icf")}
-          </p>
+          {/* Video Subtitle - 18px SemiBold, #345766 color */}
+          <p className="video-subtitle">{t("video_subtitle_icf")}</p>
         </div>
 
         {/* File Attachments Section - 1700px × 145px, 20px gap, border-bottom 1px */}
@@ -140,7 +198,7 @@ const StandardAndLaboratoryCertification = () => {
           <div className="file-list">
             {renderFileCard(
               fileCard(
-                "#",
+                "https://ecobuild.co.il/wp-content/uploads/2020/03/7967875.pdf",
                 t("file_europe_bba")
               )
             )}
@@ -167,9 +225,7 @@ const StandardAndLaboratoryCertification = () => {
       <section className="number-seven-section">
         {/* Text Container - 1720px × 79px, 100px gap */}
         <div className="etag-text-container">
-          <h4 className="etag-title">
-            {t("etag_009_guideline")}
-          </h4>
+          <h4 className="etag-title">{t("etag_009_guideline")}</h4>
         </div>
 
         {/* File Attachments Section - 1700px × 145px, 20px gap, border-bottom 1px */}
@@ -182,13 +238,13 @@ const StandardAndLaboratoryCertification = () => {
           <div className="file-list">
             {renderFileCard(
               fileCard(
-                "#",
+                "https://ecobuild.co.il/wp-content/uploads/2020/03/7967875.pdf",
                 t("file_uk_etag_compliance")
               )
             )}
             {renderFileCard(
               fileCard(
-                "#",
+                "https://ecobuild.co.il/wp-content/uploads/2020/03/9709073.pdf",
                 t("file_iso_9001_certification")
               )
             )}
@@ -214,14 +270,19 @@ const StandardAndLaboratoryCertification = () => {
                 <td className="table-header-cell">{t("file")}</td>
               </tr>
               {/* Table Rows - Map through each test report */}
-              {tableRows.map((row, idx) => (
+              {tableData.map((row, idx) => (
                 <tr className="table-data-row" key={idx}>
                   {/* Report description */}
-                  <td className="table-data-cell">{row}</td>
-                  {/* Download link with PDF icon */}
+                  <td className="table-data-cell">{row.label}</td>
+
+                  {/* PDF link */}
                   <td className="table-data-cell table-file-cell">
                     <div className="table-file-link">
-                      <a href="#" onClick={(e) => e.preventDefault()}>
+                      <a
+                        href={row.pdf}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <div className="file-icon">
                           <img src={pdf} alt={t("pdf_icon")} />
                         </div>
@@ -245,89 +306,52 @@ const StandardAndLaboratoryCertification = () => {
       <section className="british-psi-section">
         {/* Title - 36px ExtraBold, gradient color */}
         <div className="british-psi-title-container">
-          <h3 className="british-psi-title">{t("british_psi_certifications")}</h3>
+          <h3 className="british-psi-title">
+            {t("british_psi_certifications")}
+          </h3>
         </div>
 
         {/* Data Table - 1700px width, 30px border-radius, 1px black border, shadow */}
         <div className="british-psi-table-container">
           <table className="british-psi-table">
             <tbody>
-              {/* Table Header */}
               <tr className="table-header-row">
                 <td className="table-header-cell">{t("notes")}</td>
                 <td className="table-header-cell">{t("file")}</td>
               </tr>
-              {/* Table Rows - British Psi certifications */}
-              <tr className="table-data-row">
-                <td className="table-data-cell">{t("british_psi_standard_block")}</td>
-                <td className="table-data-cell table-file-cell">
-                  <div className="table-file-link">
-                    <a href="#" onClick={(e) => e.preventDefault()}>
-                      <div className="file-icon">
-                        <img src={pdf} alt={t("zip_icon")} />
-                      </div>
-                      <span className="file-label">{t("zip")}</span>
-                      <img src={download} alt={t("download")} className="download-icon" />
-                    </a>
-                  </div>
-                </td>
-              </tr>
-              <tr className="table-data-row">
-                <td className="table-data-cell">{t("british_psi_25mm")}</td>
-                <td className="table-data-cell table-file-cell">
-                  <div className="table-file-link">
-                    <a href="#" onClick={(e) => e.preventDefault()}>
-                      <div className="file-icon">
-                        <img src={pdf} alt={t("zip_icon")} />
-                      </div>
-                      <span className="file-label">{t("zip")}</span>
-                      <img src={download} alt={t("download")} className="download-icon" />
-                    </a>
-                  </div>
-                </td>
-              </tr>
-              <tr className="table-data-row">
-                <td className="table-data-cell">{t("british_psi_102mm")}</td>
-                <td className="table-data-cell table-file-cell">
-                  <div className="table-file-link">
-                    <a href="#" onClick={(e) => e.preventDefault()}>
-                      <div className="file-icon">
-                        <img src={pdf} alt={t("zip_icon")} />
-                      </div>
-                      <span className="file-label">{t("zip")}</span>
-                      <img src={download} alt={t("download")} className="download-icon" />
-                    </a>
-                  </div>
-                </td>
-              </tr>
-              <tr className="table-data-row">
-                <td className="table-data-cell">{t("fire_table_row_3")}</td>
-                <td className="table-data-cell table-file-cell">
-                  <div className="table-file-link">
-                    <a href="#" onClick={(e) => e.preventDefault()}>
-                      <div className="file-icon">
-                        <img src={pdf} alt={t("pdf_icon")} />
-                      </div>
-                      <span className="file-label">{t("pdf")}</span>
-                      <img src={download} alt={t("download")} className="download-icon" />
-                    </a>
-                  </div>
-                </td>
-              </tr>
-              <tr className="table-data-row">
-                <td className="table-data-cell">{t("british_psi_152mm")}</td>
-                <td className="table-data-cell table-file-cell">
-                  <div className="table-file-link">
-                    <a href="#" onClick={(e) => e.preventDefault()}>
-                      <div className="file-icon">
-                        <img src={pdf} alt={t("zip_icon")} />
-                      </div>
-                      <span className="file-label">{t("zip")}</span>
-                      <img src={download} alt={t("download")} className="download-icon" />
-                    </a>
-                  </div>
-                </td>
-              </tr>
+
+              {britishPsiFiles.map((item, idx) => (
+                <tr className="table-data-row" key={idx}>
+                  {/* Notes column */}
+                  <td className="table-data-cell">{t(item.label)}</td>
+
+                  {/* File column */}
+                  <td className="table-data-cell table-file-cell">
+                    <div className="table-file-link">
+                      <a href={item.file} target="_blank" download>
+                        <div className="file-icon">
+                          <img
+                            src={item.type === "zip" ? pdf : pdf}
+                            alt={t(
+                              item.type === "zip" ? "zip_icon" : "pdf_icon"
+                            )}
+                          />
+                        </div>
+
+                        <span className="file-label">
+                          {item.type === "zip" ? t("zip") : t("zip")}
+                        </span>
+
+                        <img
+                          src={download}
+                          alt={t("download")}
+                          className="download-icon"
+                        />
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
@@ -349,77 +373,33 @@ const StandardAndLaboratoryCertification = () => {
                 <td className="table-header-cell">{t("notes")}</td>
                 <td className="table-header-cell">{t("file")}</td>
               </tr>
-              {/* Table Rows - Psi approval certifications */}
-              <tr className="table-data-row">
-                <td className="table-data-cell">{t("psi_phpp_standard_block")}</td>
-                <td className="table-data-cell table-file-cell">
-                  <div className="table-file-link">
-                    <a href="#" onClick={(e) => e.preventDefault()}>
-                      <div className="file-icon">
-                        <img src={pdf} alt={t("zip_icon")} />
-                      </div>
-                      <span className="file-label">{t("zip")}</span>
-                      <img src={download} alt={t("download")} className="download-icon" />
-                    </a>
-                  </div>
-                </td>
-              </tr>
-              <tr className="table-data-row">
-                <td className="table-data-cell">{t("psi_phpp_25mm")}</td>
-                <td className="table-data-cell table-file-cell">
-                  <div className="table-file-link">
-                    <a href="#" onClick={(e) => e.preventDefault()}>
-                      <div className="file-icon">
-                        <img src={pdf} alt={t("zip_icon")} />
-                      </div>
-                      <span className="file-label">{t("zip")}</span>
-                      <img src={download} alt={t("download")} className="download-icon" />
-                    </a>
-                  </div>
-                </td>
-              </tr>
-              <tr className="table-data-row">
-                <td className="table-data-cell">{t("psi_phpp_51mm")}</td>
-                <td className="table-data-cell table-file-cell">
-                  <div className="table-file-link">
-                    <a href="#" onClick={(e) => e.preventDefault()}>
-                      <div className="file-icon">
-                        <img src={pdf} alt={t("zip_icon")} />
-                      </div>
-                      <span className="file-label">{t("zip")}</span>
-                      <img src={download} alt={t("download")} className="download-icon" />
-                    </a>
-                  </div>
-                </td>
-              </tr>
-              <tr className="table-data-row">
-                <td className="table-data-cell">{t("psi_phpp_102mm")}</td>
-                <td className="table-data-cell table-file-cell">
-                  <div className="table-file-link">
-                    <a href="#" onClick={(e) => e.preventDefault()}>
-                      <div className="file-icon">
-                        <img src={pdf} alt={t("zip_icon")} />
-                      </div>
-                      <span className="file-label">{t("zip")}</span>
-                      <img src={download} alt={t("download")} className="download-icon" />
-                    </a>
-                  </div>
-                </td>
-              </tr>
-              <tr className="table-data-row">
-                <td className="table-data-cell">{t("psi_phpp_152mm")}</td>
-                <td className="table-data-cell table-file-cell">
-                  <div className="table-file-link">
-                    <a href="#" onClick={(e) => e.preventDefault()}>
-                      <div className="file-icon">
-                        <img src={pdf} alt={t("zip_icon")} />
-                      </div>
-                      <span className="file-label">{t("zip")}</span>
-                      <img src={download} alt={t("download")} className="download-icon" />
-                    </a>
-                  </div>
-                </td>
-              </tr>
+
+              {/* Dynamic Rows */}
+              {psiApprovalFiles.map((item, idx) => (
+                <tr className="table-data-row" key={idx}>
+                  {/* Notes / Label */}
+                  <td className="table-data-cell">{item.label}</td>
+
+                  {/* File Column */}
+                  <td className="table-data-cell table-file-cell">
+                    <div className="table-file-link">
+                      <a href={item.file} download>
+                        <div className="file-icon">
+                          <img src={pdf} alt={t("zip_icon")} />
+                        </div>
+
+                        <span className="file-label">{item.type}</span>
+
+                        <img
+                          src={download}
+                          alt={t("download")}
+                          className="download-icon"
+                        />
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
@@ -448,7 +428,7 @@ const StandardAndLaboratoryCertification = () => {
           <div className="file-list">
             {renderFileCard(
               fileCard(
-                "#",
+                "https://ecobuild.co.il/wp-content/uploads/2020/03/8569537.pdf",
                 t("file_european_eta")
               )
             )}
@@ -456,7 +436,9 @@ const StandardAndLaboratoryCertification = () => {
         </div>
 
         {/* National Approvals Subsection */}
-        <h4 className="subsection-title" style={{ marginTop: '40px' }}>{t("national_approvals")}</h4>
+        <h4 className="subsection-title" style={{ marginTop: "40px" }}>
+          {t("national_approvals")}
+        </h4>
         <div className="file-attachments-section">
           <div>
             <span className="file-attachments-title">
@@ -464,24 +446,9 @@ const StandardAndLaboratoryCertification = () => {
             </span>
           </div>
           <div className="file-list">
-            {renderFileCard(
-              fileCard(
-                "#",
-                t("file_france_cstb")
-              )
-            )}
-            {renderFileCard(
-              fileCard(
-                "#",
-                t("file_technion_approval")
-              )
-            )}
-            {renderFileCard(
-              fileCard(
-                "#",
-                t("file_fire_resistance_755")
-              )
-            )}
+            {renderFileCard(fileCard("https://ecobuild.co.il/wp-content/uploads/2020/03/476232.pdf", t("file_france_cstb")))}
+            {renderFileCard(fileCard("https://ecobuild.co.il/wp-content/uploads/2020/03/185888.pdf", t("file_technion_approval")))}
+            {renderFileCard(fileCard("https://ecobuild.co.il/wp-content/uploads/2020/03/3483534.pdf", t("file_fire_resistance_755")))}
           </div>
         </div>
       </section>
@@ -489,9 +456,7 @@ const StandardAndLaboratoryCertification = () => {
       {/* ===== CONFORMITY TO STANDARD 466 SECTION ===== */}
       <section className="conformity-466-section">
         {/* Section Title */}
-        <h3 className="section-title">
-          {t("conformity_standard_466")}
-        </h3>
+        <h3 className="section-title">{t("conformity_standard_466")}</h3>
 
         {/* STC Rating Reports Subsection */}
         <h4 className="subsection-title">{t("stc_rating_reports")}</h4>
@@ -502,23 +467,15 @@ const StandardAndLaboratoryCertification = () => {
             </span>
           </div>
           <div className="file-list">
-            {renderFileCard(
-              fileCard(
-                "#",
-                t("file_stc_4inch")
-              )
-            )}
-            {renderFileCard(
-              fileCard(
-                "#",
-                t("file_stc_6inch")
-              )
-            )}
+            {renderFileCard(fileCard("https://ecobuild.co.il/wp-content/uploads/2020/03/7493775.pdf", t("file_stc_4inch")))}
+            {renderFileCard(fileCard("https://ecobuild.co.il/wp-content/uploads/2020/03/9107927.pdf", t("file_stc_6inch")))}
           </div>
         </div>
 
         {/* Fire Resistance Rating Subsection */}
-        <h4 className="subsection-title" style={{ marginTop: '40px' }}>{t("fire_resistance_rating")}</h4>
+        <h4 className="subsection-title" style={{ marginTop: "40px" }}>
+          {t("fire_resistance_rating")}
+        </h4>
         <div className="file-attachments-section">
           <div>
             <span className="file-attachments-title">
@@ -526,23 +483,15 @@ const StandardAndLaboratoryCertification = () => {
             </span>
           </div>
           <div className="file-list">
-            {renderFileCard(
-              fileCard(
-                "#",
-                t("file_nudura_canada_fire")
-              )
-            )}
-            {renderFileCard(
-              fileCard(
-                "#",
-                t("file_nudura_usa_fire")
-              )
-            )}
+            {renderFileCard(fileCard("https://ecobuild.co.il/wp-content/uploads/2020/03/3273641.pdf", t("file_nudura_canada_fire")))}
+            {renderFileCard(fileCard("https://ecobuild.co.il/wp-content/uploads/2020/03/4542703.pdf", t("file_nudura_usa_fire")))}
           </div>
         </div>
 
         {/* Capacity And Structural Stability Testing Subsection */}
-        <h4 className="subsection-title" style={{ marginTop: '40px' }}>{t("capacity_structural_stability")}</h4>
+        <h4 className="subsection-title" style={{ marginTop: "40px" }}>
+          {t("capacity_structural_stability")}
+        </h4>
         <div className="file-attachments-section">
           <div>
             <span className="file-attachments-title">
@@ -550,23 +499,15 @@ const StandardAndLaboratoryCertification = () => {
             </span>
           </div>
           <div className="file-list">
-            {renderFileCard(
-              fileCard(
-                "#",
-                t("file_nudura_molds_capacity")
-              )
-            )}
-            {renderFileCard(
-              fileCard(
-                "#",
-                t("file_nudura_curbstone")
-              )
-            )}
+            {renderFileCard(fileCard("https://ecobuild.co.il/wp-content/uploads/2020/03/7163893.pdf", t("file_nudura_molds_capacity")))}
+            {renderFileCard(fileCard("https://ecobuild.co.il/wp-content/uploads/2020/03/4194410.pdf", t("file_nudura_curbstone")))}
           </div>
         </div>
 
         {/* Thermal Barrier Test Subsection */}
-        <h4 className="subsection-title" style={{ marginTop: '40px' }}>{t("thermal_barrier_test")}</h4>
+        <h4 className="subsection-title" style={{ marginTop: "40px" }}>
+          {t("thermal_barrier_test")}
+        </h4>
         <div className="file-attachments-section">
           <div>
             <span className="file-attachments-title">
@@ -574,23 +515,15 @@ const StandardAndLaboratoryCertification = () => {
             </span>
           </div>
           <div className="file-list">
-            {renderFileCard(
-              fileCard(
-                "#",
-                t("file_thermal_barrier_canada")
-              )
-            )}
-            {renderFileCard(
-              fileCard(
-                "#",
-                t("file_thermal_barrier_usa")
-              )
-            )}
+            {renderFileCard(fileCard("https://ecobuild.co.il/wp-content/uploads/2020/03/1162749.pdf", t("file_thermal_barrier_canada")))}
+            {renderFileCard(fileCard("https://ecobuild.co.il/wp-content/uploads/2020/03/6810536.pdf", t("file_thermal_barrier_usa")))}
           </div>
         </div>
 
         {/* Vapor Permeability Subsection */}
-        <h4 className="subsection-title" style={{ marginTop: '40px' }}>{t("vapor_permeability")}</h4>
+        <h4 className="subsection-title" style={{ marginTop: "40px" }}>
+          {t("vapor_permeability")}
+        </h4>
         <div className="file-attachments-section">
           <div>
             <span className="file-attachments-title">
@@ -598,29 +531,16 @@ const StandardAndLaboratoryCertification = () => {
             </span>
           </div>
           <div className="file-list">
-            {renderFileCard(
-              fileCard(
-                "#",
-                t("file_vapor_canada")
-              )
-            )}
-            {renderFileCard(
-              fileCard(
-                "#",
-                t("file_vapor_usa")
-              )
-            )}
-            {renderFileCard(
-              fileCard(
-                "#",
-                t("file_vapor_testing")
-              )
-            )}
+            {renderFileCard(fileCard("https://ecobuild.co.il/wp-content/uploads/2020/03/9076470.pdf", t("file_vapor_canada")))}
+            {renderFileCard(fileCard("https://ecobuild.co.il/wp-content/uploads/2020/03/3631750.pdf", t("file_vapor_usa")))}
+            {renderFileCard(fileCard("https://ecobuild.co.il/wp-content/uploads/2020/03/3525777.pdf", t("file_vapor_testing")))}
           </div>
         </div>
 
         {/* Thermal Resistance Subsection */}
-        <h4 className="subsection-title" style={{ marginTop: '40px' }}>{t("thermal_resistance")}</h4>
+        <h4 className="subsection-title" style={{ marginTop: "40px" }}>
+          {t("thermal_resistance")}
+        </h4>
         <div className="file-attachments-section">
           <div>
             <span className="file-attachments-title">
@@ -628,17 +548,14 @@ const StandardAndLaboratoryCertification = () => {
             </span>
           </div>
           <div className="file-list">
-            {renderFileCard(
-              fileCard(
-                "#",
-                t("file_thermal_resistance_wall")
-              )
-            )}
+            {renderFileCard(fileCard("https://ecobuild.co.il/wp-content/uploads/2020/03/2535642.pdf", t("file_thermal_resistance_wall")))}
           </div>
         </div>
 
         {/* NUDURA Tensile Stress Mesh Subsection */}
-        <h4 className="subsection-title" style={{ marginTop: '40px' }}>{t("nudura_tensile_stress_mesh")}</h4>
+        <h4 className="subsection-title" style={{ marginTop: "40px" }}>
+          {t("nudura_tensile_stress_mesh")}
+        </h4>
         <div className="file-attachments-section">
           <div>
             <span className="file-attachments-title">
@@ -646,12 +563,7 @@ const StandardAndLaboratoryCertification = () => {
             </span>
           </div>
           <div className="file-list">
-            {renderFileCard(
-              fileCard(
-                "#",
-                t("file_tensile_stress_homes")
-              )
-            )}
+            {renderFileCard(fileCard("https://ecobuild.co.il/wp-content/uploads/2020/03/8131914.pdf", t("file_tensile_stress_homes")))}
           </div>
         </div>
       </section>

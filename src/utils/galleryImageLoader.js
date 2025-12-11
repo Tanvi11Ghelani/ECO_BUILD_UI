@@ -39,11 +39,13 @@ export const loadGalleryImages = (folderName) => {
 export const loadAllCategories = () => {
   const completedProjects = loadGalleryImages("Gallery of completed Projects");
   const underConstruction = loadGalleryImages("Project under construction");
+    const ecoBuildEvents = loadGalleryImages("Ecobuild Events");
+
 
   return {
-    all: [...completedProjects, ...underConstruction],
+    all: [...completedProjects, ...underConstruction,...ecoBuildEvents],
     completed: completedProjects,
     construction: underConstruction,
-    events: [], // Empty for events
+    events: ecoBuildEvents, // Empty for events
   };
 };

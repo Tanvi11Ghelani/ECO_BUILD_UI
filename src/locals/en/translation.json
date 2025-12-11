@@ -946,6 +946,7 @@
   "british_psi_certifications": "British Psi Certifications",
   "british_psi_standard_block": "NUDURA British Psi Approvals Standard Block",
   "british_psi_25mm": "NUDURA British Psi Approvals +25 Mm.",
+  "british_psi_51mm": "NUDURA British Psi Approvals +51 Mm.",
   "british_psi_102mm": "NUDURA British Psi Approvals +102 Mm.",
   "british_psi_152mm": "NUDURA British Psi Approvals +152 Mm.",
   "psi_approval": "Psi approval",
@@ -1508,5 +1509,24 @@
   "private_contractor": "Private contractor",
   "construction_company": "Construction company",
   "public_construction": "Public construction",
-  "other": "Other"
+  "other": "Other",
+  
+  "clear": "Clear",
+  "brick_insulated": "Brick Insulated",
+  "brick_non_insulated": "Brick Non-Insulated",
+  "non_brick_insulated": "Non-Brick Insulated",
+  "non_brick_non_insulated": "Non-Brick Non-Insulated",
+  "6_head_and_sill_brick": "6\" Head and Sill Brick (152mm)",
+  "8_concrete_core_brick": "8\" (203mm) Concrete core",
+  "10_concrete_core": "10\" (254mm) Concrete core",
+  "12_concrete_core": "12\" (305mm) Concrete core",
+  "6_concrete_core_brick": "6\" (152mm) Concrete core",
+  "6_concrete_core": "6\" (152mm) Concrete core",
+  "8_concrete_core": "8\" (203mm) Concrete core",
+  "10_concrete_core_brick": "10\" (254mm) Concrete core",
+  "12_concrete_core_brick": "12\" (305mm) Concrete core",
+  "without_bricks": "Without Bricks",
+  "8": "8\"",
+  "10": "10\"",
+  "12": "12\""
 }

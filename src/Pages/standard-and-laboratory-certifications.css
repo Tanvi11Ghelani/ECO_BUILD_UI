@@ -1,5 +1,5 @@
 /* Standard And Laboratory Certifications - Figma Design Implementation */
-/* Base measurements: Desktop 1720px width */
+/* Base measurements: Desktop 1320px width */
 
 /* ============================================
    HERO SECTION - Title with Background Image
@@ -7,14 +7,14 @@
 
 /* Breadcrumb Container Fix - Match content width */
 .standard-cert-page .container {
-  max-width: 1720px;
+  max-width: 1320px;
   width: 100%;
   padding: 0 20px;
   box-sizing: border-box;
   margin: 0 auto;
 }
 
-/* Hero Container - 1720px × 350px */
+/* Hero Container - 1320px × 350px */
 .standard-cert-page {
   width: 100%;
   padding: 0 20px;
@@ -23,7 +23,7 @@
 
 .standard-cert-page .hero-banner {
   width: 100%;
-  max-width: 1720px;
+  max-width: 1320px;
   height: 350px;
   margin: 40px auto 50px auto;
   position: relative;
@@ -81,7 +81,7 @@
   letter-spacing: 0% !important;
   text-align: center !important;
   text-transform: none !important;
-  color: #FFFFFF !important;
+  color: #ffffff !important;
   margin: 0;
   padding: 0;
   opacity: 1;
@@ -105,7 +105,7 @@
   font-size: 14px !important;
   line-height: 20px !important;
   text-transform: uppercase !important;
-  color: #FFFFFF !important;
+  color: #ffffff !important;
   opacity: 1 !important;
   letter-spacing: 1px;
   margin: 0 0 8px 0;
@@ -115,16 +115,15 @@
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-
 /* ============================================
    CONTENT SECTION - Number 6 Container
    ============================================ */
 
-/* Main Content Container - 1720px width, 372px height, 30px gap */
+/* Main Content Container - 1320px width, 372px height, 30px gap */
 .standard-cert-page .content-section {
   width: 100%;
-  max-width: 1720px;
-  margin: 0 auto 40px auto;
+  max-width: 1320px;
+  margin: 0 auto 60px auto;
   padding: 0 20px !important;
   opacity: 1;
   box-sizing: border-box;
@@ -137,7 +136,7 @@
   box-shadow: none !important;
 }
 
-/* Text Container - 1720px × 197px */
+/* Text Container - 1320px × 197px */
 .standard-cert-page .content-text-wrapper {
   width: 100%;
   margin-bottom: 30px;
@@ -156,7 +155,7 @@
   line-height: 44px !important;
   letter-spacing: 0% !important;
   text-transform: none !important;
-  background: linear-gradient(180deg, #00D4FF 0%, #00A3E0 100%) !important;
+  background: linear-gradient(180deg, #00d4ff 0%, #00a3e0 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
@@ -167,7 +166,7 @@
   display: block;
 }
 
-/* Description Text - 1720px width, 114px height top: 83px, gap: 100px */
+/* Description Text - 1320px width, 114px height top: 83px, gap: 100px */
 .standard-cert-page .description-text {
   width: 100%;
   max-width: 100%;
@@ -185,7 +184,6 @@
   margin-bottom: 30px !important;
 }
 
-
 /* ============================================
    FILE ATTACHMENTS SECTION
    ============================================ */
@@ -200,7 +198,7 @@
   display: block !important;
 }
 
-.standard-cert-page .file-attachments-section>div:first-child {
+.standard-cert-page .file-attachments-section > div:first-child {
   margin-bottom: 15px;
 }
 
@@ -210,7 +208,6 @@
   gap: 20px;
   justify-content: flex-start;
 }
-
 
 /* File Attachments Title */
 .standard-cert-page .file-attachments-title {
@@ -238,17 +235,16 @@
   width: 270px;
   height: 100px;
   border-radius: 12px;
-  background: #FFFFFF;
+  background: #ffffff;
   transition: all 0.3s ease;
   overflow: hidden;
   opacity: 1;
-
 }
 
 .standard-cert-page .file-card:hover {
   box-shadow: 0px 6px 20px rgba(0, 212, 255, 0.2);
   transform: translateY(-2px);
-  border-color: #00A3E0;
+  border-color: #00a3e0;
 }
 
 .standard-cert-page .file-card a {
@@ -324,13 +320,12 @@
   height: auto;
 }
 
-
 /* ============================================
    CARD STYLING - For content sections
    ============================================ */
 
 .standard-cert-page .card {
-  background: #FFFFFF !important;
+  background: #ffffff !important;
   border: none !important;
   box-shadow: none !important;
   margin-bottom: 30px;
@@ -347,7 +342,7 @@
   font-weight: 700 !important;
   font-size: 28px !important;
   line-height: 38px !important;
-  color: #00A3E0 !important;
+  color: #00a3e0 !important;
 }
 
 .standard-cert-page .card p {
@@ -357,7 +352,6 @@
   color: #333333 !important;
 }
 
-
 /* ============================================
    VIDEO SECTION - Figma Specifications
    ============================================ */
@@ -365,7 +359,7 @@
 /* Video Main Section - 1750px × 939px, 30px gap */
 .standard-cert-page .video-main-section {
   width: 100%;
-  max-width: 1720px;
+  max-width: 1320px;
   margin: 40px auto;
   padding: 0 20px;
   box-sizing: border-box;
@@ -375,10 +369,10 @@
   opacity: 1;
 }
 
-/* Text Container - 1720px × 114px */
+/* Text Container - 1320px × 114px */
 .standard-cert-page .video-text-container {
   width: 100%;
-  max-width: 1720px;
+  max-width: 1320px;
   opacity: 1;
 }
 
@@ -389,8 +383,8 @@
   font-family: "Noto Sans", sans-serif !important;
   font-weight: 700 !important;
   font-style: normal !important;
-  font-size: 24px !important;
-  line-height: 36px !important;
+  font-size: 18px !important;
+  line-height: 25px !important;
   letter-spacing: 0% !important;
   text-transform: none !important;
   color: #345766 !important;
@@ -401,16 +395,16 @@
 /* Video Subtitle - 18px SemiBold, #161E2D color */
 .standard-cert-page .video-subtitle {
   width: 100%;
-  max-width: 1720px;
+  max-width: 1723px;
   font-family: "Noto Sans", sans-serif !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
   font-style: normal !important;
   font-size: 18px !important;
-  line-height: 25px !important;
+  line-height: 20px !important;
   letter-spacing: 0% !important;
   text-transform: none !important;
-  color: #161E2D !important;
-  margin: 0 !important;
+  color: #345766 !important;
+  margin: 0 0 1px 0 !important;
   opacity: 1;
 }
 
@@ -423,7 +417,7 @@
   opacity: 1;
 }
 
-.standard-cert-page .video-file-attachments>div:first-child {
+.standard-cert-page .video-file-attachments > div:first-child {
   margin-bottom: 15px;
 }
 
@@ -467,15 +461,14 @@
   border: none;
 }
 
-
 /* ============================================
    NUMBER 7 SECTION - ETAG 009 Guideline
    ============================================ */
 
-/* Number 7 Section - 1720px × 300px, 30px gap */
+/* Number 7 Section - 1320px × 300px, 30px gap */
 .standard-cert-page .number-seven-section {
   width: 100%;
-  max-width: 1720px;
+  max-width: 1320px;
   margin: 40px auto;
   padding: 0 20px;
   box-sizing: border-box;
@@ -485,10 +478,10 @@
   opacity: 1;
 }
 
-/* Text Container - 1720px × 79px, 100px gap */
+/* Text Container - 1320px × 79px, 100px gap */
 .standard-cert-page .etag-text-container {
   width: 100%;
-  max-width: 1720px;
+  max-width: 1320px;
   opacity: 1;
 }
 
@@ -496,8 +489,8 @@
 .standard-cert-page .etag-title {
   font-family: "Noto Sans", sans-serif !important;
   font-weight: 700 !important;
-  font-size: 20px !important;
-  line-height: 28px !important;
+  font-size: 18px !important;
+  line-height: 25px !important;
   color: #333333 !important;
   margin: 0 !important;
 }
@@ -511,7 +504,7 @@
   opacity: 1;
 }
 
-.standard-cert-page .etag-file-attachments>div:first-child {
+.standard-cert-page .etag-file-attachments > div:first-child {
   margin-bottom: 15px;
 }
 
@@ -522,7 +515,6 @@
   justify-content: flex-start;
 }
 
-
 /* ============================================
    FIRE LEVEL E TABLE SECTION
    ============================================ */
@@ -530,7 +522,7 @@
 /* Fire Level Section - 1700px × 506px, 50px gap */
 .standard-cert-page .fire-level-section {
   width: 100%;
-  max-width: 1720px;
+  max-width: 1320px;
   margin: 15px auto 30px auto;
   padding: 0 20px;
   box-sizing: border-box;
@@ -561,7 +553,7 @@
   font-size: 36px !important;
   line-height: 44px !important;
   letter-spacing: 0% !important;
-  background: linear-gradient(180deg, #00D4FF 0%, #00A3E0 100%) !important;
+  background: linear-gradient(180deg, #00d4ff 0%, #00a3e0 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
@@ -578,23 +570,23 @@
   width: 100%;
   max-width: 1700px;
   border-radius: 30px;
-  border: 1px solid #E4E4E4;
+  border: 1px solid #e4e4e4;
   box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   opacity: 1;
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 /* Fire Level Table */
 .standard-cert-page .fire-level-table {
   width: 100% !important;
   border-collapse: collapse !important;
-  background: #FFFFFF !important;
+  background: #ffffff !important;
 }
 
 /* Table Header Row */
 .standard-cert-page .table-header-row {
-  background-color: #F5F5F5 !important;
+  background-color: #f5f5f5 !important;
 }
 
 /* Table Header Cell */
@@ -606,18 +598,18 @@
   line-height: 24px !important;
   color: #000000 !important;
   text-align: left !important;
-  border-bottom: 1px solid #E4E4E4 !important;
-  background-color: #F5F5F5 !important;
+  border-bottom: 1px solid #e4e4e4 !important;
+  background-color: #f5f5f5 !important;
 }
 
 /* Table Data Row */
 .standard-cert-page .table-data-row {
-  background: #FFFFFF !important;
+  background: #ffffff !important;
   transition: background-color 0.2s ease;
 }
 
 .standard-cert-page .table-data-row:hover {
-  background: #F9FAFB !important;
+  background: #f9fafb !important;
 }
 
 /* Table Data Cell */
@@ -629,9 +621,9 @@
   line-height: 22px !important;
   color: #333333 !important;
   text-align: left !important;
-  border-bottom: 1px solid #E4E4E4 !important;
+  border-bottom: 1px solid #e4e4e4 !important;
   vertical-align: middle !important;
-  background: #FFFFFF !important;
+  background: #ffffff !important;
 }
 
 /* Remove border from last row */
@@ -659,7 +651,7 @@
   justify-content: center;
   gap: 8px;
   text-decoration: none;
-  color: #00A3E0;
+  color: #00a3e0;
   padding: 8px 12px;
   border-radius: 8px;
   transition: all 0.2s ease;
@@ -690,7 +682,7 @@
   font-weight: 600;
   font-size: 13px;
   text-transform: uppercase;
-  color: #00A3E0;
+  color: #00a3e0;
   letter-spacing: 0.5px;
 }
 
@@ -700,7 +692,6 @@
   flex-shrink: 0;
 }
 
-
 /* ============================================
    BRITISH PSI CERTIFICATIONS TABLE SECTION
    ============================================ */
@@ -708,7 +699,7 @@
 /* British Psi Section - Similar styling to Fire Level */
 .standard-cert-page .british-psi-section {
   width: 100%;
-  max-width: 1720px;
+  max-width: 1320px;
   margin: 15px auto 30px auto;
   padding: 0 20px;
   box-sizing: border-box;
@@ -737,7 +728,7 @@
   font-size: 36px !important;
   line-height: 44px !important;
   letter-spacing: 0% !important;
-  background: linear-gradient(180deg, #00D4FF 0%, #00A3E0 100%) !important;
+  background: linear-gradient(180deg, #00d4ff 0%, #00a3e0 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
@@ -754,20 +745,19 @@
   width: 100%;
   max-width: 1700px;
   border-radius: 30px;
-  border: 1px solid #E4E4E4;
+  border: 1px solid #e4e4e4;
   box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   opacity: 1;
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 /* British Psi Table */
 .standard-cert-page .british-psi-table {
   width: 100% !important;
   border-collapse: collapse !important;
-  background: #FFFFFF !important;
+  background: #ffffff !important;
 }
-
 
 /* ============================================
    PSI APPROVAL TABLE SECTION
@@ -776,7 +766,7 @@
 /* Psi Approval Section - Similar styling to British Psi */
 .standard-cert-page .psi-approval-section {
   width: 100%;
-  max-width: 1720px;
+  max-width: 1320px;
   margin: 15px auto 30px auto;
   padding: 0 20px;
   box-sizing: border-box;
@@ -805,7 +795,7 @@
   font-size: 36px !important;
   line-height: 44px !important;
   letter-spacing: 0% !important;
-  background: linear-gradient(180deg, #00D4FF 0%, #00A3E0 100%) !important;
+  background: linear-gradient(180deg, #00d4ff 0%, #00a3e0 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
@@ -822,20 +812,19 @@
   width: 100%;
   max-width: 1700px;
   border-radius: 30px;
-  border: 1px solid #E4E4E4;
+  border: 1px solid #e4e4e4;
   box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   opacity: 1;
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 /* Psi Approval Table */
 .standard-cert-page .psi-approval-table {
   width: 100% !important;
   border-collapse: collapse !important;
-  background: #FFFFFF !important;
+  background: #ffffff !important;
 }
-
 
 /* ============================================
    STANDARD TESTS AND CERTIFICATIONS SECTION
@@ -844,7 +833,7 @@
 /* Standard Tests Section */
 .standard-cert-page .standard-tests-section {
   width: 100%;
-  max-width: 1720px;
+  max-width: 1320px;
   margin: 30px auto;
   padding: 0 20px;
   box-sizing: border-box;
@@ -862,7 +851,6 @@
   margin-bottom: 15px !important;
 }
 
-
 /* ============================================
    CONFORMITY TO STANDARD 466 SECTION
    ============================================ */
@@ -870,13 +858,12 @@
 /* Conformity 466 Section */
 .standard-cert-page .conformity-466-section {
   width: 100%;
-  max-width: 1720px;
+  max-width: 1320px;
   margin: 30px auto 40px auto;
   padding: 0 20px;
   box-sizing: border-box;
   opacity: 1;
 }
-
 
 /* ============================================
    RESPONSIVE DESIGN - Mobile & Tablet
@@ -884,7 +871,6 @@
 
 /* Tablet - Max width 1200px */
 @media (max-width: 1200px) {
-
   /* Hero section adjustments */
   .standard-cert-page {
     padding: 0 15px;
@@ -962,7 +948,6 @@
 
 /* Tablet Portrait - Max width 992px */
 @media (max-width: 992px) {
-
   /* Hero adjustments */
   .standard-cert-page {
     padding: 0 15px;
@@ -1046,7 +1031,6 @@
 
 /* Mobile Landscape - Max width 768px */
 @media (max-width: 768px) {
-
   /* Hero adjustments */
   .standard-cert-page {
     padding: 0 10px;
@@ -1181,7 +1165,6 @@
 
 /* Mobile Portrait - Max width 576px */
 @media (max-width: 576px) {
-
   /* Hero adjustments */
   .standard-cert-page {
     padding: 0 10px;
@@ -1316,7 +1299,6 @@
 
 /* Extra Small Mobile - Max width 400px */
 @media (max-width: 400px) {
-
   /* Hero adjustments */
   .standard-cert-page {
     padding: 0 8px;
@@ -1410,7 +1392,6 @@
   }
 }
 
-
 /* ============================================
    UTILITY CLASSES
    ============================================ */
@@ -1438,11 +1419,11 @@
 }
 
 .standard-cert-page .text-white {
-  color: #FFFFFF !important;
+  color: #ffffff !important;
 }
 
 .standard-cert-page .text-primary {
-  color: #00A3E0 !important;
+  color: #00a3e0 !important;
 }
 
 .standard-cert-page .text-muted {

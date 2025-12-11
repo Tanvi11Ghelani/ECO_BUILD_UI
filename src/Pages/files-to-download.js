@@ -3,7 +3,7 @@ import download from "../images/Icons/Download.svg";
 import pdffile from "../images/Icons/pdf-fille.svg";
 import { useTranslation } from "react-i18next";
 import Breadcrumb from "../common-component/Breadcrumb";
-
+import { Link } from "react-router-dom";
 const FileToDownload = () => {
   const { t } = useTranslation();
 
@@ -54,8 +54,7 @@ const FileToDownload = () => {
     {
       notes: "",
       number: "14",
-      pdfPath:
-        "/EcoBuildPdf/Information Center/Files to Download/Nodora Installation Manuals - Download Chapters/The farge layer.pdf",
+      pdfPath: "/rockplaster",
     },
     {
       notes: "",
@@ -237,7 +236,7 @@ const FileToDownload = () => {
     },
   ];
 
-  // Reusable Table Component
+  // Modify the FileTable component to handle both downloads and redirects
   const FileTable = ({ data }) => (
     <table className="dltrc" style={{ background: "none" }}>
       <tbody>
@@ -247,34 +246,54 @@ const FileToDownload = () => {
           <td className="dlheader">{t("file_name")}</td>
           <td className="dlheader">{t("files")}</td>
         </tr>
-        {data.map((item, index) => (
-          <tr className="dlinfo" key={index}>
-            <td className="dlinfo hover01">{item.notes}</td>
-            <td className="dlinfo hover01">{item.number}</td>
-            <td className="dlinfo hover01">
-              {item.fileName || getFileNameFromPath(item.pdfPath)}
-            </td>
-            <td className="dlinfo hover01">
-              <ul className="file-list-inner-td justify-content-center">
-                <li>
-                  <a
-                    href={item.pdfPath}
-                    download={
-                      item.fileName || getFileNameFromPath(item.pdfPath)
-                    }
-                    className="red-link border-none"
-                  >
-                    <div className="icon-band">
-                      <img alt="" src={pdf} />
-                    </div>
-                    {t("pdf")}
-                    <img src={download} className="download-icon" alt="" />
-                  </a>
-                </li>
-              </ul>
-            </td>
-          </tr>
-        ))}
+        {data.map((item, index) => {
+          // Check if it's a redirect path or download file
+          const isRedirect =
+            item.pdfPath.startsWith("/") && !item.pdfPath.includes(".pdf");
+
+          return (
+            <tr className="dlinfo" key={index}>
+              <td className="dlinfo hover01">{item.notes}</td>
+              <td className="dlinfo hover01">{item.number}</td>
+              <td className="dlinfo hover01">
+                {item.fileName || getFileNameFromPath(item.pdfPath)}
+              </td>
+              <td className="dlinfo hover01">
+                <ul className="file-list-inner-td justify-content-center">
+                  <li>
+                    {isRedirect ? (
+                      // For redirect pages - use Link from react-router-dom
+                      <Link to={item.pdfPath} className="red-link border-none">
+                        <div className="icon-band">
+                          <img alt="" src={pdf} />
+                        </div>
+                        {t("view")}
+                        <i
+                          className="fa fa-arrow-right"
+                          style={{ marginLeft: "8px" }}
+                        ></i>
+                      </Link>
+                    ) : (
+                      <a
+                        href={item.pdfPath}
+                        download={
+                          item.fileName || getFileNameFromPath(item.pdfPath)
+                        }
+                        className="red-link border-none"
+                      >
+                        <div className="icon-band">
+                          <img alt="" src={pdf} />
+                        </div>
+                        {t("pdf")}
+                        <img src={download} className="download-icon" alt="" />
+                      </a>
+                    )}
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          );
+        })}
       </tbody>
     </table>
   );
