@@ -18,7 +18,24 @@ const ContactUS = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+
+    if (name === "phone") {
+      // Remove all non-numeric characters
+      const cleaned = value.replace(/\D/g, "").slice(0, 9);
+
+      // Format as 02-970-9705 (XX-XXX-XXXX)
+      let formatted = cleaned;
+      if (cleaned.length > 2) {
+        formatted = cleaned.slice(0, 2) + "-" + cleaned.slice(2);
+      }
+      if (cleaned.length > 5) {
+        formatted = formatted.slice(0, 6) + "-" + cleaned.slice(5);
+      }
+
+      setFormData({ ...formData, [name]: formatted });
+    } else {
+      setFormData({ ...formData, [name]: value });
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -57,7 +74,7 @@ const ContactUS = () => {
 
   return (
     <div className="contact-us-page">
-      <Breadcrumb 
+      <Breadcrumb
         header={t('contact_us')}
         subHeader={t('building_homes_also_for_the_generations_to_come')}
         className="contact-us-banner"
@@ -156,7 +173,7 @@ const ContactUS = () => {
                   </li>
                   <li>
                     <h6>{t('information')}</h6>
-                    <a   target="_blank">
+                    <a target="_blank">
                       <p>{t('phone_02_970_9705')}</p>
                     </a>
                     <a href="mailto:info@ecobuild.co.il" target="_blank">
@@ -172,27 +189,27 @@ const ContactUS = () => {
                 <h6>{t('follow_us')}</h6>
                 <ul className="soical-links">
                   <li>
-                    <a   target="_blank">
+                    <a target="_blank">
                       <i className="fa-brands fa-facebook-f"></i>
                     </a>
                   </li>
                   <li>
-                    <a   target="_blank">
+                    <a target="_blank">
                       <i className="fa-brands fa-linkedin-in"></i>
                     </a>
                   </li>
                   <li>
-                    <a   target="_blank">
+                    <a target="_blank">
                       <i className="fa-brands fa-x-twitter"></i>
                     </a>
                   </li>
                   <li>
-                    <a   target="_blank">
+                    <a target="_blank">
                       <i className="fa-brands fa-square-instagram"></i>
                     </a>
                   </li>
                   <li>
-                    <a   target="_blank">
+                    <a target="_blank">
                       <i className="fa-brands fa-youtube"></i>
                     </a>
                   </li>

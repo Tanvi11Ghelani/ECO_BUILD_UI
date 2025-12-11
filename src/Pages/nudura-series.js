@@ -6,11 +6,11 @@ import threshold from '../images/Threshold-Sealer.jpg';
 import { useTranslation } from "react-i18next";
 import Breadcrumb from '../common-component/Breadcrumb';
 
-const NUDURASeries = () =>{
+const NUDURASeries = () => {
     const { t } = useTranslation();
     return (
         <div>
-            <Breadcrumb 
+            <Breadcrumb
                 header={t('nodora_series')}
                 subHeader={t('building_homes_also_for_the_generations_to_come')}
             />
@@ -37,12 +37,12 @@ const NUDURASeries = () =>{
                     <div className="row align-items-center g-4">
                         <div className="col-md-4">
                             <div className="layer_image small-round-layer border border-blue h-auto">
-                                <img alt=""src={duralock} />
+                                <img alt="" src={duralock} />
                             </div>
 
                         </div>
                         <div className="col-md-8">
-                            <div className="layer_content p-0">
+                            <div className="layer_content p-0" style={{ marginLeft: "20px" }}>
                                 <h3 className="text-primary">{t('duralok_technology')}</h3>
                                 <div className="text-band flex-text-band">
                                     <p className="bold-bg">{t('securely_locks_forms_into_place_with_a_triple_tooth_interlock_eliminating_the_need_to_wire_or_glue_forms_resulting_in_reduced_labor_costs_during_installation_once_the_forms_are_stacked_together_a_continuous_full_height_fastening_strip_ensures_wall_heights_are_always_accurate_compared_to_other_forms_without_full_height_fastening_which_can_cause_wall_height_shrinkage_once_concrete_is_placed_duralok_technology_makes_nudura_the_strongest_in_the_industry')}</p>
@@ -67,7 +67,7 @@ const NUDURASeries = () =>{
                         </div>
                         <div className="col-md-4">
                             <div className="layer_image small-round-layer border border-blue h-auto">
-                                <img alt=""src={durafold} />
+                                <img alt="" src={durafold} />
                             </div>
 
                         </div>
@@ -80,12 +80,12 @@ const NUDURASeries = () =>{
                     <div className="row align-items-center g-4">
                         <div className="col-md-4">
                             <div className="layer_image small-round-layer border border-blue h-auto">
-                                <img alt=""src={duramax} />
+                                <img alt="" src={duramax} />
                             </div>
 
                         </div>
                         <div className="col-md-8">
-                            <div className="layer_content p-0">
+                            <div className="layer_content p-0" style={{ marginLeft: "20px" }}>
                                 <h3 className="text-primary">{t('duramax_technology')}</h3>
                                 <div className="text-band flex-text-band">
                                     <p className="bold-bg">{t('largest_standard_form_on_the_market_measuring_96_x_18_2438mm_x_457mm_our_96_2438mm_form_creates_60_fewer_joints_in_the_wall_compared_to_other_wall_systems_and_allows_installers_the_ability_to_place_12_sq_ft_1_11m2_of_wall_area_with_one_block')}</p>
@@ -110,7 +110,7 @@ const NUDURASeries = () =>{
                         </div>
                         <div className="col-md-4">
                             <div className="layer_image small-round-layer border border-blue h-auto">
-                                <img alt=""src={wayreve} />
+                                <img alt="" src={wayreve} />
                             </div>
 
                         </div>
@@ -150,7 +150,7 @@ const NUDURASeries = () =>{
                         </div>
                         <div className="col-sm-12 col-md-12 col-lg-6">
                             <div className="layer_image small-round-layer border border-blue h-auto">
-                                <img alt=""src={threshold} />
+                                <img alt="" src={threshold} />
                             </div>
 
                         </div>

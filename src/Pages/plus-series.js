@@ -89,7 +89,7 @@ const PlusSeriesSection = () => {
 
                         </div>
                         <div className="col-sm-12 col-md-6 col-lg-8 col-xl-8 ">
-                            <div className="layer_content p-0">
+                            <div className="layer_content p-0 " style={{ marginLeft: '20px' }}>
                                 {/* <!-- <h3 className="text-primary">90° corner panel options</h3> --> */}
                                 <div className="text-band flex-text-band proper-spacing">
                                     <p className="bold-bg">{t('nudura_is_a_pioneer_in_product_innovation_and_leads_the_industry_with_its_innovative_line_of_insulated_concrete_forms_the_plus_series_of_forms_and_inserts_offers_alternatives_for_designers_and_contractors_looking_to_add_more_insulation_to_the_standard_nudura_insulated_concrete_form_series')}</p>

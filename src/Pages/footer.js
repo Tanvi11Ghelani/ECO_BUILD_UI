@@ -27,7 +27,7 @@ function Footer() {
                 <ul className="soical-links d-flex align-items-center gap-2 mb-0 list-unstyled ps-0">
                   <li className="p-0 m-0">
                     <a
-                      href="#"
+                      href="https://www.facebook.com/people/Doron-Aroussi/100011427586087/"
                       target="_blank"
                       className="
                         d-flex align-items-center justify-content-center
@@ -59,7 +59,7 @@ function Footer() {
                   </li>
                   <li className="p-0 m-0">
                     <a
-                      href="#"
+                      href="https://www.instagram.com/ecobuild.il/"
                       target="_blank"
                       className="
                         d-flex align-items-center justify-content-center
@@ -91,7 +91,7 @@ function Footer() {
                   </li>
                   <li className="p-0 m-0">
                     <a
-                      href="#"
+                      href="https://twitter.com/EcoBuildIL"
                       target="_blank"
                       className="
                         d-flex align-items-center justify-content-center
@@ -124,7 +124,7 @@ function Footer() {
                   {/* LinkedIn */}
                   <li className="p-0 m-0">
                     <a
-                      href="#"
+                      href="https://www.linkedin.com/in/eco-build-062206118?trk=nav_responsive_tab_profile_pic"
                       target="_blank"
                       className="
                         d-flex align-items-center justify-content-center
@@ -158,7 +158,7 @@ function Footer() {
                   {/* YouTube */}
                   <li className="p-0 m-0">
                     <a
-                      href="#"
+                      href="https://www.youtube.com/watch?v=1OUXTlIK6mg&list=PLbj7S1hwjaEtqERQlHkozbc1UmYjo-Ct0"
                       target="_blank"
                       className="
                         d-flex align-items-center justify-content-center
@@ -227,7 +227,6 @@ function Footer() {
                 <li className="mb-2">
                   <a
                     href="mailto:info@ecobuild.co.il"
-                    target="_blank"
                     className="d-flex align-items-start gap-2"
                   >
                     <i className="fa-solid fa-envelope mt-1"></i>
@@ -240,7 +239,9 @@ function Footer() {
               <h5 className="mb-3">{t("most_viewed")}</h5>
               <ul className="footer-nav-links list-unstyled">
                 <li className="mb-2">
-                  <a target="_blank">{t("nudura_adapter_for_high_walls")}</a>
+                  <Link className="dropdown-item" to="/nuduraseriesproduct">
+                    {t("nudura_adapter_for_high_walls")}{" "}
+                  </Link>
                 </li>
                 <li className="mb-2">
                   <Link className="dropdown-item" to="/thecombinedseries">
@@ -253,7 +254,9 @@ function Footer() {
                   </Link>
                 </li>
                 <li className="mb-2">
-                  <a target="_blank">{t("alignment_systems")}</a>
+                  <Link className="dropdown-item" to="/alignment_systems">
+                    {t("alignment_systems")}
+                  </Link>
                 </li>
                 <li className="mb-2">
                   <a href="https://zap.dbusiness.co/" target="_blank">
@@ -265,16 +268,17 @@ function Footer() {
             <div className="col-12 col-sm-6 col-lg-3">
               <h5 className="mb-3">{t("links_on_the_site")}</h5>
               <ul className="footer-nav-links list-unstyled">
-                <li className="dropdown mb-2">
+                <li className="dropdown mb-2 custom-hover-dropdown position-relative">
                   <a
-                    className="dropdown-toggle"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
+                    className="d-flex align-items-center justify-content-between text-decoration-none about-toggle-link"
+                    href="#"
+                    onClick={(e) => e.preventDefault()}
+                    style={{ cursor: "pointer" }}
                   >
-                    {t("about")}
+                    <span>{t("about")}</span>
+                    <i className="fa-solid fa-chevron-right ms-2" style={{ fontSize: "12px" }}></i>
                   </a>
-                  <ul className="dropdown-menu">
+                  <ul className="dropdown-menu custom-dropdown-style">
                     <li>
                       <Link className="dropdown-item" to="/aboutus">
                         {t("write_about_us")}
@@ -299,16 +303,20 @@ function Footer() {
                 </li>
 
                 <li className="mb-2">
-                  <a target="_blank">{t("icf")}</a>
+                  <Link className="mb-2" to="/icf">
+                    {t("icf")}
+                  </Link>
                 </li>
                 <li className="mb-2">
                   <Link className="mb-2" to="/thecombinedseries">
                     {t("nudura_combined_series")}
                   </Link>
                 </li>
-                <Link className="mb-2" to="/thecombinedseries">
-                  {t("retrofit_insulation_technology")}
-                </Link>
+                <li className="mb-2 ">
+                  <Link className="mb-2" to="/retrofit-insulation-technology">
+                    {t("retrofit_insulation_technology")}
+                  </Link>
+                </li>
                 <li className="mb-2">
                   <Link className="dropdown-item" to="/construction-methods">
                     {t("advanced_construction_methods")}

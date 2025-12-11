@@ -1,4 +1,176 @@
 .form-control::placeholder {
-  color: white!important;
-  opacity: 1; /* makes sure it's not faded */
+  color: white !important;
+  opacity: 1;
+  /* makes sure it's not faded */
+}
+
+/* Custom Hover Dropdown for Footer */
+.custom-hover-dropdown {
+  position: relative;
+  width: fit-content;
+}
+
+/* 
+   Invisible bridge to prevent menu from closing when moving mouse across the gap.
+   It covers the space to the right of the link.
+*/
+.custom-hover-dropdown::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -25px;
+  /* Extends right to reach the menu */
+  width: 30px;
+  /* Width of the gap */
+  height: 100%;
+  background: transparent;
+  /* pointer-events: auto; implied for hover */
+}
+
+/* The Bubble "Image" Box */
+.custom-dropdown-style {
+  display: none !important;
+  position: absolute !important;
+  left: 100% !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  margin-left: 20px !important;
+  /* Visual spacing */
+  margin-top: 0 !important;
+
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  /* Remove padding so hover fills corners */
+  min-width: 280px;
+  z-index: 9999;
+  overflow: hidden;
+  /* rounded corners clip content */
+}
+
+/* Hover trigger: Show when hovering the LI (parent) or the menu itself */
+.custom-hover-dropdown:hover .custom-dropdown-style,
+.custom-hover-dropdown .custom-dropdown-style:hover {
+  display: block !important;
+  animation: fadeInRight 0.3s ease forwards;
+}
+
+/* The Triangle Arrow pointing Left */
+.custom-dropdown-style::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  transform: translateY(-50%);
+  border-width: 10px 10px 10px 0;
+  border-style: solid;
+  border-color: transparent #ffffff transparent transparent;
+  filter: drop-shadow(-2px 0 2px rgba(0, 0, 0, 0.05));
+  z-index: 10000;
+}
+
+/* List Items Styling */
+.custom-dropdown-style li {
+  margin: 0;
+  list-style: none;
+  /* Ensure no bullets */
+}
+
+.custom-dropdown-style .dropdown-item {
+  font-size: 15px;
+  font-weight: 600;
+  color: #334e6f;
+  padding: 15px 20px;
+  transition: all 0.2s ease;
+  white-space: normal;
+  line-height: 1.4;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Remove border from last item */
+.custom-dropdown-style li:last-child .dropdown-item {
+  border-bottom: none;
+}
+
+/* Hover State - Dark Blue Background */
+.custom-dropdown-style .dropdown-item:hover,
+.custom-dropdown-style .dropdown-item:focus {
+  background-color: #345766;
+  /* Matching footer social icons color */
+  color: #ffffff;
+}
+
+/* Animation */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) translateX(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .custom-hover-dropdown::after {
+    display: none;
+    /* No side bridge needed on mobile */
+  }
+
+  .custom-dropdown-style {
+    left: 0 !important;
+    top: 100% !important;
+    transform: translateY(10px) !important;
+    margin-left: 0 !important;
+  }
+
+  .custom-dropdown-style::before {
+    left: 20px;
+    top: -10px;
+    transform: none;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #ffffff transparent;
+  }
+
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateY(0);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(10px);
+    }
+  }
+}
+
+/* Remove the default arrow from all footer links on hover */
+.footer-nav-links li a::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Add persistent underline to all TOP LEVEL footer links only */
+.footer-nav-links>li>a {
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+  font-weight: 700 !important;
+}
+
+/* Specific override for About link to handle arrow */
+.footer-nav-links>li>a.about-toggle-link {
+  text-decoration: none !important;
+  /* Remove from container/arrow */
+}
+
+/* Re-apply underline just to the text span */
+.about-toggle-link span {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
