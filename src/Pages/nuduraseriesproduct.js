@@ -1,5 +1,6 @@
 import React from "react";
 import "./nuduraseriesproduct.css";
+import "./proper-spacing.css";
 // Re-using images from Home or placeholders if available
 import product1 from "../images/prod-1.png";
 import product2 from "../images/prod-2.png";
@@ -45,7 +46,7 @@ const Nuduraseriesproduct = () => {
                     <div className="nudura-content-col">
 
                         {/* Description */}
-                        <div className="content-block">
+                        <div className="content-block proper-spacing">
                             <h3 className="section-title">Description</h3>
                             <p className="nudura-text-block">
                                 The Nudura ICF Series, manufactured from Expanded Polystyrene (EPS) foam, and high-density polypropylene plastic,

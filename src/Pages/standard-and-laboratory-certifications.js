@@ -7,6 +7,7 @@ import Breadcrumb from '../common-component/Breadcrumb';
 
 // Import component-specific CSS - Figma design implementation
 import "./standard-and-laboratory-certifications.css";
+import "./proper-spacing.css";
 
 // Hero background image - Construction site image (1720px × 350px)
 // Construction workers with building panels - matching Figma design
@@ -66,7 +67,7 @@ const StandardAndLaboratoryCertification = () => {
       {/* ===== CONTENT SECTION ===== */}
       {/* Introduction text and first file attachment */}
       {/* Container: 1720px width, 372px height, 30px gap */}
-      <section className="content-section mb-5">
+      <section className="content-section mb-5 proper-spacing">
         {/* Section Title - "Standard and laboratory certifications" */}
         {/* Font: Noto Sans Bold 36px/44px, Gradient color */}
         <h3 className="section-title">

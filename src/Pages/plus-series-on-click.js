@@ -4,6 +4,7 @@ import pdfIcon from '../images/Icons/pdf-fille.svg';
 import { useTranslation } from "react-i18next";
 import Breadcrumb from '../common-component/Breadcrumb';
 import './plus-series.css';
+import './proper-spacing.css';
 
 const PlusSeriesOnClickSection = () => {
     const { t } = useTranslation();
@@ -56,7 +57,7 @@ const PlusSeriesOnClickSection = () => {
                     <div className="row mb-5">
                         <div className="col-12">
                             <h5 className="text-primary mb-3">{t('nudura_plus_series')}</h5>
-                            <div className="text-band">
+                            <div className="text-band proper-spacing">
                                 <p>{t('nudura_plus_series_intro')}</p>
                                 <p>{t('nudura_plus_series_desc_1')}</p>
                                 <p>{t('nudura_plus_series_desc_2')}</p>
@@ -69,7 +70,7 @@ const PlusSeriesOnClickSection = () => {
                     <div className="row">
                         <div className="col-12">
                             <h5 className="text-primary mb-3">{t('nudura_plus_forms_title')}</h5>
-                            <div className="text-band">
+                            <div className="text-band proper-spacing">
                                 <p>{t('nudura_plus_forms_desc')}</p>
                             </div>
                         </div>

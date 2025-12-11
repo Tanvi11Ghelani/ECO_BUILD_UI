@@ -32,6 +32,7 @@ import waterResistant from "../images/Icons/water-and-moisture-resistant.svg";
 import { useTranslation } from "react-i18next";
 import Breadcrumb from '../common-component/Breadcrumb';
 import './the-combined-series.css';
+import './proper-spacing.css';
 
 
 
@@ -105,7 +106,7 @@ const TheCombinedSeries = () => {
                             <div className="container">
                                 <div className="ab-info-band">
                                     <h3 className="text-primary">{t('heated_floor_technology')}</h3>
-                                    <div className="text-band">
+                                    <div className="text-band proper-spacing">
 
                                         <p>{t('nudura_provides_maximum_insulation_for_underfloor_heating_in_both_residential_and_commercial_projects_nudura_technology_ensures_even_heat_distribution_across_the_entire_floor_area_creating_a_more_comfortable_living_and_working_environment')}</p>
                                         <p>{t('nudura_continues_the_innovation_momentum_that_began_with_its_insulated_concrete_formwork_product_line_and_now_introduces_another_groundbreaking_product_hydrofoam')}</p>
@@ -435,7 +436,7 @@ const TheCombinedSeries = () => {
 
                                 <div className="ab-info-band">
 
-                                    <div className="text-band">
+                                    <div className="text-band proper-spacing">
 
                                         <p>{t('nudura_retrofit_insulation_technology_is_an_easy_and_simple_installation_method_compared_to_traditional_multi_step_finishing_methods')}</p>
                                         <p>{t('simply_attach_the_standard_1_2_x_2_4m_nudura_panels_to_the_wall_using_the_embedded_connection_strip_and_suitable_fasteners_nudura_retrofit_insulation_panels_interlock_perfectly_it_is_easy_to_complete_electrical_wiring_and_attach_plasterboard_or_gypsum_board_using_the_64mm_wide_connection_strip_at_400mm_intervals_to_install_ready_to_finish_wall_insulation')}</p>
@@ -526,7 +527,7 @@ const TheCombinedSeries = () => {
                         <section className="pt-0">
                             <div className="container">
                                 <div className="ab-info-band">
-                                    <div className="text-band">
+                                    <div className="text-band proper-spacing">
                                         <p>{t('at_nudura_we_understand_the_importance_of_an_integrated_building_envelope_nudura_offers_energy_efficient_materials_that_work_with_our_insulated_concrete_formwork_walls_to_create_the_most_comfortable_and_energy_efficient_home_possible_to_ensure_maximum_energy_savings_incorporating_energy_efficient_materials_is_a_key_aspect_of_any_good_building_plan_nudura_ceiling_and_floor_technology_complements_the_building_envelope_maximizing_the_energy_efficiency_of_your_home_using_these_energy_efficient_materials_results_in_monthly_savings_on_your_energy_bill_but_using_these_materials_gives_you_more_than_just_savings_nudura_ceiling_and_floor_technology_creates_a_home_that_is_more_comfortable_to_live_in')}</p>
                                     </div>
                                 </div>

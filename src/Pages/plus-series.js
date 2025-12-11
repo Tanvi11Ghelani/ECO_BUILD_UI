@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 import Breadcrumb from '../common-component/Breadcrumb';
 import './plus-series.css';
+import './proper-spacing.css';
 
 
 const PlusSeriesSection = () => {
@@ -90,7 +91,7 @@ const PlusSeriesSection = () => {
                         <div className="col-sm-12 col-md-6 col-lg-8 col-xl-8 ">
                             <div className="layer_content p-0">
                                 {/* <!-- <h3 className="text-primary">90° corner panel options</h3> --> */}
-                                <div className="text-band flex-text-band">
+                                <div className="text-band flex-text-band proper-spacing">
                                     <p className="bold-bg">{t('nudura_is_a_pioneer_in_product_innovation_and_leads_the_industry_with_its_innovative_line_of_insulated_concrete_forms_the_plus_series_of_forms_and_inserts_offers_alternatives_for_designers_and_contractors_looking_to_add_more_insulation_to_the_standard_nudura_insulated_concrete_form_series')}</p>
                                 </div>
                             </div>
@@ -106,7 +107,7 @@ const PlusSeriesSection = () => {
                             <div className="row">
                                 <div className="col-md-6">
                                     <div className="layer_content p-0">
-                                        <div className="text-band flex-text-band">
+                                        <div className="text-band flex-text-band proper-spacing">
                                             <p className="bold-bg">{t('nudura_plus_forms_come_in_four_other_foam_thickness_options_25mm_50mm_100mm_and_150mm_they_also_produce_u_values_as_low_as_0_11_plus_forms_are_coated_with_the_desired_amount_of_insulation_using_an_adhesive_approved_for_use_with_eps_ensuring_the_insulation_is_locked_in_place_for_any_application_during_the_construction_process_if_the_desired_insulation_thickness_is_greater_than_150mm_nudura_can_supply_the_required_amount_of_insulation_on_a_time_sensitive_basis')}</p>
                                         </div>
                                     </div>
@@ -150,7 +151,7 @@ const PlusSeriesSection = () => {
                             <div className="row">
                                 <div className="col-md-6">
                                     <div className="layer_content p-0">
-                                        <div className="text-band flex-text-band">
+                                        <div className="text-band flex-text-band proper-spacing">
                                             <p className="bold-bg">{t('the_u_value_plus_insert_is_specifically_designed_to_fit_into_any_nudura_formwork_to_reduce_u_values_without_compromising_the_unique_technological_features_of_the_formwork_the_inserts_are_available_in_three_standard_sizes_50mm_100mm_and_150mm_all_813mm_high_once_the_desired_size_is_selected_the_insert_is_simply_threaded_into_the_formwork_thanks_to_the_special_configuration_of_the_insert_it_fits_tightly_into_the_formwork')}</p>
                                         </div>
                                     </div>
@@ -180,7 +181,7 @@ const PlusSeriesSection = () => {
                         <div className="col-md-12">
                             <div className="layer_content p-0">
                                 <h3 className="text-primary">{t('unique_innovation_for_the_nudura_plus_series')}</h3>
-                                <div className="text-band flex-text-band">
+                                <div className="text-band flex-text-band proper-spacing">
                                     <p className="bold-bg">{t('the_plus_series_features_nudura_s_unique_technological_innovation_enabling_contractors_architects_and_engineers_to_design_and_construct_residential_and_commercial_buildings_more_efficiently_the_durafold_duramax_and_duralok_systems_as_well_as_the_4_way_reversible_system_which_are_available_in_a_variety_of_shapes_and_sizes_are_patented_technologies_available_only_from_nudura')}</p>
                                 </div>
                             </div>

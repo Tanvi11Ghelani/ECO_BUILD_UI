@@ -6,6 +6,7 @@ import plaster1 from "../images/Plaster-finish01.jpg";
 import plaster from "../images/Plaster-finish.jpg";
 import { useTranslation } from "react-i18next";
 import Breadcrumb from "../common-component/Breadcrumb";
+import './proper-spacing.css';
 
 
 const RockPlaster = () => {
@@ -75,7 +76,7 @@ const RockPlaster = () => {
                 <h6 className="mb-0 mt-3 mb-3 font-bg-700">
                   {t("8_first_base_plaster_layer_derivit_plaster")}
                 </h6>
-                <div className="text-band flex-text-band">
+                <div className="text-band flex-text-band proper-spacing">
                   <p className="bold-bg">
                     {t(
                       "as_with_all_nudura_products_and_accessories_the_underlayment_material_is_another_important_element_in_nudura_s_unique_construction_process_the_underlayment_in_this_case_is_the_thin_polymer_or_cementitious_coating_that_is_applied_to_the_concrete_to_smooth_and_refine_its_shape"
@@ -159,7 +160,7 @@ const RockPlaster = () => {
             <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6">
               <div className="layer_content p-0">
                 <h3 className="text-primary">{t("product_description")}</h3>
-                <div className="text-band flex-text-band">
+                <div className="text-band flex-text-band proper-spacing">
                   <p className="bold-bg">
                     {t(
                       "the_material_used_for_this_purpose_is_b2000_precoat_or_rock_plaster_which_is_a_dry_acrylic_cementitious_base_coat_specifically_designed_for_use_on_insulated_concrete_forms_icf_made_of_high_density_expanded_polystyrene_eps_b2000_creates_a_strong_yet_flexible_base_coat_eliminating_the_complications_associated_with_mixing_base_coat_on_site_such_as_adding_cement_a_7_22_kg_bag_covers_approximately_5_7_m2_of_wall_area_at_a_2_mm_thick_layer"
@@ -227,7 +228,7 @@ const RockPlaster = () => {
                 <h6 className="mb-0 mt-3 mb-3 font-bg-700">
                   {t("precaution")}
                 </h6>
-                <div className="text-band flex-text-band">
+                <div className="text-band flex-text-band proper-spacing">
                   <p className="bold-bg">
                     {t(
                       "store_b2000_precoat_above_ground_in_a_dry_place_away_from_direct_sunlight_ensure_that_the_surface_of_the_expanded_polystyrene_eps_is_free_from_dirt_or_dust_frost_moisture_loose_particles_paint_or_any_other_foreign_matter_ensure_that_the_surface_and_ambient_temperature_is_above_5_c_when_applying_the_coat_and_remains_so_for_at_least_24_hours_allow_the_coat_to_dry_for_at_least_24_hours_before_applying_another_coat_protect_the_applied_material_from_winds_exceeding_24_km_h_rain_hail_snow_and_any_other_damage_until_it_has_fully_set_and_dried_or_until_all_finishing_and_crack_filling_work_has_been_completed"
@@ -245,7 +246,7 @@ const RockPlaster = () => {
             <div className="col-md-12">
               <div className="layer_content p-0">
                 <h3 className="text-primary">{t("8_1_mixing_instructions")}</h3>
-                <div className="text-band flex-text-band">
+                <div className="text-band flex-text-band proper-spacing">
                   <p className="bold-bg">
                     {t(
                       "gradually_add_one_bag_of_b2000_to_5_4_liters_of_clean_drinking_water_while_stirring_until_a_material_with_the_appropriate_viscosity_is_obtained_for_the_job"
@@ -282,7 +283,7 @@ const RockPlaster = () => {
                 <h3 className="text-primary">
                   {t("8_2_implementation_instructions")}
                 </h3>
-                <div className="text-band flex-text-band">
+                <div className="text-band flex-text-band proper-spacing">
                   <p className="bold-bg">
                     {t(
                       "four_steps_will_ensure_that_the_base_plaster_layer_is_properly_applied_to_the_eps_wall_and_ensure_good_performance_and_these_are"
@@ -322,7 +323,7 @@ const RockPlaster = () => {
             <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6">
               <div className="layer_content p-0">
                 <h3 className="text-primary">{t("8_3_plaster_finish")}</h3>
-                <div className="text-band flex-text-band">
+                <div className="text-band flex-text-band proper-spacing">
                   <p className="bold-bg">
                     {t(
                       "if_the_exterior_finish_is_a_mineral_or_colored_putty_the_b2000_base_coat_should_still_be_applied_to_the_section_of_the_wall_that_will_come_into_contact_with_the_ground_most_products_from_mineral_or_colored_putty_manufacturers_are_not_designed_to_withstand_the_basic_conditions_of_the_ground_and_may_disintegrate_over_time_ask_the_technical_department_of_the_putty_manufacturer_what_recommendations_they_have_for_the_proper_interface_of_their_materials_with_b2000_on_the_ground_surface_if_the_recommendation_is_to_use_b2000_the_same_application_steps_should_be_followed"

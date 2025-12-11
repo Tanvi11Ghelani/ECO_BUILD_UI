@@ -15,6 +15,7 @@ import image11 from "../images/Icons/dwg.svg";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./below-the-construction-slope.css";
+import "./proper-spacing.css";
 
 const FlamableConstruction = () => {
   const { t } = useTranslation();
@@ -412,11 +413,13 @@ const FlamableConstruction = () => {
                 <h3 className="text-primary mb-3">
                   {t("flammable_construction")}
                 </h3>
-                <p className="dark-font-600 mt-2 mb-2">
-                  {t(
-                    "this_section_covers_what_you_need_to_know_when_using_nudura_above_ground_for_buildings_that_are_classified_as_combustible_construction_under_applicable_building_codes_this_type_of_construction_is_most_often_found_in_low_rise_multi_residential_homes_in_north_america"
-                  )}
-                </p>
+                <div className="text-band flex-text-band proper-spacing">
+                  <p className="dark-font-600 mt-2 mb-2">
+                    {t(
+                      "this_section_covers_what_you_need_to_know_when_using_nudura_above_ground_for_buildings_that_are_classified_as_combustible_construction_under_applicable_building_codes_this_type_of_construction_is_most_often_found_in_low_rise_multi_residential_homes_in_north_america"
+                    )}
+                  </p>
+                </div>
               </div>
             </div>
           </div>

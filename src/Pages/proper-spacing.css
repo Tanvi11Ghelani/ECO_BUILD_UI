@@ -1,0 +1,12 @@
+/* Standardized spacing for text bands */
+.proper-spacing {
+      display: flex;
+      flex-direction: column;
+      gap: 12px !important;
+}
+
+.proper-spacing p,
+.proper-spacing p.bold-bg {
+      margin-bottom: 0 !important;
+      line-height: 1.5 !important;
+}
