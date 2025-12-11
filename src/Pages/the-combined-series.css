@@ -50,7 +50,7 @@
     width: 100%;
     max-width: 1290px;
     min-height: 73px;
-    font-family: "Noto Sans", sans-serif;
+    font-family: var(--font-primary);
     font-weight: 600;
     font-size: 24px;
     line-height: 140%;
@@ -62,7 +62,7 @@
 
 /* Title h5 in gradient card */
 .the-combined-series .card.gredient-card .text-band h5 {
-    font-family: "Noto Sans", sans-serif;
+    font-family: var(--font-primary);
     font-weight: 600;
     font-size: 24px;
     color: #FFFFFF;
@@ -132,7 +132,7 @@
 .the-combined-series .text-band p.bold-bg,
 .the-combined-series .ab-info-band .text-band p.bold-bg,
 .the-combined-series .layer_content .text-band p.bold-bg {
-    font-family: "Noto Sans", sans-serif;
+    font-family: var(--font-primary);
     font-weight: 600;
     font-style: normal;
     font-size: 18px;
@@ -174,7 +174,7 @@
 .the-combined-series .text-band p,
 .the-combined-series .ab-info-band .text-band p,
 .the-combined-series .layer_content .text-band p {
-    font-family: "Noto Sans", sans-serif;
+    font-family: var(--font-primary);
     font-size: 20px;
     line-height: 140%;
     letter-spacing: 0%;
@@ -183,7 +183,7 @@
 
 /* Paragraphs with pb-3 class - 24px typography */
 .the-combined-series .layer_content p.pb-3 {
-    font-family: "Noto Sans", sans-serif;
+    font-family: var(--font-primary);
     font-weight: 600;
     font-size: 18px;
     line-height: 140%;
@@ -193,7 +193,7 @@
 
 /* Floor Technology Section - List items with 24px typography (same as paragraph) */
 .the-combined-series .layer_content .details-list li {
-    font-family: "Noto Sans", sans-serif;
+    font-family: var(--font-primary);
     font-weight: 600;
     font-size: 18px;
     line-height: 140%;
@@ -204,7 +204,7 @@
 /* Exclude file name paragraphs from typography changes - override with original styles */
 .the-combined-series .file-name-band p,
 .the-combined-series .file-card .file-name-band p {
-    font-family: "Noto Sans", sans-serif;
+    font-family: var(--font-primary);
     font-weight: 500;
     font-size: 16px;
     line-height: normal;

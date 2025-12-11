@@ -10,6 +10,7 @@
   --white-bg: #fff;
   --light-bg: #f3f7fd;
   --border-light: #eee;
+  --font-primary: "Noto Sans", sans-serif;
 }
 
 html {
@@ -19,21 +20,21 @@ html {
 body {
   padding: 0;
   margin: 0 auto;
-  font-family: "Noto Sans", sans-serif;
+  font-family: var(--font-primary);
 }
 
 h1 {
   font-size: 44px;
   color: var(--font);
   margin-bottom: 20px;
-  font-family: "Noto Sans", sans-serif;
+  font-family: var(--font-primary);
   font-weight: 600;
 }
 
 h2 {
   color: var(--font);
   margin-bottom: 10px;
-  font-family: "Noto Sans", sans-serif;
+  font-family: var(--font-primary);
   font-weight: 600;
   font-size: 38px;
 }
@@ -41,7 +42,7 @@ h2 {
 h3 {
   color: var(--font);
   margin-bottom: 10px;
-  font-family: "Noto Sans", sans-serif;
+  font-family: var(--font-primary);
   font-weight: 600;
   font-size: 32px;
 }
@@ -49,7 +50,7 @@ h3 {
 h4 {
   color: var(--font);
   margin-bottom: 10px;
-  font-family: "Noto Sans", sans-serif;
+  font-family: var(--font-primary);
   font-weight: 600;
   font-size: 24px;
 }
@@ -57,7 +58,7 @@ h4 {
 h5 {
   color: var(--font);
   margin-bottom: 10px;
-  font-family: "Noto Sans", sans-serif;
+  font-family: var(--font-primary);
   font-weight: 600;
   font-size: 20px;
 }
@@ -65,7 +66,7 @@ h5 {
 h6 {
   color: var(--font);
   margin-bottom: 10px;
-  font-family: "Noto Sans", sans-serif;
+  font-family: var(--font-primary);
   font-weight: 600;
   font-size: 18px;
   line-height: 26px;
@@ -6152,4 +6153,3 @@ ul.dropdown-menu.show li:last-child a:hover {
     padding: 6px 12px;
   }
 }
-

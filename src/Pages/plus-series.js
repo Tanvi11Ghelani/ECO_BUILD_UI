@@ -13,7 +13,7 @@ import './plus-series.css';
 const PlusSeriesSection = () => {
     const { t } = useTranslation();
     return (
-        <div>
+        <div className="plus-series-page">
             {/* Breadcrumb Component - Reusable header banner */}
             <Breadcrumb
                 header={t('plus_series')}
@@ -87,7 +87,7 @@ const PlusSeriesSection = () => {
                             </div>
 
                         </div>
-                        <div className="col-sm-12 col-md-6 col-lg-8 col-xl-8">
+                        <div className="col-sm-12 col-md-6 col-lg-8 col-xl-8 ">
                             <div className="layer_content p-0">
                                 {/* <!-- <h3 className="text-primary">90° corner panel options</h3> --> */}
                                 <div className="text-band flex-text-band">
@@ -146,7 +146,7 @@ const PlusSeriesSection = () => {
                             </div>
 
                         </div>
-                        <div className="col-sm-12 col-md-12 col-lg-8 col-xl-8">
+                        <div className="col-sm-12 col-md-12 col-lg-8 col-xl-8 ps-lg-5">
                             <div className="row">
                                 <div className="col-md-6">
                                     <div className="layer_content p-0">
@@ -174,7 +174,7 @@ const PlusSeriesSection = () => {
 
                 </div>
             </section>
-            <section className="pt-0">
+            <section className="pt-4">
                 <div className="container">
                     <div className="row align-items-center g-4">
                         <div className="col-md-12">

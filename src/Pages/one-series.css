@@ -34,7 +34,7 @@
     height: auto;
     min-height: 44px;
     display: block;
-    font-family: "Noto Sans", sans-serif;
+    font-family: var(--font-primary);
     font-weight: 700;
     font-style: normal;
     font-size: 36px;
@@ -52,7 +52,7 @@
 
 /* First paragraph - 18px, 140% line-height - Matching Figma */
 .one-series-first-paragraph {
-    font-family: "Noto Sans", sans-serif;
+    font-family: var(--font-primary);
     font-weight: 600;
     font-style: normal;
     font-size: 18px;
@@ -104,7 +104,7 @@
 
 /* Second and third paragraphs - 18px, 200% line-height - Matching Figma */
 .one-series-content-paragraph {
-    font-family: "Noto Sans", sans-serif;
+    font-family: var(--font-primary);
     font-weight: 600;
     font-style: normal;
     font-size: 18px;
@@ -142,12 +142,12 @@
         gap: 80px;
         padding: 0 20px;
     }
-    
+
     .one-series-text-section {
         width: 100%;
         max-width: 889px;
     }
-    
+
     .one-series-image-wrapper {
         width: 450px;
         height: 375px;
@@ -163,20 +163,20 @@
         padding: 0 20px;
         min-height: auto;
     }
-    
+
     .one-series-text-section {
         width: 100%;
         max-width: 700px;
         flex: 1;
     }
-    
+
     .one-series-image-wrapper {
         width: 100%;
         max-width: 450px;
         height: auto;
         aspect-ratio: 508 / 424;
     }
-    
+
     .one-series-image-container {
         aspect-ratio: 508 / 424;
     }
@@ -191,41 +191,41 @@
         align-items: center;
         padding: 0 20px;
     }
-    
+
     .one-series-text-section {
         width: 100%;
         max-width: 100%;
         gap: 25px;
     }
-    
+
     .one-series-title {
         font-size: 32px;
         line-height: 40px;
         width: auto;
         height: auto;
     }
-    
+
     .one-series-first-paragraph,
     .one-series-content-paragraph {
         font-size: 16px;
     }
-    
+
     .one-series-image-wrapper {
         width: 100%;
         max-width: 508px;
         height: auto;
         aspect-ratio: 508 / 424;
     }
-    
+
     .one-series-image-container {
         border-radius: 25px;
     }
-    
+
     section.pt-0 .layer_image.small-round-layer.border-blue {
         border-radius: 25px;
         padding: 8px;
     }
-    
+
     section.pt-0 .layer_content h3.text-primary {
         font-size: 32px;
         line-height: 40px;
@@ -237,31 +237,31 @@
     .one-series-frame {
         gap: 30px;
     }
-    
+
     .one-series-text-section {
         gap: 20px;
     }
-    
+
     .one-series-title {
         font-size: 28px;
         line-height: 36px;
     }
-    
+
     .one-series-first-paragraph,
     .one-series-content-paragraph {
         font-size: 15px;
         line-height: 180%;
     }
-    
+
     .one-series-image-container {
         border-radius: 20px;
     }
-    
+
     section.pt-0 .layer_content h3.text-primary {
         font-size: 28px;
         line-height: 36px;
     }
-    
+
     section.pt-0 .layer_content .text-band p.bold-bg {
         font-size: 16px;
     }
@@ -272,22 +272,22 @@
     .one-series-frame {
         gap: 20px;
     }
-    
+
     .one-series-text-section {
         gap: 15px;
     }
-    
+
     .one-series-title {
         font-size: 24px;
         line-height: 32px;
     }
-    
+
     .one-series-first-paragraph,
     .one-series-content-paragraph {
         font-size: 14px;
         line-height: 160%;
     }
-    
+
     .one-series-image-container {
         border-radius: 15px;
     }
@@ -339,7 +339,7 @@
 
 /* Title "90° corner panel options" - gradient text matching Figma */
 .one-series-corner-title {
-    font-family: "Noto Sans", sans-serif;
+    font-family: var(--font-primary);
     font-weight: 700;
     font-size: 36px;
     line-height: 44px;
@@ -357,7 +357,7 @@
 
 /* Text "Internal EPS Board" - matching Figma specifications */
 .one-series-corner-text {
-    font-family: "Noto Sans", sans-serif;
+    font-family: var(--font-primary);
     font-weight: 600;
     font-size: 18px;
     line-height: 140%;
@@ -377,20 +377,20 @@
         padding: 8px;
         margin-bottom: 30px;
     }
-    
+
     .one-series-corner-image-container {
         border-radius: 18px;
     }
-    
+
     .one-series-corner-image-container img {
         border-radius: 18px;
     }
-    
+
     .one-series-corner-title {
         font-size: 32px;
         line-height: 40px;
     }
-    
+
     .one-series-corner-text {
         font-size: 16px;
     }
@@ -400,12 +400,12 @@
     .one-series-corner-content {
         gap: 15px;
     }
-    
+
     .one-series-corner-title {
         font-size: 28px;
         line-height: 36px;
     }
-    
+
     .one-series-corner-text {
         font-size: 15px;
     }
@@ -416,22 +416,21 @@
         border-radius: 20px;
         padding: 6px;
     }
-    
+
     .one-series-corner-image-container {
         border-radius: 15px;
     }
-    
+
     .one-series-corner-image-container img {
         border-radius: 15px;
     }
-    
+
     .one-series-corner-title {
         font-size: 24px;
         line-height: 32px;
     }
-    
+
     .one-series-corner-text {
         font-size: 14px;
     }
 }
-
