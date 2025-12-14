@@ -263,6 +263,13 @@ a.btn-secondary.border-line-btn {
   background-color: var(--light-bg) !important;
 }
 
+/* Global: prevent horizontal page overflow */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .btn-secondary:hover {
   background-color: var(--white);
   color: var(--primary);
@@ -382,6 +389,12 @@ ul.navbar-nav li a {
 }
 .cus-container-fluid {
   padding-left: 0 !important;
+}
+/* Fixed icon column spacing reset to avoid overflow */
+.fixed-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 li.nav-item.active a {
   color: var(--font-dark);

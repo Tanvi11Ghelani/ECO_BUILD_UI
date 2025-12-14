@@ -175,13 +175,11 @@
       .main-logo-band.logo-group {
             height: 70px;
             background: #fff;
-            clip-path: none;
-            border: none;
-            box-shadow: none;
+            clip-path: polygon(0 0, 100% 0, calc(100% - 25px) 100%, 0 100%);
       }
 
       [dir="rtl"] .main-logo-band.logo-group {
-            clip-path: none;
+            clip-path: polygon(25px 0, 100% 0, 100% 100%, 0 100%);
       }
 
       .logo-g-band {
@@ -205,14 +203,11 @@
       .cus-container-fluid {
             height: 70px;
             padding: 0 10px;
-            gap: 10px;
-            justify-content: space-between;
       }
 
       .navmenu-band {
             height: 70px;
             padding-right: 15px;
-            margin-left: auto;
       }
 
       [dir="rtl"] .navmenu-band {
@@ -229,8 +224,6 @@
 
       .navbar-toogle-btn {
             display: block !important;
-            position: relative;
-            z-index: 2;
       }
 
       .navmenu-band .btn-primary {
@@ -238,8 +231,6 @@
             padding: 4px 14px;
             font-size: 11px;
             white-space: nowrap;
-            position: relative;
-            z-index: 2;
       }
 
       /* Sidenav for mobile */
