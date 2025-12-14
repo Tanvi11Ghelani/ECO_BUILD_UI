@@ -310,6 +310,10 @@ nav.navbar.navbar-expand-lg {
 .navmenu-band {
   display: flex;
   align-items: center;
+  flex: 1 1 auto;
+  min-width: 0;
+  justify-content: flex-end;
+  gap: 12px;
 }
 
 .navbar-expand-lg .navbar-nav {
@@ -319,6 +323,9 @@ nav.navbar.navbar-expand-lg {
   justify-content: flex-end;
   margin-right: 7px;
   padding: 0px;
+  flex: 1 1 auto;
+  min-width: 0;
+  gap: 6px;
 }
 
 ul.navbar-nav li a {
@@ -332,6 +339,50 @@ ul.navbar-nav li a {
   padding: 0px !important;
 }
 
+@media (max-width: 1600px) {
+  ul.navbar-nav li a {
+    font-size: 18px;
+    padding: 4px 10px !important;
+  }
+  .lg-img {
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 1400px) {
+  ul.navbar-nav li a {
+    font-size: 16px;
+    padding: 4px 8px !important;
+  }
+  .navmenu-band .btn-primary {
+    height: 42px;
+    padding: 4px 16px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .navbar-expand-lg .navbar-nav {
+    gap: 4px;
+  }
+  .lg-img {
+    max-width: 320px;
+  }
+}
+
+/* Header overrides to prevent left blue strip */
+.main-logo-band.logo-group {
+  background: #fff !important;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 40px) 100%, 0 100%) !important;
+  border-top: 0 !important;
+  border-right: 0 !important;
+}
+.logo-g-band {
+  margin-top: 0 !important;
+}
+.cus-container-fluid {
+  padding-left: 0 !important;
+}
 li.nav-item.active a {
   color: var(--font-dark);
 }
@@ -3043,6 +3094,9 @@ nav.navbar.navbar-expand-lg {
   display: flex;
   align-items: center;
   gap: 15px;
+  flex: 1 1 auto;
+  min-width: 0;
+  justify-content: flex-end;
 }
 
 /* RTL Support for navmenu */
@@ -3053,13 +3107,15 @@ nav.navbar.navbar-expand-lg {
 
 .navbar-expand-lg .navbar-nav {
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   margin-right: 15px;
   padding: 0px;
   gap: 8px;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 /* RTL Support for navbar-nav */
@@ -3080,6 +3136,37 @@ ul.navbar-nav li a {
   text-transform: capitalize;
   padding: 8px 14px !important;
   white-space: nowrap;
+}
+
+@media (max-width: 1600px) {
+  ul.navbar-nav li a {
+    font-size: 18px;
+    padding: 4px 10px !important;
+  }
+  .lg-img {
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 1400px) {
+  ul.navbar-nav li a {
+    font-size: 16px;
+    padding: 4px 8px !important;
+  }
+  .navmenu-band .btn-primary {
+    height: 42px;
+    padding: 4px 16px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .navbar-expand-lg .navbar-nav {
+    gap: 4px;
+  }
+  .lg-img {
+    max-width: 320px;
+  }
 }
 
 li.nav-item.active a {
@@ -6152,4 +6239,5 @@ ul.dropdown-menu.show li:last-child a:hover {
     font-size: 14px;
     padding: 6px 12px;
   }
+  
 }

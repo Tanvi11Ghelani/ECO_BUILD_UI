@@ -47,6 +47,19 @@ const Navbar = () => {
     }
   };
 
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    const onKeyDown = (e) => {
+      if (e.key === "Escape") {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [isOpen]);
+
   const handleInputChange = (e) => {
     const { name, value, type, checked, files } = e.target;
     setFormData((prev) => ({
@@ -754,7 +767,11 @@ const Navbar = () => {
             </div>
 
             <div className="navmenu-band">
-              <ul className="navbar-nav sidenav" id="mySidenav">
+              <ul
+                className={`navbar-nav sidenav ${isOpen ? "open" : ""}`}
+                id="mySidenav"
+                aria-hidden={!isOpen}
+              >
                 <a
                   href="javascript:void(0)"
                   className="closebtn"
@@ -996,6 +1013,14 @@ const Navbar = () => {
           </div>
         </nav>
       </header>
+      {isOpen && (
+        <div
+          id="overlay"
+          onClick={closeNav}
+          style={{ display: "block" }}
+          aria-hidden="true"
+        />
+      )}
 
       {/* Floating icons + Chat */}
       <div className="fixed-nav" style={{ display: "flex" }}>
