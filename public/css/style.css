@@ -107,6 +107,10 @@ section {
   padding: 70px 0;
 }
 
+section:first-of-type {
+  padding-top: 0 !important;
+}
+
 .main-heading h1 {
   text-align: center;
   color: var(--primary);
@@ -305,7 +309,7 @@ nav.navbar.navbar-expand-lg {
   padding: 0;
   background: linear-gradient(356deg, #00d4ff, #00a3e0);
   height: 92px;
-  box-shadow: 0 6px 10px rgb(0 0 0 / 8%);
+  box-shadow: none;
 }
 
 .navmenu-band .btn-primary {
@@ -509,6 +513,8 @@ section.hero-band {
   z-index: 1;
   display: flex;
   align-items: center;
+  padding-top: 0 !important;
+  margin-top: 0 !important;
 }
 
 .hero-text-band {
@@ -547,7 +553,7 @@ section.hero-band {
   position: relative;
   align-items: center;
   padding-right: 0px;
-  min-height: 110px;
+  min-height: 92px;
   height: 100%;
   background: #fff;
   clip-path: polygon(0 0, 100% 0, calc(100% - 40px) 100%, 0 100%);
@@ -559,7 +565,7 @@ section.hero-band {
   display: flex;
   align-items: center;
   gap: 20px;
-  min-height: 110px;
+  min-height: 92px;
   height: 100%;
   padding-left: 40px;
   padding-right: 25px;
@@ -590,7 +596,7 @@ section.hero-band {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 110px;
+  min-height: 92px;
   height: 100%;
   flex-direction: row;
   max-width: 100%;
@@ -609,7 +615,7 @@ section.hero-band {
   align-items: center;
   padding-right: 30px;
   margin-left: auto;
-  min-height: 110px;
+  min-height: 92px;
   height: 100%;
   order: 2;
   flex-shrink: 0;
@@ -3055,7 +3061,7 @@ nav.navbar.navbar-expand-lg {
   width: 100%;
   padding: 0;
   background: linear-gradient(356deg, #00d4ff, #00a3e0);
-  height: 110px;
+  height: 92px;
   box-shadow: 0 6px 10px rgb(0 0 0 / 8%);
   transition: all 0.3s ease;
   position: relative;

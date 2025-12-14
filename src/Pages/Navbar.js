@@ -47,19 +47,6 @@ const Navbar = () => {
     }
   };
 
-  useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "";
-    const onKeyDown = (e) => {
-      if (e.key === "Escape") {
-        setIsOpen(false);
-      }
-    };
-    window.addEventListener("keydown", onKeyDown);
-    return () => {
-      window.removeEventListener("keydown", onKeyDown);
-    };
-  }, [isOpen]);
-
   const handleInputChange = (e) => {
     const { name, value, type, checked, files } = e.target;
     setFormData((prev) => ({
@@ -134,6 +121,13 @@ const Navbar = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [showQuoteForm]);
+  
+  useEffect(() => {
+    document.body.style.paddingTop = "0px";
+    return () => {
+      document.body.style.paddingTop = "";
+    };
+  }, []);
 
   return (
     <div>
@@ -767,11 +761,7 @@ const Navbar = () => {
             </div>
 
             <div className="navmenu-band">
-              <ul
-                className={`navbar-nav sidenav ${isOpen ? "open" : ""}`}
-                id="mySidenav"
-                aria-hidden={!isOpen}
-              >
+              <ul className="navbar-nav sidenav" id="mySidenav">
                 <a
                   href="javascript:void(0)"
                   className="closebtn"
@@ -991,8 +981,27 @@ const Navbar = () => {
                   </ul>
                 </li>
 
-                <li className="nav-item">
-                  <Link to="/academy">{t("ecobuild_academy")}</Link>
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    {t("ecobuild_academy")}
+                  </a>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <Link className="dropdown-item" to="/academy">
+                        {t("ecobuild_academy")}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/ecobuild">
+                        EcoBuild Guide
+                      </Link>
+                    </li>
+                  </ul>
                 </li>
                 <li className="nav-item">
                   <Link to="/contactus">{t("contact_us")}</Link>
@@ -1013,14 +1022,6 @@ const Navbar = () => {
           </div>
         </nav>
       </header>
-      {isOpen && (
-        <div
-          id="overlay"
-          onClick={closeNav}
-          style={{ display: "block" }}
-          aria-hidden="true"
-        />
-      )}
 
       {/* Floating icons + Chat */}
       <div className="fixed-nav" style={{ display: "flex" }}>
