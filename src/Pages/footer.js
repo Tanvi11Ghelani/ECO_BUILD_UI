@@ -339,13 +339,22 @@ function Footer() {
                   >
                     <img alt="" src="Images/Icons/send.svg" />
                   </span>
-                  <input
-                    type="email"
-                    className="form-control w-100"
-                    id="inputEmail4"
-                    placeholder={t("your_email_address")}
-                    style={{ color: "white", paddingRight: "50px" }}
-                  />
+                 <div className="form-group position-relative">
+  <span
+    className="send-icon position-absolute top-50 end-0 translate-middle-y pe-3"
+    style={{ zIndex: 10 }}
+  >
+    <img alt="" src="Images/Icons/send.svg" />
+  </span>
+  <input
+    type="email"
+    className="form-control w-100 email-input"
+    id="inputEmail4"
+    placeholder={t("your_email_address")}
+    style={{ color: "white", paddingRight: "50px" }}
+  />
+</div>
+
                 </div>
               </div>
             </div>
@@ -359,9 +368,17 @@ function Footer() {
             <div className="col-12 col-md-7 text-center text-md-start">
               <p className="p-bg-text mb-0">
                 {t("2025")}
-                <a target="_blank" className="text-white ms-1">
-                  {t("ecobuild_system_ltd")}
-                </a>
+               <a 
+  href="#" 
+  onClick={(e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }}
+  className="text-white ms-1"
+  style={{ cursor: 'pointer' }}
+>
+  {t("ecobuild_system_ltd")}
+</a>
                 {t("all_rights_reserved")}
               </p>
             </div>

@@ -24,8 +24,19 @@ const Navbar = () => {
   });
 
   const openNav = () => setIsOpen(true);
-  const closeNav = () => setIsOpen(false);
-  const scrollToTop = () => {
+const closeNav = () => {
+  setIsOpen(false);
+  closeAllSubmenus(); // ADD THIS LINE
+};
+
+// ADD THIS ENTIRE FUNCTION
+const closeAllSubmenus = () => {
+  document
+    .querySelectorAll(".dropdown-submenu .dropdown-menu.show")
+    .forEach((menu) => {
+      menu.classList.remove("show");
+    });
+};  const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   const languages = [
@@ -98,6 +109,7 @@ const Navbar = () => {
       link.addEventListener("click", handleSubmenuClick);
     });
 
+
     const handleClickOutside = (e) => {
       if (!e.target.closest(".language-dropdown-wrapper")) {
         setShowLangDropdown(false);
@@ -110,6 +122,10 @@ const Navbar = () => {
       ) {
         setShowQuoteForm(false);
       }
+
+       if (!e.target.closest(".navbar")) {
+    closeAllSubmenus();
+  }
     };
 
     document.addEventListener("mousedown", handleClickOutside);
@@ -129,6 +145,12 @@ const Navbar = () => {
     };
   }, []);
 
+  // ADD THIS ENTIRE useEffect
+useEffect(() => {
+  if (!isOpen) {
+    closeAllSubmenus();
+  }
+}, [isOpen]);
   return (
     <div>
       <header className="header">
@@ -776,6 +798,10 @@ const Navbar = () => {
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
+                    onClick={(e) => {
+    e.preventDefault();
+    closeAllSubmenus(); // ADD THIS
+  }}
                   >
                     {t("products")}
                   </a>
@@ -843,6 +869,10 @@ const Navbar = () => {
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
+                    onClick={(e) => {
+    e.preventDefault();
+    closeAllSubmenus(); // ADD THIS
+  }}
                   >
                     {t("information_center")}
                   </a>
@@ -907,6 +937,10 @@ const Navbar = () => {
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
+                    onClick={(e) => {
+    e.preventDefault();
+    closeAllSubmenus(); // ADD THIS
+  }}
                   >
                     {t("design_library")}
                   </a>
@@ -964,6 +998,10 @@ const Navbar = () => {
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
+                    onClick={(e) => {
+    e.preventDefault();
+    closeAllSubmenus(); // ADD THIS
+  }}
                   >
                     {t("gallery")}
                   </a>
@@ -987,6 +1025,10 @@ const Navbar = () => {
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
+                    onClick={(e) => {
+    e.preventDefault();
+    closeAllSubmenus(); // ADD THIS
+  }}
                   >
                     {t("ecobuild_academy")}
                   </a>

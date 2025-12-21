@@ -52,10 +52,11 @@ const FileToDownload = () => {
         "/EcoBuildPdf/Information Center/Files to Download/Nodora Installation Manuals - Download Chapters/Insulation from moisture and humidity.pdf",
     },
     {
-      notes: "",
-      number: "14",
-      pdfPath: "/rockplaster",
-    },
+    notes: "",
+    number: "14",
+    pdfPath: "/rockplaster",
+    fileName: "The farge layer"
+  },
     {
       notes: "",
       number: "15",

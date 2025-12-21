@@ -237,6 +237,7 @@ const PhotoGallery = () => {
         header={t("gallery")}
         subHeader={t("building_homes_also_for_the_generations_to_come")}
       />
+      
       <section className="photo-gallery-section">
         <div className="container">
           <ul

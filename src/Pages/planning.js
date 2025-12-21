@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import Breadcrumb from '../common-component/Breadcrumb';
 import { Link } from 'react-router-dom';
 
-const Plannig = () => {
+const Planning = () => {
     const { t } = useTranslation();
     return (
         <div>
@@ -13,7 +13,6 @@ const Plannig = () => {
             />
             <section>
                 <div className="container">
-
                     <div className="row g-4">
                         <div className="col-sm-6 col-md-6 col-lg-4 col-xl-4">
                             <div className="card icon-top-primary-card h-245 action-icon-card single-action-band">
@@ -24,8 +23,10 @@ const Plannig = () => {
                                     <h5>{t('firewall_details')}</h5>
                                 </div>
                                 <div className="action-band">
-                                    <a className="btn-primary icon-btn border-btn-primary" href='/firewall'>{t('watching_the_series')}<i
-                                        className="fa-solid fa-arrow-right"></i></a>
+                                    <Link className="btn-primary icon-btn border-btn-primary" to='/firewall'>
+                                        {t('watching_the_series')}
+                                        <i className="fa-solid fa-arrow-right"></i>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -38,8 +39,10 @@ const Plannig = () => {
                                     <h5>{t('flammable_construction')}</h5>
                                 </div>
                                 <div className="action-band">
-                                    <a className="btn-primary icon-btn border-btn-primary" href='/flamableconstruction'>{t('watching_the_series')}<i
-                                        className="fa-solid fa-arrow-right"></i></a>
+                                    <Link className="btn-primary icon-btn border-btn-primary" to='/flamableconstruction'>
+                                        {t('watching_the_series')}
+                                        <i className="fa-solid fa-arrow-right"></i>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -52,8 +55,10 @@ const Plannig = () => {
                                     <h5>{t('construction_below_ground_level')}</h5>
                                 </div>
                                 <div className="action-band">
-                                    <a className="btn-primary icon-btn border-btn-primary" href='/belowtheconstructionslope'>{t('watching_the_series')}<i
-                                        className="fa-solid fa-arrow-right"></i></a>
+                                    <Link className="btn-primary icon-btn border-btn-primary" to='/belowtheconstructionslope'>
+                                        {t('watching_the_series')}
+                                        <i className="fa-solid fa-arrow-right"></i>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -66,8 +71,10 @@ const Plannig = () => {
                                     <h5>{t('pre_planning_criteria')}</h5>
                                 </div>
                                 <div className="action-band">
-                                    <a className="btn-primary icon-btn border-btn-primary">{t('watching_the_series')}<i
-                                        className="fa-solid fa-arrow-right"></i></a>
+                                    <Link className="btn-primary icon-btn border-btn-primary" to='/earlydesigncriteria'>
+                                        {t('watching_the_series')}
+                                        <i className="fa-solid fa-arrow-right"></i>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -80,8 +87,10 @@ const Plannig = () => {
                                     <h5>{t('non_combustible_construction')}</h5>
                                 </div>
                                 <div className="action-band">
-                                    <a className="btn-primary icon-btn border-btn-primary" href='/noncombstibleconstruction'>{t('watching_the_series')}<i
-                                        className="fa-solid fa-arrow-right"></i></a>
+                                    <Link className="btn-primary icon-btn border-btn-primary" to='/noncombstibleconstruction'>
+                                        {t('watching_the_series')}
+                                        <i className="fa-solid fa-arrow-right"></i>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -94,8 +103,10 @@ const Plannig = () => {
                                     <h5>{t('bim_revit')}</h5>
                                 </div>
                                 <div className="action-band">
-                                    <a className="btn-primary icon-btn border-btn-primary" href='/bimlibrary'>{t('watching_the_series')}<i
-                                        className="fa-solid fa-arrow-right"></i></a>
+                                    <Link className="btn-primary icon-btn border-btn-primary" to='/bimlibrary'>
+                                        {t('watching_the_series')}
+                                        <i className="fa-solid fa-arrow-right"></i>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -108,19 +119,18 @@ const Plannig = () => {
                                     <h5>{t('description_of_template_units')}</h5>
                                 </div>
                                 <div className="action-band">
-                                    <a className="btn-primary icon-btn border-btn-primary">{t('watching_the_series')}<i
-                                        className="fa-solid fa-arrow-right"></i></a>
+                                    <Link className="btn-primary icon-btn border-btn-primary" to='/formunitprofile'>
+                                        {t('watching_the_series')}
+                                        <i className="fa-solid fa-arrow-right"></i>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
-
                 </div>
             </section>
         </div>
     );
 }
 
-export default Plannig;
+export default Planning;

@@ -6260,3 +6260,7 @@ ul.dropdown-menu.show li:last-child a:hover {
   }
   
 }
+  .email-input:focus::placeholder {
+    opacity: 0;
+    visibility: hidden;
+  }
