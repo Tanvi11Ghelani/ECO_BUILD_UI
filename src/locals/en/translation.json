@@ -1554,5 +1554,29 @@
   "hollow_metal_doors_brick_finish":"Hollow Metal Doors Brick Finish",
   "hollow_metal_doors_non_brick_finish":"Hollow Metal Doors Non Brick Finish",
   "aluminum_entrances_brick_finish":"Aluminum Entrances Brick Finish",
-  "aluminum_entrances_non_brick_finish":"Aluminum Entrances Non Brick Finish"
+  "aluminum_entrances_non_brick_finish":"Aluminum Entrances Non Brick Finish",
+  "guide": {
+    "chapter": "Chapter",
+    "content": "Content",
+    "tables": "Tables",
+    "next": "Next",
+    "previous": "Previous",
+    "back_to_home": "Back to Home",
+    "chapter_of": "Chapter {current} of {total}",
+    "installation_guide": "Installation Guide for Contractors",
+    "quick_navigation": "Quick navigation between guide chapters",
+    "home": "Home",
+    "tutorials": "Video Tutorials",
+    "conversion": "Unit Converter",
+    "glossary": "Glossary",
+    "settings": "Settings",
+    "search_guide": "Search guide...",
+    "search_all_guide": "Search entire guide...",
+    "no_results": "No results found",
+    "search_results": "Search Results",
+    "search_glossary": "Search Glossary",
+    "search_in_glossary": "Search \"{query}\" in glossary",
+    "open_menu": "Open menu",
+    "menu": "Menu"
+  }
 }

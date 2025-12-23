@@ -1507,6 +1507,30 @@
   "construction_company": "חברת בנייה",
   "public_construction": "בנייה ציבורית",
   "british_psi_51mm": "אישור NUDURA הבריטי Psi ‏+51 מ״מ",
-  "other": "אחר"
+  "other": "אחר",
+  "guide": {
+    "chapter": "פרק",
+    "content": "תוכן",
+    "tables": "טבלאות",
+    "next": "הבא",
+    "previous": "הקודם",
+    "back_to_home": "חזרה לדף הבית",
+    "chapter_of": "פרק {current} מתוך {total}",
+    "installation_guide": "מדריך התקנה לקבלנים",
+    "quick_navigation": "ניווט מהיר בין פרקי המדריך",
+    "home": "ראשי",
+    "tutorials": "סרטוני הדרכה",
+    "conversion": "ממיר מידות",
+    "glossary": "מילון מונחים",
+    "settings": "הגדרות",
+    "search_guide": "חיפוש במדריך...",
+    "search_all_guide": "חיפוש בכל המדריך...",
+    "no_results": "לא נמצאו תוצאות",
+    "search_results": "תוצאות חיפוש",
+    "search_glossary": "חיפוש במילון",
+    "search_in_glossary": "חפש \"{query}\" במילון מונחים",
+    "open_menu": "פתח תפריט",
+    "menu": "תפריט"
+  }
 
 }

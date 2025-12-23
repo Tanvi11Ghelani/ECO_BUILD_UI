@@ -1509,7 +1509,31 @@
   "construction_company": "شركة إنشاءات",
   "public_construction": "إنشاءات عامة",
   "british_psi_51mm": "موافقة NUDURA البريطانية Psi ‏+51 مم",
-  "other": "أخرى"
+  "other": "أخرى",
+  "guide": {
+    "chapter": "الفصل",
+    "content": "المحتوى",
+    "tables": "الجداول",
+    "next": "التالي",
+    "previous": "السابق",
+    "back_to_home": "العودة إلى الصفحة الرئيسية",
+    "chapter_of": "الفصل {current} من {total}",
+    "installation_guide": "دليل التثبيت للمقاولين",
+    "quick_navigation": "التنقل السريع بين فصول الدليل",
+    "home": "الرئيسية",
+    "tutorials": "فيديوهات تعليمية",
+    "conversion": "محول الوحدات",
+    "glossary": "المسرد",
+    "settings": "الإعدادات",
+    "search_guide": "البحث في الدليل...",
+    "search_all_guide": "البحث في الدليل بالكامل...",
+    "no_results": "لم يتم العثور على نتائج",
+    "search_results": "نتائج البحث",
+    "search_glossary": "البحث في المسرد",
+    "search_in_glossary": "ابحث عن \"{query}\" في المسرد",
+    "open_menu": "فتح القائمة",
+    "menu": "القائمة"
+  }
 
 
 }

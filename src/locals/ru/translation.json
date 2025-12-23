@@ -1541,6 +1541,30 @@
   "construction_company": "Строительная компания",
   "public_construction": "Государственное строительство",
   "british_psi_51mm": "NUDURA Британское Psi одобрение +51 мм.",
-  "other": "Другое"
+  "other": "Другое",
+  "guide": {
+    "chapter": "Глава",
+    "content": "Содержание",
+    "tables": "Таблицы",
+    "next": "Следующий",
+    "previous": "Предыдущий",
+    "back_to_home": "Вернуться на главную",
+    "chapter_of": "Глава {current} из {total}",
+    "installation_guide": "Руководство по установке для подрядчиков",
+    "quick_navigation": "Быстрая навигация между главами руководства",
+    "home": "Главная",
+    "tutorials": "Видеоуроки",
+    "conversion": "Конвертер единиц",
+    "glossary": "Глоссарий",
+    "settings": "Настройки",
+    "search_guide": "Поиск в руководстве...",
+    "search_all_guide": "Поиск по всему руководству...",
+    "no_results": "Результаты не найдены",
+    "search_results": "Результаты поиска",
+    "search_glossary": "Поиск в глоссарии",
+    "search_in_glossary": "Искать \"{query}\" в глоссарии",
+    "open_menu": "Открыть меню",
+    "menu": "Меню"
+  }
 
 }
